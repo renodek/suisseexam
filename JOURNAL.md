@@ -99,3 +99,34 @@ Aucun.
 
 - `CLAUDE.md`
 - `source/design-system-mzi/` (trouvé déjà présent, non généré par cette conversation — voir ci-dessus)
+
+## Étape 3 — Audit SEO &amp; Design (livrable/audit.html) (2026-09-24)
+
+### Ce qui a été fait
+
+- Lecture exhaustive de toutes les sources listées dans la demande avant rédaction : HTML rendu, CSS, robots.txt, sitemap.xml, les deux rapports Lighthouse JSON (mobile/desktop), PageSpeed Insights.pdf, seo-existant.md, styles-reels.md, design-system-mzi/ (constats.html, tokens), debordement-mobile.md, images/inventaire.md, contenu.md, captures. Vérifications complémentaires en direct : existence et contenu de `/llms.txt`, existence de `/consultant-ia-a-annemasse/`, absence de motifs téléphone/carte Google dans le HTML.
+- Production de `livrable/audit.html` : rapport de 13 sections (synthèse, architecture, SEO on-page, SEO local, données structurées, réseaux sociaux, GEO/AEO, E-E-A-T, UX, design, performance, accessibilité, feuille de route 30/60/90), sommaire cliquable avec repère de section active, feuille de style d'impression dédiée, 2 captures annotées (desktop/mobile) converties en WebP.
+- Conversion de 3 images en WebP (`sharp`) dans `livrable/assets/img/` : 2 captures annotées + le logo utilisé dans l'en-tête du rapport — nécessaire car `/livrable` est déployé comme racine Vercel séparée, sans accès aux fichiers de `source/`.
+- Vérification visuelle du rendu (Playwright, desktop/mobile/impression), correction de la position de 2 marqueurs d'annotation initialement mal calés.
+
+### Décisions prises et leur justification
+
+- **Chaque score chiffré cité est mesuré, jamais halluciné** : les deux rapports Lighthouse (exécution locale) et le PDF PageSpeed Insights donnent des chiffres différents de ceux évoqués dans la demande initiale (ex. performance mobile 69 et non 53, CLS 0,001 et non 0,37) — les valeurs mesurées ont été utilisées, pas celles de la demande, conformément à la consigne « à vérifier avant d'être repris, pas à recopier ».
+- **Assets copiés en local dans `livrable/assets/img/` plutôt que référencés vers `../source/`** : Vercel déploie probablement `/livrable` comme racine du site, donc toute référence hors de ce dossier serait cassée en production.
+- **`llms.txt` traité comme un vrai constat GEO/AEO plutôt qu'un simple point positif** : sa présence a d'abord semblé confirmer l'hypothèse de la demande, mais sa lecture directe a révélé un contenu obsolète (positionnement « Genève », lien mort vers une page 404) — un exemple concret que la présence d'un signal technique ne garantit pas sa qualité, cohérent avec le constat parallèle sur le score de contraste Lighthouse.
+- **Contraste au survol du bouton principal recalculé indépendamment** (formule WCAG appliquée aux couleurs déjà extraites dans styles-reels.md) plutôt que simplement cité depuis design-system-mzi/ : donne une preuve de premier niveau, vérifiable par quiconque relit le calcul.
+- **Aucun chiffre de gain inventé pour MZI Consulting** : les gains attendus renvoient à des études publiques (Core Web Vitals de Google, étude Google/Deloitte « Milliseconds Make Millions ») formulées comme repères directionnels, jamais comme prévisions chiffrées propres au site.
+- **Chiffres-clés et certifications non vérifiables marqués `[À CONFIRMER : ...]`** plutôt que corrigés ou supprimés unilatéralement, conformément à la règle de contenu de CLAUDE.md.
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Les nombres de la demande initiale (scores Lighthouse, CLS, TBT) ne correspondaient pas aux mesures réelles | Nouvelle mesure complète à partir des fichiers sources ; les chiffres de la demande ont été ignorés au profit des valeurs vérifiées. |
+| Deux mesures de performance (Lighthouse local vs PageSpeed Insights, ~40 min d'écart) très différentes, sans donnée de terrain disponible pour trancher | Les deux mesures sont présentées côte à côte avec leur horodatage, accompagnées d'une hypothèse explicite (cache serveur) plutôt que d'un chiffre unique choisi arbitrairement. |
+| Deux marqueurs de la capture annotée (desktop) mal positionnés lors d'un premier rendu (ne pointaient pas sur les bons éléments) | Repositionnement après mesure des coordonnées réelles sur la capture source, vérifié par une nouvelle capture d'écran du rendu final. |
+
+### Fichiers produits
+
+- `livrable/audit.html`
+- `livrable/assets/img/audit-desktop-hero.webp`, `audit-mobile-hero.webp`, `logo-mzi-consulting.webp`
