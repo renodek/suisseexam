@@ -314,3 +314,56 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html`.
 - `livrable/assets/img/v1-og-image.jpg`
 - `livrable/exemples/robots.txt`
 - `livrable/exemples/llms.txt`
+
+## Étape 10 — Recette de v1-clarte.html : fidélité au design, interactions, contrastes (2026-09-24)
+
+### Ce qui a été fait
+
+- `scripts/compare-v1.js` (nouveau) : sert le repo en HTTP local, charge le design d'origine (`Accueil Clarte.dc.html`, qui télécharge React/Babel depuis unpkg — les icônes `mask-image` échouent en `file://`, d'où le serveur local) et `v1-clarte.html?statique`, capture les deux en 1440, 768 et 390 px (fond animé masqué des deux côtés), découpe les 11 blocs (en-tête, 9 sections, pied de page) et compare : `pixelmatch` par bloc **et** géométrie/style de chaque élément textuel (position, taille, police, graisse, couleur, interligne, espacement des lettres). Sorties : `mesures/v1-diff/` (captures pleine page, images de différence, `rapport.json`).
+- Écarts trouvés puis corrigés dans `v1-clarte.html` (la 1re mesure montrait un héros de +240 px et des chiffres de bénéfices à 16 px) :
+  - héros : la règle générique `section{padding}` s'appliquait aussi au héros (+120 px haut et bas) ; interligne de l'étiquette (1,5), taille (19 px) et flèche (16 px) des boutons du héros ;
+  - bénéfices : `.benefit-card p` (spécificité plus forte) écrasait `.benefit-value` — les gros chiffres s'affichaient en 16 px ; interligne 1,5 (et non 1,55) des textes de cartes bénéfices/« Qui sommes-nous » ;
+  - `text-wrap:balance/pretty` appliqué partout alors que le design le limite à certains titres/paragraphes (méthode, témoignages, FAQ n'en ont pas) ;
+  - boutons : `white-space:nowrap` limité au bouton d'en-tête (les autres renvoient à la ligne comme dans le design) ; bouton d'envoi du formulaire à 18 px de padding (17 px pour celui de Solution) ;
+  - FAQ : marge droite des réponses fixe à 60 px comme dans le design (j'avais mis un `clamp()`) ; espacement 24 px entre lignes de l'en-tête « Solution » ; colonnes du pied de page à 200/220/180 px ; apostrophes typographiques (’) de deux textes ;
+  - « Qui sommes-nous » : l'étiquette « À CONFIRMER : photo du fondateur » se superpose au cadre de photo (comme dans le design) au lieu de le suivre ;
+  - photos : le design demande le recadrage Unsplash `entropy` à 1000×1300 et 2000×800 — mes fichiers, demandés au ratio d'affichage, étaient cadrés différemment. Retéléchargées aux ratios du design (1200×1560 et 2400×960, ≥ 2× l'affichage), WebP et image Open Graph régénérés ; le bandeau de crédit « Photo by … on Unsplash » du design (visible sur la photo Méthode) est repris, avec les liens Unsplash + paramètres `utm` ;
+  - zones tactiles de l'étape 9 : le padding ajouté aux liens de navigation/pied de page décalait la mise en page ; compensé par une marge négative de même valeur (zone cliquable ≥ 24 px, espacement identique au design).
+- Résultat : hauteur identique pour toutes les sections aux 3 largeurs (au plus +1 px sur le pied de page), 0 écart de géométrie/style hors tolérance (2 px de position, 3 px de taille) sur les 3 largeurs, `pixelmatch` ≤ 1,05 % par bloc (résidu : ré-encodage WebP des photos et adresse e-mail/étiquette du pied de page, corrections voulues).
+- `scripts/controle-v1.js` (nouveau) : Playwright, rapport dans `mesures/v1-controles/rapport.json`. Contrôles :
+  - survol de 9 boutons/liens mesuré sur v1 **et** sur le design : les 9 états de survol sont identiques ; les 4 types de cartes n'ont aucun effet de survol, ni dans le design ni dans v1 (cartes non interactives, donc rien à corriger) ;
+  - focus clavier : parcours de Tab sur les 42 éléments focalisables (1440 px), 37 (390 px) et 8 (menu mobile ouvert) — chaque focus change les pixels du composant (indicateur visible) et aucun élément n'est masqué par l'en-tête fixe ;
+  - menu mobile, FAQ (ouverture indépendante, Entrée/Espace, rotation de l'icône), formulaire (champs vides et e-mail invalide bloqués par la validation native, confirmation affichée avec le bon texte, aucune requête réseau non-GET) ;
+  - contrastes : 26 couples texte/fond uniques à 1440 px et 25 à 390 px (avec menu ouvert), fond effectif calculé par empilement des fonds translucides des ancêtres ; états de survol ; bordures de champs (WCAG 1.4.11).
+- Corrections issues des contrôles : focus clavier sorti du menu mobile (le menu ouvert recouvrait la page : il se referme désormais quand le focus le quitte, ainsi qu'avec Échap avec retour du focus sur le bouton, et le libellé du bouton devient « Fermer le menu ») ; validation native du formulaire rétablie (`novalidate` retiré : le formulaire vide se soumettait) ; focus placé sur le message de confirmation (`tabindex="-1"`) ; `scroll-padding-top` pour que les ancres ne passent pas sous l'en-tête fixe.
+
+### Résultats des contrastes
+
+- Étiquettes `[À CONFIRMER]` : **6,62:1** (`#7a4f00` sur `#fdf6e7`, 19 occurrences) sur pages claires ; **10,98:1** (`#f4c96e` sur fond ambré translucide au-dessus de `#0a0e1a`) sur fond nuit — AA (4,5:1) respecté dans les deux cas.
+- Bleu pétrole `#0e7490` : **5,36:1** sur blanc, **4,91:1** sur gris clair `#f3f5f8` (petit texte comme grand titre) ; texte blanc sur bleu pétrole 5,36:1 — AA respecté, marge la plus faible sur gris clair.
+- Survol : bouton cyan 9,43:1 (texte nuit sur `#09c6eb`), bouton pétrole foncé 7,52:1, liens cyan sur nuit 11,15:1, lien « Toutes les questions » 7,52:1 — l'écueil du site réel (blanc sur `#09c6eb`, 2,04:1) n'existe pas ici.
+- Échecs trouvés et corrigés : (1) libellé « Photo du fondateur » du cadre vide en `#74767c` sur `#f5f5f5` = **4,17:1** → `#5b6576`, 5,39:1 ; (2) bordure des champs du formulaire `#9aa4b2` (valeur du design) = **2,52:1** sur blanc, sous les 3:1 exigés pour un composant d'interface → `#7c8696`, 3,68:1.
+- Restent à vérifier hors de portée de l'outil : le texte blanc du bandeau de crédit photo repose sur la photo (mesuré 4,76:1 sur fond blanc, pire cas, et 20:1 sur fond noir) ; le fond animé du héros n'est pas pris en compte (nœuds cyan très transparents derrière un dégradé sombre).
+
+### Décisions prises et leur justification
+
+- **Comparaison par géométrie de texte (`Range`) et non par boîte d'élément** : le design d'origine enveloppe chaque expression `{{ }}` dans un élément en ligne, ce qui faussait largeur et position des blocs de texte de 20 à 220 px alors que le rendu est identique.
+- **Fidélité au design conservée même quand elle est discutable** (marge droite de 60 px des réponses FAQ, cartes sans effet de survol, liens de navigation vers des pages qui n'existent pas encore) : c'est le périmètre demandé ; seuls deux écarts d'accessibilité mesurés (contraste du cadre vide, bordure des champs) et deux comportements (menu, validation) ont été corrigés, chacun justifié ci-dessus.
+- **Exemptions retenues pour les zones tactiles < 24 px** : liens « Photo by … on Unsplash » et « Politique de confidentialité », placés dans une phrase — exception « en ligne » de WCAG 2.5.8.
+- **Recadrages/vignettes intermédiaires non conservés** : seuls les captures pleine page et les images de différence sont versionnées (21 Mo → 11 Mo).
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Le design d'origine ne charge pas ses icônes en `file://` | Servi via un petit serveur HTTP Node local ; React/Babel viennent d'unpkg (connexion requise). |
+| Écarts de largeur artificiels de 20 à 220 px sur les titres/étapes | Mesure sur le rectangle du texte (`Range`), pas sur l'élément. |
+| Contrôle du focus avec menu mobile ouvert : 7 éléments « sans indicateur » | Le focus passait sous l'en-tête fixe agrandi ; vrai défaut d'usage, corrigé par la fermeture du menu à la sortie du focus. Le test se limite alors à l'en-tête. |
+| Lien d'évitement signalé « masqué par l'en-tête » | Faux positif : mesure prise pendant sa transition (0,15 s) ; mesure décalée de 260 ms. |
+| Contrastes de survol NaN dans le premier rapport | Expression régulière perdue dans un heredoc (barres obliques inversées) ; corrigée dans le script. |
+
+### Fichiers produits
+
+- `scripts/compare-v1.js`, `scripts/controle-v1.js`
+- `mesures/v1-diff/` (captures pleine page, images de différence, `rapport.json`), `mesures/v1-controles/rapport.json`
+- `livrable/v1-clarte.html` (corrigé), photos et image Open Graph régénérées (`livrable/assets/img/v1-*.webp`, `v1-og-image.jpg`, sources dans `source/images/design-v1/`)

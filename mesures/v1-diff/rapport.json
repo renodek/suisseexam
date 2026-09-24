@@ -1,0 +1,362 @@
+{
+  "390": {
+    "header": {
+      "designHeight": 81,
+      "v1Height": 81,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "hero": {
+      "designHeight": 1372,
+      "v1Height": 1372,
+      "mismatchPct": 0.99,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "Christin Hume",
+        "Unsplash"
+      ]
+    },
+    "defis": {
+      "designHeight": 1623,
+      "v1Height": 1623,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "solution": {
+      "designHeight": 1360,
+      "v1Height": 1360,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "methode": {
+      "designHeight": 1532,
+      "v1Height": 1532,
+      "mismatchPct": 0.26,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "Annie Spratt",
+        "Unsplash"
+      ]
+    },
+    "benefices": {
+      "designHeight": 1296,
+      "v1Height": 1296,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "qui": {
+      "designHeight": 1340,
+      "v1Height": 1340,
+      "mismatchPct": 0.09,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo du fondateur"
+      ]
+    },
+    "temoignages": {
+      "designHeight": 1610,
+      "v1Height": 1610,
+      "mismatchPct": 0.01,
+      "diffs": [],
+      "missing": [
+        "« »",
+        "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.",
+        "« »",
+        "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.",
+        "« »",
+        "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs."
+      ],
+      "extra": [
+        "« L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé. »",
+        "« Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés. »",
+        "« Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs. »"
+      ]
+    },
+    "faq": {
+      "designHeight": 1109,
+      "v1Height": 1109,
+      "mismatchPct": 0.03,
+      "diffs": [],
+      "missing": [
+        "Nous accompagnons des PME d'Annemasse, de Haute-Savoie et du Grand Genève. Chaque audit est adapté à votre secteur, vos objectifs et votre culture d'entreprise."
+      ],
+      "extra": [
+        "Nous accompagnons des PME d'Annemasse et de Haute-Savoie, et pouvons intervenir dans le Grand Genève. Chaque audit est adapté à votre secteur, vos objectifs et votre culture d'entreprise.",
+        "À CONFIRMER : zones d'intervention réelles"
+      ]
+    },
+    "contact": {
+      "designHeight": 1373,
+      "v1Height": 1373,
+      "mismatchPct": 0.03,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "footer": {
+      "designHeight": 1031,
+      "v1Height": 1032,
+      "mismatchPct": 0.24,
+      "diffs": [],
+      "missing": [
+        "À CONFIRMER : e-mail"
+      ],
+      "extra": [
+        "contact@mzi-consulting.com"
+      ]
+    }
+  },
+  "768": {
+    "header": {
+      "designHeight": 81,
+      "v1Height": 81,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "hero": {
+      "designHeight": 1066,
+      "v1Height": 1066,
+      "mismatchPct": 0.35,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "Christin Hume",
+        "Unsplash"
+      ]
+    },
+    "defis": {
+      "designHeight": 967,
+      "v1Height": 967,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "solution": {
+      "designHeight": 976,
+      "v1Height": 976,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "methode": {
+      "designHeight": 1037,
+      "v1Height": 1037,
+      "mismatchPct": 0.25,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "Annie Spratt",
+        "Unsplash"
+      ]
+    },
+    "benefices": {
+      "designHeight": 774,
+      "v1Height": 774,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "qui": {
+      "designHeight": 1015,
+      "v1Height": 1015,
+      "mismatchPct": 0.06,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo du fondateur"
+      ]
+    },
+    "temoignages": {
+      "designHeight": 1214,
+      "v1Height": 1214,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [
+        "« »",
+        "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.",
+        "« »",
+        "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.",
+        "« »",
+        "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs."
+      ],
+      "extra": [
+        "« L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé. »",
+        "« Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés. »",
+        "« Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs. »"
+      ]
+    },
+    "faq": {
+      "designHeight": 946,
+      "v1Height": 946,
+      "mismatchPct": 0.02,
+      "diffs": [],
+      "missing": [
+        "Nous accompagnons des PME d'Annemasse, de Haute-Savoie et du Grand Genève. Chaque audit est adapté à votre secteur, vos objectifs et votre culture d'entreprise."
+      ],
+      "extra": [
+        "Nous accompagnons des PME d'Annemasse et de Haute-Savoie, et pouvons intervenir dans le Grand Genève. Chaque audit est adapté à votre secteur, vos objectifs et votre culture d'entreprise.",
+        "À CONFIRMER : zones d'intervention réelles"
+      ]
+    },
+    "contact": {
+      "designHeight": 1168,
+      "v1Height": 1168,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "footer": {
+      "designHeight": 678,
+      "v1Height": 679,
+      "mismatchPct": 1.05,
+      "diffs": [],
+      "missing": [
+        "À CONFIRMER : e-mail"
+      ],
+      "extra": [
+        "contact@mzi-consulting.com"
+      ]
+    }
+  },
+  "1440": {
+    "header": {
+      "designHeight": 81,
+      "v1Height": 81,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "hero": {
+      "designHeight": 861,
+      "v1Height": 861,
+      "mismatchPct": 0.23,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "Christin Hume",
+        "Unsplash"
+      ]
+    },
+    "defis": {
+      "designHeight": 860,
+      "v1Height": 860,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "solution": {
+      "designHeight": 776,
+      "v1Height": 776,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "methode": {
+      "designHeight": 1141,
+      "v1Height": 1141,
+      "mismatchPct": 0.04,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "Annie Spratt",
+        "Unsplash"
+      ]
+    },
+    "benefices": {
+      "designHeight": 679,
+      "v1Height": 679,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "qui": {
+      "designHeight": 784,
+      "v1Height": 784,
+      "mismatchPct": 0.05,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo du fondateur"
+      ]
+    },
+    "temoignages": {
+      "designHeight": 825,
+      "v1Height": 825,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [
+        "« »",
+        "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.",
+        "« »",
+        "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.",
+        "« »",
+        "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs."
+      ],
+      "extra": [
+        "« L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé. »",
+        "« Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés. »",
+        "« Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs. »"
+      ]
+    },
+    "faq": {
+      "designHeight": 898,
+      "v1Height": 898,
+      "mismatchPct": 0.01,
+      "diffs": [],
+      "missing": [
+        "Nous accompagnons des PME d'Annemasse, de Haute-Savoie et du Grand Genève. Chaque audit est adapté à votre secteur, vos objectifs et votre culture d'entreprise."
+      ],
+      "extra": [
+        "Nous accompagnons des PME d'Annemasse et de Haute-Savoie, et pouvons intervenir dans le Grand Genève. Chaque audit est adapté à votre secteur, vos objectifs et votre culture d'entreprise.",
+        "À CONFIRMER : zones d'intervention réelles"
+      ]
+    },
+    "contact": {
+      "designHeight": 825,
+      "v1Height": 825,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "footer": {
+      "designHeight": 455,
+      "v1Height": 456,
+      "mismatchPct": 0.61,
+      "diffs": [],
+      "missing": [
+        "À CONFIRMER : e-mail"
+      ],
+      "extra": [
+        "contact@mzi-consulting.com"
+      ]
+    }
+  }
+}

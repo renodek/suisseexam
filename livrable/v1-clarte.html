@@ -171,7 +171,7 @@
     --font-display:'Outfit',system-ui,sans-serif; --font-body:'Figtree',system-ui,sans-serif;
   }
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%;scroll-padding-top:96px}
   @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
   body{margin:0;background:var(--night);font-family:var(--font-body);-webkit-font-smoothing:antialiased;color:var(--body)}
   img{max-width:100%;display:block}
@@ -185,16 +185,16 @@
   .skip-link:focus{top:16px}
 
   /* Boutons */
-  .btn{display:inline-flex;align-items:center;gap:14px;font:500 18px var(--font-display);border-radius:999px;text-decoration:none;border:none;cursor:pointer;white-space:nowrap}
+  .btn{display:inline-flex;align-items:center;gap:14px;font:500 18px var(--font-display);border-radius:999px;text-decoration:none;border:none;cursor:pointer}
   .btn svg{width:15px;height:15px;flex-shrink:0}
   .btn-cyan{background:var(--cyan);color:var(--night);padding:18px 30px}
   .btn-cyan:hover{background:var(--cyan-dark);color:var(--night);box-shadow:0 0 10px rgba(255,255,255,.5)}
-  .btn-cyan.compact{padding:12px 22px;font-size:16px}
+  .btn-cyan.compact{padding:12px 22px;font-size:16px;white-space:nowrap}
   .btn-teal{background:var(--teal);color:#fff;padding:17px 28px}
   .btn-teal:hover{background:var(--teal-dark);color:#fff}
   .link-underline{font:500 19px var(--font-display);color:#fff;padding:10px 2px;border-bottom:1px solid #7e8da3;text-decoration:none}
   .link-underline:hover{color:var(--cyan);border-color:var(--cyan)}
-  .link-teal{display:inline-flex;align-items:center;min-height:24px;font:600 17px var(--font-body);color:var(--teal);text-decoration:none}
+  .link-teal{display:inline-flex;align-items:center;min-height:24px;margin:-2px 0;font:600 17px var(--font-body);color:var(--teal);text-decoration:none}
   .link-teal:hover{color:var(--teal-dark)}
 
   /* Badges "À confirmer" */
@@ -243,14 +243,18 @@
   h2{margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 var(--font-display);letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
   h2 .accent{color:var(--teal)}
   .section-lead{margin:0;font:400 19px/1.55 var(--font-body);color:var(--body);text-wrap:pretty}
+  .plain,.section-lead.plain{text-wrap:wrap}
 
   /* Héros */
-  .hero{position:relative;background:var(--night);overflow:hidden}
+  .hero{position:relative;background:var(--night);overflow:hidden;padding:0}
   .hero-canvas{position:absolute;left:0;top:0;width:100%;height:100%;mask-image:linear-gradient(90deg,#000 0%,#000 35%,transparent 80%);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 35%,transparent 80%)}
   .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,26,.3) 0%,rgba(10,14,26,.8) 35%,rgba(10,14,26,.5) 65%,rgba(10,14,26,0) 100%);pointer-events:none}
   .hero-inner{position:relative;max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,5.5vw,80px) 0}
   .hero-grid{display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,72px);align-items:center}
   .hero-text{flex:1 1 560px;min-width:0;display:flex;flex-direction:column}
+  .hero-text .eyebrow{line-height:1.5}
+  .hero-actions .btn{font-size:19px}
+  .hero-actions .btn svg{width:16px;height:16px}
   .hero-title{margin:20px 0 0;font:800 clamp(40px,4.9vw,66px)/1.06 var(--font-display);letter-spacing:-.022em;color:#fff;text-wrap:balance}
   .hero-lead{margin:24px 0 0;font:400 clamp(18px,1.5vw,21px)/1.5 var(--font-body);color:var(--gray-text);max-width:600px;text-wrap:pretty}
   .hero-actions{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
@@ -259,6 +263,9 @@
   .hero-checklist svg{width:14px;height:14px;color:var(--cyan);flex-shrink:0}
   .hero-media{flex:1 1 380px;min-width:0;position:relative;height:clamp(440px,44vw,620px)}
   .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:28px}
+  .photo-credit{position:absolute;left:6px;bottom:6px;max-width:calc(100% - 12px);padding:3px 7px;border-radius:5px;background:rgba(0,0,0,.55);color:#fff;font:10px/1.2 system-ui,-apple-system,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;backdrop-filter:blur(6px)}
+  .photo-credit a,.photo-credit a:hover{color:inherit;text-decoration:none}
+  .photo-credit a:hover{text-decoration:underline}
   .hero-card{position:absolute;left:20px;bottom:20px;width:min(300px,calc(100% - 40px));background:var(--night);border:1px solid rgba(126,141,163,.35);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 48px rgba(0,0,0,.35)}
   .hero-card-title{font:700 18px var(--font-display);color:#fff}
   .hero-steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.35 var(--font-body);color:#c9d1de}
@@ -298,13 +305,15 @@
   /* Bénéfices */
   .benefit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px}
   .benefit-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:32px 28px;display:flex;flex-direction:column;gap:12px}
-  .benefit-value{margin:0 0 8px;font:800 52px/1 var(--font-display);letter-spacing:-.02em;color:var(--teal)}
+  .benefit-card .benefit-value{margin:0 0 8px;font:800 52px/1 var(--font-display);letter-spacing:-.02em;color:var(--teal)}
   .benefit-card h3{font-size:21px}
+  .benefit-card p:not(.benefit-value), .qui-feature p{line-height:1.5}
 
   /* Qui sommes-nous */
   .qui-grid{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,88px);align-items:center}
-  .qui-media{flex:1 1 340px;min-width:0;position:relative;height:clamp(380px,38vw,520px);display:flex;flex-direction:column;gap:16px}
-  .placeholder-slot{position:relative;flex:1;border-radius:28px;background:rgba(127,127,127,.08);border:1.5px dashed rgba(10,14,26,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:rgba(10,14,26,.55);text-align:center;padding:16px}
+  .qui-media{flex:1 1 340px;min-width:0;position:relative;height:clamp(380px,38vw,520px)}
+  .qui-media .todo{position:absolute;left:16px;bottom:16px;max-width:calc(100% - 32px)}
+  .placeholder-slot{position:absolute;inset:0;border-radius:28px;background:rgba(127,127,127,.08);border:1.5px dashed rgba(10,14,26,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted);text-align:center;padding:16px}
   .placeholder-slot svg{width:28px;height:28px;opacity:.6}
   .placeholder-slot span{font:500 13px var(--font-body)}
   .qui-text{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:20px}
@@ -331,7 +340,7 @@
   .faq-question{margin:0;font:700 20px/1.3 var(--font-display);color:var(--ink)}
   .faq-plus{flex-shrink:0;width:36px;height:36px;border-radius:50%;border:1px solid #c5ccd6;display:flex;align-items:center;justify-content:center;font:400 22px/1 var(--font-body);color:var(--teal);transition:transform .2s}
   @media (prefers-reduced-motion:reduce){ .faq-plus{transition:none} }
-  .faq-body{padding:0 clamp(20px,4vw,60px) 26px 0;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+  .faq-body{padding:0 60px 26px 0;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
   .faq-answer{margin:0;font:400 17px/1.6 var(--font-body);color:var(--body);text-wrap:pretty}
 
   /* Contact */
@@ -349,10 +358,13 @@
   .contact-form[hidden]{display:none}
   .form-group{display:flex;flex-direction:column;gap:8px}
   .form-group label{font:600 15px var(--font-body);color:var(--slate)}
-  .form-field{font:400 17px var(--font-body);color:var(--ink);background:#fff;border:1px solid #9aa4b2;border-radius:12px;padding:14px 16px;outline:none}
+  /* Contraste : le design source donne #9aa4b2 (2,5:1 sur blanc) à la bordure des champs, seul
+     indicateur visuel de leur emplacement — sous les 3:1 exigés pour un composant d'interface
+     (WCAG 1.4.11). #7c8696 atteint 3,7:1. */
+  .form-field{font:400 17px var(--font-body);color:var(--ink);background:#fff;border:1px solid #7c8696;border-radius:12px;padding:14px 16px;outline:none}
   textarea.form-field{font-family:var(--font-body);line-height:1.5;resize:vertical}
   .form-field:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(14,116,144,.2)}
-  .contact-form .btn-teal{margin-top:4px;justify-content:center}
+  .contact-form .btn-teal{margin-top:4px;padding:18px 28px;justify-content:center}
   .form-note{margin:0;font:400 14px/1.5 var(--font-body);color:var(--muted)}
   .form-sent{display:flex;flex-direction:column;gap:12px;padding:24px 0}
   .form-sent[hidden]{display:none}
@@ -366,18 +378,19 @@
   .footer-brand{flex:1 1 280px;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
   .footer-brand p{margin:0;font:400 16px/1.55 var(--font-body);color:var(--gray-text);max-width:300px}
   .footer-contact{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
-  .footer-email{display:inline-flex;align-items:center;min-height:24px;font:500 15px var(--font-body);color:var(--gray-text);text-decoration:none}
+  .footer-email{display:inline-flex;align-items:center;min-height:28px;font:500 15px var(--font-body);color:var(--gray-text);text-decoration:none}
   .footer-email:hover{color:var(--cyan)}
-  .footer-nav{flex:0 1 200px;display:flex;flex-direction:column;gap:6px}
+  .footer-nav{flex:0 1 200px;display:flex;flex-direction:column;gap:12px}
   .footer-nav-title{font:700 16px var(--font-display);color:#fff;margin-bottom:4px}
   /* Audit §12 : zones tactiles ≥24×24px (voir commentaire sur .nav-link) — padding vertical
-     ajouté et gap de la colonne réduit d'autant pour garder le même espacement visuel global. */
-  .footer-link{display:inline-flex;align-items:center;min-height:24px;padding:3px 0;font:400 15px var(--font-body);color:var(--gray-text);text-decoration:none}
+     ajouté et compensé par une marge négative de même valeur : la zone cliquable atteint 24px,
+     l'espacement visuel de la colonne reste celui du design. */
+  .footer-link{display:inline-flex;align-items:center;min-height:24px;padding:3px 0;margin:-3px 0;font:400 15px var(--font-body);color:var(--gray-text);text-decoration:none}
   .footer-link:hover{color:var(--cyan)}
   .footer-bottom{border-top:1px solid rgba(221,221,221,.18);padding-top:24px;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
   .footer-copy{margin:0;font:400 14px var(--font-body);color:var(--gray-text)}
   .footer-legal{display:flex;flex-wrap:wrap;gap:12px 28px}
-  .footer-legal-link{display:inline-flex;align-items:center;min-height:24px;padding:4px 0;font:400 14px var(--font-body);color:var(--gray-text);text-decoration:none}
+  .footer-legal-link{display:inline-flex;align-items:center;min-height:24px;padding:4px 0;margin:-4px 0;font:400 14px var(--font-body);color:var(--gray-text);text-decoration:none}
   .footer-legal-link:hover{color:var(--cyan)}
 </style>
 </head>
@@ -443,7 +456,8 @@
         </ul>
       </div>
       <div class="hero-media">
-        <img class="hero-photo" src="assets/img/v1-hero-reunion.webp" width="434" height="620" alt="Photo d'illustration : réunion de travail" fetchpriority="high">
+        <img class="hero-photo" src="assets/img/v1-hero-reunion.webp" width="600" height="780" alt="Photo d'illustration : réunion de travail" fetchpriority="high">
+        <span class="photo-credit">Photo by <a href="https://unsplash.com/@christinhumephoto?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Christin Hume</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
         <div class="hero-card">
           <div class="hero-card-title">L'audit IA gratuit</div>
           <ol class="hero-steps">
@@ -502,7 +516,7 @@
 
 <section class="bg-light" data-screen-label="Solution">
   <div class="wrap">
-    <div class="section-head-row">
+    <div class="section-head-row" style="row-gap:24px">
       <div class="section-head" style="max-width:760px">
         <div class="eyebrow">La solution</div>
         <h2>Un audit IA <span class="accent">personnalisé</span> pour votre entreprise</h2>
@@ -546,10 +560,11 @@
     <div class="section-head" style="max-width:760px">
       <div class="eyebrow">La méthode</div>
       <h2>Une approche <span class="accent">structurée et éprouvée</span></h2>
-      <p class="section-lead">Notre accompagnement en intelligence artificielle à Annemasse suit un processus en 4 étapes.</p>
+      <p class="section-lead plain">Notre accompagnement en intelligence artificielle à Annemasse suit un processus en 4 étapes.</p>
     </div>
     <div class="methode-photo-wrap">
-      <img class="methode-photo" src="assets/img/v1-methode-atelier.webp" width="1200" height="380" alt="Photo d'illustration : atelier de travail" loading="lazy">
+      <img class="methode-photo" src="assets/img/v1-methode-atelier.webp" width="1200" height="480" alt="Photo d'illustration : atelier de travail" loading="lazy">
+      <span class="photo-credit">Photo by <a href="https://unsplash.com/@anniespratt?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Annie Spratt</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
     </div>
     <ol class="methode-steps">
       <li class="methode-step">
@@ -560,7 +575,7 @@
       <li class="methode-step">
         <div class="step-head"><span class="step-circle">02</span><span class="step-line" aria-hidden="true"></span></div>
         <h3>Stratégie IA</h3>
-        <p>Élaboration d'une feuille de route IA personnalisée, alignée sur vos objectifs business.</p>
+        <p>Élaboration d’une feuille de route IA personnalisée, alignée sur vos objectifs business.</p>
       </li>
       <li class="methode-step">
         <div class="step-head"><span class="step-circle">03</span><span class="step-line" aria-hidden="true"></span></div>
@@ -653,8 +668,8 @@
   <div class="wrap">
     <div class="section-head" style="max-width:760px">
       <div class="eyebrow">Témoignages</div>
-      <h2>Ce que disent <span class="accent">nos clients</span></h2>
-      <p class="section-lead">Chaque avis est publié avec son auteur, son entreprise, sa date et un lien vers la source d'origine.</p>
+      <h2 class="plain">Ce que disent <span class="accent">nos clients</span></h2>
+      <p class="section-lead plain">Chaque avis est publié avec son auteur, son entreprise, sa date et un lien vers la source d'origine.</p>
     </div>
     <div class="testimonial-grid">
       <figure class="testimonial-card">
@@ -698,7 +713,7 @@
   <div class="faq-layout">
     <div class="faq-head">
       <div class="eyebrow">FAQ</div>
-      <h2>Questions <span class="accent">fréquentes</span></h2>
+      <h2 class="plain">Questions <span class="accent">fréquentes</span></h2>
       <a class="link-teal" href="/faq/">Toutes les questions</a>
     </div>
     <div class="faq-list">
@@ -709,7 +724,7 @@
         </summary>
         <div class="faq-body">
           <p class="faq-answer">Oui, l'audit est gratuit et sans engagement. Vous repartez avec une analyse de vos processus et des recommandations concrètes, que vous décidiez ou non de poursuivre avec nous.</p>
-          <span class="todo">À CONFIRMER : durée et format de l'audit</span>
+          <span class="todo">À CONFIRMER : durée et format de l’audit</span>
         </div>
       </details>
       <details class="faq-item">
@@ -787,7 +802,7 @@
       </address>
     </div>
     <div class="contact-form-wrap">
-      <form class="contact-form" id="contact-form" novalidate>
+      <form class="contact-form" id="contact-form">
         <div class="form-group">
           <label for="f-nom">Nom complet</label>
           <input class="form-field" id="f-nom" name="nom" required autocomplete="name">
@@ -805,7 +820,7 @@
         </button>
         <p class="form-note">Vos données servent uniquement à vous recontacter. <a href="/politique-de-confidentialite/">Politique de confidentialité</a></p>
       </form>
-      <div class="form-sent" id="form-sent" role="status" hidden>
+      <div class="form-sent" id="form-sent" role="status" tabindex="-1" hidden>
         <div class="form-sent-title">Merci, votre demande est envoyée.</div>
         <p class="form-sent-text">Nous revenons vers vous sous 24 h pour planifier votre audit.</p>
       </div>
@@ -832,13 +847,13 @@
         <a class="footer-link" href="/services/automatisation-ia/">Automatisation IA</a>
         <a class="footer-link" href="/services/integration-ia/">Intégration IA sur-mesure</a>
       </nav>
-      <nav class="footer-nav" aria-label="Zones desservies">
+      <nav class="footer-nav" style="flex-basis:220px" aria-label="Zones desservies">
         <div class="footer-nav-title">Zones desservies</div>
         <a class="footer-link" href="/agence-ia-annemasse/">Agence IA à Annemasse</a>
         <a class="footer-link" href="/agence-ia-geneve/">Agence IA à Genève</a>
         <a class="footer-link" href="/ia-pme-suisse-romande/">IA pour PME en Suisse romande</a>
       </nav>
-      <nav class="footer-nav" aria-label="Ressources">
+      <nav class="footer-nav" style="flex-basis:180px" aria-label="Ressources">
         <div class="footer-nav-title">Ressources</div>
         <a class="footer-link" href="/methode/">Notre méthode</a>
         <a class="footer-link" href="/etudes-de-cas/">Études de cas</a>
@@ -867,17 +882,27 @@
   var toggle = document.getElementById('menu-toggle');
   var panel = document.getElementById('mobile-nav');
   if (toggle && panel) {
-    var closeMenu = function(){
-      toggle.setAttribute('aria-expanded', 'false');
-      panel.hidden = true;
+    var setMenu = function(open){
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      panel.hidden = !open;
     };
     toggle.addEventListener('click', function(){
-      var open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
-      panel.hidden = open;
+      setMenu(toggle.getAttribute('aria-expanded') !== 'true');
     });
     Array.prototype.forEach.call(panel.querySelectorAll('a'), function(a){
-      a.addEventListener('click', closeMenu);
+      a.addEventListener('click', function(){ setMenu(false); });
+    });
+    // Le menu ouvert recouvre la page : si le focus clavier en sort, on le referme
+    // pour que le focus ne disparaisse pas derrière l'en-tête fixe.
+    document.getElementById('site-header').addEventListener('focusout', function(e){
+      if (e.relatedTarget && !this.contains(e.relatedTarget)) setMenu(false);
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        toggle.focus();
+      }
     });
   }
 
@@ -889,6 +914,7 @@
       e.preventDefault();
       form.hidden = true;
       sent.hidden = false;
+      sent.focus();
     });
   }
 
