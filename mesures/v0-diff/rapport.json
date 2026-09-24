@@ -1,0 +1,122 @@
+{
+  "target": "v0-existant.html",
+  "generatedAt": "2026-09-24T13:01:28.972Z",
+  "viewports": {
+    "390": {
+      "sections": {
+        "hero": {
+          "realHeight": 986,
+          "localHeight": 1029,
+          "heightDeltaPct": 4.4,
+          "mismatchPct": 9.46
+        },
+        "defis": {
+          "realHeight": 1935,
+          "localHeight": 1932,
+          "heightDeltaPct": -0.2,
+          "mismatchPct": 9.61
+        },
+        "solution": {
+          "realHeight": 1598,
+          "localHeight": 1653,
+          "heightDeltaPct": 3.4,
+          "mismatchPct": 6.61
+        },
+        "benefices": {
+          "realHeight": 1542,
+          "localHeight": 1710,
+          "heightDeltaPct": 10.9,
+          "mismatchPct": 6.47
+        },
+        "temoignages": {
+          "realHeight": 2807,
+          "localHeight": 2760,
+          "heightDeltaPct": -1.7,
+          "mismatchPct": 6.12
+        },
+        "methodologie": {
+          "realHeight": 1396,
+          "localHeight": 1302,
+          "heightDeltaPct": -6.7,
+          "mismatchPct": 10.37
+        },
+        "pourquoi-nous": {
+          "realHeight": 1724,
+          "localHeight": 1585,
+          "heightDeltaPct": -8.1,
+          "mismatchPct": 20.82
+        },
+        "contact": {
+          "realHeight": 1104,
+          "localHeight": 1107,
+          "heightDeltaPct": 0.3,
+          "mismatchPct": 7.74
+        },
+        "footer": {
+          "realHeight": 198,
+          "localHeight": 206,
+          "heightDeltaPct": 4,
+          "mismatchPct": 3.75
+        }
+      }
+    },
+    "1440": {
+      "sections": {
+        "hero": {
+          "realHeight": 1047,
+          "localHeight": 955,
+          "heightDeltaPct": -8.8,
+          "mismatchPct": 2.46
+        },
+        "defis": {
+          "realHeight": 958,
+          "localHeight": 959,
+          "heightDeltaPct": 0.1,
+          "mismatchPct": 4.71
+        },
+        "solution": {
+          "realHeight": 952,
+          "localHeight": 952,
+          "heightDeltaPct": 0,
+          "mismatchPct": 3.73
+        },
+        "benefices": {
+          "realHeight": 784,
+          "localHeight": 787,
+          "heightDeltaPct": 0.4,
+          "mismatchPct": 3.33
+        },
+        "temoignages": {
+          "realHeight": 1514,
+          "localHeight": 1496,
+          "heightDeltaPct": -1.2,
+          "mismatchPct": 3.23
+        },
+        "methodologie": {
+          "realHeight": 1272,
+          "localHeight": 1172,
+          "heightDeltaPct": -7.9,
+          "mismatchPct": 3.63
+        },
+        "pourquoi-nous": {
+          "realHeight": 1059,
+          "localHeight": 1176,
+          "heightDeltaPct": 11,
+          "mismatchPct": 5.81
+        },
+        "contact": {
+          "realHeight": 1174,
+          "localHeight": 1119,
+          "heightDeltaPct": -4.7,
+          "mismatchPct": 3.67
+        },
+        "footer": {
+          "realHeight": 159,
+          "localHeight": 159,
+          "heightDeltaPct": 0,
+          "mismatchPct": 0.79
+        }
+      }
+    }
+  }
+}

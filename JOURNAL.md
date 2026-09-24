@@ -215,3 +215,33 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html`.
 ### Fichiers produits
 
 - `livrable/v0-existant.html`
+
+## Étape 7 — Comparaison pixel-à-pixel de v0-existant.html (2026-09-24)
+
+### Ce qui a été fait
+
+- Création de `scripts/compare-visuel.js` (outil réutilisable, prend le nom du livrable en argument — servira aussi pour v1/v2) : recharge le site réel avec les mêmes réglages de préparation que `collecte.js`, mesure les frontières Y de chaque section par leur texte (badge/titre), applique la même mesure sur `v0-existant.html?statique`, découpe `source/captures/accueil-{1440,390}.png` et une capture fraîche du livrable section par section, puis compare avec `pixelmatch`. Sorties dans `mesures/v0-diff/` : images `-reel.png` / `-local.png` / `-diff.png` par section et par largeur, plus `rapport.json`.
+- Installé `pixelmatch` et `pngjs` (devDependencies).
+- Trois cycles mesure → correction → nouvelle mesure :
+  1. Première mesure : `pourquoi-nous` très écarté (constat : cartes 8px trop courtes par rapport au réel, mesuré directement via `getBoundingClientRect`) ; `défis`/`solution` très écartés (constat : cartes mesurées à 270px de large contre 300px sur le site réel — la rangée de cartes utilise en réalité un conteneur plus large, 1280px, que le texte de la section, 1140px, ce qui n'apparaissait pas dans `source/design-system-mzi/` qui uniformisait tout à 1140px).
+  2. Correction : padding des cartes « Pourquoi nous » ajusté (20px → 24px), et rangées de cartes élargies à 1280px via une technique CSS de débordement contrôlé (`calc(100% + 140px)` + marge négative, appliquée uniquement ≥901px pour ne pas perturber le mobile).
+  3. Nouvelle mesure : largeurs de cartes quasi identiques au réel (305px vs 300px), hauteurs de section `défis`/`solution` passées de -5,1 %/-2,5 % d'écart à 0,1 %/0,0 %. Écart horizontal résiduel des cartes corrigé par un ajustement de marge.
+- Vérification finale par comparaison visuelle directe (côte à côte, pas seulement l'image de différence pixelmatch, volontairement plus sensible) : aucune différence perceptible à l'œil nu constatée sur les sections les plus corrigées.
+
+### Décisions prises et leur justification
+
+- **Arrêt des itérations une fois les écarts structurels corrigés**, sans chercher à ramener le taux pixelmatch à 0 % : l'image « Pourquoi nous » (`pourquoi-nous.webp`) occupe une bonne partie de la section et sa recompression WebP modifie légèrement chaque pixel par rapport au JPEG d'origine — cela seul suffit à produire plusieurs % d'écart pixelmatch sans aucune différence visible. De même, un décalage de 2-3px sur du texte (rendu de police, anti-aliasing) fait apparaître un « dédoublement » très visible sur l'image de différence sans être perceptible sur les pages elles-mêmes. Le critère retenu pour arrêter est donc la comparaison directe des rendus, comme demandé (« aucun écart visible à l'œil nu »), pas le taux pixelmatch brut.
+- **`compare-visuel.js` conservé comme outil du projet** (pas un script jetable) : sa conception généraliste (argument = nom du fichier livrable) permettra de l'utiliser tel quel pour `v1-clarte.html` et `v2-nuit-suisse.html`.
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| `pixelmatch is not a function` au premier lancement | Le module expose un export par défaut au format ESM interop ; corrigé en `require('pixelmatch').default \|\| require('pixelmatch')`. |
+| Rangées de cartes défis/solution 30px trop étroites par carte, causant un retour à la ligne du texte différent du site réel | Mesure directe du site réel (`getBoundingClientRect`) révélant un conteneur de 1280px pour les cartes contre 1140px pour le texte ; reproduit via une largeur `calc(100% + 140px)` et une marge négative, activée uniquement au-delà de 900px. |
+| Première tentative de dépassement de largeur avec `width:100vw; left:50%; transform:translateX(-50%)` mal centrée (le `%` de `left` se calcule par rapport au parent, pas à la fenêtre) | Remplacée par une largeur/marge en valeurs fixes relatives au conteneur connu (1140px), sans unité de viewport — robuste quel que soit le parent. |
+
+### Fichiers produits
+
+- `scripts/compare-visuel.js`
+- `mesures/v0-diff/` (captures, images de différence, `rapport.json`)
