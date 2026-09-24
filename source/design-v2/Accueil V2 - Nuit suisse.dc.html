@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Audit IA gratuit pour PME à Annemasse | MZI Consulting</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Geist+Mono:wght@300;400;500&amp;family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500,0,0;1,9..144,400,0,0;1,9..144,500,0,0&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#0a0e1a;font-family:Geist,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#10d7fd}
+a:hover{color:#7fe9fe}
+summary::-webkit-details-marker{display:none}
+details[open] .faq-plus{transform:rotate(45deg)}
+</style>
+</helmet>
+
+<header data-screen-label="Header" style="position:sticky;top:0;z-index:50;background:rgba(10,14,26,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)">
+  <div style="max-width:1400px;margin:0 auto;height:80px;padding:0 clamp(20px,4vw,64px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="/" aria-label="MZI Consulting, accueil" style="display:flex;align-items:center;flex-shrink:0">
+      <img src="assets/mzi-consulting-logo.png" alt="MZI Consulting" width="104" height="39" style="display:block">
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Navigation principale" style="display:flex;gap:36px">
+        <a href="/services/audit-ia/" style="font:400 15px Geist;color:#d5dbe5;text-decoration:none" style-hover="color:#10d7fd">Services</a>
+        <a href="/methode/" style="font:400 15px Geist;color:#d5dbe5;text-decoration:none" style-hover="color:#10d7fd">Méthode</a>
+        <a href="/etudes-de-cas/" style="font:400 15px Geist;color:#d5dbe5;text-decoration:none" style-hover="color:#10d7fd">Études de cas</a>
+        <a href="/faq/" style="font:400 15px Geist;color:#d5dbe5;text-decoration:none" style-hover="color:#10d7fd">FAQ</a>
+        <a href="/contact/" style="font:400 15px Geist;color:#d5dbe5;text-decoration:none" style-hover="color:#10d7fd">Contact</a>
+      </nav>
+      <a href="#contact" style="font:500 15px Geist;background:#10d7fd;color:#0a0e1a;padding:12px 22px;border-radius:999px;text-decoration:none;white-space:nowrap" style-hover="background:#6ee6fe;color:#0a0e1a">Réserver mon audit gratuit</a>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="Ouvrir le menu" style="width:48px;height:48px;border-radius:12px;border:1px solid rgba(126,141,163,.5);background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer">
+        <span aria-hidden="true" style="width:20px;height:20px;background:#fff;-webkit-mask:url(assets/icons/fas-align-justify.svg) center/contain no-repeat;mask:url(assets/icons/fas-align-justify.svg) center/contain no-repeat"></span>
+      </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ showMobileMenu }}" hint-placeholder-val="{{ false }}">
+    <nav aria-label="Navigation principale" style="padding:8px 20px 24px;display:flex;flex-direction:column;border-top:1px solid rgba(16,215,253,.3)">
+      <a href="/services/audit-ia/" style="font:400 18px Geist;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)">Services</a>
+      <a href="/methode/" style="font:400 18px Geist;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)">Méthode</a>
+      <a href="/etudes-de-cas/" style="font:400 18px Geist;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)">Études de cas</a>
+      <a href="/faq/" style="font:400 18px Geist;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)">FAQ</a>
+      <a href="/contact/" style="font:400 18px Geist;color:#fff;text-decoration:none;padding:14px 0">Contact</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="margin-top:12px;text-align:center;font:500 17px Geist;background:#10d7fd;color:#0a0e1a;padding:16px 22px;border-radius:999px;text-decoration:none">Réserver mon audit gratuit</a>
+    </nav>
+  </sc-if>
+</header>
+
+<main>
+<section data-screen-label="Héros" style="background:#0a0e1a;padding:0 clamp(10px,1.6vw,24px) clamp(10px,1.6vw,24px)">
+  <div ref="{{ heroRef }}" style="position:relative;max-width:1400px;margin:0 auto;border-radius:clamp(22px,2.4vw,32px);background:#0f1526;border:1px solid rgba(126,141,163,.22);overflow:hidden">
+    <canvas ref="{{ canvasRef }}" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:100%"></canvas>
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,21,38,.2) 0%,rgba(15,21,38,.75) 45%,#0f1526 70%);pointer-events:none"></div>
+    <div style="position:relative;padding:clamp(40px,6vw,88px) clamp(20px,4vw,64px) 0">
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="font:400 12.5px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#10d7fd;border:1px solid rgba(16,215,253,.5);border-radius:999px;padding:8px 14px">Agence d'automatisation IA</span>
+        <span style="font:400 12.5px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#d5dbe5;border:1px solid rgba(126,141,163,.5);border-radius:999px;padding:8px 14px">Annemasse</span>
+        <span style="font:400 12.5px/1 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#d5dbe5;border:1px solid rgba(126,141,163,.5);border-radius:999px;padding:8px 14px">Grand Genève</span>
+      </div>
+      <div style="margin-top:clamp(28px,3vw,40px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:36px;align-items:end">
+        <h1 style="grid-column:{{ col.h1 }};margin:0;font:500 clamp(40px,6.4vw,100px)/1.02 Fraunces,serif;letter-spacing:-.02em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff;text-wrap:balance">Automatisez les tâches répétitives de votre PME, <em style="font-style:italic;color:#10d7fd">à Annemasse</em></h1>
+        <p style="grid-column:{{ col.heroSub }};margin:0;font:300 clamp(18px,1.45vw,21px)/1.55 Geist;color:#b9c1ce;text-wrap:pretty">Gagnez du temps et augmentez votre chiffre d'affaires grâce à nos solutions IA sur-mesure.</p>
+        <div style="grid-column:{{ col.heroCta }};display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+          <div style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
+            <a href="#contact" style="display:inline-flex;align-items:center;gap:14px;font:500 17px Geist;background:#10d7fd;color:#0a0e1a;padding:18px 28px;border-radius:999px;text-decoration:none" style-hover="background:#6ee6fe;color:#0a0e1a">Réserver mon audit gratuit <span aria-hidden="true" style="width:14px;height:14px;background:#0a0e1a;-webkit-mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat;mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat"></span></a>
+            <a href="/methode/" style="font:400 17px Geist;color:#fff;padding:8px 0;border-bottom:1px solid #7e8da3;text-decoration:none" style-hover="color:#10d7fd;border-color:#10d7fd">Découvrir notre méthode</a>
+          </div>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 24px;font:400 13px 'Geist Mono',monospace;letter-spacing:.02em;color:#b9c1ce">
+            <li style="display:flex;align-items:center;gap:8px"><span aria-hidden="true" style="width:6px;height:6px;background:#10d7fd"></span>Sans engagement</li>
+            <li style="display:flex;align-items:center;gap:8px"><span aria-hidden="true" style="width:6px;height:6px;background:#10d7fd"></span>Réponse sous 24 h</li>
+            <li style="display:flex;align-items:center;gap:8px"><span aria-hidden="true" style="width:6px;height:6px;background:#10d7fd"></span>Audit personnalisé</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(16,215,253,.35);padding-top:24px;display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:20px">
+        <div style="grid-column:{{ col.auditL }};font:500 26px/1.1 Fraunces,serif;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff">L'audit IA gratuit</div>
+        <ol style="grid-column:{{ col.auditR }};margin:0;padding:0;list-style:none;display:grid;grid-template-columns:{{ g.c3 }};column-gap:clamp(16px,2vw,24px);row-gap:14px">
+          <li style="display:flex;gap:14px;align-items:baseline;font:400 16px/1.4 Geist;color:#d5dbe5"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">01</span>Analyse de vos processus</li>
+          <li style="display:flex;gap:14px;align-items:baseline;font:400 16px/1.4 Geist;color:#d5dbe5"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">02</span>Identification des opportunités IA</li>
+          <li style="display:flex;gap:14px;align-items:baseline;font:400 16px/1.4 Geist;color:#d5dbe5"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">03</span>Recommandations concrètes</li>
+        </ol>
+      </div>
+    </div>
+    <div style="position:relative;margin-top:clamp(40px,5vw,64px);height:clamp(200px,24vw,340px)">
+      <div style="position:absolute;inset:0;filter:saturate(.7) brightness(.85)">
+        <image-slot id="v2-hero-alpes" shape="rect" placeholder="Photo : paysage lémanique, lac et Alpes" src="https://images.unsplash.com/photo-1699470740879-bde4d7db985c?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=2200&amp;h=500" credit="Photo by T Fang on Unsplash" credit-href="https://unsplash.com/@tqfang"></image-slot>
+      </div>
+      <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,#0f1526 0%,rgba(15,21,38,.35) 45%,rgba(10,14,26,.25) 100%);pointer-events:none"></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="01 Chiffres-clés" style="background:#0a0e1a;padding:clamp(72px,8vw,120px) 0">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;border-top:1px solid rgba(16,215,253,.4);padding-top:18px">
+      <div style="display:flex;gap:20px;align-items:baseline"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">01</span><span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#b9c1ce">Chiffres-clés</span></div>
+      <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : source et période</span>
+    </div>
+    <div style="margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:{{ g.c3 }};column-gap:clamp(16px,2vw,24px);row-gap:48px">
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:16px">
+        <p style="margin:0;font:300 clamp(84px,10.5vw,168px)/.9 'Geist Mono',monospace;letter-spacing:-.06em;color:#fff">50+</p>
+        <p style="margin:0;border-top:1px solid rgba(126,141,163,.3);padding-top:16px;font:400 18px/1.4 Geist;color:#b9c1ce">entreprises accompagnées</p>
+      </div>
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:16px">
+        <p style="margin:0;font:300 clamp(84px,10.5vw,168px)/.9 'Geist Mono',monospace;letter-spacing:-.06em;color:#fff">3x</p>
+        <p style="margin:0;border-top:1px solid rgba(126,141,163,.3);padding-top:16px;font:400 18px/1.4 Geist;color:#b9c1ce">productivité moyenne</p>
+      </div>
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:16px">
+        <p style="margin:0;font:300 clamp(84px,10.5vw,168px)/.9 'Geist Mono',monospace;letter-spacing:-.06em;color:#fff">40<span style="font-size:.5em;letter-spacing:0"> %</span></p>
+        <p style="margin:0;border-top:1px solid rgba(126,141,163,.3);padding-top:16px;font:400 18px/1.4 Geist;color:#b9c1ce">de temps économisé</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="02 Défis" style="background:#0f1526;padding:clamp(80px,10vw,152px) 0">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;gap:20px;align-items:baseline;border-top:1px solid rgba(16,215,253,.4);padding-top:18px"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">02</span><span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#b9c1ce">Les défis</span></div>
+    <div style="margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:32px;align-items:end">
+      <h2 data-reveal="" style="grid-column:{{ col.h2 }};margin:0;font:500 clamp(34px,4.4vw,64px)/1.06 Fraunces,serif;letter-spacing:-.015em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff;text-wrap:balance">Votre entreprise à Annemasse fait face à <em style="color:#10d7fd">ces défis ?</em></h2>
+      <p data-reveal="" style="grid-column:{{ col.intro }};margin:0;font:300 18px/1.6 Geist;color:#b9c1ce;text-wrap:pretty">Les entreprises qui n'adoptent pas l'intelligence artificielle perdent un avantage concurrentiel majeur. Pourtant, des solutions simples existent pour renverser cette tendance rapidement.</p>
+    </div>
+    <div style="margin-top:clamp(56px,6vw,96px);display:grid;grid-template-columns:{{ g.c4 }};column-gap:clamp(16px,2vw,24px);row-gap:48px">
+      <article data-reveal="" style="border-top:1px solid rgba(126,141,163,.35);padding-top:22px;display:flex;flex-direction:column;gap:14px">
+        <span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">A</span>
+        <h3 style="margin:0;font:600 22px/1.2 Geist;letter-spacing:-.01em;color:#fff">Perte de temps massive</h3>
+        <p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Vos équipes passent trop de temps sur des tâches répétitives, qui pourraient être automatisées pour libérer du temps sur l'essentiel.</p>
+      </article>
+      <article data-reveal="" style="border-top:1px solid rgba(126,141,163,.35);padding-top:22px;display:flex;flex-direction:column;gap:14px">
+        <span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">B</span>
+        <h3 style="margin:0;font:600 22px/1.2 Geist;letter-spacing:-.01em;color:#fff">Manque d'automatisation</h3>
+        <p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Sans système performant pour accélérer vos résultats, vous ne pouvez pas vous concentrer sur ce qui rapporte vraiment.</p>
+      </article>
+      <article data-reveal="" style="border-top:1px solid rgba(126,141,163,.35);padding-top:22px;display:flex;flex-direction:column;gap:14px">
+        <span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">C</span>
+        <h3 style="margin:0;font:600 22px/1.2 Geist;letter-spacing:-.01em;color:#fff">Concurrence plus rapide</h3>
+        <p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Vos concurrents utilisent déjà l'IA et prennent une avance significative sur votre part de marché. Agir maintenant est indispensable.</p>
+      </article>
+      <article data-reveal="" style="border-top:1px solid rgba(126,141,163,.35);padding-top:22px;display:flex;flex-direction:column;gap:14px">
+        <span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">D</span>
+        <h3 style="margin:0;font:600 22px/1.2 Geist;letter-spacing:-.01em;color:#fff">Mauvaise utilisation de l'IA</h3>
+        <p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Vous avez testé quelques outils d'IA sans obtenir les résultats souhaités. Un accompagnement par un expert fait toute la différence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="03 Solution" style="background:#0a0e1a;padding:clamp(80px,10vw,152px) 0">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;gap:20px;align-items:baseline;border-top:1px solid rgba(16,215,253,.4);padding-top:18px"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">03</span><span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#b9c1ce">La solution</span></div>
+    <div style="margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:48px">
+      <div data-reveal="" style="grid-column:{{ col.left5 }};position:relative;min-height:clamp(360px,42vw,600px);border-radius:28px;overflow:hidden">
+        <div style="position:absolute;inset:0;filter:grayscale(.45) brightness(.9)">
+          <image-slot id="v2-solution-photo" shape="rect" placeholder="Photo d'illustration : personnes au travail" src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=1000&amp;h=1300" credit="Photo by Mimi Thian on Unsplash" credit-href="https://unsplash.com/@mimithian"></image-slot>
+        </div>
+        <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,26,.1) 0%,rgba(10,14,26,.45) 100%);mix-blend-mode:multiply;pointer-events:none"></div>
+      </div>
+      <div style="grid-column:{{ col.right6 }};display:flex;flex-direction:column;gap:28px;justify-content:center">
+        <h2 data-reveal="" style="margin:0;font:500 clamp(34px,4.4vw,64px)/1.06 Fraunces,serif;letter-spacing:-.015em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff;text-wrap:balance">Un audit IA <em style="color:#10d7fd">personnalisé</em> pour votre entreprise</h2>
+        <p data-reveal="" style="margin:0;font:300 18px/1.6 Geist;color:#b9c1ce;text-wrap:pretty">En tant qu'agence IA à Annemasse, nous vous accompagnons pour transformer votre activité grâce à l'intelligence artificielle.</p>
+        <ol style="margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column">
+          <li data-reveal="" style="border-top:1px solid rgba(126,141,163,.35);padding:22px 0;display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px 16px">
+            <span style="font:400 13px/1.9 'Geist Mono',monospace;color:#10d7fd">01</span>
+            <div style="display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font:600 22px/1.2 Geist;letter-spacing:-.01em;color:#fff">Analyse détaillée et complète</h3><p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Nous analysons vos processus, vos outils actuels et votre organisation pour vous offrir une vision claire.</p></div>
+          </li>
+          <li data-reveal="" style="border-top:1px solid rgba(126,141,163,.35);padding:22px 0;display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px 16px">
+            <span style="font:400 13px/1.9 'Geist Mono',monospace;color:#10d7fd">02</span>
+            <div style="display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font:600 22px/1.2 Geist;letter-spacing:-.01em;color:#fff">Identification des opportunités IA</h3><p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Nous identifions les gains automatisables les plus pertinents pour votre activité et vos objectifs.</p></div>
+          </li>
+          <li data-reveal="" style="border-top:1px solid rgba(126,141,163,.35);border-bottom:1px solid rgba(126,141,163,.35);padding:22px 0;display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px 16px">
+            <span style="font:400 13px/1.9 'Geist Mono',monospace;color:#10d7fd">03</span>
+            <div style="display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font:600 22px/1.2 Geist;letter-spacing:-.01em;color:#fff">Recommandations concrètes</h3><p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Vous recevez une liste de recommandations pour passer à l'IA efficacement.</p></div>
+          </li>
+        </ol>
+        <a href="#contact" style="align-self:flex-start;display:inline-flex;align-items:center;gap:14px;font:500 17px Geist;background:#10d7fd;color:#0a0e1a;padding:18px 28px;border-radius:999px;text-decoration:none" style-hover="background:#6ee6fe;color:#0a0e1a">Réserver mon audit gratuit <span aria-hidden="true" style="width:14px;height:14px;background:#0a0e1a;-webkit-mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat;mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="04 Méthode" style="background:#0f1526;padding:clamp(80px,10vw,152px) 0">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;gap:20px;align-items:baseline;border-top:1px solid rgba(16,215,253,.4);padding-top:18px"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">04</span><span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#b9c1ce">La méthode</span></div>
+    <div style="margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:32px;align-items:end">
+      <h2 data-reveal="" style="grid-column:{{ col.h2 }};margin:0;font:500 clamp(34px,4.4vw,64px)/1.06 Fraunces,serif;letter-spacing:-.015em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff;text-wrap:balance">Une approche <em style="color:#10d7fd">structurée et éprouvée</em></h2>
+      <p data-reveal="" style="grid-column:{{ col.intro }};margin:0;font:300 18px/1.6 Geist;color:#b9c1ce">Notre accompagnement en intelligence artificielle à Annemasse suit un processus en 4 étapes.</p>
+    </div>
+    <div data-reveal="" style="margin-top:clamp(48px,5vw,72px);position:relative;height:clamp(220px,26vw,380px);border-radius:28px;overflow:hidden">
+      <div style="position:absolute;inset:0;filter:grayscale(.45) brightness(.9)">
+        <image-slot id="v2-methode-photo" shape="rect" placeholder="Photo d'illustration : atelier de travail" src="https://images.unsplash.com/photo-1522071901873-411886a10004?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=2200&amp;h=800" credit="Photo by Annie Spratt on Unsplash" credit-href="https://unsplash.com/@anniespratt"></image-slot>
+      </div>
+      <div aria-hidden="true" style="position:absolute;inset:0;background:rgba(10,14,26,.3);pointer-events:none"></div>
+    </div>
+    <ol style="margin:clamp(48px,5vw,72px) 0 0;padding:0;list-style:none;display:grid;grid-template-columns:{{ g.c4 }};column-gap:clamp(16px,2vw,24px);row-gap:40px">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+        <li data-reveal="" style="position:relative;display:flex;flex-direction:column;gap:16px;border-top:1px solid #10d7fd;padding-top:26px">
+          <span aria-hidden="true" style="position:absolute;left:0;top:-5px;width:9px;height:9px;background:#10d7fd"></span>
+          <span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.08em;color:#10d7fd">ÉTAPE {{ s.n }}</span>
+          <h3 style="margin:0;font:600 24px/1.2 Geist;letter-spacing:-.01em;color:#fff">{{ s.label }}</h3>
+          <p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce;text-wrap:pretty">{{ s.text }}</p>
+        </li>
+      </sc-for>
+    </ol>
+  </div>
+</section>
+
+<section data-screen-label="05 Bénéfices" style="background:#0a0e1a;padding:clamp(80px,10vw,152px) 0">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;border-top:1px solid rgba(16,215,253,.4);padding-top:18px">
+      <div style="display:flex;gap:20px;align-items:baseline"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">05</span><span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#b9c1ce">Les bénéfices</span></div>
+      <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : source et période</span>
+    </div>
+    <div style="margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px)">
+      <h2 data-reveal="" style="grid-column:{{ col.h2 }};margin:0;font:500 clamp(34px,4.4vw,64px)/1.06 Fraunces,serif;letter-spacing:-.015em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff;text-wrap:balance">Des bénéfices <em style="color:#10d7fd">concrets</em> pour votre entreprise</h2>
+    </div>
+    <div style="margin-top:clamp(48px,5vw,80px);display:flex;flex-direction:column;border-bottom:1px solid rgba(126,141,163,.35)">
+      <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+        <div data-reveal="" style="border-top:1px solid rgba(126,141,163,.35);padding:clamp(24px,3vw,36px) 0;display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:12px;align-items:baseline">
+          <p style="grid-column:{{ b.c1 }};margin:0;font:300 clamp(56px,6vw,96px)/.9 'Geist Mono',monospace;letter-spacing:-.05em;color:#fff">{{ b.value }}</p>
+          <h3 style="grid-column:{{ b.c2 }};margin:0;font:600 clamp(22px,2vw,26px)/1.2 Geist;letter-spacing:-.01em;color:#fff">{{ b.title }}</h3>
+          <p style="grid-column:{{ b.c3 }};margin:0;font:300 17px/1.6 Geist;color:#b9c1ce">{{ b.text }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="06 Qui sommes-nous" style="background:#0f1526;padding:clamp(80px,10vw,152px) 0">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;gap:20px;align-items:baseline;border-top:1px solid rgba(16,215,253,.4);padding-top:18px"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">06</span><span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#b9c1ce">Qui sommes-nous</span></div>
+    <div style="margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:48px">
+      <div data-reveal="" style="grid-column:{{ col.left5 }};position:relative;min-height:clamp(380px,40vw,560px)">
+        <image-slot id="v2-fondateur-photo" shape="rounded" radius="28" placeholder="Photo du fondateur"></image-slot>
+        <span style="position:absolute;left:16px;bottom:16px;max-width:calc(100% - 32px);font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(10,14,26,.85);border-radius:6px;padding:4px 9px">À CONFIRMER : photo du fondateur</span>
+      </div>
+      <div style="grid-column:{{ col.right6 }};display:flex;flex-direction:column;gap:24px;justify-content:center">
+        <h2 data-reveal="" style="margin:0;font:500 clamp(34px,4.4vw,64px)/1.06 Fraunces,serif;letter-spacing:-.015em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff;text-wrap:balance">Votre agence IA de confiance <em style="color:#10d7fd">à Annemasse</em></h2>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : nom du fondateur</span>
+          <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : parcours du fondateur</span>
+        </div>
+        <ul style="margin:12px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:{{ g.c2 }};gap:32px clamp(16px,2vw,24px)">
+          <li data-reveal="" style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(126,141,163,.35);padding-top:20px">
+            <h3 style="margin:0;font:600 20px/1.25 Geist;letter-spacing:-.01em;color:#fff">Expert certifié</h3>
+            <p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Formation approfondie et certifications reconnues en intelligence artificielle et automatisation.</p>
+            <span style="align-self:flex-start;margin-top:4px;font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : noms des certifications</span>
+          </li>
+          <li data-reveal="" style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(126,141,163,.35);padding-top:20px">
+            <h3 style="margin:0;font:600 20px/1.25 Geist;letter-spacing:-.01em;color:#fff">Approche personnalisée</h3>
+            <p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Chaque audit est unique, adapté à votre secteur, vos objectifs et votre culture d'entreprise.</p>
+          </li>
+          <li data-reveal="" style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(126,141,163,.35);padding-top:20px">
+            <h3 style="margin:0;font:600 20px/1.25 Geist;letter-spacing:-.01em;color:#fff">Résultats concrets</h3>
+            <p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Nos recommandations sont actionnables immédiatement, avec un impact mesurable.</p>
+          </li>
+          <li data-reveal="" style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(126,141,163,.35);padding-top:20px">
+            <h3 style="margin:0;font:600 20px/1.25 Geist;letter-spacing:-.01em;color:#fff">Vision business et technique</h3>
+            <p style="margin:0;font:300 16px/1.6 Geist;color:#b9c1ce">Une alliance rare entre compréhension business et maîtrise technique de l'IA.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="07 Témoignages" style="background:#f3f5f8;padding:clamp(80px,10vw,152px) 0">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;gap:20px;align-items:baseline;border-top:1px solid #0e7490;padding-top:18px"><span style="font:400 13px 'Geist Mono',monospace;color:#0e7490">07</span><span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#3d4655">Témoignages</span></div>
+    <div style="margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:32px;align-items:end">
+      <h2 data-reveal="" style="grid-column:{{ col.h2 }};margin:0;font:500 clamp(34px,4.4vw,64px)/1.06 Fraunces,serif;letter-spacing:-.015em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#0a0e1a">Ce que disent <em style="color:#0e7490">nos clients</em></h2>
+      <p data-reveal="" style="grid-column:{{ col.intro }};margin:0;font:300 18px/1.6 Geist;color:#3d4655">Chaque avis est publié avec son auteur, son entreprise, sa date et un lien vers la source d'origine.</p>
+    </div>
+    <div style="margin-top:clamp(48px,5vw,80px);display:grid;grid-template-columns:{{ g.c3 }};column-gap:clamp(16px,2vw,24px);row-gap:24px">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+        <figure data-reveal="" style="margin:0;background:#fff;border:1px solid #dfe4ea;border-radius:28px;padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:28px">
+          <span aria-hidden="true" style="font:italic 400 72px/.5 Fraunces,serif;font-variation-settings:'SOFT' 0,'WONK' 0;color:#0e7490;height:28px">«</span>
+          <blockquote style="margin:0;font:italic 400 26px/1.25 Fraunces,serif;font-variation-settings:'SOFT' 0,'WONK' 0;color:#0a0e1a;text-wrap:pretty">{{ t.quote }}</blockquote>
+          <figcaption style="margin-top:auto;border-top:1px solid #dfe4ea;padding-top:20px;display:flex;flex-direction:column;gap:10px">
+            <div style="font:500 17px Geist;color:#0a0e1a">{{ t.name }}</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:3px 8px">À CONFIRMER : entreprise</span>
+              <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:3px 8px">À CONFIRMER : date</span>
+              <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:3px 8px">À CONFIRMER : lien vers l'avis</span>
+            </div>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="08 FAQ" style="background:#0a0e1a;padding:clamp(80px,10vw,152px) 0">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;gap:20px;align-items:baseline;border-top:1px solid rgba(16,215,253,.4);padding-top:18px"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">08</span><span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#b9c1ce">FAQ</span></div>
+    <div style="margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:40px">
+      <div style="grid-column:{{ col.faqL }};display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+        <h2 data-reveal="" style="margin:0;font:500 clamp(34px,4.4vw,64px)/1.06 Fraunces,serif;letter-spacing:-.015em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff">Questions <em style="color:#10d7fd">fréquentes</em></h2>
+        <a href="/faq/" style="font:400 16px Geist;color:#fff;padding:6px 0;border-bottom:1px solid #7e8da3;text-decoration:none" style-hover="color:#10d7fd;border-color:#10d7fd">Toutes les questions</a>
+      </div>
+      <div style="grid-column:{{ col.faqR }};display:flex;flex-direction:column;border-top:1px solid rgba(126,141,163,.35)">
+        <sc-for list="{{ faq }}" as="q" hint-placeholder-count="6">
+          <details open="{{ q.open }}" style="border-bottom:1px solid rgba(126,141,163,.35)">
+            <summary style="list-style:none;cursor:pointer;padding:26px 0;display:grid;grid-template-columns:44px minmax(0,1fr) 36px;gap:12px;align-items:center">
+              <span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">{{ q.n }}</span>
+              <h3 style="margin:0;font:600 clamp(18px,1.5vw,21px)/1.3 Geist;letter-spacing:-.01em;color:#fff">{{ q.q }}</h3>
+              <span class="faq-plus" aria-hidden="true" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(126,141,163,.6);display:flex;align-items:center;justify-content:center;font:300 22px/1 Geist;color:#10d7fd;transition:transform .2s">+</span>
+            </summary>
+            <div style="padding:0 48px 28px 56px;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+              <p style="margin:0;font:300 17px/1.65 Geist;color:#b9c1ce;text-wrap:pretty">{{ q.a }}</p>
+              <sc-if value="{{ q.tag }}" hint-placeholder-val="{{ false }}">
+                <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">{{ q.tag }}</span>
+              </sc-if>
+            </div>
+          </details>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-screen-label="09 Contact" style="background:#0f1526;padding:clamp(80px,10vw,152px) 0;scroll-margin-top:80px">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="display:flex;gap:20px;align-items:baseline;border-top:1px solid rgba(16,215,253,.4);padding-top:18px"><span style="font:400 13px 'Geist Mono',monospace;color:#10d7fd">09</span><span style="font:400 13px 'Geist Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#b9c1ce">Contact</span></div>
+    <div data-reveal="" style="margin-top:clamp(40px,5vw,72px);position:relative;height:clamp(160px,18vw,260px);border-radius:28px;overflow:hidden">
+      <div style="position:absolute;inset:0;filter:saturate(.7) brightness(.85)">
+        <image-slot id="v2-contact-alpes" shape="rect" placeholder="Photo : paysage lémanique, lac et Alpes" src="https://images.unsplash.com/photo-1699470740879-bde4d7db985c?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=2200&amp;h=420&amp;fp-y=.7" credit="Photo by T Fang on Unsplash" credit-href="https://unsplash.com/@tqfang"></image-slot>
+      </div>
+      <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,21,38,.85) 0%,rgba(15,21,38,.2) 60%);pointer-events:none"></div>
+      <div style="position:absolute;left:clamp(20px,3vw,40px);bottom:clamp(18px,2.4vw,32px);display:flex;flex-direction:column;gap:4px;pointer-events:none">
+        <span style="font:400 12.5px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#10d7fd">Annemasse · Haute-Savoie</span>
+        <span style="font:400 12.5px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#fff">Grand Genève</span>
+      </div>
+    </div>
+    <div style="margin-top:clamp(48px,5vw,80px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:48px;align-items:start">
+      <div style="grid-column:{{ col.left5 }};display:flex;flex-direction:column;gap:24px">
+        <h2 data-reveal="" style="margin:0;font:500 clamp(32px,4vw,58px)/1.06 Fraunces,serif;letter-spacing:-.015em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff;text-wrap:balance">Prêt à transformer votre entreprise avec l'IA <em style="color:#10d7fd">à Annemasse ?</em></h2>
+        <p style="margin:0;font:300 18px/1.6 Geist;color:#b9c1ce;text-wrap:pretty">Réservez votre audit IA gratuit et découvrez concrètement comment exploiter l'intelligence artificielle dans votre entreprise.</p>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 14px 'Geist Mono',monospace;color:#d5dbe5">
+          <li style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="width:6px;height:6px;background:#10d7fd"></span>Sans engagement</li>
+          <li style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="width:6px;height:6px;background:#10d7fd"></span>Réponse sous 24 h</li>
+          <li style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="width:6px;height:6px;background:#10d7fd"></span>Audit personnalisé</li>
+        </ul>
+        <address style="margin-top:8px;font-style:normal;display:flex;flex-direction:column">
+          <div style="border-top:1px solid rgba(126,141,163,.35);padding:16px 0;display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 16px;align-items:baseline">
+            <span style="font:400 12px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8b96a9">Adresse</span>
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><span style="font:400 16px Geist;color:#fff">Annemasse, Haute-Savoie</span><span style="font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : adresse complète</span></div>
+          </div>
+          <div style="border-top:1px solid rgba(126,141,163,.35);padding:16px 0;display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 16px;align-items:baseline">
+            <span style="font:400 12px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8b96a9">Téléphone</span>
+            <div style="display:flex;align-items:flex-start"><span style="font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : numéro de téléphone</span></div>
+          </div>
+          <div style="border-top:1px solid rgba(126,141,163,.35);border-bottom:1px solid rgba(126,141,163,.35);padding:16px 0;display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 16px;align-items:baseline">
+            <span style="font:400 12px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8b96a9">E-mail</span>
+            <a href="mailto:contact@mzi-consulting.com" style="font:400 16px Geist;color:#fff;text-decoration:none;overflow-wrap:anywhere" style-hover="color:#10d7fd">contact@mzi-consulting.com</a>
+          </div>
+        </address>
+      </div>
+      <div style="grid-column:{{ col.right6 }};background:#0a0e1a;border:1px solid rgba(126,141,163,.3);border-radius:28px;padding:clamp(24px,3.4vw,48px)">
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:22px">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <label for="v2-nom" style="font:400 12.5px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#d5dbe5">Nom complet</label>
+              <input id="v2-nom" name="nom" required="{{ true }}" autocomplete="name" style="font:400 17px Geist;color:#fff;background:#0f1526;border:1px solid #5d6a82;border-radius:12px;padding:15px 16px;outline:none" style-focus="border-color:#10d7fd;box-shadow:0 0 0 3px rgba(16,215,253,.2)">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <label for="v2-email" style="font:400 12.5px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#d5dbe5">E-mail professionnel</label>
+              <input id="v2-email" name="email" type="email" required="{{ true }}" autocomplete="email" style="font:400 17px Geist;color:#fff;background:#0f1526;border:1px solid #5d6a82;border-radius:12px;padding:15px 16px;outline:none" style-focus="border-color:#10d7fd;box-shadow:0 0 0 3px rgba(16,215,253,.2)">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <label for="v2-msg" style="font:400 12.5px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#d5dbe5">Comment pouvons-nous vous aider ?</label>
+              <textarea id="v2-msg" name="message" rows="4" style="font:400 17px/1.5 Geist;color:#fff;background:#0f1526;border:1px solid #5d6a82;border-radius:12px;padding:15px 16px;outline:none;resize:vertical" style-focus="border-color:#10d7fd;box-shadow:0 0 0 3px rgba(16,215,253,.2)"></textarea>
+            </div>
+            <button type="submit" style="margin-top:4px;display:flex;align-items:center;justify-content:center;gap:14px;font:500 17px Geist;background:#10d7fd;color:#0a0e1a;padding:18px 28px;border-radius:999px;border:none;cursor:pointer" style-hover="background:#6ee6fe;color:#0a0e1a">Réserver mon audit gratuit <span aria-hidden="true" style="width:14px;height:14px;background:#0a0e1a;-webkit-mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat;mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat"></span></button>
+            <p style="margin:0;font:300 14px/1.5 Geist;color:#aab3c2">Vos données servent uniquement à vous recontacter. <a href="/politique-de-confidentialite/" style="color:#10d7fd">Politique de confidentialité</a></p>
+          </form>
+        </sc-if>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div role="status" style="display:flex;flex-direction:column;gap:12px;padding:24px 0">
+            <div style="font:500 36px/1.1 Fraunces,serif;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff">Merci, votre demande est envoyée.</div>
+            <p style="margin:0;font:300 17px/1.6 Geist;color:#b9c1ce">Nous revenons vers vous sous 24 h pour planifier votre audit.</p>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer data-screen-label="Pied de page" style="background:#0a0e1a;padding:clamp(64px,7vw,104px) 0 32px">
+  <div style="max-width:1400px;margin:0 auto;padding:0 clamp(20px,4vw,64px)">
+    <div style="border-top:1px solid rgba(16,215,253,.4);padding-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:{{ g.c12 }};column-gap:clamp(16px,2vw,24px);row-gap:44px">
+      <div style="grid-column:{{ col.f1 }};display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+        <img src="assets/mzi-consulting-logo.png" alt="MZI Consulting" width="120" height="45" style="display:block">
+        <p style="margin:0;font:300 16px/1.6 Geist;color:#aab3c2;max-width:320px">Agence d'automatisation IA à Annemasse, Haute-Savoie, France.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+          <a href="mailto:contact@mzi-consulting.com" style="font:400 15px Geist;color:#fff;text-decoration:none" style-hover="color:#10d7fd">contact@mzi-consulting.com</a>
+          <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : adresse complète</span>
+          <span style="font:400 12px/1.4 'Geist Mono',monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : téléphone</span>
+        </div>
+      </div>
+      <nav aria-label="Services" style="grid-column:{{ col.f2 }};display:flex;flex-direction:column;gap:12px">
+        <div style="font:400 12px 'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#10d7fd;margin-bottom:6px">Services</div>
+        <a href="/services/audit-ia/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Audit IA gratuit</a>
+        <a href="/services/automatisation-ia/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Automatisation IA</a>
+        <a href="/services/integration-ia/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Intégration IA sur-mesure</a>
+      </nav>
+      <nav aria-label="Zones desservies" style="grid-column:{{ col.f3 }};display:flex;flex-direction:column;gap:12px">
+        <div style="font:400 12px 'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#10d7fd;margin-bottom:6px">Zones desservies</div>
+        <a href="/agence-ia-annemasse/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Agence IA à Annemasse</a>
+        <a href="/agence-ia-geneve/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Agence IA à Genève</a>
+        <a href="/ia-pme-suisse-romande/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">IA pour PME en Suisse romande</a>
+      </nav>
+      <nav aria-label="Ressources" style="grid-column:{{ col.f4 }};display:flex;flex-direction:column;gap:12px">
+        <div style="font:400 12px 'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#10d7fd;margin-bottom:6px">Ressources</div>
+        <a href="/methode/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Notre méthode</a>
+        <a href="/etudes-de-cas/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Études de cas</a>
+        <a href="/faq/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">FAQ</a>
+        <a href="/blog/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Blog</a>
+        <a href="/contact/" style="font:300 15px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Contact</a>
+      </nav>
+    </div>
+    <div style="margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(126,141,163,.25);padding-top:24px;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center">
+      <p style="margin:0;font:400 13px 'Geist Mono',monospace;color:#aab3c2">© 2026 MZI Consulting. Tous droits réservés.</p>
+      <nav aria-label="Pages légales" style="display:flex;flex-wrap:wrap;gap:12px 28px">
+        <a href="/mention-legale/" style="font:300 14px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Mentions légales</a>
+        <a href="/politique-de-confidentialite/" style="font:300 14px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Politique de confidentialité</a>
+        <a href="/politique-de-cookies-ue/" style="font:300 14px Geist;color:#c9d1de;text-decoration:none" style-hover="color:#10d7fd">Politique de cookies</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;animated&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mouvement&quot;},&quot;reveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mouvement&quot;}}">
+class Component extends DCLogic {
+  state = { mobile: typeof window !== 'undefined' && window.innerWidth < 900, menuOpen: false, sent: false };
+  canvasRef = React.createRef();
+  heroRef = React.createRef();
+  componentDidMount() {
+    this.reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.onResize = () => {
+      const m = window.innerWidth < 900;
+      if (m !== this.state.mobile) this.setState({ mobile: m, menuOpen: false });
+      this.setup(); if (this.still) this.draw(false);
+    };
+    window.addEventListener('resize', this.onResize);
+    this.start();
+    setTimeout(() => this.initReveal(), 60);
+  }
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf); window.removeEventListener('resize', this.onResize);
+    if (this.io) this.io.disconnect();
+  }
+  componentDidUpdate(p) {
+    if (p.animated !== this.props.animated) { cancelAnimationFrame(this.raf); this.start(); }
+  }
+  initReveal() {
+    if (this.reduce || this.props.reveal === false || !('IntersectionObserver' in window)) return;
+    const vh = window.innerHeight;
+    this.io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) {
+        e.target.style.opacity = '1'; e.target.style.transform = 'none'; this.io.unobserve(e.target);
+      }
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('[data-reveal]').forEach((el) => {
+      if (el.getBoundingClientRect().top < vh * 0.92) return;
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)';
+      this.io.observe(el);
+    });
+  }
+  start() {
+    this.setup();
+    this.still = this.reduce || this.props.animated === false;
+    if (this.still) { this.draw(false); return; }
+    let last = 0;
+    const loop = (t) => { this.raf = requestAnimationFrame(loop); if (t - last < 50) return; last = t; this.draw(true); };
+    this.raf = requestAnimationFrame(loop);
+  }
+  setup() {
+    const cv = this.canvasRef.current, hero = this.heroRef.current; if (!cv || !hero) return;
+    const w = hero.offsetWidth, h = hero.offsetHeight * 0.6, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.style.height = h + 'px';
+    cv.width = w * dpr; cv.height = h * dpr;
+    this.ctx = cv.getContext('2d'); this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    this.w = w; this.h = h;
+    const count = Math.round(Math.min(18, w / 70));
+    this.nodes = Array.from({ length: count }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .18, vy: (Math.random() - .5) * .18 }));
+  }
+  draw(move) {
+    const { ctx, w, h, nodes } = this; if (!ctx) return;
+    const D = 220;
+    ctx.clearRect(0, 0, w, h);
+    if (move) for (const p of nodes) { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > w) p.vx *= -1; if (p.y < 0 || p.y > h) p.vy *= -1; }
+    for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+      const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+      if (d < D) { ctx.strokeStyle = `rgba(16,215,253,${(1 - d / D) * 0.14})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke(); }
+    }
+    ctx.fillStyle = 'rgba(16,215,253,.35)';
+    for (const p of nodes) { ctx.fillRect(p.x - 1.5, p.y - 1.5, 3, 3); }
+  }
+  renderVals() {
+    const { mobile, menuOpen, sent } = this.state;
+    const one = 'minmax(0,1fr)';
+    const g = mobile
+      ? { c12: one, c4: one, c3: one, c2: one }
+      : { c12: 'repeat(12,minmax(0,1fr))', c4: 'repeat(4,minmax(0,1fr))', c3: 'repeat(3,minmax(0,1fr))', c2: 'repeat(2,minmax(0,1fr))' };
+    const D = { h1: '1 / span 11', heroSub: '1 / span 5', heroCta: '7 / span 6', auditL: '1 / span 3', auditR: '4 / span 9', h2: '1 / span 7', intro: '9 / span 4', left5: '1 / span 5', right6: '7 / span 6', faqL: '1 / span 4', faqR: '5 / span 8', f1: '1 / span 4', f2: '6 / span 2', f3: '8 / span 3', f4: '11 / span 2' };
+    const col = {};
+    for (const k in D) col[k] = mobile ? '1 / -1' : D[k];
+    const bc = mobile ? ['1 / -1', '1 / -1', '1 / -1'] : ['1 / span 3', '4 / span 4', '9 / span 4'];
+    const benefits = [
+      { value: '40 %', title: 'Gain de temps immédiat', text: 'Réduction du temps passé sur les tâches répétitives.' },
+      { value: '3x', title: 'Productivité décuplée', text: 'Plus de résultats avec les mêmes ressources.' },
+      { value: '+60 %', title: 'Plus de clients potentiels', text: "Augmentation significative de l'acquisition." },
+      { value: '2x', title: 'Meilleure rentabilité', text: 'Des processus transformés en machine rentable.' }
+    ].map(b => ({ ...b, c1: bc[0], c2: bc[1], c3: bc[2] }));
+    const faq = [
+      { open: true, q: "L'audit IA est-il vraiment gratuit ?", a: "Oui, l'audit est gratuit et sans engagement. Vous repartez avec une analyse de vos processus et des recommandations concrètes, que vous décidiez ou non de poursuivre avec nous.", tag: 'À CONFIRMER : durée et format de l\u2019audit' },
+      { open: false, q: "En quoi consiste l'audit IA ?", a: "Nous analysons vos processus, vos outils et votre organisation, puis nous identifions les tâches automatisables les plus rentables. Vous recevez ensuite une liste de recommandations priorisées.", tag: '' },
+      { open: false, q: 'Faut-il des compétences techniques dans mon équipe ?', a: "Non. Nous traduisons les sujets techniques en langage clair et accompagnons vos équipes à chaque étape, de la stratégie à la mise en place.", tag: '' },
+      { open: false, q: 'Quelles entreprises accompagnez-vous ?', a: "Nous accompagnons des PME d'Annemasse et de Haute-Savoie, et pouvons intervenir dans le Grand Genève.", tag: 'À CONFIRMER : zones d\u2019intervention réelles' },
+      { open: false, q: "Que se passe-t-il après l'audit ?", a: "Vous recevez une feuille de route IA personnalisée. Si vous le souhaitez, nous mettons ensuite en place les outils et les automatisations, puis nous suivons les performances.", tag: '' },
+      { open: false, q: 'Combien coûte la mise en place des solutions ?', a: "Le coût dépend des recommandations retenues : il est chiffré après l'audit, sur la base de votre situation réelle.", tag: 'À CONFIRMER : fourchette de prix ou modalités' }
+    ].map((q, i) => ({ ...q, n: String(i + 1).padStart(2, '0') }));
+    return {
+      canvasRef: this.canvasRef, heroRef: this.heroRef, g, col,
+      isMobile: mobile, isDesktop: !mobile, menuOpen, showMobileMenu: mobile && menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      sent, notSent: !sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      steps: [
+        { n: '01', label: 'Audit', text: "Analyse approfondie de vos processus, de vos outils, de vos objectifs et de l'état actuel de votre entreprise." },
+        { n: '02', label: 'Stratégie IA', text: 'Élaboration d\u2019une feuille de route IA personnalisée, alignée sur vos objectifs business.' },
+        { n: '03', label: 'Implémentation', text: 'Mise en place des outils IA et des automatisations pour transformer vos résultats en bénéfices concrets.' },
+        { n: '04', label: 'Optimisation', text: 'Suivi des performances, ajustements et itérations pour des résultats durables.' }
+      ],
+      benefits, faq,
+      testimonials: [
+        { name: 'Jean-Pierre Morel', quote: "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé." },
+        { name: 'Clara Vallet', quote: "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés." },
+        { name: 'Yohanna B.', quote: "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs." }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

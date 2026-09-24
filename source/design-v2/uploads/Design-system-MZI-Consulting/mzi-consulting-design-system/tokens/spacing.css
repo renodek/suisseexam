@@ -1,0 +1,37 @@
+/* Rayons, ombres, espacements relevés dans les CSS Elementor du site. */
+:root {
+  --radius-field: 5px;
+  --radius-card: 10px;        /* défis, solution, pourquoi nous */
+  --radius-card-lg: 15px;     /* bénéfices, témoignages, formulaire */
+  --radius-badge-section: 23px;
+  --radius-pill: 50px;        /* boutons, badge héros */
+  --radius-pill-nav: 200px;   /* bouton Contact du header */
+  --radius-none: 0px;         /* bouton retour en haut */
+
+  --shadow-button-hover: 0 0 10px 0 rgba(255, 255, 255, .5);
+  --shadow-benefit: 0 0 10px 0 rgba(42.5, 40.56, 40.56, .5);
+  --shadow-benefit-first: 0 0 10px 0 rgba(0, 0, 0, .5);
+
+  --pad-button: 20px;
+  --pad-badge-hero: 5px 15px;
+  --pad-badge-section: 5px 20px;
+  --pad-card: 35px;
+  --pad-card-why: 20px;
+  --pad-benefit: 35px 15px;
+  --pad-testimonial: 21px;
+  --pad-testimonial-lg: 50px;
+  --pad-form: 30px;
+  --pad-field: 5px;
+  --gap-button-icon: 20px;
+  --gap-card-icon: 24px;
+
+  --shadow-icon-glow: 0 0 15px 13px rgba(7, 105, 124, 0.6);
+  --shadow-card-hover: inset 0 0 20px rgba(0, 103, 177, 0.1), 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-header-sticky: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --ease-card: cubic-bezier(0.23, 1, 0.32, 1);     /* 0.5s */
+  --ease-header: cubic-bezier(0.4, 0, 0.2, 1);     /* 0.4s */
+  --header-min-height: 86px;
+  --logo-width-header: 100px;
+  --transition-icon: 200ms;
+  --transition-list: 0.3s;
+}

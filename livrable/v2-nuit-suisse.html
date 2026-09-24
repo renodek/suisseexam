@@ -1,0 +1,1110 @@
+<!doctype html>
+<!--
+  V2 — NUIT SUISSE
+  ================
+  Reproduction vanilla (HTML/CSS/JS, aucune dépendance à support.js ni à
+  image-slot.js) de l'export Claude Design source/design-v2/Accueil V2 -
+  Nuit suisse.dc.html : mêmes textes, mêmes valeurs de style, même structure
+  de page, rendu visuel identique au design.
+
+  Le design V2 intègre déjà les deux corrections de contenu demandées pour la
+  V1 (e-mail réel contact@mzi-consulting.com ; réponse FAQ sur les zones
+  d'intervention sans clientèle confirmée dans le Grand Genève, avec
+  l'étiquette [À CONFIRMER : zones d'intervention réelles]) : reprises telles
+  quelles.
+
+  Fond animé du héros et apparitions au défilement : repris à l'identique,
+  coupés si prefers-reduced-motion est actif ou si l'URL contient ?statique.
+
+  Polices : Geist et Geist Mono depuis Google Fonts ; Fraunces limitée aux
+  seules instances utilisées (3 styles, optical size fixé, glyphes de la page
+  uniquement) — voir le commentaire au-dessus du lien Fraunces.
+
+  Photo du fondateur : aucune source n'existe dans le design (image-slot
+  sans src) — encart vide « À CONFIRMER », pas une photo.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>V2 — Nuit suisse | MZI Consulting</title>
+
+<!-- Audit §2, §3 : title actuel du site réel dilue 3 intentions à la fois et omet la marque
+     (constat "Title générique, marque absente"). Meta description absente à l'origine ; ciblée
+     ici sur l'intention retenue en §2 (table de mots-clés : "audit IA gratuit entreprise"). -->
+<meta name="description" content="Audit IA gratuit pour PME à Annemasse et en Haute-Savoie : analyse de vos processus, recommandations concrètes, sans engagement, réponse sous 24 h.">
+
+<!-- Audit §4 : cinq formulations différentes du nom de l'entreprise relevées sur le site réel
+     (copyright, meta description, title, og:site_name, JSON-LD) — unifiées ici sur « MZI Consulting ». -->
+<!-- Audit §6 : og:image sous-dimensionnée sur le site réel (375×423, aucune variante 1200×630
+     disponible sur le serveur) et og:site_name = « Agence IA à Annemasse » au lieu de la marque. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mzi-consulting.com/">
+<meta property="og:site_name" content="MZI Consulting">
+<meta property="og:title" content="Audit IA gratuit pour PME à Annemasse | MZI Consulting">
+<meta property="og:description" content="Audit IA gratuit pour PME à Annemasse et en Haute-Savoie : analyse de vos processus, recommandations concrètes, sans engagement, réponse sous 24 h.">
+<meta property="og:image" content="https://mzi-consulting.com/assets/img/v2-og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chaîne de montagnes enneigées éclairée par la lumière du soir, sous un ciel dégagé">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Audit IA gratuit pour PME à Annemasse | MZI Consulting">
+<meta name="twitter:description" content="Audit IA gratuit pour PME à Annemasse et en Haute-Savoie : analyse de vos processus, recommandations concrètes, sans engagement, réponse sous 24 h.">
+<meta name="twitter:image" content="https://mzi-consulting.com/assets/img/v2-og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Polices : le design charge Geist, Geist Mono et Fraunces complètes, dont Fraunces avec son axe de
+     taille optique (opsz 9..144, SOFT, WONK) : 165 Ko mesurés (V1 : 51 Ko). Chaque famille est
+     donc limitée aux instances utilisées (Geist 300-600 ; Geist Mono 300-400, le 500 n'est pas
+     utilisé ; Fraunces romain 500 + italique 400/500) ET aux seuls glyphes rendus dans la page,
+     calculés par scripts/fraunces-subset.js (+ alphabet latin et chiffres en marge de sécurité).
+     L'axe opsz reste variable : le fixer (testé à 72, 40 Ko au lieu de 80) change les retours à
+     la ligne des titres — hero +94 px, citations −33 px — donc le rendu du design. -->
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;display=swap&amp;text=%20'%2B%2C-.0123456789%3A%3F%40ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%89%C3%A0%C3%A2%C3%A8%C3%A9%C3%AA%C3%AE%C3%BB%E2%80%99" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400&amp;display=swap&amp;text=%20%25'%2B-.0123456789%3A%3FABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C2%A9%C2%B7%C3%80%C3%88%C3%89%C3%A8%C3%A9%E2%80%99" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500,0,0;1,9..144,400,0,0;1,9..144,500,0,0&amp;display=swap&amp;text=%20'%2C.0123456789%3B%3FABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C2%AB%C3%A0%C3%A2%C3%A9%C3%AA%C3%AE" rel="stylesheet">
+
+<!-- Audit §5 : le graphe JSON-LD du site réel se limite à WebPage/WebSite/Organization (sans
+     adresse ni téléphone) et un BreadcrumbList à un seul niveau ("Aucun schéma
+     LocalBusiness/ProfessionalService", "Aucun schéma Service", "Aucun schéma FAQPage").
+     Adresse et téléphone volontairement absents ci-dessous : non confirmés (§4) — un
+     schema.org PostalAddress avec des champs vides serait invalide, pas simplement "à
+     compléter", donc omis plutôt que rempli de valeurs inventées ou vides. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://mzi-consulting.com/#organization",
+      "name": "MZI Consulting",
+      "url": "https://mzi-consulting.com/",
+      "email": "contact@mzi-consulting.com",
+      "areaServed": [
+        { "@type": "City", "name": "Annemasse" },
+        { "@type": "AdministrativeArea", "name": "Haute-Savoie" }
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@id": "https://mzi-consulting.com/#service-audit" } },
+        { "@type": "Offer", "itemOffered": { "@id": "https://mzi-consulting.com/#service-automatisation" } },
+        { "@type": "Offer", "itemOffered": { "@id": "https://mzi-consulting.com/#service-integration" } }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mzi-consulting.com/#service-audit",
+      "name": "Audit IA gratuit",
+      "serviceType": "Audit d'intelligence artificielle",
+      "provider": { "@id": "https://mzi-consulting.com/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Annemasse" },
+        { "@type": "AdministrativeArea", "name": "Haute-Savoie" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mzi-consulting.com/#service-automatisation",
+      "name": "Automatisation IA",
+      "serviceType": "Automatisation de processus par intelligence artificielle",
+      "provider": { "@id": "https://mzi-consulting.com/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Annemasse" },
+        { "@type": "AdministrativeArea", "name": "Haute-Savoie" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mzi-consulting.com/#service-integration",
+      "name": "Intégration IA sur-mesure",
+      "serviceType": "Intégration d'outils d'intelligence artificielle",
+      "provider": { "@id": "https://mzi-consulting.com/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Annemasse" },
+        { "@type": "AdministrativeArea", "name": "Haute-Savoie" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "L'audit IA est-il vraiment gratuit ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, l'audit est gratuit et sans engagement. Vous repartez avec une analyse de vos processus et des recommandations concrètes, que vous décidiez ou non de poursuivre avec nous." }
+        },
+        {
+          "@type": "Question",
+          "name": "En quoi consiste l'audit IA ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nous analysons vos processus, vos outils et votre organisation, puis nous identifions les tâches automatisables les plus rentables. Vous recevez ensuite une liste de recommandations priorisées." }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il des compétences techniques dans mon équipe ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Non. Nous traduisons les sujets techniques en langage clair et accompagnons vos équipes à chaque étape, de la stratégie à la mise en place." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles entreprises accompagnez-vous ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nous accompagnons des PME d'Annemasse et de Haute-Savoie, et pouvons intervenir dans le Grand Genève." }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il après l'audit ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Vous recevez une feuille de route IA personnalisée. Si vous le souhaitez, nous mettons ensuite en place les outils et les automatisations, puis nous suivons les performances." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte la mise en place des solutions ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le coût dépend des recommandations retenues : il est chiffré après l'audit, sur la base de votre situation réelle." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mzi-consulting.com/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --night:#0a0e1a; --night2:#0f1526; --cyan:#10d7fd; --cyan-hover:#6ee6fe;
+    --t2:#d5dbe5; --t3:#b9c1ce; --t4:#aab3c2; --muted:#8b96a9;
+    --line:rgba(126,141,163,.35); --line-cyan:rgba(16,215,253,.4);
+    --todo:#f4c96e; --todo-border:rgba(244,201,110,.6); --todo-bg:rgba(244,201,110,.07);
+    --serif:Fraunces,serif; --sans:Geist,system-ui,sans-serif; --mono:'Geist Mono',monospace;
+    --gutter:clamp(20px,4vw,64px); --colgap:clamp(16px,2vw,24px);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-padding-top:96px}
+  @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
+  body{margin:0;background:var(--night);font-family:var(--sans);-webkit-font-smoothing:antialiased;color:var(--t3)}
+  img{max-width:100%;display:block}
+  a{color:var(--cyan)}
+  a:hover{color:#7fe9fe}
+  summary::-webkit-details-marker{display:none}
+  details[open] .faq-plus{transform:rotate(45deg)}
+  h1,h2,h3,p,ol,ul,figure,blockquote{margin:0}
+  ol,ul{padding:0;list-style:none}
+  .skip-link{position:absolute;left:16px;top:-60px;z-index:100;background:var(--cyan);color:var(--night);font:500 15px var(--sans);padding:12px 18px;border-radius:8px;text-decoration:none;transition:top .15s}
+  .skip-link:focus{top:16px}
+
+  /* Grille 12 colonnes : une colonne sous 900px (comme le composant source) */
+  .grid12,.grid4,.grid3,.grid2{display:grid;grid-template-columns:minmax(0,1fr);column-gap:var(--colgap)}
+  .grid12>*{grid-column:1 / -1}
+  @media (min-width:900px){
+    .grid12{grid-template-columns:repeat(12,minmax(0,1fr))}
+    .grid4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid12>.c-h1{grid-column:1 / span 11}
+    .grid12>.c-hsub{grid-column:1 / span 5}
+    .grid12>.c-hcta{grid-column:7 / span 6}
+    .grid12>.c-auditL{grid-column:1 / span 3}
+    .grid12>.c-auditR{grid-column:4 / span 9}
+    .grid12>.c-h2{grid-column:1 / span 7}
+    .grid12>.c-intro{grid-column:9 / span 4}
+    .grid12>.c-left5{grid-column:1 / span 5}
+    .grid12>.c-right6{grid-column:7 / span 6}
+    .grid12>.c-faqL{grid-column:1 / span 4}
+    .grid12>.c-faqR{grid-column:5 / span 8}
+    .grid12>.c-f1{grid-column:1 / span 4}
+    .grid12>.c-f2{grid-column:6 / span 2}
+    .grid12>.c-f3{grid-column:8 / span 3}
+    .grid12>.c-f4{grid-column:11 / span 2}
+    .grid12>.c-b1{grid-column:1 / span 3}
+    .grid12>.c-b2{grid-column:4 / span 4}
+    .grid12>.c-b3{grid-column:9 / span 4}
+  }
+
+  /* Boutons et liens */
+  .btn{display:inline-flex;align-items:center;gap:14px;font:500 17px var(--sans);background:var(--cyan);color:var(--night);padding:18px 28px;border-radius:999px;text-decoration:none;border:none;cursor:pointer}
+  .btn:hover{background:var(--cyan-hover);color:var(--night)}
+  .btn svg{width:14px;height:14px;flex-shrink:0}
+  .btn.compact{font-size:15px;padding:12px 22px;white-space:nowrap}
+  .link-line{font:400 17px var(--sans);color:#fff;padding:8px 0;border-bottom:1px solid #7e8da3;text-decoration:none}
+  .link-line:hover{color:var(--cyan);border-color:var(--cyan)}
+
+  /* Étiquettes « À CONFIRMER » */
+  .todo{display:inline-block;font:400 12px/1.4 var(--mono);color:var(--todo);border:1px dashed var(--todo-border);background:var(--todo-bg);border-radius:6px;padding:4px 9px}
+  .todo.sm{padding:3px 8px}
+  .todo.light{color:#7a4f00;border-color:#c99a3e;background:#fdf6e7}
+
+  /* En-tête */
+  .site-header{position:sticky;top:0;z-index:50;background:rgba(10,14,26,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+  .header-inner{max-width:1400px;margin:0 auto;height:80px;padding:0 var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .logo-link{display:flex;align-items:center;flex-shrink:0}
+  .nav-desktop{display:none;gap:36px}
+  /* Audit §12 : "Zones tactiles trop petites en pied de page" sur le site réel (lien de
+     152,5×19,5px, minimum requis 24×24px, audit Lighthouse target-size en échec). Les liens
+     texte ci-dessous reçoivent un padding vertical compensé par une marge négative de même
+     valeur : la zone cliquable atteint 24px de hauteur, la mise en page reste celle du design. */
+  .nav-link{display:inline-flex;align-items:center;min-height:24px;padding:6px 0;font:400 15px var(--sans);color:var(--t2);text-decoration:none}
+  .nav-link:hover{color:var(--cyan)}
+  .menu-toggle{display:flex;width:48px;height:48px;border-radius:12px;border:1px solid rgba(126,141,163,.5);background:transparent;align-items:center;justify-content:center;cursor:pointer;color:#fff}
+  .menu-toggle svg{width:20px;height:20px}
+  .nav-mobile{padding:8px 20px 24px;display:flex;flex-direction:column;border-top:1px solid rgba(16,215,253,.3)}
+  .nav-mobile[hidden]{display:none}
+  .mobile-link{font:400 18px var(--sans);color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)}
+  .mobile-link:last-of-type{border-bottom:none}
+  .mobile-cta{margin-top:12px;justify-content:center;font-size:17px;padding:16px 22px}
+  @media (min-width:900px){
+    .nav-desktop{display:flex}
+    .menu-toggle,.nav-mobile{display:none}
+  }
+  @media (max-width:899px){
+    .header-inner>.btn.compact{display:none}
+  }
+
+  /* Sections */
+  .sec{padding:clamp(80px,10vw,152px) 0}
+  .sec.stats{padding:clamp(72px,8vw,120px) 0}
+  .bg-a{background:var(--night)}
+  .bg-b{background:var(--night2)}
+  .bg-light{background:#f3f5f8}
+  .wrap{max-width:1400px;margin:0 auto;padding:0 var(--gutter)}
+  .eyebrow-row{display:flex;gap:20px;align-items:baseline;border-top:1px solid var(--line-cyan);padding-top:18px}
+  .eyebrow-row.split{flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px}
+  .eyebrow-row .lab-group{display:flex;gap:20px;align-items:baseline}
+  .num{font:400 13px var(--mono);color:var(--cyan)}
+  .lab{font:400 13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--t3)}
+  h2.lab{margin:0}
+  .light .eyebrow-row{border-top-color:#0e7490}
+  .light .num{color:#0e7490}
+  .light .lab{color:#3d4655}
+  .h2{font:500 clamp(34px,4.4vw,64px)/1.06 var(--serif);letter-spacing:-.015em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff}
+  .h2.balance{text-wrap:balance}
+  .h2 em{color:var(--cyan)}
+  .light .h2{color:var(--night)}
+  .light .h2 em{color:#0e7490}
+  .lead{font:300 18px/1.6 var(--sans);color:var(--t3)}
+  .lead.pretty{text-wrap:pretty}
+  .light .lead{color:#3d4655}
+  h3.card-title{font:600 22px/1.2 var(--sans);letter-spacing:-.01em;color:#fff}
+  .body-sm{font:300 16px/1.6 var(--sans);color:var(--t3)}
+  .head-grid{margin-top:clamp(40px,5vw,72px);row-gap:32px;align-items:end}
+
+  /* Héros */
+  .hero-sec{background:var(--night);padding:0 clamp(10px,1.6vw,24px) clamp(10px,1.6vw,24px)}
+  .hero{position:relative;max-width:1400px;margin:0 auto;border-radius:clamp(22px,2.4vw,32px);background:var(--night2);border:1px solid rgba(126,141,163,.22);overflow:hidden}
+  .hero-canvas{position:absolute;left:0;top:0;width:100%}
+  .hero-fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,21,38,.2) 0%,rgba(15,21,38,.75) 45%,#0f1526 70%);pointer-events:none}
+  .hero-body{position:relative;padding:clamp(40px,6vw,88px) var(--gutter) 0}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font:400 12.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--t2);border:1px solid rgba(126,141,163,.5);border-radius:999px;padding:8px 14px}
+  .chip.accent{color:var(--cyan);border-color:rgba(16,215,253,.5)}
+  .hero-grid{margin-top:clamp(28px,3vw,40px);row-gap:36px;align-items:end}
+  .hero-title{font:500 clamp(40px,6.4vw,100px)/1.02 var(--serif);letter-spacing:-.02em;font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff;text-wrap:balance}
+  .hero-title em{font-style:italic;color:var(--cyan)}
+  .hero-sub{font:300 clamp(18px,1.45vw,21px)/1.55 var(--sans);color:var(--t3);text-wrap:pretty}
+  .hero-cta{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+  .ticks{display:flex;flex-wrap:wrap;gap:8px 24px;font:400 13px var(--mono);letter-spacing:.02em;color:var(--t3)}
+  .ticks li{display:flex;align-items:center;gap:8px}
+  .ticks i{display:block;width:6px;height:6px;background:var(--cyan);flex-shrink:0}
+  .audit-row{margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(16,215,253,.35);padding-top:24px;row-gap:20px}
+  .audit-title{font:500 26px/1.1 var(--serif);font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff}
+  .audit-steps{display:grid;grid-template-columns:minmax(0,1fr);column-gap:var(--colgap);row-gap:14px}
+  @media (min-width:900px){ .audit-steps{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  .audit-steps li{display:flex;gap:14px;align-items:baseline;font:400 16px/1.4 var(--sans);color:var(--t2)}
+  .audit-steps span{font:400 13px var(--mono);color:var(--cyan)}
+  .hero-band{position:relative;margin-top:clamp(40px,5vw,64px);height:clamp(200px,24vw,340px)}
+  .photo-layer{position:absolute;inset:0}
+  .photo-layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .grade-a{filter:saturate(.7) brightness(.85)}
+  .grade-b{filter:grayscale(.45) brightness(.9)}
+  .band-fade{position:absolute;inset:0;background:linear-gradient(180deg,#0f1526 0%,rgba(15,21,38,.35) 45%,rgba(10,14,26,.25) 100%);pointer-events:none}
+  .photo-credit{position:absolute;left:6px;bottom:6px;max-width:calc(100% - 12px);padding:3px 7px;border-radius:5px;background:rgba(0,0,0,.55);color:#fff;font:10px/1.2 system-ui,-apple-system,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;backdrop-filter:blur(6px);z-index:1}
+  .photo-credit a,.photo-credit a:hover{color:inherit;text-decoration:none}
+  .photo-credit a:hover{text-decoration:underline}
+
+  /* 01 Chiffres-clés */
+  .stat-grid{margin-top:clamp(40px,5vw,64px);row-gap:48px}
+  .stat{display:flex;flex-direction:column;gap:16px}
+  .stat-value{font:300 clamp(84px,10.5vw,168px)/.9 var(--mono);letter-spacing:-.06em;color:#fff}
+  .stat-value span{font-size:.5em;letter-spacing:0}
+  .stat-label{border-top:1px solid rgba(126,141,163,.3);padding-top:16px;font:400 18px/1.4 var(--sans);color:var(--t3)}
+
+  /* 02 Défis */
+  .challenge-grid{margin-top:clamp(56px,6vw,96px);row-gap:48px}
+  .challenge{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column;gap:14px}
+
+  /* 03 Solution */
+  .solution-grid{margin-top:clamp(40px,5vw,72px);row-gap:48px}
+  .photo-box{position:relative;min-height:clamp(360px,42vw,600px);border-radius:28px;overflow:hidden}
+  .multiply{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,26,.1) 0%,rgba(10,14,26,.45) 100%);mix-blend-mode:multiply;pointer-events:none}
+  .solution-text{display:flex;flex-direction:column;gap:28px;justify-content:center}
+  .solution-list{margin:8px 0 0;display:flex;flex-direction:column}
+  .solution-list li{border-top:1px solid var(--line);padding:22px 0;display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px 16px}
+  .solution-list li:last-child{border-bottom:1px solid var(--line)}
+  .solution-list .n{font:400 13px/1.9 var(--mono);color:var(--cyan)}
+  .solution-list div{display:flex;flex-direction:column;gap:8px}
+  .solution-text .btn{align-self:flex-start}
+
+  /* 04 Méthode */
+  .methode-photo{margin-top:clamp(48px,5vw,72px);position:relative;height:clamp(220px,26vw,380px);border-radius:28px;overflow:hidden}
+  .methode-dim{position:absolute;inset:0;background:rgba(10,14,26,.3);pointer-events:none}
+  .steps{margin:clamp(48px,5vw,72px) 0 0;row-gap:40px}
+  .step{position:relative;display:flex;flex-direction:column;gap:16px;border-top:1px solid var(--cyan);padding-top:26px}
+  .step-mark{position:absolute;left:0;top:-5px;width:9px;height:9px;background:var(--cyan)}
+  .step-tag{font:400 13px var(--mono);letter-spacing:.08em;color:var(--cyan)}
+  .step h3{font:600 24px/1.2 var(--sans);letter-spacing:-.01em;color:#fff}
+  .step p{font:300 16px/1.6 var(--sans);color:var(--t3);text-wrap:pretty}
+
+  /* 05 Bénéfices */
+  .benefit-list{margin-top:clamp(48px,5vw,80px);display:flex;flex-direction:column;border-bottom:1px solid var(--line)}
+  .benefit{border-top:1px solid var(--line);padding:clamp(24px,3vw,36px) 0;row-gap:12px;align-items:baseline}
+  .benefit-value{font:300 clamp(56px,6vw,96px)/.9 var(--mono);letter-spacing:-.05em;color:#fff}
+  .benefit h3{font:600 clamp(22px,2vw,26px)/1.2 var(--sans);letter-spacing:-.01em;color:#fff}
+  .benefit-text{font:300 17px/1.6 var(--sans);color:var(--t3)}
+
+  /* 06 Qui sommes-nous */
+  .qui-grid{margin-top:clamp(40px,5vw,72px);row-gap:48px}
+  .qui-media{position:relative;min-height:clamp(380px,40vw,560px)}
+  /* Le cadre d'image du design retombe sur un ratio 3/2 quand la hauteur du parent est indéfinie
+     (sous 900 px) : cette cale reproduit ce comportement. */
+  .qui-media::before{content:"";display:block;aspect-ratio:3/2}
+  .placeholder-slot{position:absolute;inset:0;border-radius:28px;background:rgba(127,127,127,.08);border:1.5px dashed rgba(185,193,206,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--t3);text-align:center;padding:16px}
+  .placeholder-slot svg{width:28px;height:28px;opacity:.7}
+  .placeholder-slot span{font:500 13px var(--sans)}
+  .qui-media .todo{position:absolute;left:16px;bottom:16px;max-width:calc(100% - 32px);background:rgba(10,14,26,.85)}
+  .qui-text{display:flex;flex-direction:column;gap:24px;justify-content:center}
+  .qui-tags{display:flex;flex-wrap:wrap;gap:10px}
+  .qui-features{margin:12px 0 0;gap:32px var(--colgap)}
+  .qui-feature{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--line);padding-top:20px}
+  .qui-feature h3{font:600 20px/1.25 var(--sans);letter-spacing:-.01em;color:#fff}
+  .qui-feature .todo{align-self:flex-start;margin-top:4px}
+
+  /* 07 Témoignages */
+  .testimonial-grid{margin-top:clamp(48px,5vw,80px);row-gap:24px}
+  .testimonial{background:#fff;border:1px solid #dfe4ea;border-radius:28px;padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:28px}
+  .quote-mark{font:italic 400 72px/.5 var(--serif);font-variation-settings:'SOFT' 0,'WONK' 0;color:#0e7490;height:28px}
+  .testimonial blockquote{font:italic 400 26px/1.25 var(--serif);font-variation-settings:'SOFT' 0,'WONK' 0;color:var(--night);text-wrap:pretty}
+  .testimonial-foot{margin-top:auto;border-top:1px solid #dfe4ea;padding-top:20px;display:flex;flex-direction:column;gap:10px}
+  .testimonial-name{font:500 17px var(--sans);color:var(--night)}
+  .testimonial-tags{display:flex;flex-wrap:wrap;gap:8px}
+
+  /* 08 FAQ */
+  .faq-grid{margin-top:clamp(40px,5vw,72px);row-gap:40px}
+  .faq-head{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+  .link-line.sm{font-size:16px;padding:6px 0}
+  .faq-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-summary{list-style:none;cursor:pointer;padding:26px 0;display:grid;grid-template-columns:44px minmax(0,1fr) 36px;gap:12px;align-items:center}
+  .faq-question{font:600 clamp(18px,1.5vw,21px)/1.3 var(--sans);letter-spacing:-.01em;color:#fff}
+  .faq-plus{width:36px;height:36px;border-radius:50%;border:1px solid rgba(126,141,163,.6);display:flex;align-items:center;justify-content:center;font:300 22px/1 var(--sans);color:var(--cyan);transition:transform .2s}
+  @media (prefers-reduced-motion:reduce){ .faq-plus{transition:none} }
+  .faq-body{padding:0 48px 28px 56px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+  .faq-answer{font:300 17px/1.65 var(--sans);color:var(--t3);text-wrap:pretty}
+
+  /* 09 Contact */
+  .contact-banner{margin-top:clamp(40px,5vw,72px);position:relative;height:clamp(160px,18vw,260px);border-radius:28px;overflow:hidden}
+  .banner-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,21,38,.85) 0%,rgba(15,21,38,.2) 60%);pointer-events:none}
+  .banner-labels{position:absolute;left:clamp(20px,3vw,40px);bottom:clamp(18px,2.4vw,32px);display:flex;flex-direction:column;gap:4px;pointer-events:none}
+  .banner-labels span{font:400 12.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#fff}
+  .banner-labels span:first-child{color:var(--cyan)}
+  .contact-grid{margin-top:clamp(48px,5vw,80px);row-gap:48px;align-items:start}
+  .contact-info{display:flex;flex-direction:column;gap:24px}
+  .contact-info .h2{font-size:clamp(32px,4vw,58px)}
+  .contact-ticks{font-size:14px;letter-spacing:normal;color:var(--t2);flex-direction:column;gap:10px;flex-wrap:nowrap}
+  .contact-ticks li{gap:12px}
+  .contact-address{margin-top:8px;font-style:normal;display:flex;flex-direction:column}
+  .address-row{border-top:1px solid var(--line);padding:16px 0;display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 16px;align-items:baseline}
+  .address-row:last-child{border-bottom:1px solid var(--line)}
+  .address-label{font:400 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .address-value{display:flex;flex-direction:column;gap:8px;align-items:flex-start;font:400 16px var(--sans);color:#fff}
+  .address-mail{display:inline-flex;align-items:center;min-height:24px;padding:3px 0;margin:-3px 0;font:400 16px var(--sans);color:#fff;text-decoration:none;overflow-wrap:anywhere}
+  .address-mail:hover{color:var(--cyan)}
+  .contact-form-wrap{background:var(--night);border:1px solid rgba(126,141,163,.3);border-radius:28px;padding:clamp(24px,3.4vw,48px)}
+  .contact-form{display:flex;flex-direction:column;gap:22px}
+  .contact-form[hidden]{display:none}
+  .form-group{display:flex;flex-direction:column;gap:8px}
+  .form-group label{font:400 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--t2)}
+  .form-field{font:400 17px var(--sans);color:#fff;background:var(--night2);border:1px solid #5d6a82;border-radius:12px;padding:15px 16px;outline:none}
+  textarea.form-field{line-height:1.5;resize:vertical}
+  .form-field:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(16,215,253,.2)}
+  .contact-form .btn{margin-top:4px;justify-content:center}
+  .form-note{font:300 14px/1.5 var(--sans);color:var(--t4)}
+  .form-sent{display:flex;flex-direction:column;gap:12px;padding:24px 0}
+  .form-sent[hidden]{display:none}
+  .form-sent-title{font:500 36px/1.1 var(--serif);font-variation-settings:'SOFT' 0,'WONK' 0;color:#fff}
+  .form-sent-text{font:300 17px/1.6 var(--sans);color:var(--t3)}
+
+  /* Pied de page */
+  .site-footer{background:var(--night);padding:clamp(64px,7vw,104px) 0 32px}
+  .footer-top{border-top:1px solid var(--line-cyan);padding-top:clamp(40px,5vw,64px);row-gap:44px}
+  .footer-brand{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+  .footer-brand p{font:300 16px/1.6 var(--sans);color:var(--t4);max-width:320px}
+  .footer-contact{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+  .footer-email{display:inline-flex;align-items:center;min-height:24px;padding:3px 0;margin:-3px 0;font:400 15px var(--sans);color:#fff;text-decoration:none}
+  .footer-email:hover{color:var(--cyan)}
+  .footer-nav{display:flex;flex-direction:column;gap:12px}
+  .footer-nav-title{font:400 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
+  /* Audit §12 : zones tactiles ≥24×24px (voir commentaire sur .nav-link). */
+  .footer-link{display:inline-flex;align-items:center;min-height:24px;padding:3px 0;margin:-3px 0;font:300 15px var(--sans);color:#c9d1de;text-decoration:none}
+  .footer-link:hover{color:var(--cyan)}
+  .footer-bottom{margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(126,141,163,.25);padding-top:24px;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+  .footer-copy{font:400 13px var(--mono);color:var(--t4)}
+  .footer-legal{display:flex;flex-wrap:wrap;gap:12px 28px}
+  .footer-legal-link{display:inline-flex;align-items:center;min-height:24px;padding:4px 0;margin:-4px 0;font:300 14px var(--sans);color:#c9d1de;text-decoration:none}
+  .footer-legal-link:hover{color:var(--cyan)}
+</style>
+</head>
+<body>
+<!-- Audit §12 : le site réel n'a aucun repère <main> ("landmark-one-main" en échec) et son
+     lien d'évitement pointe vers un id="content" qui n'existe nulle part dans la page (présent
+     mais non fonctionnel). Ici, <main id="contenu"> existe et le lien ci-dessous y mène
+     réellement. -->
+<a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a class="logo-link" href="/" aria-label="MZI Consulting, accueil">
+      <img src="assets/img/logo-mzi-consulting.webp" alt="MZI Consulting" width="104" height="39">
+    </a>
+    <nav class="nav-desktop" aria-label="Navigation principale">
+      <a class="nav-link" href="/services/audit-ia/">Services</a>
+      <a class="nav-link" href="/methode/">Méthode</a>
+      <a class="nav-link" href="/etudes-de-cas/">Études de cas</a>
+      <a class="nav-link" href="/faq/">FAQ</a>
+      <a class="nav-link" href="/contact/">Contact</a>
+    </nav>
+    <a class="btn compact" href="#contact">Réserver mon audit gratuit</a>
+    <!-- Audit §7, §12 : le bouton "retour en haut" du site réel n'a ni texte ni aria-label —
+         seule une icône SVG masquée aux technologies d'assistance (aria-hidden="true"), en échec
+         sur l'audit Lighthouse agent-accessibility-tree ET sur l'accessibilité humaine (même
+         cause racine, un seul correctif sert les deux audiences). Tous les boutons icône-seule
+         ci-dessous portent un aria-label explicite. -->
+    <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+      <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"/></svg>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="mobile-nav" aria-label="Navigation principale" hidden>
+    <a class="mobile-link" href="/services/audit-ia/">Services</a>
+    <a class="mobile-link" href="/methode/">Méthode</a>
+    <a class="mobile-link" href="/etudes-de-cas/">Études de cas</a>
+    <a class="mobile-link" href="/faq/">FAQ</a>
+    <a class="mobile-link" href="/contact/">Contact</a>
+    <a class="btn mobile-cta" href="#contact">Réserver mon audit gratuit</a>
+  </nav>
+</header>
+
+<main id="contenu">
+<section class="hero-sec" data-screen-label="Héros">
+  <div class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-fade" aria-hidden="true"></div>
+    <div class="hero-body">
+      <div class="chips">
+        <span class="chip accent">Agence d'automatisation IA</span>
+        <span class="chip">Annemasse</span>
+        <span class="chip">Grand Genève</span>
+      </div>
+      <div class="grid12 hero-grid">
+        <h1 class="c-h1 hero-title">Automatisez les tâches répétitives de votre PME, <em>à Annemasse</em></h1>
+        <p class="c-hsub hero-sub">Gagnez du temps et augmentez votre chiffre d'affaires grâce à nos solutions IA sur-mesure.</p>
+        <div class="c-hcta hero-cta">
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Réserver mon audit gratuit
+              <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+            </a>
+            <a class="link-line" href="/methode/">Découvrir notre méthode</a>
+          </div>
+          <ul class="ticks">
+            <li><i aria-hidden="true"></i>Sans engagement</li>
+            <li><i aria-hidden="true"></i>Réponse sous 24 h</li>
+            <li><i aria-hidden="true"></i>Audit personnalisé</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid12 audit-row">
+        <div class="c-auditL audit-title">L'audit IA gratuit</div>
+        <ol class="c-auditR audit-steps">
+          <li><span>01</span>Analyse de vos processus</li>
+          <li><span>02</span>Identification des opportunités IA</li>
+          <li><span>03</span>Recommandations concrètes</li>
+        </ol>
+      </div>
+    </div>
+    <div class="hero-band">
+      <div class="photo-layer grade-a">
+        <img src="assets/img/v2-hero-alpes.webp" width="1496" height="340" alt="Chaîne de montagnes enneigées éclairée par la lumière du soir, sous un ciel dégagé" fetchpriority="high">
+        <span class="photo-credit">Photo by <a href="https://unsplash.com/@tqfang?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">T Fang</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
+      </div>
+      <div class="band-fade" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec stats bg-a" data-screen-label="01 Chiffres-clés">
+  <div class="wrap">
+    <div class="eyebrow-row split">
+      <!-- Audit §3 : sur le site réel, les trois chiffres-clés du héros sont balisés en <h3>
+           sans <h2> parent ("Hiérarchie de titres rompue par les chiffres-clés" — H1 → H3 → H3 →
+           H3 → premier H2, sans contexte lisible pour un lecteur d'écran). Ici, un seul <h1>
+           pour la page, un <h2> par section (celui-ci, visuellement identique à l'étiquette du
+           design, donne son titre à la section) et les chiffres restent du texte simple (<p>),
+           jamais balisés en Hn. -->
+      <div class="lab-group"><span class="num">01</span><h2 class="lab">Chiffres-clés</h2></div>
+      <span class="todo">À CONFIRMER : source et période</span>
+    </div>
+    <div class="grid3 stat-grid">
+      <div class="stat" data-reveal>
+        <p class="stat-value">50+</p>
+        <p class="stat-label">entreprises accompagnées</p>
+      </div>
+      <div class="stat" data-reveal>
+        <p class="stat-value">3x</p>
+        <p class="stat-label">productivité moyenne</p>
+      </div>
+      <div class="stat" data-reveal>
+        <p class="stat-value">40<span> %</span></p>
+        <p class="stat-label">de temps économisé</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-b" data-screen-label="02 Défis">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="num">02</span><span class="lab">Les défis</span></div>
+    <div class="grid12 head-grid">
+      <h2 class="c-h2 h2 balance" data-reveal>Votre entreprise à Annemasse fait face à <em>ces défis ?</em></h2>
+      <p class="c-intro lead pretty" data-reveal>Les entreprises qui n'adoptent pas l'intelligence artificielle perdent un avantage concurrentiel majeur. Pourtant, des solutions simples existent pour renverser cette tendance rapidement.</p>
+    </div>
+    <div class="grid4 challenge-grid">
+      <article class="challenge" data-reveal>
+        <span class="num">A</span>
+        <h3 class="card-title">Perte de temps massive</h3>
+        <p class="body-sm">Vos équipes passent trop de temps sur des tâches répétitives, qui pourraient être automatisées pour libérer du temps sur l'essentiel.</p>
+      </article>
+      <article class="challenge" data-reveal>
+        <span class="num">B</span>
+        <h3 class="card-title">Manque d'automatisation</h3>
+        <p class="body-sm">Sans système performant pour accélérer vos résultats, vous ne pouvez pas vous concentrer sur ce qui rapporte vraiment.</p>
+      </article>
+      <article class="challenge" data-reveal>
+        <span class="num">C</span>
+        <h3 class="card-title">Concurrence plus rapide</h3>
+        <p class="body-sm">Vos concurrents utilisent déjà l'IA et prennent une avance significative sur votre part de marché. Agir maintenant est indispensable.</p>
+      </article>
+      <article class="challenge" data-reveal>
+        <span class="num">D</span>
+        <h3 class="card-title">Mauvaise utilisation de l'IA</h3>
+        <p class="body-sm">Vous avez testé quelques outils d'IA sans obtenir les résultats souhaités. Un accompagnement par un expert fait toute la différence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-a" data-screen-label="03 Solution">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="num">03</span><span class="lab">La solution</span></div>
+    <div class="grid12 solution-grid">
+      <div class="c-left5 photo-box" data-reveal>
+        <div class="photo-layer grade-b">
+          <img src="assets/img/v2-solution-personnes.webp" width="600" height="780" alt="Deux personnes travaillant ensemble devant un ordinateur portable, une main posée sur le clavier" loading="lazy">
+          <span class="photo-credit">Photo by <a href="https://unsplash.com/@mimithian?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Mimi Thian</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
+        </div>
+        <div class="multiply" aria-hidden="true"></div>
+      </div>
+      <div class="c-right6 solution-text">
+        <h2 class="h2 balance" data-reveal>Un audit IA <em>personnalisé</em> pour votre entreprise</h2>
+        <p class="lead pretty" data-reveal>En tant qu'agence IA à Annemasse, nous vous accompagnons pour transformer votre activité grâce à l'intelligence artificielle.</p>
+        <ol class="solution-list">
+          <li data-reveal>
+            <span class="n">01</span>
+            <div><h3 class="card-title">Analyse détaillée et complète</h3><p class="body-sm">Nous analysons vos processus, vos outils actuels et votre organisation pour vous offrir une vision claire.</p></div>
+          </li>
+          <li data-reveal>
+            <span class="n">02</span>
+            <div><h3 class="card-title">Identification des opportunités IA</h3><p class="body-sm">Nous identifions les gains automatisables les plus pertinents pour votre activité et vos objectifs.</p></div>
+          </li>
+          <li data-reveal>
+            <span class="n">03</span>
+            <div><h3 class="card-title">Recommandations concrètes</h3><p class="body-sm">Vous recevez une liste de recommandations pour passer à l'IA efficacement.</p></div>
+          </li>
+        </ol>
+        <a class="btn" href="#contact">Réserver mon audit gratuit
+          <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-b" data-screen-label="04 Méthode">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="num">04</span><span class="lab">La méthode</span></div>
+    <div class="grid12 head-grid">
+      <h2 class="c-h2 h2 balance" data-reveal>Une approche <em>structurée et éprouvée</em></h2>
+      <p class="c-intro lead" data-reveal>Notre accompagnement en intelligence artificielle à Annemasse suit un processus en 4 étapes.</p>
+    </div>
+    <div class="methode-photo" data-reveal>
+      <div class="photo-layer grade-b">
+        <img src="assets/img/v2-methode-atelier.webp" width="1290" height="469" alt="Atelier de travail : plusieurs personnes devant leurs ordinateurs portables autour d'une table en bois" loading="lazy">
+        <span class="photo-credit">Photo by <a href="https://unsplash.com/@anniespratt?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Annie Spratt</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
+      </div>
+      <div class="methode-dim" aria-hidden="true"></div>
+    </div>
+    <ol class="grid4 steps">
+      <li class="step" data-reveal>
+        <span class="step-mark" aria-hidden="true"></span>
+        <span class="step-tag">ÉTAPE 01</span>
+        <h3>Audit</h3>
+        <p>Analyse approfondie de vos processus, de vos outils, de vos objectifs et de l'état actuel de votre entreprise.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-mark" aria-hidden="true"></span>
+        <span class="step-tag">ÉTAPE 02</span>
+        <h3>Stratégie IA</h3>
+        <p>Élaboration d’une feuille de route IA personnalisée, alignée sur vos objectifs business.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-mark" aria-hidden="true"></span>
+        <span class="step-tag">ÉTAPE 03</span>
+        <h3>Implémentation</h3>
+        <p>Mise en place des outils IA et des automatisations pour transformer vos résultats en bénéfices concrets.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-mark" aria-hidden="true"></span>
+        <span class="step-tag">ÉTAPE 04</span>
+        <h3>Optimisation</h3>
+        <p>Suivi des performances, ajustements et itérations pour des résultats durables.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec bg-a" data-screen-label="05 Bénéfices">
+  <div class="wrap">
+    <div class="eyebrow-row split">
+      <div class="lab-group"><span class="num">05</span><span class="lab">Les bénéfices</span></div>
+      <span class="todo">À CONFIRMER : source et période</span>
+    </div>
+    <div class="grid12" style="margin-top:clamp(40px,5vw,72px)">
+      <h2 class="c-h2 h2 balance" data-reveal>Des bénéfices <em>concrets</em> pour votre entreprise</h2>
+    </div>
+    <div class="benefit-list">
+      <div class="grid12 benefit" data-reveal>
+        <p class="c-b1 benefit-value">40 %</p>
+        <h3 class="c-b2">Gain de temps immédiat</h3>
+        <p class="c-b3 benefit-text">Réduction du temps passé sur les tâches répétitives.</p>
+      </div>
+      <div class="grid12 benefit" data-reveal>
+        <p class="c-b1 benefit-value">3x</p>
+        <h3 class="c-b2">Productivité décuplée</h3>
+        <p class="c-b3 benefit-text">Plus de résultats avec les mêmes ressources.</p>
+      </div>
+      <div class="grid12 benefit" data-reveal>
+        <p class="c-b1 benefit-value">+60 %</p>
+        <h3 class="c-b2">Plus de clients potentiels</h3>
+        <p class="c-b3 benefit-text">Augmentation significative de l'acquisition.</p>
+      </div>
+      <div class="grid12 benefit" data-reveal>
+        <p class="c-b1 benefit-value">2x</p>
+        <h3 class="c-b2">Meilleure rentabilité</h3>
+        <p class="c-b3 benefit-text">Des processus transformés en machine rentable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-b" data-screen-label="06 Qui sommes-nous">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="num">06</span><span class="lab">Qui sommes-nous</span></div>
+    <div class="grid12 qui-grid">
+      <div class="c-left5 qui-media" data-reveal>
+        <div class="placeholder-slot" role="img" aria-label="Emplacement réservé : photo du fondateur, non fournie">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span>Photo du fondateur</span>
+        </div>
+        <span class="todo">À CONFIRMER : photo du fondateur</span>
+      </div>
+      <div class="c-right6 qui-text">
+        <h2 class="h2 balance" data-reveal>Votre agence IA de confiance <em>à Annemasse</em></h2>
+        <div class="qui-tags">
+          <span class="todo">À CONFIRMER : nom du fondateur</span>
+          <span class="todo">À CONFIRMER : parcours du fondateur</span>
+        </div>
+        <ul class="grid2 qui-features">
+          <li class="qui-feature" data-reveal>
+            <h3>Expert certifié</h3>
+            <p class="body-sm">Formation approfondie et certifications reconnues en intelligence artificielle et automatisation.</p>
+            <span class="todo">À CONFIRMER : noms des certifications</span>
+          </li>
+          <li class="qui-feature" data-reveal>
+            <h3>Approche personnalisée</h3>
+            <p class="body-sm">Chaque audit est unique, adapté à votre secteur, vos objectifs et votre culture d'entreprise.</p>
+          </li>
+          <li class="qui-feature" data-reveal>
+            <h3>Résultats concrets</h3>
+            <p class="body-sm">Nos recommandations sont actionnables immédiatement, avec un impact mesurable.</p>
+          </li>
+          <li class="qui-feature" data-reveal>
+            <h3>Vision business et technique</h3>
+            <p class="body-sm">Une alliance rare entre compréhension business et maîtrise technique de l'IA.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-light light" data-screen-label="07 Témoignages">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="num">07</span><span class="lab">Témoignages</span></div>
+    <div class="grid12 head-grid">
+      <h2 class="c-h2 h2" data-reveal>Ce que disent <em>nos clients</em></h2>
+      <p class="c-intro lead" data-reveal>Chaque avis est publié avec son auteur, son entreprise, sa date et un lien vers la source d'origine.</p>
+    </div>
+    <div class="grid3 testimonial-grid">
+      <figure class="testimonial" data-reveal>
+        <span class="quote-mark" aria-hidden="true">«</span>
+        <blockquote>L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.</blockquote>
+        <figcaption class="testimonial-foot">
+          <div class="testimonial-name">Jean-Pierre Morel</div>
+          <div class="testimonial-tags">
+            <span class="todo light sm">À CONFIRMER : entreprise</span>
+            <span class="todo light sm">À CONFIRMER : date</span>
+            <span class="todo light sm">À CONFIRMER : lien vers l'avis</span>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="testimonial" data-reveal>
+        <span class="quote-mark" aria-hidden="true">«</span>
+        <blockquote>Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.</blockquote>
+        <figcaption class="testimonial-foot">
+          <div class="testimonial-name">Clara Vallet</div>
+          <div class="testimonial-tags">
+            <span class="todo light sm">À CONFIRMER : entreprise</span>
+            <span class="todo light sm">À CONFIRMER : date</span>
+            <span class="todo light sm">À CONFIRMER : lien vers l'avis</span>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="testimonial" data-reveal>
+        <span class="quote-mark" aria-hidden="true">«</span>
+        <blockquote>Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs.</blockquote>
+        <figcaption class="testimonial-foot">
+          <div class="testimonial-name">Yohanna B.</div>
+          <div class="testimonial-tags">
+            <span class="todo light sm">À CONFIRMER : entreprise</span>
+            <span class="todo light sm">À CONFIRMER : date</span>
+            <span class="todo light sm">À CONFIRMER : lien vers l'avis</span>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-a" data-screen-label="08 FAQ">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="num">08</span><span class="lab">FAQ</span></div>
+    <div class="grid12 faq-grid">
+      <div class="c-faqL faq-head">
+        <h2 class="h2" data-reveal>Questions <em>fréquentes</em></h2>
+        <a class="link-line sm" href="/faq/">Toutes les questions</a>
+      </div>
+      <div class="c-faqR faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-summary"><span class="num">01</span><h3 class="faq-question">L'audit IA est-il vraiment gratuit ?</h3><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">
+            <p class="faq-answer">Oui, l'audit est gratuit et sans engagement. Vous repartez avec une analyse de vos processus et des recommandations concrètes, que vous décidiez ou non de poursuivre avec nous.</p>
+            <span class="todo">À CONFIRMER : durée et format de l’audit</span>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary"><span class="num">02</span><h3 class="faq-question">En quoi consiste l'audit IA ?</h3><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">
+            <p class="faq-answer">Nous analysons vos processus, vos outils et votre organisation, puis nous identifions les tâches automatisables les plus rentables. Vous recevez ensuite une liste de recommandations priorisées.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary"><span class="num">03</span><h3 class="faq-question">Faut-il des compétences techniques dans mon équipe ?</h3><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">
+            <p class="faq-answer">Non. Nous traduisons les sujets techniques en langage clair et accompagnons vos équipes à chaque étape, de la stratégie à la mise en place.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary"><span class="num">04</span><h3 class="faq-question">Quelles entreprises accompagnez-vous ?</h3><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">
+            <p class="faq-answer">Nous accompagnons des PME d'Annemasse et de Haute-Savoie, et pouvons intervenir dans le Grand Genève.</p>
+            <span class="todo">À CONFIRMER : zones d’intervention réelles</span>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary"><span class="num">05</span><h3 class="faq-question">Que se passe-t-il après l'audit ?</h3><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">
+            <p class="faq-answer">Vous recevez une feuille de route IA personnalisée. Si vous le souhaitez, nous mettons ensuite en place les outils et les automatisations, puis nous suivons les performances.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-summary"><span class="num">06</span><h3 class="faq-question">Combien coûte la mise en place des solutions ?</h3><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">
+            <p class="faq-answer">Le coût dépend des recommandations retenues : il est chiffré après l'audit, sur la base de votre situation réelle.</p>
+            <span class="todo">À CONFIRMER : fourchette de prix ou modalités</span>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-b" id="contact" data-screen-label="09 Contact" style="scroll-margin-top:80px">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="num">09</span><span class="lab">Contact</span></div>
+    <div class="contact-banner" data-reveal>
+      <div class="photo-layer grade-a">
+        <img src="assets/img/v2-contact-alpes.webp" width="1362" height="260" alt="Chaîne de montagnes enneigées au coucher du soleil, vue panoramique" loading="lazy">
+        <span class="photo-credit">Photo by <a href="https://unsplash.com/@tqfang?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">T Fang</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
+      </div>
+      <div class="banner-fade" aria-hidden="true"></div>
+      <div class="banner-labels">
+        <span>Annemasse · Haute-Savoie</span>
+        <span>Grand Genève</span>
+      </div>
+    </div>
+    <div class="grid12 contact-grid">
+      <div class="c-left5 contact-info">
+        <h2 class="h2 balance" data-reveal>Prêt à transformer votre entreprise avec l'IA <em>à Annemasse ?</em></h2>
+        <p class="lead pretty">Réservez votre audit IA gratuit et découvrez concrètement comment exploiter l'intelligence artificielle dans votre entreprise.</p>
+        <ul class="ticks contact-ticks">
+          <li><i aria-hidden="true"></i>Sans engagement</li>
+          <li><i aria-hidden="true"></i>Réponse sous 24 h</li>
+          <li><i aria-hidden="true"></i>Audit personnalisé</li>
+        </ul>
+        <address class="contact-address">
+          <div class="address-row">
+            <span class="address-label">Adresse</span>
+            <div class="address-value"><span>Annemasse, Haute-Savoie</span><span class="todo">À CONFIRMER : adresse complète</span></div>
+          </div>
+          <div class="address-row">
+            <span class="address-label">Téléphone</span>
+            <div class="address-value"><span class="todo">À CONFIRMER : numéro de téléphone</span></div>
+          </div>
+          <div class="address-row">
+            <span class="address-label">E-mail</span>
+            <a class="address-mail" href="mailto:contact@mzi-consulting.com">contact@mzi-consulting.com</a>
+          </div>
+        </address>
+      </div>
+      <div class="c-right6 contact-form-wrap">
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="v2-nom">Nom complet</label>
+            <input class="form-field" id="v2-nom" name="nom" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="v2-email">E-mail professionnel</label>
+            <input class="form-field" id="v2-email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="v2-msg">Comment pouvons-nous vous aider ?</label>
+            <textarea class="form-field" id="v2-msg" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn">Réserver mon audit gratuit
+            <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+          </button>
+          <p class="form-note">Vos données servent uniquement à vous recontacter. <a href="/politique-de-confidentialite/">Politique de confidentialité</a></p>
+        </form>
+        <div class="form-sent" id="form-sent" role="status" tabindex="-1" hidden>
+          <div class="form-sent-title">Merci, votre demande est envoyée.</div>
+          <p class="form-sent-text">Nous revenons vers vous sous 24 h pour planifier votre audit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer" data-screen-label="Pied de page">
+  <div class="wrap">
+    <div class="grid12 footer-top">
+      <div class="c-f1 footer-brand">
+        <img src="assets/img/logo-mzi-consulting.webp" alt="MZI Consulting" width="120" height="45">
+        <p>Agence d'automatisation IA à Annemasse, Haute-Savoie, France.</p>
+        <div class="footer-contact">
+          <a class="footer-email" href="mailto:contact@mzi-consulting.com">contact@mzi-consulting.com</a>
+          <span class="todo">À CONFIRMER : adresse complète</span>
+          <span class="todo">À CONFIRMER : téléphone</span>
+        </div>
+      </div>
+      <nav class="c-f2 footer-nav" aria-label="Services">
+        <div class="footer-nav-title">Services</div>
+        <a class="footer-link" href="/services/audit-ia/">Audit IA gratuit</a>
+        <a class="footer-link" href="/services/automatisation-ia/">Automatisation IA</a>
+        <a class="footer-link" href="/services/integration-ia/">Intégration IA sur-mesure</a>
+      </nav>
+      <nav class="c-f3 footer-nav" aria-label="Zones desservies">
+        <div class="footer-nav-title">Zones desservies</div>
+        <a class="footer-link" href="/agence-ia-annemasse/">Agence IA à Annemasse</a>
+        <a class="footer-link" href="/agence-ia-geneve/">Agence IA à Genève</a>
+        <a class="footer-link" href="/ia-pme-suisse-romande/">IA pour PME en Suisse romande</a>
+      </nav>
+      <nav class="c-f4 footer-nav" aria-label="Ressources">
+        <div class="footer-nav-title">Ressources</div>
+        <a class="footer-link" href="/methode/">Notre méthode</a>
+        <a class="footer-link" href="/etudes-de-cas/">Études de cas</a>
+        <a class="footer-link" href="/faq/">FAQ</a>
+        <a class="footer-link" href="/blog/">Blog</a>
+        <a class="footer-link" href="/contact/">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 MZI Consulting. Tous droits réservés.</p>
+      <nav class="footer-legal" aria-label="Pages légales">
+        <a class="footer-legal-link" href="/mention-legale/">Mentions légales</a>
+        <a class="footer-legal-link" href="/politique-de-confidentialite/">Politique de confidentialité</a>
+        <a class="footer-legal-link" href="/politique-de-cookies-ue/">Politique de cookies</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var STATIC_MODE = new URLSearchParams(location.search).has('statique');
+  var reduceMotion = STATIC_MODE || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Menu mobile
+  var toggle = document.getElementById('menu-toggle');
+  var panel = document.getElementById('mobile-nav');
+  if (toggle && panel) {
+    var setMenu = function(open){
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      panel.hidden = !open;
+    };
+    toggle.addEventListener('click', function(){
+      setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    Array.prototype.forEach.call(panel.querySelectorAll('a'), function(a){
+      a.addEventListener('click', function(){ setMenu(false); });
+    });
+    // Le menu ouvert recouvre la page : si le focus clavier en sort, on le referme
+    // pour que le focus ne disparaisse pas derrière l'en-tête fixe.
+    document.getElementById('site-header').addEventListener('focusout', function(e){
+      if (e.relatedTarget && !this.contains(e.relatedTarget)) setMenu(false);
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+  }
+
+  // Formulaire de contact (visuel uniquement, aucun envoi réel)
+  var form = document.getElementById('contact-form');
+  var sent = document.getElementById('form-sent');
+  if (form && sent) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      form.hidden = true;
+      sent.hidden = false;
+      sent.focus();
+    });
+  }
+
+  // Fond animé du héros (18 nœuds max), coupé si prefers-reduced-motion ou ?statique
+  var canvas = document.getElementById('hero-canvas');
+  var hero = document.getElementById('hero');
+  if (canvas && hero) {
+    var ctx = canvas.getContext('2d');
+    var nodes = [], w = 0, h = 0;
+
+    var setup = function(){
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = hero.offsetWidth; h = hero.offsetHeight * 0.6;
+      canvas.style.height = h + 'px';
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var count = Math.round(Math.min(18, w / 70));
+      nodes = [];
+      for (var i = 0; i < count; i++) {
+        nodes.push({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .18, vy: (Math.random() - .5) * .18 });
+      }
+    };
+
+    var draw = function(move){
+      var D = 220;
+      ctx.clearRect(0, 0, w, h);
+      if (move) {
+        for (var i = 0; i < nodes.length; i++) {
+          var p = nodes[i];
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > w) p.vx *= -1;
+          if (p.y < 0 || p.y > h) p.vy *= -1;
+        }
+      }
+      for (var a = 0; a < nodes.length; a++) {
+        for (var b = a + 1; b < nodes.length; b++) {
+          var dx = nodes[a].x - nodes[b].x, dy = nodes[a].y - nodes[b].y;
+          var d = Math.sqrt(dx * dx + dy * dy);
+          if (d < D) {
+            ctx.strokeStyle = 'rgba(16,215,253,' + ((1 - d / D) * 0.14) + ')';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(nodes[a].x, nodes[a].y);
+            ctx.lineTo(nodes[b].x, nodes[b].y);
+            ctx.stroke();
+          }
+        }
+      }
+      ctx.fillStyle = 'rgba(16,215,253,.35)';
+      for (var n = 0; n < nodes.length; n++) ctx.fillRect(nodes[n].x - 1.5, nodes[n].y - 1.5, 3, 3);
+    };
+
+    setup();
+    if (reduceMotion) {
+      draw(false);
+    } else {
+      var last = 0;
+      var loop = function(t){
+        requestAnimationFrame(loop);
+        if (t - last < 50) return;
+        last = t; draw(true);
+      };
+      requestAnimationFrame(loop);
+    }
+    window.addEventListener('resize', function(){
+      setup();
+      if (reduceMotion) draw(false);
+    });
+  }
+
+  // Apparitions au défilement : tout ce qui est sous la ligne de flottaison s'estompe puis
+  // apparaît (opacité + léger décalage). Sans effet si reduce-motion, ?statique ou pas d'IntersectionObserver.
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    setTimeout(function(){
+      var vh = window.innerHeight;
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting) {
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'none';
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      Array.prototype.forEach.call(document.querySelectorAll('[data-reveal]'), function(el){
+        if (el.getBoundingClientRect().top < vh * 0.92) return;
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(14px)';
+        el.style.transition = 'opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)';
+        io.observe(el);
+      });
+    }, 60);
+  }
+})();
+</script>
+</body>
+</html>

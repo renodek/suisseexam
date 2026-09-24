@@ -1,0 +1,52 @@
+/* MZI Consulting — couleurs relevées sur https://mzi-consulting.com (styles-reels.md, CSS Elementor) et sur les logos.
+   Couleurs techniques des plugins WordPress (#0073aa, #d9534f, #cc3366, icônes sociales…) volontairement exclues. */
+:root {
+  /* Base — valeurs brutes */
+  --mzi-night-900: #0a0e1a;   /* fond body + canvas "réseau neuronal" — site */
+  --mzi-night-850: #0c0f14;   /* --e-global-color-text : fond header/footer, texte des boutons cyan — site + SVG logo reconstruit */
+  --mzi-night-800: #0f1526;   /* fond cartes témoignages — site */
+  --mzi-field-700: #24282e;   /* fond champs formulaire — site */
+  --mzi-cyan-500: #10d7fd;    /* --e-global-color-accent + bandeau "CONSULTING" du logo (mesuré : #10d7fd) — site + logo */
+  --mzi-cyan-600: #09c6eb;    /* survol bouton principal — site */
+  --mzi-canvas-cyan: rgb(0, 200, 255); /* nœuds/liaisons du canvas de fond (alpha 0.55 / ≤0.4) — site (script) */
+  --mzi-slate-400: #7e8da3;   /* --e-global-color-secondary : sous-titres, descriptions, bordures — site */
+  --mzi-gray-400: #9ca3af;    /* descriptions cartes bénéfices — site */
+  --mzi-white: #ffffff;       /* --e-global-color-primary : titres, texte, logo — site + logo */
+  --mzi-gold-500: #f5b401;    /* étoiles témoignages, flèches/puces du carrousel — site */
+
+  --mzi-glow-blue: rgb(0, 103, 177);   /* reflets : survol cartes icon-box (α .05/.1), halo formulaire (α .15→.05) — site (CSS perso) */
+  --mzi-glow-teal: rgba(7, 105, 124, 0.6); /* halo des icônes encadrées : 0 0 15px 13px — site (CSS perso) */
+  --mzi-field-border: #666666;          /* bordure des champs (thème), #333333 au focus — site */
+
+  /* Déclinaison MZI Agency (logo uniquement, mesuré sur Logo-MZI-Agency.jpg — dégradé radial) */
+  --mzi-agency-blue-center: #41c9fb;
+  --mzi-agency-blue-edge: #297ef3;
+  --mzi-agency-gradient: radial-gradient(circle at 50% 45%, #41c9fb 0%, #297ef3 75%);
+
+  /* Transparences utilisées */
+  --mzi-white-a10: #ffffff1a; /* survol badge héros */
+  --mzi-white-a12: #ffffff1f; /* fond bouton secondaire */
+  --mzi-white-a18: #ffffff2e; /* survol badges de section */
+  --mzi-white-a22: #ffffff38; /* survol bouton secondaire */
+  --mzi-slate-a52: #7e8da385; /* bordure cartes défis / solution */
+  --mzi-slate-a38: #7e8da361; /* bordure cartes "Pourquoi nous" */
+  --mzi-divider-footer: #dddddd2e; /* séparateurs liens légaux */
+
+  /* Alias sémantiques */
+  --bg-page: var(--mzi-night-900);
+  --bg-header: var(--mzi-night-850);
+  --bg-footer: var(--mzi-night-850);
+  --surface-testimonial: var(--mzi-night-800);
+  --surface-field: var(--mzi-field-700);
+  --text-heading: var(--mzi-white);
+  --text-body: var(--mzi-slate-400);
+  --text-muted: var(--mzi-gray-400);
+  --text-accent: var(--mzi-cyan-500);
+  --text-on-accent: var(--mzi-night-850);
+  --accent: var(--mzi-cyan-500);
+  --accent-hover: var(--mzi-cyan-600);
+  --border-card: var(--mzi-slate-a52);
+  --border-card-soft: var(--mzi-slate-a38);
+  --border-control: var(--mzi-slate-400);
+  --rating: var(--mzi-gold-500);
+}

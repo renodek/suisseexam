@@ -1,0 +1,24 @@
+/* Échelle relevée sur le site (desktop / mobile ≤767px). */
+:root {
+  --font-display: "Outfit", sans-serif;
+  --font-text: "Lato", sans-serif;
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; /* body par défaut du thème */
+
+  --fs-h1: 104px;  --lh-h1: 1.2;  --fw-h1: 800;   /* mobile 45px */
+  --fs-h2: 60px;   --lh-h2: 1.2;  --fw-h2: 800;   /* mobile 35px ; 2 H2 en 600 (méthodologie, pourquoi nous) */
+  --fs-h3: 35px;   --lh-h3: 1.2;  --fw-h3: 600;   /* Lato — chiffres-clés */
+  --fs-h1-mobile: 45px;
+  --fs-h2-mobile: 35px;
+
+  --fs-benefit-number: 90px;   /* Outfit 800, mobile 40px */
+  --fs-card-title: 24px;       /* Outfit 600 (défis) / Lato 600 (solution) */
+  --fs-lead: 20px;             /* Lato 400, sous-titres de section ; mobile 16px */
+  --fs-keyfig-label: 18px;     /* Lato 400 */
+  --fs-button: 20px;           /* Outfit 500 ; mobile 15px */
+  --fs-badge: 16px;            /* Lato 600 */
+  --fs-body: 16px;             /* Lato 400 */
+  --fs-label: 14px;            /* formulaire */
+  --fs-footer: 13px;           /* Lato 400 */
+  --fs-quote-lg: 30px;         /* Outfit 300, lh 32px — témoignage mis en avant */
+  --fs-quote: 16px;            /* Outfit 300, lh 26px */
+}

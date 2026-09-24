@@ -1,0 +1,389 @@
+{
+  "390": {
+    "header": {
+      "designHeight": 80,
+      "pageHeight": 80,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "hero": {
+      "designHeight": 1100,
+      "pageHeight": 1100,
+      "mismatchPct": 0.1,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "T Fang",
+        "Unsplash"
+      ]
+    },
+    "chiffres": {
+      "designHeight": 756,
+      "pageHeight": 756,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "defis": {
+      "designHeight": 1456,
+      "pageHeight": 1456,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "solution": {
+      "designHeight": 1566,
+      "pageHeight": 1566,
+      "mismatchPct": 0.17,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "Mimi Thian",
+        "Unsplash"
+      ]
+    },
+    "methode": {
+      "designHeight": 1563,
+      "pageHeight": 1563,
+      "mismatchPct": 0.2,
+      "diffs": [],
+      "missing": [
+        "ÉTAPE",
+        "01",
+        "ÉTAPE",
+        "02",
+        "ÉTAPE",
+        "03",
+        "ÉTAPE",
+        "04"
+      ],
+      "extra": [
+        "Photo by on",
+        "Annie Spratt",
+        "Unsplash",
+        "ÉTAPE 01",
+        "ÉTAPE 02",
+        "ÉTAPE 03",
+        "ÉTAPE 04"
+      ]
+    },
+    "benefices": {
+      "designHeight": 1158,
+      "pageHeight": 1158,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "qui": {
+      "designHeight": 1451,
+      "pageHeight": 1451,
+      "mismatchPct": 0.2,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo du fondateur"
+      ]
+    },
+    "temoignages": {
+      "designHeight": 2126,
+      "pageHeight": 2126,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "faq": {
+      "designHeight": 1258,
+      "pageHeight": 1258,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "contact": {
+      "designHeight": 1659,
+      "pageHeight": 1659,
+      "mismatchPct": 0.04,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "T Fang",
+        "Unsplash"
+      ]
+    },
+    "footer": {
+      "designHeight": 1051,
+      "pageHeight": 1051,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    }
+  },
+  "768": {
+    "header": {
+      "designHeight": 80,
+      "pageHeight": 80,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "hero": {
+      "designHeight": 949,
+      "pageHeight": 949,
+      "mismatchPct": 0.06,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "T Fang",
+        "Unsplash"
+      ]
+    },
+    "chiffres": {
+      "designHeight": 727,
+      "pageHeight": 727,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "defis": {
+      "designHeight": 1209,
+      "pageHeight": 1209,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "solution": {
+      "designHeight": 1255,
+      "pageHeight": 1255,
+      "mismatchPct": 0.17,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "Mimi Thian",
+        "Unsplash"
+      ]
+    },
+    "methode": {
+      "designHeight": 1370,
+      "pageHeight": 1370,
+      "mismatchPct": 0.15,
+      "diffs": [],
+      "missing": [
+        "ÉTAPE",
+        "01",
+        "ÉTAPE",
+        "02",
+        "ÉTAPE",
+        "03",
+        "ÉTAPE",
+        "04"
+      ],
+      "extra": [
+        "Photo by on",
+        "Annie Spratt",
+        "Unsplash",
+        "ÉTAPE 01",
+        "ÉTAPE 02",
+        "ÉTAPE 03",
+        "ÉTAPE 04"
+      ]
+    },
+    "benefices": {
+      "designHeight": 1039,
+      "pageHeight": 1039,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "qui": {
+      "designHeight": 1341,
+      "pageHeight": 1341,
+      "mismatchPct": 0.17,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo du fondateur"
+      ]
+    },
+    "temoignages": {
+      "designHeight": 1475,
+      "pageHeight": 1475,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "faq": {
+      "designHeight": 1052,
+      "pageHeight": 1052,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "contact": {
+      "designHeight": 1517,
+      "pageHeight": 1517,
+      "mismatchPct": 0.01,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "T Fang",
+        "Unsplash"
+      ]
+    },
+    "footer": {
+      "designHeight": 1021,
+      "pageHeight": 1021,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    }
+  },
+  "1440": {
+    "header": {
+      "designHeight": 80,
+      "pageHeight": 80,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "hero": {
+      "designHeight": 1038,
+      "pageHeight": 1038,
+      "mismatchPct": 0.03,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "T Fang",
+        "Unsplash"
+      ]
+    },
+    "chiffres": {
+      "designHeight": 534,
+      "pageHeight": 534,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "defis": {
+      "designHeight": 881,
+      "pageHeight": 881,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "solution": {
+      "designHeight": 1172,
+      "pageHeight": 1172,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "Mimi Thian",
+        "Unsplash"
+      ]
+    },
+    "methode": {
+      "designHeight": 1230,
+      "pageHeight": 1230,
+      "mismatchPct": 0.04,
+      "diffs": [],
+      "missing": [
+        "ÉTAPE",
+        "01",
+        "ÉTAPE",
+        "02",
+        "ÉTAPE",
+        "03",
+        "ÉTAPE",
+        "04"
+      ],
+      "extra": [
+        "Photo by on",
+        "Annie Spratt",
+        "Unsplash",
+        "ÉTAPE 01",
+        "ÉTAPE 02",
+        "ÉTAPE 03",
+        "ÉTAPE 04"
+      ]
+    },
+    "benefices": {
+      "designHeight": 1216,
+      "pageHeight": 1216,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "qui": {
+      "designHeight": 956,
+      "pageHeight": 956,
+      "mismatchPct": 0.1,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo du fondateur"
+      ]
+    },
+    "temoignages": {
+      "designHeight": 1124,
+      "pageHeight": 1124,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "faq": {
+      "designHeight": 1054,
+      "pageHeight": 1054,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    },
+    "contact": {
+      "designHeight": 1387,
+      "pageHeight": 1387,
+      "mismatchPct": 0.03,
+      "diffs": [],
+      "missing": [],
+      "extra": [
+        "Photo by on",
+        "T Fang",
+        "Unsplash"
+      ]
+    },
+    "footer": {
+      "designHeight": 542,
+      "pageHeight": 542,
+      "mismatchPct": 0,
+      "diffs": [],
+      "missing": [],
+      "extra": []
+    }
+  }
+}

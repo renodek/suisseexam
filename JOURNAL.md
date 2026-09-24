@@ -397,3 +397,52 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html`.
 - `livrable/assets/img/v1-hero-audit.webp`, `livrable/assets/img/v1-og-image.jpg` (régénérée), `source/images/design-v1/hero-audit-original.jpg`
 - `livrable/v1-clarte.html` et `livrable/credits.txt` (modifiés)
 - Supprimés : `livrable/assets/img/v1-hero-reunion.webp`, `source/images/design-v1/hero-reunion.jpg`
+
+## Étape 12 — V2 « Nuit suisse » (livrable/v2-nuit-suisse.html) (2026-09-24)
+
+### Ce qui a été fait
+
+- Conversion de `source/design-v2/Accueil V2 - Nuit suisse.dc.html` (seul fichier utilisé ; les autres fichiers du zip — V1, comparaison des titres, aperçus — ignorés) en HTML/CSS/JS vanilla, sans `support.js` ni `image-slot.js`. Même méthode que la V1 : `<sc-if>`/`<sc-for>`/`{{ }}` remplacés par du HTML en dur, grille 12 colonnes du composant (une colonne sous 900 px) exprimée en CSS avec media query, `style-hover`/`style-focus` traduits en vrais états `:hover`/`:focus`, icônes en `<svg>` inline.
+- Le design V2 contient déjà les deux corrections de contenu de la V1 (e-mail `contact@mzi-consulting.com` au lieu de « À CONFIRMER » ; réponse FAQ sur les zones d'intervention sans clientèle Grand Genève confirmée + étiquette `[À CONFIRMER : zones d'intervention réelles]`) : reprises à l'identique. La réponse est celle du design (une seule phrase) et le JSON-LD `FAQPage` la reproduit mot pour mot.
+- **Photos** (4 fichiers, deux photos sources d'après le design + une déjà utilisée en V1) : dimensions d'affichage maximales mesurées sur le design en 1920/1440/768/390 px (héros 1398×340, solution 521×778, méthode 1285×380, contact 1285×260), téléchargées au ratio de recadrage du design (`crop=entropy`, mêmes paramètres Unsplash) à ≥ 2× cette taille, converties en WebP q78 : `v2-hero-alpes` 2992×680 (112 Ko), `v2-solution-personnes` 1200×1560 (43 Ko), `v2-methode-atelier` 2580×938 (200 Ko), `v2-contact-alpes` 2724×520 (96 Ko). `width`/`height` à 1×, `alt` descriptif (vérifié à l'œil sur chaque photo : le héros est une chaîne de montagnes enneigée, pas un lac comme l'annonçait l'emplacement du design), `loading="lazy"` sauf le héros (`fetchpriority="high"`). Dégradés, `filter` (saturate/grayscale/brightness) et `mix-blend-mode` du design conservés en CSS. Bandeau de crédit Unsplash du design repris. Photo du fondateur : aucune source dans le design → encart vide « À CONFIRMER ».
+- `credits.txt` réécrit sans doublon : la photo de la méthode (Annie Spratt) est déjà créditée en V1 et sert aussi en V2 (autre recadrage) → une seule entrée, deux fichiers ; T Fang (héros + bandeau contact + Open Graph, une seule entrée pour la même photo) et Mimi Thian (solution) ajoutés.
+- Fond animé (18 nœuds max, distance 220 px, carrés de 3 px) et apparitions au défilement (`data-reveal`, 41 éléments) repris à l'identique, désactivés si `prefers-reduced-motion` ou `?statique`. Vérifié : mode normal = 109 puis 254 appels `requestAnimationFrame` et 41 éléments masqués qui se révèlent au défilement ; `?statique` et reduced-motion = 0 appel, 0 élément masqué, canvas dessiné une seule fois.
+- **SEO** : même socle que `v1-clarte.html`, mêmes commentaires `<!-- Audit §n -->` (meta description de 147 car., Open Graph/Twitter, JSON-LD `ProfessionalService` + 3 `Service` + `FAQPage` + `BreadcrumbList`, `<main>`, lien d'évitement, boutons nommés, zones tactiles ≥ 24 px) ; image Open Graph 1200×630 propre à la V2 (`v2-og-image.jpg`), recadrée sur le sommet du héros et étalonnée comme lui (saturation 0,7, luminosité 0,85). Section « 01 Chiffres-clés » : son étiquette est un `<h2>` (visuellement identique) pour qu'aucune section n'ait de contenu sans titre ; les chiffres restent du texte (`<p>`).
+- Recette : `scripts/compare-v2.js` (design d'origine vs page, 1440/768/390 px) et `scripts/controle-v2.js` (survol, focus, menu, FAQ, formulaire, contrastes), dérivés de ceux de la V1.
+
+### Polices
+
+- Mesure (octets réellement téléchargés par Chromium, page entière défilée) : **V1 51,2 Ko** (Outfit 31,5 + Figtree 19,7) ; **design V2 164,8 Ko** (Fraunces 113,5 dont 79,6 pour l'italique + Geist 28,7 + Geist Mono 22,6). Écart ×3,2 : « nettement » supérieur → chargement limité.
+- Retenu : chaque famille demandée uniquement pour ses instances utilisées (Geist 300–600 ; Geist Mono 300–400 — le 500 du design n'est pas utilisé ; Fraunces romain 500 + italique 400 et 500) **et** restreinte aux glyphes réellement rendus (paramètre `text=` de Google Fonts, calculé par `scripts/fraunces-subset.js` en tenant compte de `text-transform`, avec alphabet latin et chiffres en marge). Résultat : **111,6 Ko** (Fraunces 78,0 + Geist 19,4 + Geist Mono 14,2), soit −32 % contre le design, mais encore ×2,2 la V1.
+- **Écarté : fixer l'axe opsz** (testé à 72 : Fraunces 40 Ko au lieu de 78, page ≈ 74 Ko). Il change la largeur des glyphes, donc les retours à la ligne : héros +94 px, témoignages −33 px, contact −61 px (1440 px), « Qui sommes-nous » −91 px (768 px), solution −36 px (390 px) — le rendu n'est plus celui du design. Non retenu tant que « rendu identique » prime ; c'est l'unique levier restant (l'API Google renvoie exactement le même fichier si l'on réduit la plage d'opsz à 26..100 ou si l'on retire SOFT/WONK — vérifié).
+
+### Résultats de la recette
+
+- Comparaison design d'origine / page, 3 largeurs × 12 blocs : hauteurs identiques partout (écart 0 px), 0 écart de position/taille/police/couleur/interligne hors tolérance, `pixelmatch` ≤ 0,2 % par bloc (résidu : ré-encodage WebP des photos). Le seul écart voulu est le bandeau de crédit Unsplash, invisible dans l'analyse de texte car interne au composant du design.
+- Survol : 10 boutons/liens identiques au design ; les 4 types de cartes/lignes n'ont aucun effet de survol dans le design ni dans la page. Focus clavier : 47 (1440 px), 42 (390 px) et 8 éléments (menu ouvert) tous avec indicateur visible, aucun masqué par l'en-tête. Menu mobile (ouverture, Échap, fermeture au départ du focus), FAQ (6 questions indépendantes, Entrée/Espace, icône pivotée), formulaire (validation native, confirmation, aucune requête) : conformes.
+- Contrastes : 30 couples texte/fond uniques à 1440 px et à 390 px, **0 échec** AA. Étiquettes `[À CONFIRMER]` : 10,19:1 à 10,98:1 sur fond nuit (`#f4c96e`), 6,62:1 sur la section claire (`#7a4f00` sur `#fdf6e7`) ; bleu pétrole `#0e7490` sur gris clair `#f3f5f8` : 4,91:1 (5,36:1 sur blanc). Étiquettes de mono gris `#8b96a9` : 6,09:1. Survol : 13,22:1 (bouton cyan éclairci) et 11,15:1 (liens). Bordure des champs `#5d6a82` : 3,33:1 sur le champ, 3,53:1 sur le cadre (≥ 3:1) — aucune correction nécessaire ici, contrairement à la V1. Crédits photo : blanc sur bandeau noir 55 %, 14,1:1 minimum mesuré sur les pixels rendus (1440/768/390 px).
+- SEO/structure vérifiés : 1 `<h1>`, 1 `<h2>` par section (hors héros), JSON-LD valide et `FAQPage` strictement identique aux 6 questions/réponses affichées, 0 lien/bouton sans nom, 0 zone tactile < 24 px (hors liens de crédit et de confidentialité, dans une phrase : exception « en ligne » de WCAG 2.5.8), 0 erreur console.
+
+### Décisions prises et leur justification
+
+- **« Grand Genève » conservé dans les pastilles du héros et le bandeau du contact** (comme en V1) : positionnement du design, non compris dans les corrections demandées.
+- **Écarts volontaires avec le design** : libellé du cadre « Photo du fondateur » en `#b9c1ce` (le design le laisse hériter du noir du `body` sur fond nuit — illisible) ; lien d'évitement, `<main>` (déjà présent) et comportements du menu/du formulaire de la V1 ajoutés ; padding des liens texte compensé par des marges négatives pour atteindre 24 px de zone cliquable sans bouger la mise en page.
+- **Liens du menu vers des pages inexistantes** (`/services/…`, `/faq/`…) laissés tels quels, comme en V1.
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Fraunces pesait 113 Ko | Voir « Polices » : instances limitées + glyphes utilisés (78 Ko) ; épinglage de l'opsz mesuré puis écarté (retours à la ligne modifiés). |
+| Premier essai avec opsz fixé : 5 blocs de hauteur différente | Retour à l'axe variable, le gain restant venant du sous-ensemble de glyphes. |
+| Bloc « Qui sommes-nous » plus court de 91 px à 768 px | Le cadre d'image du design retombe sur un ratio 3/2 quand la hauteur du parent est indéfinie : reproduit par une cale `aspect-ratio:3/2`. |
+| Espacement des lettres (0,28 px) sur la liste à puces du contact | Le design n'en a pas à cet endroit (la classe commune en ajoutait) : `letter-spacing:normal`. |
+| Outils Node incapables de lire `/tmp/…` (chemin Git Bash) | Fichiers temporaires dans le dépôt, supprimés ensuite ; URL `file://` construites avec `pathToFileURL`. |
+
+### Fichiers produits
+
+- `livrable/v2-nuit-suisse.html`, `livrable/credits.txt` (mis à jour)
+- `livrable/assets/img/v2-hero-alpes.webp`, `v2-solution-personnes.webp`, `v2-methode-atelier.webp`, `v2-contact-alpes.webp`, `v2-og-image.jpg` ; sources brutes dans `source/images/design-v2/`
+- `source/design-v2/` (export Claude Design, conservé comme source)
+- `scripts/compare-v2.js`, `scripts/controle-v2.js`, `scripts/fraunces-subset.js`
+- `mesures/v2-diff/`, `mesures/v2-controles/rapport.json`

@@ -1,9 +1,23 @@
-Crédits photographiques — livrable/v1-clarte.html
-==================================================
+Crédits photographiques — livrable/v1-clarte.html et livrable/v2-nuit-suisse.html
+==================================================================================
 
 Ce sont des photos d'illustration libres de droits (Unsplash), utilisées
-pour représenter des scènes de travail génériques. Aucune ne montre un
-membre réel de l'équipe MZI Consulting.
+pour représenter des scènes de travail ou de paysage génériques. Aucune ne
+montre un membre réel de l'équipe MZI Consulting.
+
+Chaque photo n'est créditée qu'une fois, même lorsqu'elle sert dans les deux
+versions ou dans plusieurs sections d'une même version.
+
+V1 « Clarté » et V2 « Nuit suisse »
+
+Photo « atelier de travail » (section méthode, V1 et V2)
+  Auteur   : Annie Spratt
+  Source   : https://unsplash.com/@anniespratt
+  Licence  : Unsplash License (https://unsplash.com/license)
+  Fichiers : assets/img/v1-methode-atelier.webp (V1), assets/img/v2-methode-atelier.webp (V2,
+             recadrage différent)
+
+V1 « Clarté » uniquement
 
 Photo « People reviewing documents at workspace » (section héros et image Open Graph)
   Auteur   : ThisisEngineering
@@ -11,8 +25,18 @@ Photo « People reviewing documents at workspace » (section héros et image Ope
   Licence  : Unsplash License (https://unsplash.com/license)
   Fichiers : assets/img/v1-hero-audit.webp, assets/img/v1-og-image.jpg
 
-Photo « atelier de travail » (section méthode)
-  Auteur   : Annie Spratt
-  Source   : https://unsplash.com/@anniespratt
+V2 « Nuit suisse » uniquement
+
+Photo « chaîne de montagnes enneigées » (bandeau du héros, bandeau de la section contact et
+image Open Graph)
+  Auteur   : T Fang
+  Source   : https://unsplash.com/@tqfang
   Licence  : Unsplash License (https://unsplash.com/license)
-  Fichier  : assets/img/v1-methode-atelier.webp
+  Fichiers : assets/img/v2-hero-alpes.webp, assets/img/v2-contact-alpes.webp,
+             assets/img/v2-og-image.jpg
+
+Photo « deux personnes devant un ordinateur portable » (section solution)
+  Auteur   : Mimi Thian
+  Source   : https://unsplash.com/@mimithian
+  Licence  : Unsplash License (https://unsplash.com/license)
+  Fichier  : assets/img/v2-solution-personnes.webp

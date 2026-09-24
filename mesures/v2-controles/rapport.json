@@ -1,0 +1,1427 @@
+{
+  "survol": [
+    {
+      "element": "Bouton d'en-tête",
+      "v1_change": [
+        "background"
+      ],
+      "design_change": [
+        "background"
+      ],
+      "v1_survol": {
+        "color": "rgb(10, 14, 26)",
+        "background": "rgb(110, 230, 254)",
+        "borderBottom": "0px rgb(10, 14, 26)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(10, 14, 26)",
+        "background": "rgb(110, 230, 254)",
+        "borderBottom": "0px rgb(10, 14, 26)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Bouton du héros",
+      "v1_change": [
+        "background"
+      ],
+      "design_change": [
+        "background"
+      ],
+      "v1_survol": {
+        "color": "rgb(10, 14, 26)",
+        "background": "rgb(110, 230, 254)",
+        "borderBottom": "0px rgb(10, 14, 26)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(10, 14, 26)",
+        "background": "rgb(110, 230, 254)",
+        "borderBottom": "0px rgb(10, 14, 26)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Lien « Découvrir notre méthode »",
+      "v1_change": [
+        "color",
+        "borderBottom"
+      ],
+      "design_change": [
+        "color",
+        "borderBottom"
+      ],
+      "v1_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "1px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "1px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Bouton section Solution",
+      "v1_change": [
+        "background"
+      ],
+      "design_change": [
+        "background"
+      ],
+      "v1_survol": {
+        "color": "rgb(10, 14, 26)",
+        "background": "rgb(110, 230, 254)",
+        "borderBottom": "0px rgb(10, 14, 26)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(10, 14, 26)",
+        "background": "rgb(110, 230, 254)",
+        "borderBottom": "0px rgb(10, 14, 26)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Bouton d'envoi du formulaire",
+      "v1_change": [
+        "background"
+      ],
+      "design_change": [
+        "background"
+      ],
+      "v1_survol": {
+        "color": "rgb(10, 14, 26)",
+        "background": "rgb(110, 230, 254)",
+        "borderBottom": "0px rgb(10, 14, 26)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(10, 14, 26)",
+        "background": "rgb(110, 230, 254)",
+        "borderBottom": "0px rgb(10, 14, 26)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Lien de navigation « Services »",
+      "v1_change": [
+        "color",
+        "borderBottom"
+      ],
+      "design_change": [
+        "color",
+        "borderBottom"
+      ],
+      "v1_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Lien « Toutes les questions »",
+      "v1_change": [
+        "color",
+        "borderBottom"
+      ],
+      "design_change": [
+        "color",
+        "borderBottom"
+      ],
+      "v1_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "1px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "1px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Lien e-mail du bloc contact",
+      "v1_change": [
+        "color",
+        "borderBottom"
+      ],
+      "design_change": [
+        "color",
+        "borderBottom"
+      ],
+      "v1_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Lien de pied de page « Audit IA gratuit »",
+      "v1_change": [
+        "color",
+        "borderBottom"
+      ],
+      "design_change": [
+        "color",
+        "borderBottom"
+      ],
+      "v1_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Lien légal « Mentions légales »",
+      "v1_change": [
+        "color",
+        "borderBottom"
+      ],
+      "design_change": [
+        "color",
+        "borderBottom"
+      ],
+      "v1_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(16, 215, 253)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(16, 215, 253)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": true
+    },
+    {
+      "element": "Carte défi",
+      "v1_change": [],
+      "design_change": [],
+      "v1_survol": {
+        "color": "rgb(185, 193, 206)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(185, 193, 206)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(0, 0, 0)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": false
+    },
+    {
+      "element": "Étape de la solution",
+      "v1_change": [],
+      "design_change": [],
+      "v1_survol": {
+        "color": "rgb(185, 193, 206)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(185, 193, 206)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(0, 0, 0)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": false
+    },
+    {
+      "element": "Ligne de bénéfice",
+      "v1_change": [],
+      "design_change": [],
+      "v1_survol": {
+        "color": "rgb(185, 193, 206)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(185, 193, 206)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(0, 0, 0)",
+        "background": "rgba(0, 0, 0, 0)",
+        "borderBottom": "0px rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": false
+    },
+    {
+      "element": "Carte témoignage",
+      "v1_change": [],
+      "design_change": [],
+      "v1_survol": {
+        "color": "rgb(185, 193, 206)",
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "1px rgb(223, 228, 234)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "design_survol": {
+        "color": "rgb(0, 0, 0)",
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "1px rgb(223, 228, 234)",
+        "boxShadow": "none",
+        "transform": "none"
+      },
+      "identiqueAuDesign": false
+    }
+  ],
+  "focus": {
+    "390": {
+      "total": 42,
+      "sansIndicateurVisible": [],
+      "masquesParEntete": [],
+      "zonesSous24px": [
+        "a « T Fang » 29×14",
+        "a « Unsplash » 40×14",
+        "a « Mimi Thian » 49×14",
+        "a « Unsplash » 40×14",
+        "a « Annie Spratt » 55×14",
+        "a « Unsplash » 40×14",
+        "a « T Fang » 29×14",
+        "a « Unsplash » 40×14",
+        "a « Politique de confidentialité » 166×18"
+      ]
+    },
+    "1440": {
+      "total": 47,
+      "sansIndicateurVisible": [],
+      "masquesParEntete": [],
+      "zonesSous24px": [
+        "a « T Fang » 29×14",
+        "a « Unsplash » 40×14",
+        "a « Mimi Thian » 49×14",
+        "a « Unsplash » 40×14",
+        "a « Annie Spratt » 55×14",
+        "a « Unsplash » 40×14",
+        "a « T Fang » 29×14",
+        "a « Unsplash » 40×14",
+        "a « Politique de confidentialité » 166×18"
+      ]
+    },
+    "390-menu-ouvert": {
+      "total": 8,
+      "sansIndicateurVisible": [],
+      "masquesParEntete": [],
+      "zonesSous24px": []
+    }
+  },
+  "menu": {
+    "initial": {
+      "expanded": "false",
+      "label": "Ouvrir le menu",
+      "panneauVisible": false
+    },
+    "apresClic": {
+      "expanded": "true",
+      "label": "Fermer le menu",
+      "panneauVisible": true
+    },
+    "liensVisibles": 6,
+    "apresEchap": {
+      "expanded": "false",
+      "label": "Ouvrir le menu",
+      "panneauVisible": false
+    },
+    "focusRenduAuBouton": true,
+    "apresEntree": {
+      "expanded": "true",
+      "label": "Fermer le menu",
+      "panneauVisible": true
+    },
+    "apresClicSurLien": {
+      "expanded": "false",
+      "label": "Ouvrir le menu",
+      "panneauVisible": false
+    },
+    "apresTabHorsDuPanneau": {
+      "expanded": "false",
+      "label": "Ouvrir le menu",
+      "panneauVisible": false
+    },
+    "bureauBoutonMasque": true
+  },
+  "faq": {
+    "total": 6,
+    "initial": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "apresCliquesSurLesAutres": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "reponsesVisibles": true,
+    "premiereFermee": true,
+    "clavier": {
+      "entreeOuvre": true,
+      "espaceRefermer": true
+    },
+    "rotationIcone": "matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)"
+  },
+  "formulaire": {
+    "soumissionVide": {
+      "formulaireVisible": true,
+      "confirmationVisible": false,
+      "champsInvalides": 2
+    },
+    "emailInvalide": {
+      "formulaireVisible": true,
+      "confirmationVisible": false
+    },
+    "soumissionValide": {
+      "formulaireVisible": false,
+      "confirmationVisible": true,
+      "texte": "Merci, votre demande est envoyée. Nous revenons vers vous sous 24 h pour planifier votre audit.",
+      "roleStatus": "status",
+      "focusSurConfirmation": true,
+      "requetesNonGET": []
+    }
+  },
+  "contrastes": {
+    "390": {
+      "couples": 30,
+      "echecs": [],
+      "tous": [
+        {
+          "fg": "#0e7490",
+          "bg": "#f3f5f8",
+          "ratio": 4.91,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "07"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0e7490",
+          "bg": "#f3f5f8",
+          "ratio": 4.91,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "nos clients"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0e7490",
+          "bg": "#ffffff",
+          "ratio": 5.36,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "«",
+            "«",
+            "«"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#8b96a9",
+          "bg": "#0f1526",
+          "ratio": 6.09,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Adresse",
+            "Téléphone",
+            "E-mail"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#7a4f00",
+          "bg": "#fdf6e7",
+          "ratio": 6.62,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 9,
+          "samples": [
+            "À CONFIRMER : entreprise",
+            "À CONFIRMER : date",
+            "À CONFIRMER : lien vers l'avis"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#3d4655",
+          "bg": "#f3f5f8",
+          "ratio": 8.72,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 2,
+          "samples": [
+            "Témoignages",
+            "Chaque avis est publié avec son auteur, "
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#aab3c2",
+          "bg": "#0a0e1a",
+          "ratio": 9.11,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Vos données servent uniquement à vous re",
+            "Agence d'automatisation IA à Annemasse, ",
+            "© 2026 MZI Consulting. Tous droits réser"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#b9c1ce",
+          "bg": "#181d2d",
+          "ratio": 9.21,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "Photo du fondateur"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#b9c1ce",
+          "bg": "#0f1526",
+          "ratio": 10.02,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 23,
+          "samples": [
+            "Gagnez du temps et augmentez votre chiff",
+            "Sans engagement",
+            "Réponse sous 24 h"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#f4c96e",
+          "bg": "#1f222b",
+          "ratio": 10.19,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "À CONFIRMER : nom du fondateur",
+            "À CONFIRMER : parcours du fondateur",
+            "À CONFIRMER : noms des certifications"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0f1526",
+          "ratio": 10.52,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 17,
+          "samples": [
+            "Agence d'automatisation IA",
+            "01",
+            "02"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0f1526",
+          "ratio": 10.52,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "à Annemasse",
+            "ces défis ?",
+            "structurée et éprouvée"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#b9c1ce",
+          "bg": "#0a0e1a",
+          "ratio": 10.62,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 21,
+          "samples": [
+            "Chiffres-clés",
+            "entreprises accompagnées",
+            "productivité moyenne"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#f4c96e",
+          "bg": "#1a1b20",
+          "ratio": 10.98,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 7,
+          "samples": [
+            "À CONFIRMER : source et période",
+            "À CONFIRMER : source et période",
+            "À CONFIRMER : durée et format de l’audit"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#10d7fd",
+          "ratio": 11.15,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "Aller au contenu principal",
+            "Réserver mon audit gratuit",
+            "Réserver mon audit gratuit"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0a0e1a",
+          "ratio": 11.15,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 23,
+          "samples": [
+            "01",
+            "03",
+            "01"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0a0e1a",
+          "ratio": 11.15,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "personnalisé",
+            "concrets",
+            "fréquentes"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#f4c96e",
+          "bg": "#0b0f1c",
+          "ratio": 12.22,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "À CONFIRMER : photo du fondateur"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
+          "bg": "#0a0e1a",
+          "ratio": 12.52,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 14,
+          "samples": [
+            "Audit IA gratuit",
+            "Automatisation IA",
+            "Intégration IA sur-mesure"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#d5dbe5",
+          "bg": "#0f1526",
+          "ratio": 13.06,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 8,
+          "samples": [
+            "Annemasse",
+            "Grand Genève",
+            "Analyse de vos processus"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#d5dbe5",
+          "bg": "#0a0e1a",
+          "ratio": 13.84,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Nom complet",
+            "E-mail professionnel",
+            "Comment pouvons-nous vous aider ?"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#f3f5f8",
+          "ratio": 17.63,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "Ce que disent"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0f1526",
+          "ratio": 18.17,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 10,
+          "samples": [
+            "Automatisez les tâches répétitives de vo",
+            "L'audit IA gratuit",
+            "Votre entreprise à Annemasse fait face à"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0f1526",
+          "ratio": 18.17,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 12,
+          "samples": [
+            "Découvrir notre méthode",
+            "Perte de temps massive",
+            "Manque d'automatisation"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0a0e1a",
+          "ratio": 19.25,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 20,
+          "samples": [
+            "Services",
+            "Méthode",
+            "Études de cas"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0a0e1a",
+          "ratio": 19.25,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 11,
+          "samples": [
+            "50+",
+            "3x",
+            "40"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#ffffff",
+          "ratio": 19.25,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "L'audit réalisé a été un véritable tourn",
+            "Une expertise rare qui allie vision busi",
+            "Le langage technique est vulgarisé avec "
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#ffffff",
+          "ratio": 19.25,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Jean-Pierre Morel",
+            "Clara Vallet",
+            "Yohanna B."
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#070911",
+          "ratio": 19.85,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 9,
+          "samples": [
+            "Photo by on",
+            "T Fang",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#05060c",
+          "ratio": 20.22,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Photo by on",
+            "Mimi Thian",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
+        }
+      ]
+    },
+    "1440": {
+      "couples": 30,
+      "echecs": [],
+      "tous": [
+        {
+          "fg": "#0e7490",
+          "bg": "#f3f5f8",
+          "ratio": 4.91,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "07"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0e7490",
+          "bg": "#f3f5f8",
+          "ratio": 4.91,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "nos clients"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0e7490",
+          "bg": "#ffffff",
+          "ratio": 5.36,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "«",
+            "«",
+            "«"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#8b96a9",
+          "bg": "#0f1526",
+          "ratio": 6.09,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Adresse",
+            "Téléphone",
+            "E-mail"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#7a4f00",
+          "bg": "#fdf6e7",
+          "ratio": 6.62,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 9,
+          "samples": [
+            "À CONFIRMER : entreprise",
+            "À CONFIRMER : date",
+            "À CONFIRMER : lien vers l'avis"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#3d4655",
+          "bg": "#f3f5f8",
+          "ratio": 8.72,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 2,
+          "samples": [
+            "Témoignages",
+            "Chaque avis est publié avec son auteur, "
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#aab3c2",
+          "bg": "#0a0e1a",
+          "ratio": 9.11,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Vos données servent uniquement à vous re",
+            "Agence d'automatisation IA à Annemasse, ",
+            "© 2026 MZI Consulting. Tous droits réser"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#b9c1ce",
+          "bg": "#181d2d",
+          "ratio": 9.21,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "Photo du fondateur"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#b9c1ce",
+          "bg": "#0f1526",
+          "ratio": 10.02,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 23,
+          "samples": [
+            "Gagnez du temps et augmentez votre chiff",
+            "Sans engagement",
+            "Réponse sous 24 h"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#f4c96e",
+          "bg": "#1f222b",
+          "ratio": 10.19,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "À CONFIRMER : nom du fondateur",
+            "À CONFIRMER : parcours du fondateur",
+            "À CONFIRMER : noms des certifications"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0f1526",
+          "ratio": 10.52,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 17,
+          "samples": [
+            "Agence d'automatisation IA",
+            "01",
+            "02"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0f1526",
+          "ratio": 10.52,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "à Annemasse",
+            "ces défis ?",
+            "structurée et éprouvée"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#b9c1ce",
+          "bg": "#0a0e1a",
+          "ratio": 10.62,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 21,
+          "samples": [
+            "Chiffres-clés",
+            "entreprises accompagnées",
+            "productivité moyenne"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#f4c96e",
+          "bg": "#1a1b20",
+          "ratio": 10.98,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 7,
+          "samples": [
+            "À CONFIRMER : source et période",
+            "À CONFIRMER : source et période",
+            "À CONFIRMER : durée et format de l’audit"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#10d7fd",
+          "ratio": 11.15,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "Aller au contenu principal",
+            "Réserver mon audit gratuit",
+            "Réserver mon audit gratuit"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0a0e1a",
+          "ratio": 11.15,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 23,
+          "samples": [
+            "01",
+            "03",
+            "01"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0a0e1a",
+          "ratio": 11.15,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "personnalisé",
+            "concrets",
+            "fréquentes"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#f4c96e",
+          "bg": "#0b0f1c",
+          "ratio": 12.22,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "À CONFIRMER : photo du fondateur"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
+          "bg": "#0a0e1a",
+          "ratio": 12.52,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 14,
+          "samples": [
+            "Audit IA gratuit",
+            "Automatisation IA",
+            "Intégration IA sur-mesure"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#d5dbe5",
+          "bg": "#0f1526",
+          "ratio": 13.06,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 8,
+          "samples": [
+            "Annemasse",
+            "Grand Genève",
+            "Analyse de vos processus"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#d5dbe5",
+          "bg": "#0a0e1a",
+          "ratio": 13.84,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 8,
+          "samples": [
+            "Services",
+            "Méthode",
+            "Études de cas"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#f3f5f8",
+          "ratio": 17.63,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "Ce que disent"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0f1526",
+          "ratio": 18.17,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 10,
+          "samples": [
+            "Automatisez les tâches répétitives de vo",
+            "L'audit IA gratuit",
+            "Votre entreprise à Annemasse fait face à"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0f1526",
+          "ratio": 18.17,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 12,
+          "samples": [
+            "Découvrir notre méthode",
+            "Perte de temps massive",
+            "Manque d'automatisation"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0a0e1a",
+          "ratio": 19.25,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 15,
+          "samples": [
+            "50+",
+            "3x",
+            "40"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0a0e1a",
+          "ratio": 19.25,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 11,
+          "samples": [
+            "Analyse détaillée et complète",
+            "Identification des opportunités IA",
+            "Recommandations concrètes"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#ffffff",
+          "ratio": 19.25,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "L'audit réalisé a été un véritable tourn",
+            "Une expertise rare qui allie vision busi",
+            "Le langage technique est vulgarisé avec "
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#ffffff",
+          "ratio": 19.25,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Jean-Pierre Morel",
+            "Clara Vallet",
+            "Yohanna B."
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#070911",
+          "ratio": 19.85,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 9,
+          "samples": [
+            "Photo by on",
+            "T Fang",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#05060c",
+          "ratio": 20.22,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Photo by on",
+            "Mimi Thian",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
+        }
+      ]
+    }
+  },
+  "contrastesSurvol": [
+    {
+      "element": "Bouton d'en-tête",
+      "texte": "rgb(10, 14, 26)",
+      "fond": "rgb(110,230,254)",
+      "ratio": 13.22
+    },
+    {
+      "element": "Bouton du héros",
+      "texte": "rgb(10, 14, 26)",
+      "fond": "rgb(110,230,254)",
+      "ratio": 13.22
+    },
+    {
+      "element": "Lien « Découvrir notre méthode »",
+      "texte": "rgb(16, 215, 253)",
+      "fond": "rgb(10,14,26)",
+      "ratio": 11.15
+    },
+    {
+      "element": "Bouton section Solution",
+      "texte": "rgb(10, 14, 26)",
+      "fond": "rgb(110,230,254)",
+      "ratio": 13.22
+    },
+    {
+      "element": "Bouton d'envoi du formulaire",
+      "texte": "rgb(10, 14, 26)",
+      "fond": "rgb(110,230,254)",
+      "ratio": 13.22
+    },
+    {
+      "element": "Lien de navigation « Services »",
+      "texte": "rgb(16, 215, 253)",
+      "fond": "rgb(10,14,26)",
+      "ratio": 11.15
+    },
+    {
+      "element": "Lien « Toutes les questions »",
+      "texte": "rgb(16, 215, 253)",
+      "fond": "rgb(10,14,26)",
+      "ratio": 11.15
+    },
+    {
+      "element": "Lien e-mail du bloc contact",
+      "texte": "rgb(16, 215, 253)",
+      "fond": "rgb(10,14,26)",
+      "ratio": 11.15
+    },
+    {
+      "element": "Lien de pied de page « Audit IA gratuit »",
+      "texte": "rgb(16, 215, 253)",
+      "fond": "rgb(10,14,26)",
+      "ratio": 11.15
+    },
+    {
+      "element": "Lien légal « Mentions légales »",
+      "texte": "rgb(16, 215, 253)",
+      "fond": "rgb(10,14,26)",
+      "ratio": 11.15
+    }
+  ],
+  "composantsInterface": [
+    {
+      "element": "Bordure des champs (#5d6a82) sur le fond du champ (#0f1526)",
+      "ratio": 3.33,
+      "requis": 3
+    },
+    {
+      "element": "Bordure des champs (#5d6a82) sur le cadre du formulaire (#0a0e1a)",
+      "ratio": 3.53,
+      "requis": 3
+    },
+    {
+      "element": "Bordure de champ au focus (#10d7fd) sur le fond du champ (#0f1526)",
+      "ratio": 10.52,
+      "requis": 3
+    }
+  ]
+}
