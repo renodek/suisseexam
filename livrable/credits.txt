@@ -1,0 +1,18 @@
+Crédits photographiques — livrable/v1-clarte.html
+==================================================
+
+Ce sont des photos d'illustration libres de droits (Unsplash), utilisées
+pour représenter des scènes de travail génériques. Aucune ne montre un
+membre réel de l'équipe MZI Consulting.
+
+Photo « réunion de travail » (section héros)
+  Auteur   : Christin Hume
+  Source   : https://unsplash.com/@christinhumephoto
+  Licence  : Unsplash License (https://unsplash.com/license)
+  Fichier  : assets/img/v1-hero-reunion.webp
+
+Photo « atelier de travail » (section méthode)
+  Auteur   : Annie Spratt
+  Source   : https://unsplash.com/@anniespratt
+  Licence  : Unsplash License (https://unsplash.com/license)
+  Fichier  : assets/img/v1-methode-atelier.webp

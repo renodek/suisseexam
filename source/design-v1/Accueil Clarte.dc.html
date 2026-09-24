@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Audit IA gratuit pour PME à Annemasse | MZI Consulting</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#0a0e1a;font-family:Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#0e7490}
+a:hover{color:#0b5c73}
+summary::-webkit-details-marker{display:none}
+details[open] .faq-plus{transform:rotate(45deg)}
+</style>
+</helmet>
+
+<header data-screen-label="Header" style="position:sticky;top:0;z-index:50;background:#0a0e1a;border-bottom:1px solid rgba(126,141,163,.22)">
+  <div style="max-width:1280px;margin:0 auto;height:80px;padding:0 clamp(20px,5.5vw,80px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="/" aria-label="MZI Consulting, accueil" style="display:flex;align-items:center;flex-shrink:0">
+      <img src="assets/mzi-consulting-logo.png" alt="MZI Consulting" width="104" height="39" style="display:block">
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Navigation principale" style="display:flex;gap:36px">
+        <a href="/services/audit-ia/" style="font:500 16px Figtree;color:#e3e8f0;text-decoration:none" style-hover="color:#10d7fd">Services</a>
+        <a href="/methode/" style="font:500 16px Figtree;color:#e3e8f0;text-decoration:none" style-hover="color:#10d7fd">Méthode</a>
+        <a href="/etudes-de-cas/" style="font:500 16px Figtree;color:#e3e8f0;text-decoration:none" style-hover="color:#10d7fd">Études de cas</a>
+        <a href="/faq/" style="font:500 16px Figtree;color:#e3e8f0;text-decoration:none" style-hover="color:#10d7fd">FAQ</a>
+        <a href="/contact/" style="font:500 16px Figtree;color:#e3e8f0;text-decoration:none" style-hover="color:#10d7fd">Contact</a>
+      </nav>
+      <a href="#contact" style="font:500 16px Outfit;background:#10d7fd;color:#0a0e1a;padding:12px 22px;border-radius:999px;text-decoration:none;white-space:nowrap" style-hover="background:#09c6eb;color:#0a0e1a;box-shadow:0 0 10px rgba(255,255,255,.5)">Réserver mon audit gratuit</a>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="Ouvrir le menu" style="width:48px;height:48px;border-radius:12px;border:1px solid rgba(126,141,163,.5);background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer">
+        <span aria-hidden="true" style="width:20px;height:20px;background:#fff;-webkit-mask:url(assets/icons/fas-align-justify.svg) center/contain no-repeat;mask:url(assets/icons/fas-align-justify.svg) center/contain no-repeat"></span>
+      </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ showMobileMenu }}" hint-placeholder-val="{{ false }}">
+    <nav aria-label="Navigation principale" style="padding:8px 20px 24px;display:flex;flex-direction:column;border-top:1px solid rgba(126,141,163,.22)">
+      <a href="/services/audit-ia/" style="font:500 18px Figtree;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)">Services</a>
+      <a href="/methode/" style="font:500 18px Figtree;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)">Méthode</a>
+      <a href="/etudes-de-cas/" style="font:500 18px Figtree;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)">Études de cas</a>
+      <a href="/faq/" style="font:500 18px Figtree;color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)">FAQ</a>
+      <a href="/contact/" style="font:500 18px Figtree;color:#fff;text-decoration:none;padding:14px 0">Contact</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="margin-top:12px;text-align:center;font:500 17px Outfit;background:#10d7fd;color:#0a0e1a;padding:16px 22px;border-radius:999px;text-decoration:none">Réserver mon audit gratuit</a>
+    </nav>
+  </sc-if>
+</header>
+
+<main>
+<section ref="{{ heroRef }}" data-screen-label="Héros" style="position:relative;background:#0a0e1a;overflow:hidden">
+  <canvas ref="{{ canvasRef }}" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:100%;-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 35%,transparent 80%);mask-image:linear-gradient(90deg,#000 0%,#000 35%,transparent 80%)"></canvas>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,26,.3) 0%,rgba(10,14,26,.8) 35%,rgba(10,14,26,.5) 65%,rgba(10,14,26,0) 100%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,5.5vw,80px) 0">
+    <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,72px);align-items:center">
+      <div style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column">
+        <div style="font:600 14px/1.5 Figtree;letter-spacing:.12em;text-transform:uppercase;color:#10d7fd">Agence d'automatisation IA · Annemasse · Grand Genève</div>
+        <h1 style="margin:20px 0 0;font:800 clamp(40px,4.9vw,66px)/1.06 Outfit;letter-spacing:-.022em;color:#fff;text-wrap:balance">Automatisez les tâches répétitives de votre PME, à Annemasse</h1>
+        <p style="margin:24px 0 0;font:400 clamp(18px,1.5vw,21px)/1.5 Figtree;color:#9ca3af;max-width:600px;text-wrap:pretty">Gagnez du temps et augmentez votre chiffre d'affaires grâce à nos solutions IA sur-mesure.</p>
+        <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center">
+          <a href="#contact" style="display:flex;align-items:center;gap:14px;font:500 19px Outfit;background:#10d7fd;color:#0a0e1a;padding:18px 30px;border-radius:999px;text-decoration:none" style-hover="background:#09c6eb;color:#0a0e1a;box-shadow:0 0 10px rgba(255,255,255,.5)">Réserver mon audit gratuit <span aria-hidden="true" style="width:16px;height:16px;background:#0a0e1a;-webkit-mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat;mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat"></span></a>
+          <a href="/methode/" style="font:500 19px Outfit;color:#fff;padding:10px 2px;border-bottom:1px solid #7e8da3;text-decoration:none" style-hover="color:#10d7fd;border-color:#10d7fd">Découvrir notre méthode</a>
+        </div>
+        <ul style="margin:36px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:12px 28px;font:500 16px Figtree;color:#c9d1de">
+          <li style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="width:14px;height:14px;background:#10d7fd;-webkit-mask:url(assets/icons/fas-check.svg) center/contain no-repeat;mask:url(assets/icons/fas-check.svg) center/contain no-repeat"></span>Sans engagement</li>
+          <li style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="width:14px;height:14px;background:#10d7fd;-webkit-mask:url(assets/icons/fas-check.svg) center/contain no-repeat;mask:url(assets/icons/fas-check.svg) center/contain no-repeat"></span>Réponse sous 24 h</li>
+          <li style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="width:14px;height:14px;background:#10d7fd;-webkit-mask:url(assets/icons/fas-check.svg) center/contain no-repeat;mask:url(assets/icons/fas-check.svg) center/contain no-repeat"></span>Audit personnalisé</li>
+        </ul>
+      </div>
+      <div style="flex:1 1 380px;min-width:0;position:relative;height:clamp(440px,44vw,620px)">
+        <image-slot id="hero-photo-v3" shape="rounded" radius="28" placeholder="Photo d'illustration : réunion de travail" src="https://images.unsplash.com/photo-1513470270416-d3ff6f16b22f?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=1000&amp;h=1300" credit="Photo by Christin Hume on Unsplash" credit-href="https://unsplash.com/@christinhumephoto"></image-slot>
+        <div style="position:absolute;left:20px;bottom:20px;width:min(300px,calc(100% - 40px));background:#0a0e1a;border:1px solid rgba(126,141,163,.35);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 48px rgba(0,0,0,.35)">
+          <div style="font:700 18px Outfit;color:#fff">L'audit IA gratuit</div>
+          <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.35 Figtree;color:#c9d1de">
+            <li style="display:flex;gap:10px"><span style="font:700 13px Outfit;color:#10d7fd;min-width:18px">01</span>Analyse de vos processus</li>
+            <li style="display:flex;gap:10px"><span style="font:700 13px Outfit;color:#10d7fd;min-width:18px">02</span>Identification des opportunités IA</li>
+            <li style="display:flex;gap:10px"><span style="font:700 13px Outfit;color:#10d7fd;min-width:18px">03</span>Recommandations concrètes</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(126,141,163,.3);padding:28px 0 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 48px">
+      <p style="margin:0;font:400 17px Figtree;color:#c9d1de"><strong style="font:700 22px Outfit;color:#fff">50+</strong> entreprises accompagnées</p>
+      <p style="margin:0;font:400 17px Figtree;color:#c9d1de"><strong style="font:700 22px Outfit;color:#fff">3x</strong> productivité moyenne</p>
+      <p style="margin:0;font:400 17px Figtree;color:#c9d1de"><strong style="font:700 22px Outfit;color:#fff">40 %</strong> de temps économisé</p>
+      <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : source et période</span>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Défis" style="background:#ffffff;padding:clamp(72px,9vw,120px) clamp(20px,5.5vw,80px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:780px">
+      <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">Les défis</div>
+      <h2 style="margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 Outfit;letter-spacing:-.02em;color:#0a0e1a;text-wrap:balance">Votre entreprise à Annemasse fait face à <span style="color:#0e7490">ces défis ?</span></h2>
+      <p style="margin:0;font:400 19px/1.55 Figtree;color:#3d4655;text-wrap:pretty">Les entreprises qui n'adoptent pas l'intelligence artificielle perdent un avantage concurrentiel majeur. Pourtant, des solutions simples existent pour renverser cette tendance rapidement.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px">
+      <article style="background:#f3f5f8;border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;gap:16px">
+        <span aria-hidden="true" style="width:52px;height:52px;border-radius:14px;background:#dcecf1;display:flex;align-items:center;justify-content:center"><span style="width:24px;height:24px;background:#0e7490;-webkit-mask:url(assets/icons/far-clock.svg) center/contain no-repeat;mask:url(assets/icons/far-clock.svg) center/contain no-repeat"></span></span>
+        <h3 style="margin:0;font:700 22px/1.2 Outfit;color:#0a0e1a">Perte de temps massive</h3>
+        <p style="margin:0;font:400 16px/1.55 Figtree;color:#3d4655">Vos équipes passent trop de temps sur des tâches répétitives, qui pourraient être automatisées pour libérer du temps sur l'essentiel.</p>
+      </article>
+      <article style="background:#f3f5f8;border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;gap:16px">
+        <span aria-hidden="true" style="width:52px;height:52px;border-radius:14px;background:#dcecf1;display:flex;align-items:center;justify-content:center"><span style="width:24px;height:24px;background:#0e7490;-webkit-mask:url(assets/icons/fas-bolt.svg) center/contain no-repeat;mask:url(assets/icons/fas-bolt.svg) center/contain no-repeat"></span></span>
+        <h3 style="margin:0;font:700 22px/1.2 Outfit;color:#0a0e1a">Manque d'automatisation</h3>
+        <p style="margin:0;font:400 16px/1.55 Figtree;color:#3d4655">Sans système performant pour accélérer vos résultats, vous ne pouvez pas vous concentrer sur ce qui rapporte vraiment.</p>
+      </article>
+      <article style="background:#f3f5f8;border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;gap:16px">
+        <span aria-hidden="true" style="width:52px;height:52px;border-radius:14px;background:#dcecf1;display:flex;align-items:center;justify-content:center"><span style="width:24px;height:24px;background:#0e7490;-webkit-mask:url(assets/icons/fas-chart-line.svg) center/contain no-repeat;mask:url(assets/icons/fas-chart-line.svg) center/contain no-repeat"></span></span>
+        <h3 style="margin:0;font:700 22px/1.2 Outfit;color:#0a0e1a">Concurrence plus rapide</h3>
+        <p style="margin:0;font:400 16px/1.55 Figtree;color:#3d4655">Vos concurrents utilisent déjà l'IA et prennent une avance significative sur votre part de marché. Agir maintenant est indispensable.</p>
+      </article>
+      <article style="background:#f3f5f8;border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;gap:16px">
+        <span aria-hidden="true" style="width:52px;height:52px;border-radius:14px;background:#dcecf1;display:flex;align-items:center;justify-content:center"><span style="width:24px;height:24px;background:#0e7490;-webkit-mask:url(assets/icons/fas-exclamation-triangle.svg) center/contain no-repeat;mask:url(assets/icons/fas-exclamation-triangle.svg) center/contain no-repeat"></span></span>
+        <h3 style="margin:0;font:700 22px/1.2 Outfit;color:#0a0e1a">Mauvaise utilisation de l'IA</h3>
+        <p style="margin:0;font:400 16px/1.55 Figtree;color:#3d4655">Vous avez testé quelques outils d'IA sans obtenir les résultats souhaités. Un accompagnement par un expert fait toute la différence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Solution" style="background:#f3f5f8;padding:clamp(72px,9vw,120px) clamp(20px,5.5vw,80px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 48px;align-items:flex-end;justify-content:space-between">
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+        <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">La solution</div>
+        <h2 style="margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 Outfit;letter-spacing:-.02em;color:#0a0e1a;text-wrap:balance">Un audit IA <span style="color:#0e7490">personnalisé</span> pour votre entreprise</h2>
+        <p style="margin:0;font:400 19px/1.55 Figtree;color:#3d4655;text-wrap:pretty">En tant qu'agence IA à Annemasse, nous vous accompagnons pour transformer votre activité grâce à l'intelligence artificielle.</p>
+      </div>
+      <a href="#contact" style="display:flex;align-items:center;gap:14px;font:500 18px Outfit;background:#0e7490;color:#fff;padding:17px 28px;border-radius:999px;text-decoration:none" style-hover="background:#0b5c73;color:#fff">Réserver mon audit gratuit <span aria-hidden="true" style="width:15px;height:15px;background:#fff;-webkit-mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat;mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat"></span></a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+      <article style="background:#fff;border:1px solid #e1e6ed;border-radius:28px;padding:36px 32px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <span aria-hidden="true" style="width:28px;height:28px;background:#0e7490;-webkit-mask:url(assets/icons/fas-search.svg) center/contain no-repeat;mask:url(assets/icons/fas-search.svg) center/contain no-repeat"></span>
+          <span style="font:700 15px Outfit;color:#5b6576">01</span>
+        </div>
+        <h3 style="margin:0;font:700 24px/1.2 Outfit;color:#0a0e1a">Analyse détaillée et complète</h3>
+        <p style="margin:0;font:400 16px/1.55 Figtree;color:#3d4655">Nous analysons vos processus, vos outils actuels et votre organisation pour vous offrir une vision claire.</p>
+      </article>
+      <article style="background:#fff;border:1px solid #e1e6ed;border-radius:28px;padding:36px 32px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <span aria-hidden="true" style="width:28px;height:28px;background:#0e7490;-webkit-mask:url(assets/icons/far-lightbulb.svg) center/contain no-repeat;mask:url(assets/icons/far-lightbulb.svg) center/contain no-repeat"></span>
+          <span style="font:700 15px Outfit;color:#5b6576">02</span>
+        </div>
+        <h3 style="margin:0;font:700 24px/1.2 Outfit;color:#0a0e1a">Identification des opportunités IA</h3>
+        <p style="margin:0;font:400 16px/1.55 Figtree;color:#3d4655">Nous identifions les gains automatisables les plus pertinents pour votre activité et vos objectifs.</p>
+      </article>
+      <article style="background:#fff;border:1px solid #e1e6ed;border-radius:28px;padding:36px 32px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <span aria-hidden="true" style="width:28px;height:28px;background:#0e7490;-webkit-mask:url(assets/icons/far-file-alt.svg) center/contain no-repeat;mask:url(assets/icons/far-file-alt.svg) center/contain no-repeat"></span>
+          <span style="font:700 15px Outfit;color:#5b6576">03</span>
+        </div>
+        <h3 style="margin:0;font:700 24px/1.2 Outfit;color:#0a0e1a">Recommandations concrètes</h3>
+        <p style="margin:0;font:400 16px/1.55 Figtree;color:#3d4655">Vous recevez une liste de recommandations pour passer à l'IA efficacement.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Méthode" style="background:#ffffff;padding:clamp(72px,9vw,120px) clamp(20px,5.5vw,80px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:56px">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+      <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">La méthode</div>
+      <h2 style="margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 Outfit;letter-spacing:-.02em;color:#0a0e1a;text-wrap:balance">Une approche <span style="color:#0e7490">structurée et éprouvée</span></h2>
+      <p style="margin:0;font:400 19px/1.55 Figtree;color:#3d4655">Notre accompagnement en intelligence artificielle à Annemasse suit un processus en 4 étapes.</p>
+    </div>
+    <div style="position:relative;height:clamp(220px,28vw,380px)">
+      <image-slot id="methode-photo" shape="rounded" radius="28" placeholder="Photo d'illustration : atelier de travail" src="https://images.unsplash.com/photo-1522071901873-411886a10004?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=2000&amp;h=800" credit="Photo by Annie Spratt on Unsplash" credit-href="https://unsplash.com/@anniespratt"></image-slot>
+    </div>
+    <ol style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:36px 24px">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+        <li style="display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="width:52px;height:52px;flex-shrink:0;border-radius:50%;border:2px solid #0e7490;display:flex;align-items:center;justify-content:center;font:700 17px Outfit;color:#0e7490">{{ s.n }}</span>
+            <span aria-hidden="true" style="flex:1;height:2px;background:#d6dde5"></span>
+          </div>
+          <h3 style="margin:0;font:700 24px/1.2 Outfit;color:#0a0e1a">{{ s.label }}</h3>
+          <p style="margin:0;font:400 16px/1.55 Figtree;color:#3d4655;text-wrap:pretty">{{ s.text }}</p>
+        </li>
+      </sc-for>
+    </ol>
+  </div>
+</section>
+
+<section data-screen-label="Bénéfices" style="background:#f3f5f8;padding:clamp(72px,9vw,120px) clamp(20px,5.5vw,80px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-wrap:wrap;gap:20px 48px;align-items:flex-end;justify-content:space-between">
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+        <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">Les bénéfices</div>
+        <h2 style="margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 Outfit;letter-spacing:-.02em;color:#0a0e1a;text-wrap:balance">Des bénéfices <span style="color:#0e7490">concrets</span> pour votre entreprise</h2>
+      </div>
+      <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:4px 9px">À CONFIRMER : source et période</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px">
+      <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+        <article style="background:#fff;border:1px solid #e1e6ed;border-radius:28px;padding:32px 28px;display:flex;flex-direction:column;gap:12px">
+          <p style="margin:0 0 8px;font:800 52px/1 Outfit;letter-spacing:-.02em;color:#0e7490">{{ b.value }}</p>
+          <h3 style="margin:0;font:700 21px/1.2 Outfit;color:#0a0e1a">{{ b.title }}</h3>
+          <p style="margin:0;font:400 16px/1.5 Figtree;color:#3d4655">{{ b.text }}</p>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Qui sommes-nous" style="background:#ffffff;padding:clamp(72px,9vw,120px) clamp(20px,5.5vw,80px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,88px);align-items:center">
+    <div style="flex:1 1 340px;min-width:0;position:relative;height:clamp(380px,38vw,520px)">
+      <image-slot id="fondateur-photo" shape="rounded" radius="28" placeholder="Photo du fondateur"></image-slot>
+      <span style="position:absolute;left:16px;bottom:16px;max-width:calc(100% - 32px);font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:4px 9px">À CONFIRMER : photo du fondateur</span>
+    </div>
+    <div style="flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:20px">
+      <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">Qui sommes-nous</div>
+      <h2 style="margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 Outfit;letter-spacing:-.02em;color:#0a0e1a;text-wrap:balance">Votre agence IA de confiance <span style="color:#0e7490">à Annemasse</span></h2>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:4px 9px">À CONFIRMER : nom du fondateur</span>
+        <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:4px 9px">À CONFIRMER : parcours du fondateur</span>
+      </div>
+      <ul style="margin:12px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:28px 32px">
+        <li style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #e1e6ed;padding-top:20px">
+          <h3 style="margin:0;font:700 20px/1.2 Outfit;color:#0a0e1a">Expert certifié</h3>
+          <p style="margin:0;font:400 16px/1.5 Figtree;color:#3d4655">Formation approfondie et certifications reconnues en intelligence artificielle et automatisation.</p>
+          <span style="align-self:flex-start;margin-top:4px;font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:4px 9px">À CONFIRMER : noms des certifications</span>
+        </li>
+        <li style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #e1e6ed;padding-top:20px">
+          <h3 style="margin:0;font:700 20px/1.2 Outfit;color:#0a0e1a">Approche personnalisée</h3>
+          <p style="margin:0;font:400 16px/1.5 Figtree;color:#3d4655">Chaque audit est unique, adapté à votre secteur, vos objectifs et votre culture d'entreprise.</p>
+        </li>
+        <li style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #e1e6ed;padding-top:20px">
+          <h3 style="margin:0;font:700 20px/1.2 Outfit;color:#0a0e1a">Résultats concrets</h3>
+          <p style="margin:0;font:400 16px/1.5 Figtree;color:#3d4655">Nos recommandations sont actionnables immédiatement, avec un impact mesurable.</p>
+        </li>
+        <li style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #e1e6ed;padding-top:20px">
+          <h3 style="margin:0;font:700 20px/1.2 Outfit;color:#0a0e1a">Vision business et technique</h3>
+          <p style="margin:0;font:400 16px/1.5 Figtree;color:#3d4655">Une alliance rare entre compréhension business et maîtrise technique de l'IA.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Témoignages" style="background:#f3f5f8;padding:clamp(72px,9vw,120px) clamp(20px,5.5vw,80px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+      <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">Témoignages</div>
+      <h2 style="margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 Outfit;letter-spacing:-.02em;color:#0a0e1a">Ce que disent <span style="color:#0e7490">nos clients</span></h2>
+      <p style="margin:0;font:400 19px/1.55 Figtree;color:#3d4655">Chaque avis est publié avec son auteur, son entreprise, sa date et un lien vers la source d'origine.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+        <figure style="margin:0;background:#fff;border:1px solid #e1e6ed;border-radius:28px;padding:36px 32px 28px;display:flex;flex-direction:column;gap:24px">
+          <blockquote style="margin:0;font:400 18px/1.55 Figtree;color:#1d2433;text-wrap:pretty">« {{ t.quote }} »</blockquote>
+          <figcaption style="margin-top:auto;border-top:1px solid #e1e6ed;padding-top:20px;display:flex;flex-direction:column;gap:10px">
+            <div style="font:700 18px Outfit;color:#0a0e1a">{{ t.name }}</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <span style="font:500 12px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:3px 8px">À CONFIRMER : entreprise</span>
+              <span style="font:500 12px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:3px 8px">À CONFIRMER : date</span>
+              <span style="font:500 12px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:3px 8px">À CONFIRMER : lien vers l'avis</span>
+            </div>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="FAQ" style="background:#ffffff;padding:clamp(72px,9vw,120px) clamp(20px,5.5vw,80px)">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,88px)">
+    <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:16px">
+      <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">FAQ</div>
+      <h2 style="margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 Outfit;letter-spacing:-.02em;color:#0a0e1a">Questions <span style="color:#0e7490">fréquentes</span></h2>
+      <a href="/faq/" style="font:600 17px Figtree;color:#0e7490" style-hover="color:#0b5c73">Toutes les questions</a>
+    </div>
+    <div style="flex:2 1 560px;min-width:0;display:flex;flex-direction:column;border-top:1px solid #d6dde5">
+      <sc-for list="{{ faq }}" as="q" hint-placeholder-count="6">
+        <details open="{{ q.open }}" style="border-bottom:1px solid #d6dde5">
+          <summary style="list-style:none;cursor:pointer;padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:24px">
+            <h3 style="margin:0;font:700 20px/1.3 Outfit;color:#0a0e1a">{{ q.q }}</h3>
+            <span class="faq-plus" aria-hidden="true" style="flex-shrink:0;width:36px;height:36px;border-radius:50%;border:1px solid #c5ccd6;display:flex;align-items:center;justify-content:center;font:400 22px/1 Figtree;color:#0e7490;transition:transform .2s">+</span>
+          </summary>
+          <div style="padding:0 60px 26px 0;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+            <p style="margin:0;font:400 17px/1.6 Figtree;color:#3d4655;text-wrap:pretty">{{ q.a }}</p>
+            <sc-if value="{{ q.tag }}" hint-placeholder-val="{{ false }}">
+              <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:4px 9px">{{ q.tag }}</span>
+            </sc-if>
+          </div>
+        </details>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-screen-label="Contact" style="background:#f3f5f8;padding:clamp(72px,9vw,120px) clamp(20px,5.5vw,80px);scroll-margin-top:80px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px clamp(40px,6vw,88px);align-items:flex-start">
+    <div style="flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:20px">
+      <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">Contact</div>
+      <h2 style="margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 Outfit;letter-spacing:-.02em;color:#0a0e1a;text-wrap:balance">Prêt à transformer votre entreprise avec l'IA <span style="color:#0e7490">à Annemasse ?</span></h2>
+      <p style="margin:0;font:400 19px/1.55 Figtree;color:#3d4655;text-wrap:pretty">Réservez votre audit IA gratuit et découvrez concrètement comment exploiter l'intelligence artificielle dans votre entreprise.</p>
+      <ul style="margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font:500 17px Figtree;color:#1d2433">
+        <li style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="width:16px;height:16px;background:#0e7490;-webkit-mask:url(assets/icons/fas-check.svg) center/contain no-repeat;mask:url(assets/icons/fas-check.svg) center/contain no-repeat"></span>Sans engagement</li>
+        <li style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="width:16px;height:16px;background:#0e7490;-webkit-mask:url(assets/icons/fas-check.svg) center/contain no-repeat;mask:url(assets/icons/fas-check.svg) center/contain no-repeat"></span>Réponse sous 24 h</li>
+        <li style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" style="width:16px;height:16px;background:#0e7490;-webkit-mask:url(assets/icons/fas-check.svg) center/contain no-repeat;mask:url(assets/icons/fas-check.svg) center/contain no-repeat"></span>Audit personnalisé</li>
+      </ul>
+      <address style="margin-top:16px;font-style:normal;border-top:1px solid #d6dde5;padding-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px">
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+          <span style="font:600 14px Figtree;color:#5b6576">Adresse</span>
+          <span style="font:500 16px Figtree;color:#1d2433">Annemasse, Haute-Savoie</span>
+          <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:4px 9px">À CONFIRMER : adresse complète</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+          <span style="font:600 14px Figtree;color:#5b6576">Téléphone</span>
+          <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:4px 9px">À CONFIRMER : numéro de téléphone</span>
+        </div>
+      </address>
+    </div>
+    <div style="flex:1 1 440px;min-width:0;background:#fff;border:1px solid #e1e6ed;border-radius:28px;padding:clamp(28px,4vw,44px)">
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <label for="f-nom" style="font:600 15px Figtree;color:#1d2433">Nom complet</label>
+            <input id="f-nom" name="nom" required="{{ true }}" autocomplete="name" style="font:400 17px Figtree;color:#0a0e1a;background:#fff;border:1px solid #9aa4b2;border-radius:12px;padding:14px 16px;outline:none" style-focus="border-color:#0e7490;box-shadow:0 0 0 3px rgba(14,116,144,.2)">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <label for="f-email" style="font:600 15px Figtree;color:#1d2433">E-mail professionnel</label>
+            <input id="f-email" name="email" type="email" required="{{ true }}" autocomplete="email" style="font:400 17px Figtree;color:#0a0e1a;background:#fff;border:1px solid #9aa4b2;border-radius:12px;padding:14px 16px;outline:none" style-focus="border-color:#0e7490;box-shadow:0 0 0 3px rgba(14,116,144,.2)">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <label for="f-msg" style="font:600 15px Figtree;color:#1d2433">Comment pouvons-nous vous aider ?</label>
+            <textarea id="f-msg" name="message" rows="4" style="font:400 17px/1.5 Figtree;color:#0a0e1a;background:#fff;border:1px solid #9aa4b2;border-radius:12px;padding:14px 16px;outline:none;resize:vertical" style-focus="border-color:#0e7490;box-shadow:0 0 0 3px rgba(14,116,144,.2)"></textarea>
+          </div>
+          <button type="submit" style="margin-top:4px;display:flex;align-items:center;justify-content:center;gap:14px;font:500 18px Outfit;background:#0e7490;color:#fff;padding:18px 28px;border-radius:999px;border:none;cursor:pointer" style-hover="background:#0b5c73">Réserver mon audit gratuit <span aria-hidden="true" style="width:15px;height:15px;background:#fff;-webkit-mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat;mask:url(assets/icons/fas-arrow-right.svg) center/contain no-repeat"></span></button>
+          <p style="margin:0;font:400 14px/1.5 Figtree;color:#5b6576">Vos données servent uniquement à vous recontacter. <a href="/politique-de-confidentialite/" style="color:#0e7490">Politique de confidentialité</a></p>
+        </form>
+      </sc-if>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div role="status" style="display:flex;flex-direction:column;gap:12px;padding:24px 0">
+          <div style="font:700 26px Outfit;color:#0a0e1a">Merci, votre demande est envoyée.</div>
+          <p style="margin:0;font:400 17px/1.55 Figtree;color:#3d4655">Nous revenons vers vous sous 24 h pour planifier votre audit.</p>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer data-screen-label="Pied de page" style="background:#0a0e1a;padding:clamp(64px,7vw,96px) clamp(20px,5.5vw,80px) 32px">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:56px">
+    <div style="display:flex;flex-wrap:wrap;gap:48px 64px;justify-content:space-between">
+      <div style="flex:1 1 280px;display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+        <img src="assets/mzi-consulting-logo.png" alt="MZI Consulting" width="120" height="45" style="display:block">
+        <p style="margin:0;font:400 16px/1.55 Figtree;color:#9ca3af;max-width:300px">Agence d'automatisation IA à Annemasse, Haute-Savoie, France.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+          <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : adresse complète</span>
+          <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : téléphone</span>
+          <span style="font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : e-mail</span>
+        </div>
+      </div>
+      <nav aria-label="Services" style="flex:0 1 200px;display:flex;flex-direction:column;gap:12px">
+        <div style="font:700 16px Outfit;color:#fff;margin-bottom:4px">Services</div>
+        <a href="/services/audit-ia/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Audit IA gratuit</a>
+        <a href="/services/automatisation-ia/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Automatisation IA</a>
+        <a href="/services/integration-ia/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Intégration IA sur-mesure</a>
+      </nav>
+      <nav aria-label="Zones desservies" style="flex:0 1 220px;display:flex;flex-direction:column;gap:12px">
+        <div style="font:700 16px Outfit;color:#fff;margin-bottom:4px">Zones desservies</div>
+        <a href="/agence-ia-annemasse/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Agence IA à Annemasse</a>
+        <a href="/agence-ia-geneve/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Agence IA à Genève</a>
+        <a href="/ia-pme-suisse-romande/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">IA pour PME en Suisse romande</a>
+      </nav>
+      <nav aria-label="Ressources" style="flex:0 1 180px;display:flex;flex-direction:column;gap:12px">
+        <div style="font:700 16px Outfit;color:#fff;margin-bottom:4px">Ressources</div>
+        <a href="/methode/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Notre méthode</a>
+        <a href="/etudes-de-cas/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Études de cas</a>
+        <a href="/faq/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">FAQ</a>
+        <a href="/blog/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Blog</a>
+        <a href="/contact/" style="font:400 15px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Contact</a>
+      </nav>
+    </div>
+    <div style="border-top:1px solid rgba(221,221,221,.18);padding-top:24px;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center">
+      <p style="margin:0;font:400 14px Figtree;color:#9ca3af">© 2026 MZI Consulting. Tous droits réservés.</p>
+      <nav aria-label="Pages légales" style="display:flex;flex-wrap:wrap;gap:12px 28px">
+        <a href="/mention-legale/" style="font:400 14px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Mentions légales</a>
+        <a href="/politique-de-confidentialite/" style="font:400 14px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Politique de confidentialité</a>
+        <a href="/politique-de-cookies-ue/" style="font:400 14px Figtree;color:#9ca3af;text-decoration:none" style-hover="color:#10d7fd">Politique de cookies</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;animated&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Fond animé&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Léger&quot;,&quot;Moyen&quot;],&quot;default&quot;:&quot;Léger&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Fond animé&quot;}}">
+class Component extends DCLogic {
+  state = { mobile: typeof window !== 'undefined' && window.innerWidth < 900, menuOpen: false, sent: false };
+  canvasRef = React.createRef();
+  heroRef = React.createRef();
+  componentDidMount() {
+    this.onResize = () => {
+      const m = window.innerWidth < 900;
+      if (m !== this.state.mobile) this.setState({ mobile: m, menuOpen: false });
+      this.setup(); if (this.still) this.draw(false);
+    };
+    window.addEventListener('resize', this.onResize);
+    this.start();
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); window.removeEventListener('resize', this.onResize); }
+  componentDidUpdate(p) {
+    if (p.animated !== this.props.animated || p.density !== this.props.density) { cancelAnimationFrame(this.raf); this.start(); }
+  }
+  start() {
+    this.setup();
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.still = reduce || this.props.animated === false;
+    if (this.still) { this.draw(false); return; }
+    let last = 0;
+    const loop = (t) => {
+      this.raf = requestAnimationFrame(loop);
+      if (t - last < 40) return;
+      last = t; this.draw(true);
+    };
+    this.raf = requestAnimationFrame(loop);
+  }
+  setup() {
+    const cv = this.canvasRef.current, hero = this.heroRef.current; if (!cv || !hero) return;
+    const w = hero.offsetWidth, h = hero.offsetHeight, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cv.width = w * dpr; cv.height = h * dpr;
+    this.ctx = cv.getContext('2d'); this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    this.w = w; this.h = h;
+    const dens = this.props.density === 'Moyen' ? 1.6 : 1;
+    const count = Math.round(Math.min(34, w / 42) * dens);
+    this.nodes = Array.from({ length: count }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3 }));
+  }
+  draw(move) {
+    const { ctx, w, h, nodes } = this; if (!ctx) return;
+    const D = 150;
+    ctx.clearRect(0, 0, w, h);
+    if (move) for (const p of nodes) { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > w) p.vx *= -1; if (p.y < 0 || p.y > h) p.vy *= -1; }
+    for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+      const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+      if (d < D) { ctx.strokeStyle = `rgba(0,200,255,${(1 - d / D) * 0.2})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke(); }
+    }
+    ctx.fillStyle = 'rgba(0,200,255,.45)';
+    for (const p of nodes) { ctx.beginPath(); ctx.arc(p.x, p.y, 1.8, 0, 6.283); ctx.fill(); }
+  }
+  renderVals() {
+    const { mobile, menuOpen, sent } = this.state;
+    return {
+      canvasRef: this.canvasRef, heroRef: this.heroRef,
+      isMobile: mobile, isDesktop: !mobile, menuOpen, showMobileMenu: mobile && menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      sent, notSent: !sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      steps: [
+        { n: '01', label: 'Audit', text: "Analyse approfondie de vos processus, de vos outils, de vos objectifs et de l'état actuel de votre entreprise." },
+        { n: '02', label: 'Stratégie IA', text: 'Élaboration d\u2019une feuille de route IA personnalisée, alignée sur vos objectifs business.' },
+        { n: '03', label: 'Implémentation', text: 'Mise en place des outils IA et des automatisations pour transformer vos résultats en bénéfices concrets.' },
+        { n: '04', label: 'Optimisation', text: 'Suivi des performances, ajustements et itérations pour des résultats durables.' }
+      ],
+      benefits: [
+        { value: '40 %', title: 'Gain de temps immédiat', text: 'Réduction du temps passé sur les tâches répétitives.' },
+        { value: '3x', title: 'Productivité décuplée', text: 'Plus de résultats avec les mêmes ressources.' },
+        { value: '+60 %', title: 'Plus de clients potentiels', text: "Augmentation significative de l'acquisition." },
+        { value: '2x', title: 'Meilleure rentabilité', text: 'Des processus transformés en machine rentable.' }
+      ],
+      testimonials: [
+        { name: 'Jean-Pierre Morel', quote: "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé." },
+        { name: 'Clara Vallet', quote: "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés." },
+        { name: 'Yohanna B.', quote: "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs." }
+      ],
+      faq: [
+        { open: true, q: "L'audit IA est-il vraiment gratuit ?", a: "Oui, l'audit est gratuit et sans engagement. Vous repartez avec une analyse de vos processus et des recommandations concrètes, que vous décidiez ou non de poursuivre avec nous.", tag: 'À CONFIRMER : durée et format de l\u2019audit' },
+        { open: false, q: "En quoi consiste l'audit IA ?", a: "Nous analysons vos processus, vos outils et votre organisation, puis nous identifions les tâches automatisables les plus rentables. Vous recevez ensuite une liste de recommandations priorisées.", tag: '' },
+        { open: false, q: 'Faut-il des compétences techniques dans mon équipe ?', a: "Non. Nous traduisons les sujets techniques en langage clair et accompagnons vos équipes à chaque étape, de la stratégie à la mise en place.", tag: '' },
+        { open: false, q: 'Quelles entreprises accompagnez-vous ?', a: "Nous accompagnons des PME d'Annemasse, de Haute-Savoie et du Grand Genève. Chaque audit est adapté à votre secteur, vos objectifs et votre culture d'entreprise.", tag: '' },
+        { open: false, q: "Que se passe-t-il après l'audit ?", a: "Vous recevez une feuille de route IA personnalisée. Si vous le souhaitez, nous mettons ensuite en place les outils et les automatisations, puis nous suivons les performances.", tag: '' },
+        { open: false, q: 'Combien coûte la mise en place des solutions ?', a: "Le coût dépend des recommandations retenues : il est chiffré après l'audit, sur la base de votre situation réelle.", tag: 'À CONFIRMER : fourchette de prix ou modalités' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

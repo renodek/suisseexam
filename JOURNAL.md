@@ -245,3 +245,38 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html`.
 
 - `scripts/compare-visuel.js`
 - `mesures/v0-diff/` (captures, images de différence, `rapport.json`)
+
+## Étape 8 — V1 Clarté (livrable/v1-clarte.html) (2026-09-24)
+
+### Ce qui a été fait
+
+- Lecture intégrale de `source/design-v1/Accueil Clarte.dc.html` (export Claude Design : balises `<x-dc>`, `<helmet>`, `<sc-if>`, `<sc-for>`, gabarits `{{ }}` et données dans un `<script type="text/x-dc">`, interprétés par `support.js`/`image-slot.js`) et conversion intégrale en HTML/CSS/JS vanilla statique : toutes les données (étapes de méthode, bénéfices, témoignages, FAQ) écrites en dur dans le HTML, `support.js` et `image-slot.js` non chargés.
+- `<sc-if value="{{ isDesktop }}">` / `{{ isMobile }}` (état JS dépendant de `innerWidth`) remplacés par une media query CSS pure (`@media (min-width:900px)`) pour la navigation desktop/hamburger — équivalent fonctionnel, sans dépendre du JS pour le rendu initial.
+- Icônes converties de la technique `mask-image` (fichiers SVG externes référencés par le design) vers des `<svg>` inline `fill="currentColor"` (chemins exacts extraits des fichiers `source/design-v1/assets/icons/*.svg`), cohérent avec la technique déjà utilisée dans `v0-existant.html`.
+- Les deux `<image-slot>` porteurs d'une `src` Unsplash réelle (héros : `photo-1513470270416-d3ff6f16b22f`, méthode : `photo-1522071901873-411886a10004`) téléchargées à la taille d'affichage maximale calculée à partir du layout du design (`clamp()`/`flex-basis` résolus pour un viewport desktop large) × 2 pour le Retina, puis converties en WebP (qualité 82) : héros 868×1240 (affichage 434×620), méthode 2400×760 (affichage 1200×380). Le troisième `<image-slot>` (photo du fondateur) n'a aucune `src` dans le design — remplacé par un encart vide « À CONFIRMER », pas par une photo inventée.
+- `livrable/credits.txt` créé avec auteur + lien Unsplash de chaque photo (Christin Hume, Annie Spratt), rappelant qu'aucune ne représente l'équipe MZI.
+- Fond animé du héros repris à l'identique (mêmes formules que le composant source : distance de connexion 150px, densité « Léger » = `min(34, largeur/42)` nœuds, couleurs `rgba(0,200,255,…)`) en JS vanilla ; coupé (un seul rendu statique, pas de boucle `requestAnimationFrame`) si `prefers-reduced-motion: reduce` ou si `?statique` est présent dans l'URL.
+- Corrections de contenu demandées : (1) pied de page, « À CONFIRMER : e-mail » remplacé par un lien `mailto:contact@mzi-consulting.com` réel (adresse/téléphone restent `À CONFIRMER`, non demandés) ; (2) FAQ « Quelles entreprises accompagnez-vous ? » reformulée pour ne plus affirmer de clientèle confirmée dans le Grand Genève (« Nous accompagnons des PME d'Annemasse et de Haute-Savoie, et pouvons intervenir dans le Grand Genève »), avec l'étiquette `[À CONFIRMER : zones d'intervention réelles]` ajoutée (absente dans le design source pour cette question).
+- Vérifié par Playwright (headless, 1440px et 390px) : aucune erreur console/page, accordéon FAQ (premier élément ouvert par défaut, icône `+`/`×`), bascule du menu mobile (`aria-expanded`, panneau caché/visible), formulaire de contact (bascule formulaire → message de remerciement au submit), et le changement responsive desktop/mobile du header.
+
+### Décisions prises et leur justification
+
+- **Conversion en classes CSS plutôt qu'en styles inline conservés tels quels** : le design source encode tout en attributs `style="…"` avec des pseudo-attributs `style-hover`/`style-focus` propres à l'outil (pas du CSS valide). Une conversion en feuille de style à classes était nécessaire pour exprimer réellement les états `:hover`/`:focus` et les media queries, tout en gardant chaque valeur (couleur, `clamp()`, `border-radius`, `gap`) recopiée à l'identique depuis la source.
+- **Navigation mobile pilotée par une media query CSS plutôt que par la logique `innerWidth` du composant source** : plus robuste (pas de flash de contenu avant l'exécution du JS, fonctionne même si le JS est bloqué) et visuellement équivalent, puisque le composant source ne faisait de toute façon que basculer entre deux blocs selon un seuil de largeur fixe (900px).
+- **Photo du fondateur non remplacée par une image trouvée ailleurs** : le design source ne fournit aucune `src` pour cet `<image-slot>` (contrairement aux deux autres) — en inventer une aurait contredit la règle du projet interdisant d'inventer du contenu non fourni.
+- **Bandeau d'aperçu Grand Genève du héros conservé tel quel** (« Agence d'automatisation IA · Annemasse · Grand Genève ») : ce n'est pas une des deux corrections demandées, et il s'agit d'un positionnement affiché comme axe du design (au même titre que les liens « Zones desservies » du pied de page), pas d'une affirmation de clientèle existante comme l'était la phrase FAQ corrigée.
+- **Lien d'évitement (« skip link ») ajouté, alors qu'absent du design source** : n'affecte pas le rendu visuel (invisible sauf au focus clavier) et la règle technique globale du projet (CLAUDE.md) impose l'accessibilité WCAG AA sur l'ensemble des livrables.
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Après soumission du formulaire de contact, `#contact-form` restait visible malgré `form.hidden = true` en JS | La règle `.contact-form{display:flex}` (sélecteur de classe, feuille auteur) l'emportait sur la règle `[hidden]{display:none}` de la feuille de style par défaut du navigateur (une règle auteur l'emporte toujours sur une règle user-agent, même à spécificité égale). Ajout d'une règle explicite `.contact-form[hidden]{display:none}`. Vérifié ensuite par Playwright : formulaire bien masqué, message de remerciement bien affiché. |
+| Icônes du design en technique `mask-image` pointant vers des fichiers SVG externes contenant des métadonnées C2PA volumineuses (peu lisibles en l'état) | Chemins vectoriels exacts extraits par script Node (`<path d="…">`) plutôt que recopiés à la main depuis le rendu brut du fichier, puis intégrés en `<svg><path>` inline avec `fill="currentColor"`. |
+
+### Fichiers produits
+
+- `livrable/v1-clarte.html`
+- `livrable/credits.txt`
+- `livrable/assets/img/v1-hero-reunion.webp`, `livrable/assets/img/v1-methode-atelier.webp`
+- `source/images/design-v1/hero-reunion.jpg`, `source/images/design-v1/methode-atelier.jpg` (sources brutes, avant conversion WebP)

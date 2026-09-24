@@ -1,0 +1,3 @@
+/* Le site charge Lato et Outfit en local (WordPress). Fichiers binaires non fournis : chargement via Google Fonts.
+   Roboto Slab est également chargée par le site (--e-global-typography-secondary) mais n'est utilisée par aucun élément : non incluse. */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&family=Outfit:wght@100..900&display=swap');

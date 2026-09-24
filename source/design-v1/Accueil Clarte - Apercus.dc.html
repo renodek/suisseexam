@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&amp;family=Figtree:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;background:#e6e8ec;font-family:Figtree,system-ui,sans-serif}a{color:#0e7490}a:hover{color:#0b5c73}</style>
+</helmet>
+<section style="padding:64px;display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">Accueil V1 « Clarté » · héros 1b</div>
+    <div style="font:700 40px Outfit;color:#0a0e1a">Desktop 1440 px et mobile 390 px</div>
+    <a href="Accueil Clarte.dc.html" style="font:600 16px Figtree">Ouvrir la page seule</a>
+  </div>
+  <div style="display:flex;gap:64px;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font:600 16px Figtree;color:#0a0e1a">Desktop · 1440 px</div>
+      <iframe ref="{{ d }}" src="Accueil Clarte.dc.html" title="Accueil desktop" style="width:1440px;height:900px;border:0;background:#0a0e1a;box-shadow:0 20px 60px rgba(10,14,26,.18)"></iframe>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font:600 16px Figtree;color:#0a0e1a">Mobile · 390 px</div>
+      <iframe ref="{{ m }}" src="Accueil Clarte.dc.html" title="Accueil mobile" style="width:390px;height:844px;border:0;background:#0a0e1a;box-shadow:0 20px 60px rgba(10,14,26,.18)"></iframe>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  d = React.createRef(); m = React.createRef();
+  componentDidMount() {
+    const fit = (f) => { try { const h = f.contentDocument.documentElement.scrollHeight; if (h > 400) f.style.height = h + 'px'; } catch (e) {} };
+    [this.d, this.m].forEach(r => { const f = r.current; if (!f) return; f.addEventListener('load', () => { [600, 1500, 3000].forEach(t => setTimeout(() => fit(f), t)); }); });
+  }
+  renderVals() { return { d: this.d, m: this.m }; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!-- @dsCard group="Composants" viewport="700x330" name="Boutons" subtitle="Principal, secondaire, header, formulaire, retour en haut — normal / survol" -->
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script><script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../_ns.js" data-root="../../"></script>
+<style>body{margin:0;background:#0a0e1a;color:#fff;font-family:Lato,sans-serif}.cap{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#7e8da3}</style></head><body><div id="r"></div>
+<script type="text/babel">window.__MZI_ready.then((NS)=>{ const {Icon,Button,Badge,KeyFigure,ChallengeCard,BenefitCard,TestimonialCard,ContactForm,NavBar,Footer}=NS; const Cap=({children})=><div className="cap">{children}</div>;
+ReactDOM.createRoot(document.getElementById('r')).render(<div style={{padding:20,display:'grid',gridTemplateColumns:'110px 1fr 1fr',gap:'14px 16px',alignItems:'center'}}>
+<span/><Cap>Normal</Cap><Cap>Survol</Cap>
+<Cap>Principal</Cap><div><Button icon="fas-arrow-right">Réserver un audit IA gratuit</Button></div><div><Button icon="fas-arrow-right" forceState="hover">Réserver un audit IA gratuit</Button></div>
+<Cap>Secondaire</Cap><div><Button variant="secondary">Découvrir notre méthode</Button></div><div><Button variant="secondary" forceState="hover">Découvrir notre méthode</Button></div>
+<Cap>Header / Envoyer</Cap><div style={{display:'flex',gap:12,alignItems:'center'}}><Button variant="nav">Contact</Button><Button variant="submit" style={{marginTop:0}}>Envoyer</Button></div><div style={{display:'flex',gap:12,alignItems:'center'}}><Button variant="nav" forceState="hover">Contact</Button><Button variant="submit" forceState="hover" style={{marginTop:0}}>Envoyer</Button></div>
+<Cap>Retour en haut</Cap><div><Button variant="scrollTop"/></div><div><Button variant="scrollTop" forceState="hover"/></div></div>);});</script></body></html>

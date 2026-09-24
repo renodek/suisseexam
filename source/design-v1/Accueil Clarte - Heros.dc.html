@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&amp;family=Figtree:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#e6e8ec;font-family:Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#10d7fd;text-decoration:none}
+a:hover{color:#7fe9fe}
+</style>
+</helmet>
+
+<section id="tour-1" style="padding:72px 72px 120px;display:flex;flex-direction:column;gap:40px">
+  <div style="display:flex;flex-direction:column;gap:8px;max-width:900px">
+    <div style="font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#0e7490">Tour 1 · Page d'accueil V1 « Clarté »</div>
+    <div style="font:700 44px/1.1 Outfit;color:#0a0e1a;letter-spacing:-.01em">Trois directions pour le héros</div>
+    <div style="font:400 18px/1.5 Figtree;color:#3a4252;text-wrap:pretty">Même identité (logo, bleu nuit, cyan, Outfit 800, boutons pilule du design system), même libellé d'action, même H1 localisé. Elles diffèrent par la composition et la place donnée à la preuve.</div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:64px;align-items:flex-start">
+
+    <!-- 1a -->
+    <div id="1a" style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="font:700 15px Outfit;background:#0a0e1a;color:#10d7fd;padding:4px 10px;border-radius:8px">1a</span>
+        <span style="font:600 17px Figtree;color:#0a0e1a">Continuité</span>
+        <span style="font:400 15px Figtree;color:#4a5263">La composition actuelle, centrée, réparée et resserrée.</span>
+      </div>
+      <div data-screen-label="1a Héros continuité" style="position:relative;width:1440px;height:900px;background:#0a0e1a;overflow:hidden;border-radius:4px;box-shadow:0 20px 60px rgba(10,14,26,.18)">
+        <canvas ref="{{ c1 }}" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse 55% 50% at 50% 46%, rgba(10,14,26,.92) 0%, rgba(10,14,26,.55) 60%, rgba(10,14,26,0) 100%);pointer-events:none"></div>
+
+        <header style="position:relative;height:96px;padding:0 80px;display:flex;align-items:center;justify-content:space-between">
+          <a href="/" aria-label="MZI Consulting, accueil" style="display:flex;align-items:center">
+            <img src="assets/mzi-consulting-logo.png" alt="MZI Consulting" width="110" height="41" style="display:block">
+          </a>
+          <nav aria-label="Navigation principale" style="display:flex;gap:40px">
+            <a href="/services/audit-ia/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Services</a>
+            <a href="/methode/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Méthode</a>
+            <a href="/etudes-de-cas/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Études de cas</a>
+            <a href="/faq/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">FAQ</a>
+            <a href="/contact/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Contact</a>
+          </nav>
+          <a href="/services/audit-ia/" style="font:500 16px Figtree;background:#10d7fd;color:#0a0e1a;padding:12px 22px;border-radius:999px" style-hover="background:#09c6eb;color:#0a0e1a;box-shadow:0 0 10px rgba(255,255,255,.5)">Réserver mon audit gratuit</a>
+        </header>
+
+        <main style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:92px 160px 0">
+          <div style="display:flex;align-items:center;gap:8px;font:600 15px Figtree;color:#10d7fd;border:1px solid rgba(16,215,253,.45);border-radius:999px;padding:7px 16px">
+            <span>Agence IA à Annemasse · Haute-Savoie</span>
+            <sc-if value="{{ geneve }}" hint-placeholder-val="{{ true }}"><span>· Grand Genève</span></sc-if>
+          </div>
+          <h1 style="margin:32px 0 0;font:800 80px/1.04 Outfit;letter-spacing:-.025em;color:#fff;max-width:1060px;text-wrap:balance">Automatisez votre PME avec l'IA, <span style="color:#10d7fd">à Annemasse</span></h1>
+          <p style="margin:28px 0 0;font:400 21px/1.5 Figtree;color:#9ca3af;max-width:720px;text-wrap:pretty">Gagnez du temps et augmentez votre chiffre d'affaires grâce à nos solutions IA sur-mesure.</p>
+          <div style="margin-top:44px;display:flex;gap:16px;align-items:center">
+            <a href="/services/audit-ia/" style="display:flex;align-items:center;gap:12px;font:500 19px Outfit;background:#10d7fd;color:#0a0e1a;padding:18px 30px;border-radius:999px" style-hover="background:#09c6eb;color:#0a0e1a;box-shadow:0 0 10px rgba(255,255,255,.5)">Réserver mon audit gratuit <span aria-hidden="true">→</span></a>
+            <a href="/methode/" style="font:500 19px Outfit;color:#fff;background:#ffffff1f;padding:17px 28px;border-radius:999px;border:1px solid #7e8da3" style-hover="background:#ffffff38;color:#fff;box-shadow:0 0 10px rgba(255,255,255,.5)">Découvrir notre méthode</a>
+          </div>
+          <div style="margin-top:20px;font:500 15px Figtree;color:#9aa5b8">Sans engagement · Réponse sous 24 h</div>
+        </main>
+
+        <div style="position:absolute;left:80px;right:80px;bottom:0;height:112px;border-top:1px solid rgba(126,141,163,.3);display:flex;align-items:center;justify-content:center;gap:56px">
+          <p style="margin:0;font:400 17px Figtree;color:#c9d1de"><strong style="font:700 22px Outfit;color:#fff">50+</strong> entreprises accompagnées</p>
+          <p style="margin:0;font:400 17px Figtree;color:#c9d1de"><strong style="font:700 22px Outfit;color:#fff">3x</strong> productivité moyenne</p>
+          <p style="margin:0;font:400 17px Figtree;color:#c9d1de"><strong style="font:700 22px Outfit;color:#fff">40 %</strong> de temps économisé</p>
+          <span style="font:500 12.5px ui-monospace,Menlo,monospace;color:#f4c96e;border:1px dashed rgba(244,201,110,.6);background:rgba(244,201,110,.07);border-radius:6px;padding:4px 9px">À CONFIRMER : source et période</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1b -->
+    <div id="1b" style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="font:700 15px Outfit;background:#0a0e1a;color:#10d7fd;padding:4px 10px;border-radius:8px">1b</span>
+        <span style="font:600 17px Figtree;color:#0a0e1a">Proximité</span>
+        <span style="font:400 15px Figtree;color:#4a5263">Texte à gauche, photo humaine à droite, l'offre d'audit rendue concrète.</span>
+      </div>
+      <div data-screen-label="1b Héros proximité" style="position:relative;width:1440px;height:900px;background:#0a0e1a;overflow:hidden;border-radius:4px;box-shadow:0 20px 60px rgba(10,14,26,.18)">
+        <canvas ref="{{ c2 }}" aria-hidden="true" style="position:absolute;left:0;top:0;width:820px;height:100%;-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 40%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 40%,transparent 100%)"></canvas>
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,26,.2) 0%,rgba(10,14,26,.75) 30%,rgba(10,14,26,.4) 60%,rgba(10,14,26,0) 100%);pointer-events:none"></div>
+
+        <header style="position:relative;height:96px;padding:0 80px;display:flex;align-items:center;justify-content:space-between">
+          <a href="/" aria-label="MZI Consulting, accueil" style="display:flex;align-items:center">
+            <img src="assets/mzi-consulting-logo.png" alt="MZI Consulting" width="110" height="41" style="display:block">
+          </a>
+          <nav aria-label="Navigation principale" style="display:flex;gap:40px">
+            <a href="/services/audit-ia/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Services</a>
+            <a href="/methode/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Méthode</a>
+            <a href="/etudes-de-cas/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Études de cas</a>
+            <a href="/faq/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">FAQ</a>
+            <a href="/contact/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Contact</a>
+          </nav>
+          <a href="/services/audit-ia/" style="font:500 16px Figtree;background:#10d7fd;color:#0a0e1a;padding:12px 22px;border-radius:999px" style-hover="background:#09c6eb;color:#0a0e1a;box-shadow:0 0 10px rgba(255,255,255,.5)">Réserver mon audit gratuit</a>
+        </header>
+
+        <main style="position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:center;padding:48px 80px 0">
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;gap:6px;font:600 14px Figtree;letter-spacing:.12em;text-transform:uppercase;color:#10d7fd">
+              <span>Agence d'automatisation IA · Annemasse</span>
+              <sc-if value="{{ geneve }}" hint-placeholder-val="{{ true }}"><span>· Grand Genève</span></sc-if>
+            </div>
+            <h1 style="margin:24px 0 0;font:800 66px/1.06 Outfit;letter-spacing:-.022em;color:#fff;text-wrap:balance">Automatisez les tâches répétitives de votre PME, à Annemasse</h1>
+            <p style="margin:28px 0 0;font:400 21px/1.5 Figtree;color:#9ca3af;max-width:600px;text-wrap:pretty">Gagnez du temps et augmentez votre chiffre d'affaires grâce à nos solutions IA sur-mesure.</p>
+            <div style="margin-top:44px;display:flex;gap:16px;align-items:center">
+              <a href="/services/audit-ia/" style="display:flex;align-items:center;gap:12px;font:500 19px Outfit;background:#10d7fd;color:#0a0e1a;padding:18px 30px;border-radius:999px" style-hover="background:#09c6eb;color:#0a0e1a;box-shadow:0 0 10px rgba(255,255,255,.5)">Réserver mon audit gratuit <span aria-hidden="true">→</span></a>
+              <a href="/methode/" style="font:500 19px Outfit;color:#fff;padding:17px 4px;border-bottom:1px solid #7e8da3" style-hover="color:#10d7fd;border-color:#10d7fd">Découvrir notre méthode</a>
+            </div>
+            <ul style="margin:40px 0 0;padding:0;list-style:none;display:flex;gap:28px;font:500 16px Figtree;color:#c9d1de">
+              <li style="display:flex;align-items:center;gap:10px"><span style="width:7px;height:7px;border-radius:50%;background:#10d7fd"></span>Sans engagement</li>
+              <li style="display:flex;align-items:center;gap:10px"><span style="width:7px;height:7px;border-radius:50%;background:#10d7fd"></span>Réponse sous 24 h</li>
+              <li style="display:flex;align-items:center;gap:10px"><span style="width:7px;height:7px;border-radius:50%;background:#10d7fd"></span>Audit personnalisé</li>
+            </ul>
+          </div>
+          <div style="position:relative;height:660px">
+            <image-slot id="hero-1b-photo" shape="rounded" radius="28" placeholder="Photo : équipe au travail, bureau lumineux" src="https://images.unsplash.com/photo-1581090690925-3898802525e2?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=1100&amp;h=1400" credit="Photo by ThisisEngineering on Unsplash" credit-href="https://unsplash.com/@thisisengineering"></image-slot>
+            <div style="position:absolute;left:-56px;top:48px;width:300px;background:#0a0e1a;border:1px solid rgba(126,141,163,.35);border-radius:20px;padding:24px 24px 22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 48px rgba(0,0,0,.35)">
+              <div style="font:700 18px Outfit;color:#fff">L'audit IA gratuit</div>
+              <ol style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.35 Figtree;color:#c9d1de">
+                <li style="display:flex;gap:10px"><span style="font:700 13px Outfit;color:#10d7fd;min-width:18px">01</span>Analyse de vos processus</li>
+                <li style="display:flex;gap:10px"><span style="font:700 13px Outfit;color:#10d7fd;min-width:18px">02</span>Identification des opportunités IA</li>
+                <li style="display:flex;gap:10px"><span style="font:700 13px Outfit;color:#10d7fd;min-width:18px">03</span>Recommandations concrètes</li>
+              </ol>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- 1c -->
+    <div id="1c" style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="font:700 15px Outfit;background:#0a0e1a;color:#10d7fd;padding:4px 10px;border-radius:8px">1c</span>
+        <span style="font:600 17px Figtree;color:#0a0e1a">Ancrage régional</span>
+        <span style="font:400 15px Figtree;color:#4a5263">Grande carte arrondie, titre éditorial, paysage lémanique en socle.</span>
+      </div>
+      <div data-screen-label="1c Héros ancrage" style="position:relative;width:1440px;height:900px;background:#0a0e1a;overflow:hidden;border-radius:4px;box-shadow:0 20px 60px rgba(10,14,26,.18)">
+        <header style="position:relative;height:88px;padding:0 64px;display:flex;align-items:center;justify-content:space-between">
+          <a href="/" aria-label="MZI Consulting, accueil" style="display:flex;align-items:center">
+            <img src="assets/mzi-consulting-logo.png" alt="MZI Consulting" width="110" height="41" style="display:block">
+          </a>
+          <nav aria-label="Navigation principale" style="display:flex;gap:40px">
+            <a href="/services/audit-ia/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Services</a>
+            <a href="/methode/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Méthode</a>
+            <a href="/etudes-de-cas/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Études de cas</a>
+            <a href="/faq/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">FAQ</a>
+            <a href="/contact/" style="font:500 16px Figtree;color:#e3e8f0" style-hover="color:#10d7fd">Contact</a>
+          </nav>
+          <a href="/services/audit-ia/" style="font:500 16px Figtree;background:#10d7fd;color:#0a0e1a;padding:12px 22px;border-radius:999px" style-hover="background:#09c6eb;color:#0a0e1a;box-shadow:0 0 10px rgba(255,255,255,.5)">Réserver mon audit gratuit</a>
+        </header>
+
+        <main style="position:absolute;left:24px;right:24px;top:88px;bottom:24px;border-radius:32px;background:#0e1424;border:1px solid rgba(126,141,163,.22);overflow:hidden;display:flex;flex-direction:column">
+          <canvas ref="{{ c3 }}" aria-hidden="true" style="position:absolute;left:0;top:0;width:100%;height:520px"></canvas>
+          <div style="position:absolute;inset:0 0 auto 0;height:520px;background:linear-gradient(180deg,rgba(14,20,36,.35) 0%,rgba(14,20,36,.8) 55%,#0e1424 100%);pointer-events:none"></div>
+          <div style="position:relative;padding:56px 64px 0;display:flex;flex-direction:column">
+            <div style="display:flex;gap:10px">
+              <span style="font:500 14px Figtree;color:#e3e8f0;border:1px solid rgba(126,141,163,.5);border-radius:999px;padding:6px 14px">Annemasse</span>
+              <span style="font:500 14px Figtree;color:#e3e8f0;border:1px solid rgba(126,141,163,.5);border-radius:999px;padding:6px 14px">Haute-Savoie</span>
+              <sc-if value="{{ geneve }}" hint-placeholder-val="{{ true }}"><span style="font:500 14px Figtree;color:#e3e8f0;border:1px solid rgba(126,141,163,.5);border-radius:999px;padding:6px 14px">Grand Genève</span></sc-if>
+            </div>
+            <h1 style="margin:28px 0 0;font:800 88px/1.0 Outfit;letter-spacing:-.03em;color:#fff;max-width:1180px;text-wrap:balance">L'IA qui fait gagner du temps aux <span style="color:#10d7fd">PME de Haute-Savoie</span></h1>
+            <div style="margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:end">
+              <p style="margin:0;font:400 21px/1.5 Figtree;color:#9ca3af;max-width:560px;text-wrap:pretty">Gagnez du temps et augmentez votre chiffre d'affaires grâce à nos solutions IA sur-mesure. Agence basée à Annemasse.</p>
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:14px">
+                <div style="display:flex;gap:14px">
+                  <a href="/methode/" style="font:500 19px Outfit;color:#fff;background:#ffffff1f;padding:17px 28px;border-radius:999px;border:1px solid #7e8da3" style-hover="background:#ffffff38;color:#fff;box-shadow:0 0 10px rgba(255,255,255,.5)">Découvrir notre méthode</a>
+                  <a href="/services/audit-ia/" style="display:flex;align-items:center;gap:12px;font:500 19px Outfit;background:#10d7fd;color:#0a0e1a;padding:18px 30px;border-radius:999px" style-hover="background:#09c6eb;color:#0a0e1a;box-shadow:0 0 10px rgba(255,255,255,.5)">Réserver mon audit gratuit <span aria-hidden="true">→</span></a>
+                </div>
+                <div style="font:500 15px Figtree;color:#9aa5b8">Sans engagement · Réponse sous 24 h</div>
+              </div>
+            </div>
+          </div>
+          <div style="position:relative;margin-top:auto;height:250px">
+            <image-slot id="hero-1c-leman" shape="rect" placeholder="Photo : paysage lémanique, lac et montagnes" src="https://images.unsplash.com/photo-1699470740879-bde4d7db985c?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;q=80&amp;w=2000&amp;h=400" credit="Photo by T Fang on Unsplash" credit-href="https://unsplash.com/@tqfang"></image-slot>
+            <div style="position:absolute;left:0;right:0;top:0;height:90px;background:linear-gradient(180deg,#0e1424 0%,rgba(14,20,36,0) 100%);pointer-events:none"></div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;geneve&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenu&quot;},&quot;animated&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Fond animé&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Léger&quot;,&quot;Moyen&quot;],&quot;default&quot;:&quot;Léger&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Fond animé&quot;}}">
+class Component extends DCLogic {
+  c1 = React.createRef(); c2 = React.createRef(); c3 = React.createRef();
+  componentDidMount() {
+    this.reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.setup();
+    this.last = 0;
+    const loop = (t) => {
+      this.raf = requestAnimationFrame(loop);
+      if (t - this.last < 40) return; // ~25 fps
+      this.last = t;
+      this.draw(true);
+    };
+    if (this.reduce || this.props.animated === false) this.draw(false);
+    else this.raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); }
+  componentDidUpdate(p) {
+    if (p.animated !== this.props.animated || p.density !== this.props.density) {
+      cancelAnimationFrame(this.raf); this.componentDidMount();
+    }
+  }
+  setup() {
+    const dens = this.props.density === 'Moyen' ? 1.6 : 1;
+    const cfg = [[this.c1, 34, 0.55], [this.c2, 22, 0.6], [this.c3, 26, 0.5]];
+    this.nets = cfg.map(([ref, n, a]) => {
+      const cv = ref.current; if (!cv) return null;
+      const w = cv.offsetWidth, h = cv.offsetHeight, dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cv.width = w * dpr; cv.height = h * dpr;
+      const ctx = cv.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const count = Math.round(n * dens);
+      const nodes = Array.from({ length: count }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35
+      }));
+      return { ctx, w, h, nodes, a };
+    }).filter(Boolean);
+  }
+  draw(move) {
+    const D = 150;
+    for (const net of this.nets) {
+      const { ctx, w, h, nodes, a } = net;
+      ctx.clearRect(0, 0, w, h);
+      if (move) for (const p of nodes) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+      }
+      for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y, d = Math.hypot(dx, dy);
+        if (d < D) {
+          ctx.strokeStyle = `rgba(0,200,255,${(1 - d / D) * 0.28 * a})`;
+          ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke();
+        }
+      }
+      ctx.fillStyle = `rgba(0,200,255,${0.7 * a})`;
+      for (const p of nodes) { ctx.beginPath(); ctx.arc(p.x, p.y, 1.8, 0, 6.283); ctx.fill(); }
+    }
+  }
+  renderVals() {
+    return { c1: this.c1, c2: this.c2, c3: this.c3, geneve: this.props.geneve ?? true };
+  }
+}
+</script>
+</body>
+</html>
