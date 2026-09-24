@@ -1,0 +1,190 @@
+{
+  "source": "https://linear.app",
+  "tokens": {
+    "spacing": {
+      "scale": [
+        1,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        24,
+        48
+      ],
+      "base_unit": 4
+    },
+    "typography": {
+      "families": [
+        "Inter Variable",
+        "Berkeley Mono (identifiants, code)"
+      ],
+      "scale": [
+        {
+          "role": "h1",
+          "size": "64px",
+          "weight": "510",
+          "family": "Inter Variable",
+          "line_height": "64px",
+          "letter_spacing": "-1.408px"
+        },
+        {
+          "role": "h2",
+          "size": "48px",
+          "weight": "510",
+          "family": "Inter Variable",
+          "line_height": "48px",
+          "letter_spacing": "-1.056px"
+        },
+        {
+          "role": "h3",
+          "size": "20px",
+          "weight": "590",
+          "family": "Inter Variable",
+          "line_height": "26.6px",
+          "letter_spacing": "-0.24px"
+        },
+        {
+          "role": "h4",
+          "size": "16px",
+          "weight": "590",
+          "family": "Inter Variable",
+          "line_height": "28px"
+        },
+        {
+          "role": "body",
+          "size": "15px",
+          "weight": "400",
+          "family": "Inter Variable",
+          "line_height": "24px"
+        },
+        {
+          "role": "interface",
+          "size": "12px, 13px et 14px (498 nœuds sur ~630)",
+          "weight": "400 et 510",
+          "family": "Inter Variable"
+        },
+        {
+          "role": "micro",
+          "size": "10px",
+          "weight": "400",
+          "family": "Inter Variable"
+        }
+      ]
+    },
+    "colors": [
+      {
+        "role": "fond de page",
+        "value": "#08090A",
+        "area": "64.4 %"
+      },
+      {
+        "role": "panneaux et fenêtres",
+        "value": "#0F1011",
+        "area": "20.6 %"
+      },
+      {
+        "role": "bordure",
+        "value": "#2E2E32"
+      },
+      {
+        "role": "texte niveau 1",
+        "value": "#E2E4E7"
+      },
+      {
+        "role": "texte niveau 2",
+        "value": "#D0D6E0"
+      },
+      {
+        "role": "texte niveau 3",
+        "value": "#8A8F98"
+      },
+      {
+        "role": "texte niveau 4",
+        "value": "#62666D"
+      },
+      {
+        "role": "accents ponctuels (icônes, statuts)",
+        "value": "#F79CE0, #F7BF8B, #4EA7FC, rgba(0,255,5,0.1)"
+      }
+    ],
+    "radius": [
+      "9999px (72 usages : boutons, pastilles)",
+      "8px (29)",
+      "12px (19, panneaux)",
+      "9px (18, cartes de commentaires)",
+      "6px (10)",
+      "4px (18)",
+      "50% (avatars)"
+    ],
+    "shadows": [
+      "0 0 0 1px rgba(0,0,0,0.2)",
+      "inset 0 0 0 0.5px rgba(255,255,255,0.08)",
+      "inset 0 0 0 1px rgba(255,255,255,0.05)",
+      "inset 0 0 0 1px #23252A",
+      "inset 0 0 12px rgba(0,0,0,0.2)",
+      "0 2px 32px rgba(0,0,0,0.25) (panneau flottant uniquement)"
+    ],
+    "image_ratios": [
+      {
+        "usage": "visuel du héros (maquette de l'application)",
+        "ratio": "1.79:1"
+      }
+    ],
+    "grid": {
+      "max_width": "aucun (pleine largeur 1440px)",
+      "columns": 2,
+      "gutter": "variable",
+      "page_margin": "80px",
+      "note": "en-tête de 72px avec filet de 1px ; maquette plus large que le texte (1320px contre une marge de 80px)"
+    }
+  },
+  "taste": [
+    {
+      "name": "Quatre niveaux de gris, aucune couleur d'accent en surface",
+      "trigger": "Faire tenir beaucoup de texte de plusieurs importances sur un fond quasi noir",
+      "decision": "Une échelle de texte en quatre gris (#E2E4E7, #D0D6E0, #8A8F98, #62666D) et un fond à deux niveaux (#08090A, #0F1011), plutôt qu'une couleur de marque pour hiérarchiser",
+      "reason": "Le regard classe l'information par luminosité ; la couleur est gardée pour les rares états à signaler",
+      "evidence": [
+        "#8A8F98 : 180 nœuds de texte, #62666D : 132, #D0D6E0 : 105, #E2E4E7 : 81",
+        "couleurs vives seulement en petits repères : rose #F79CE0 (41), pêche #F7BF8B (22), bleu #4EA7FC",
+        "gris teintés vers le bleu (8,9,10 et 138,143,152)"
+      ]
+    },
+    {
+      "name": "La profondeur se dessine avec des filets de lumière, pas des ombres",
+      "trigger": "Séparer des panneaux les uns des autres sur un fond presque noir, où une ombre noire ne se voit pas",
+      "decision": "Anneaux de 0.5 à 1px (inset rgba(255,255,255,0.05 à 0.08)) et bordures #2E2E32, avec une seule ombre douce (0 2px 32px, 0.25) réservée aux panneaux flottants",
+      "reason": "Sur fond sombre, seule une ligne plus claire que le fond lit comme un bord ; une ombre noire disparaît",
+      "evidence": [
+        "anneau 0 0 0 1px rgba(0,0,0,0.2) : 8 usages",
+        "reflet inset 0 0 0 0.5px rgba(255,255,255,0.08) : 5 usages",
+        "ombre 0 2px 32px : 5 usages, sur le panneau de 400×520px"
+      ]
+    },
+    {
+      "name": "Demi-graisses variables et crénage négatif sur un seul sans-serif",
+      "trigger": "Donner du poids aux titres sans passer à une graisse grasse dans une interface dense",
+      "decision": "Inter Variable en graisses 510 et 590 (hors paliers habituels) avec -0.022em sur les titres, plutôt que 500 et 600 standard ou une seconde famille",
+      "reason": "Le lecteur de l'outil passe la journée dans un texte de 12 à 15px ; des titres à interligne 1.0 et graisse intermédiaire restent nets sans dominer",
+      "evidence": [
+        "h1 64px/64px w510 -1.408px, h2 48px/48px w510 -1.056px",
+        "graisse 510 : 141 nœuds, 590 : 8",
+        "tailles d'interface 12px (189), 14px (180), 13px (129), 15px (65)"
+      ]
+    },
+    {
+      "name": "Retour visuel en 100 à 160 ms, sur peu de propriétés",
+      "trigger": "Un outil manipulé des centaines de fois par jour",
+      "decision": "Transitions de 0.1 à 0.16s en cubic-bezier(0.25, 0.46, 0.45, 0.94) sur border-color, background et color, plutôt que des mouvements longs",
+      "reason": "Le geste répété ne doit jamais attendre l'animation ; le mouvement long est gardé pour l'arrivée du contenu (le titre du héros arrive flou puis net)",
+      "evidence": [
+        "transitions relevées : border-color/background 0.1s, border 0.16s, filter 0.16s",
+        "capture à 3s : titre du héros encore flou (filtre en cours d'animation)",
+        ":focus-visible et prefers-reduced-motion présents"
+      ]
+    }
+  ]
+}

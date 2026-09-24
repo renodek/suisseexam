@@ -1,0 +1,4 @@
+Source : https://github.com/senlindesign/taste-skill (commit 6dce223), version 1.1.0, auteur Sen Lin.
+Licence : MIT © 2025 Sen Lin, annoncée dans README.md ; le dépôt ne contient pas de fichier LICENSE.
+Installé sans les dossiers docs/ et evals/.
+Seule modification : ajout de disable-model-invocation: true dans l'en-tête de SKILL.md (déclenchement uniquement sur appel explicite /taste).

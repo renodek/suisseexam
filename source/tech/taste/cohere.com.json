@@ -1,0 +1,198 @@
+{
+  "source": "https://cohere.com",
+  "tokens": {
+    "spacing": {
+      "scale": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        80
+      ],
+      "base_unit": 4
+    },
+    "typography": {
+      "families": [
+        "CohereText (display)",
+        "Unica77 Cohere Web (interface et texte)",
+        "CohereMono (étiquettes)"
+      ],
+      "scale": [
+        {
+          "role": "h1",
+          "size": "96px",
+          "weight": "400",
+          "family": "CohereText",
+          "line_height": "96px",
+          "letter_spacing": "-1.92px"
+        },
+        {
+          "role": "h2",
+          "size": "60px",
+          "weight": "400",
+          "family": "CohereText",
+          "line_height": "60px",
+          "letter_spacing": "-1.2px"
+        },
+        {
+          "role": "h4",
+          "size": "32px",
+          "weight": "400",
+          "family": "Unica77 Cohere Web",
+          "line_height": "38.4px",
+          "letter_spacing": "-0.32px"
+        },
+        {
+          "role": "h5",
+          "size": "24px",
+          "weight": "400",
+          "family": "Unica77 Cohere Web",
+          "line_height": "31.2px"
+        },
+        {
+          "role": "body",
+          "size": "18px",
+          "weight": "400",
+          "family": "Unica77 Cohere Web",
+          "line_height": "25.2px"
+        },
+        {
+          "role": "interface",
+          "size": "14px",
+          "weight": "400 et 500",
+          "family": "Unica77 Cohere Web"
+        },
+        {
+          "role": "micro",
+          "size": "12px",
+          "weight": "400",
+          "family": "Unica77 Cohere Web"
+        }
+      ]
+    },
+    "colors": [
+      {
+        "role": "fond de page",
+        "value": "#FFFFFF",
+        "area": "31.9 %"
+      },
+      {
+        "role": "surface des cartes (gris chaud)",
+        "value": "#F0EEE9",
+        "area": "25.8 %"
+      },
+      {
+        "role": "surface secondaire (gris neutre)",
+        "value": "#F2F2F2",
+        "area": "8.3 %"
+      },
+      {
+        "role": "pied de page (quasi-noir teinté bleu)",
+        "value": "#17171C",
+        "area": "8.1 %"
+      },
+      {
+        "role": "scène du visuel produit",
+        "value": "#000000",
+        "area": "6.4 %"
+      },
+      {
+        "role": "panneaux vert foncé",
+        "value": "#152717",
+        "area": "5.3 %"
+      },
+      {
+        "role": "texte principal",
+        "value": "#000000"
+      },
+      {
+        "role": "texte secondaire (gris bleuté)",
+        "value": "#73738A"
+      },
+      {
+        "role": "texte sur fond sombre",
+        "value": "#FAFAFA"
+      }
+    ],
+    "radius": [
+      "9999px (boutons, pastilles)",
+      "22px (cartes ; 22px 22px 0 0 quand une image occupe le haut)",
+      "12px",
+      "8px",
+      "4px"
+    ],
+    "shadows": [
+      "aucune sur les surfaces du design ; seule ombre relevée : 0 -1px 10px rgba(172,171,171,0.3) sur le bandeau de cookies"
+    ],
+    "image_ratios": [
+      {
+        "usage": "visuels de cartes (5 sur 8 relevés)",
+        "ratio": "16:9"
+      },
+      {
+        "usage": "visuels panoramiques",
+        "ratio": "2:1 et 2.41:1"
+      }
+    ],
+    "grid": {
+      "max_width": "aucun (pleine largeur 1440px)",
+      "columns": 3,
+      "gutter": "24px",
+      "page_margin": "40px",
+      "column_width": "437.3px"
+    }
+  },
+  "taste": [
+    {
+      "name": "Interface monochrome, la couleur vient de l'image",
+      "trigger": "Une marque d'IA d'entreprise doit montrer un produit sans que l'interface du site lui fasse concurrence",
+      "decision": "Fonds et textes neutres (#FFFFFF 31.9 %, #F0EEE9 25.8 %, #17171C 8.1 %, #000 6.4 %) et boutons noirs en pastille, au lieu d'un bouton ou d'un lien en couleur de marque",
+      "reason": "Le lecteur compare des capacités : la seule zone colorée doit être le produit lui-même, pas le cadre qui l'entoure",
+      "evidence": [
+        "accentCandidates du DOM : uniquement #000, #FAFAFA, #212121, #FFFFFF, #17171C",
+        "CTA « Request a demo » : pastille noire, rayon 9999px",
+        "couleurs vives présentes seulement dans le logo et dans les visuels (panneau lavande, art génératif or et vert)"
+      ]
+    },
+    {
+      "name": "Titres immenses en graisse normale, très serrés",
+      "trigger": "Placer une promesse de deux lignes en tête de page",
+      "decision": "96px/96px en graisse 400 avec un crénage de -1.92px (-0.02em), plutôt qu'un titre gras plus petit",
+      "reason": "À cette taille, l'échelle suffit à fixer la hiérarchie ; le poids gras ajouterait du bruit visuel sans information de plus",
+      "evidence": [
+        "h1 96px/96px, h2 60px/60px, interligne 1.0",
+        "seulement deux graisses dans la page : 400 (223 nœuds) et 500 (22 nœuds)",
+        "échelle de tailles : 96, 60, 48, 32, 24, 18, 16, 14, 12"
+      ]
+    },
+    {
+      "name": "Lignes à filets pour les listes, cartes pour ce qui se compare",
+      "trigger": "Présenter une liste de secteurs et un groupe de contenus de même nature",
+      "decision": "Les secteurs sont des lignes séparées par un filet noir de 1px (pas de carte) ; les cartes (#F0EEE9, rayon 22px) sont réservées à trois éléments comparables en grille 3 × 437px",
+      "reason": "Une liste de libellés se balaie plus vite en lignes ; un cadre n'est utile que lorsqu'un bloc contient une image et du texte à comparer",
+      "evidence": [
+        "lignes « Public Sector / Technology / Energy and utilities » espacées d'environ 77px avec un filet de 1px",
+        "rayons de 22px sur 4 cartes et 22px 22px 0 0 sur 3 visuels",
+        "grille 437.3px × 3, gouttière 24px"
+      ]
+    },
+    {
+      "name": "Le produit réel comme preuve, dans une scène encadrée",
+      "trigger": "Convaincre un acheteur en entreprise dans le premier écran",
+      "decision": "Une capture d'écran du produit sur fond noir à art génératif, en pleine largeur (marges de 40px, coins arrondis), plutôt qu'une photo de personnes",
+      "reason": "L'acheteur cherche la preuve que l'outil fonctionne ; une capture réelle la donne, une photo d'ambiance ne la donne pas",
+      "evidence": [
+        "visuels majoritairement 16:9 (1440×810, 5 cas)",
+        "scène #000 sur 6.4 % de la surface et visuels de cartes entre 288px et 312px",
+        "aucune photo de personne dans les trois écrans examinés"
+      ]
+    }
+  ]
+}
