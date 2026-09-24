@@ -5,11 +5,11 @@ Ce sont des photos d'illustration libres de droits (Unsplash), utilisées
 pour représenter des scènes de travail génériques. Aucune ne montre un
 membre réel de l'équipe MZI Consulting.
 
-Photo « réunion de travail » (section héros)
-  Auteur   : Christin Hume
-  Source   : https://unsplash.com/@christinhumephoto
+Photo « People reviewing documents at workspace » (section héros et image Open Graph)
+  Auteur   : ThisisEngineering
+  Source   : https://unsplash.com/photos/8Jw2WhafOOg
   Licence  : Unsplash License (https://unsplash.com/license)
-  Fichier  : assets/img/v1-hero-reunion.webp
+  Fichiers : assets/img/v1-hero-audit.webp, assets/img/v1-og-image.jpg
 
 Photo « atelier de travail » (section méthode)
   Auteur   : Annie Spratt

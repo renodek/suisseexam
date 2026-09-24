@@ -367,3 +367,33 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html`.
 - `scripts/compare-v1.js`, `scripts/controle-v1.js`
 - `mesures/v1-diff/` (captures pleine page, images de différence, `rapport.json`), `mesures/v1-controles/rapport.json`
 - `livrable/v1-clarte.html` (corrigé), photos et image Open Graph régénérées (`livrable/assets/img/v1-*.webp`, `v1-og-image.jpg`, sources dans `source/images/design-v1/`)
+
+## Étape 11 — Nouvelle photo du héros de v1-clarte.html (2026-09-24)
+
+### Ce qui a été fait
+
+- Photo du héros remplacée par « People reviewing documents at workspace » de ThisisEngineering (Unsplash, `photo-1581090690925-3898802525e2`), téléchargée en 2400×3598 (`source/images/design-v1/hero-audit-original.jpg`, conservée comme source brute).
+- Recadrage au ratio de l'emplacement du héros à 1440 px (434×620, soit 0,70) : la photo (0,667) est presque plein cadre, on ne retire que 169 px de hauteur sur 3598 — 30 px en haut (pour garder le sommet de la tête de la femme au centre) et 139 px en bas, sur des pieds de table sans intérêt. Converti en WebP qualité 82 à 868×1240 (2× l'affichage) : `livrable/assets/img/v1-hero-audit.webp` (63 Ko). Ancienne image (`v1-hero-reunion.webp`) et sa source JPEG supprimées.
+- `alt` mis à jour : « Séance de travail autour de documents, illustrant l'analyse de processus lors d'un audit » (repris dans `og:image:alt`) ; `width="434" height="620"` (taille d'affichage à 1×), `fetchpriority="high"` conservé, pas de `loading="lazy"`.
+- Crédit affiché sur l'image et `livrable/credits.txt` mis à jour (ThisisEngineering) ; image Open Graph 1200×630 régénérée depuis la nouvelle photo (fenêtre paysage centrée sur les deux visages, `credits.txt` la mentionne).
+- Vérification Playwright en 1440, 768 et 390 px (captures de la zone photo, inspection visuelle, mesure des pixels sous le bandeau de crédit).
+
+### Décisions prises et leur justification
+
+- **`object-position:50% 0` sur la photo du héros** : à 390 px l'emplacement est plus large que haut par rapport à la photo (347×440), le centrage par défaut coupait le haut du crâne de la femme centrale. Aligné en haut, les trois visages restent entiers à toutes les largeurs ; à 1440 px (ratio identique) aucun effet.
+- **Lien du crédit vers la page de la photo fournie (`unsplash.com/photos/8Jw2WhafOOg`), pas vers un profil de photographe** : Unsplash refuse les requêtes automatisées (HTTP 401), je n'ai pas pu confirmer l'adresse du profil de ThisisEngineering et je ne l'ai pas devinée. La page de la photo est celle que vous avez fournie ; le nom du photographe et « Unsplash » (avec paramètres `utm`) sont affichés comme prescrit. À remplacer par le profil si vous le préférez.
+- **Image Open Graph sur les visages plutôt que sur la table** : dans un format paysage 1200×630, la fenêtre ne peut pas contenir à la fois les visages (haut de la photo) et les documents (bas) ; les visages portent l'aperçu de partage.
+
+### Résultats de la vérification
+
+- 1440 px : la carte « L'audit IA gratuit » (300×162, en bas à gauche) recouvre le dos de la personne au premier plan, l'ordinateur et la table ; les trois visages, les mains et le visage de la femme de droite restent entièrement visibles.
+- 768 px (emplacement paysage 684×440) : visages entiers, la carte ne recouvre que des cheveux flous au premier plan.
+- 390 px (347×440) : après `object-position`, les trois visages sont entiers ; la carte recouvre la moitié basse (table, documents) mais laisse visibles visages et mains — l'essentiel de la scène (des personnes qui examinent quelque chose ensemble).
+- Crédit lisible : texte blanc de 10 px sur le bandeau noir à 55 % ; contraste mesuré sur les pixels rendus : 11,4:1 (1440), 13,2:1 (768), 8,2:1 (390) au minimum, 20:1 au maximum — au-dessus du seuil AA de 4,5:1.
+- Aucune erreur console ni requête en échec ; image chargée à 868×1240.
+
+### Fichiers produits
+
+- `livrable/assets/img/v1-hero-audit.webp`, `livrable/assets/img/v1-og-image.jpg` (régénérée), `source/images/design-v1/hero-audit-original.jpg`
+- `livrable/v1-clarte.html` et `livrable/credits.txt` (modifiés)
+- Supprimés : `livrable/assets/img/v1-hero-reunion.webp`, `source/images/design-v1/hero-reunion.jpg`
