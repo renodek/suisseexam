@@ -1,0 +1,165 @@
+{
+ "v1-clarte": {
+  "sans-anim": {
+   "passages": [
+    {
+     "lcp_ms": 1104,
+     "element": "H1.hero-title",
+     "candidats": [
+      "1104 H1.hero-title"
+     ]
+    },
+    {
+     "lcp_ms": 908,
+     "element": "H1.hero-title",
+     "candidats": [
+      "908 H1.hero-title"
+     ]
+    },
+    {
+     "lcp_ms": 912,
+     "element": "H1.hero-title",
+     "candidats": [
+      "912 H1.hero-title"
+     ]
+    }
+   ],
+   "mediane_ms": 912
+  },
+  "anim-h1": {
+   "passages": [
+    {
+     "lcp_ms": 928,
+     "element": "H1.hero-title",
+     "candidats": [
+      "928 H1.hero-title"
+     ]
+    },
+    {
+     "lcp_ms": 948,
+     "element": "H1.hero-title",
+     "candidats": [
+      "948 H1.hero-title"
+     ]
+    },
+    {
+     "lcp_ms": 1008,
+     "element": "H1.hero-title",
+     "candidats": [
+      "1008 H1.hero-title"
+     ]
+    }
+   ],
+   "mediane_ms": 948
+  },
+  "apres": {
+   "passages": [
+    {
+     "lcp_ms": 968,
+     "element": "H1.hero-title",
+     "candidats": [
+      "968 H1.hero-title"
+     ]
+    },
+    {
+     "lcp_ms": 940,
+     "element": "H1.hero-title",
+     "candidats": [
+      "940 H1.hero-title"
+     ]
+    },
+    {
+     "lcp_ms": 1436,
+     "element": "H1.hero-title",
+     "candidats": [
+      "1436 H1.hero-title"
+     ]
+    }
+   ],
+   "mediane_ms": 968
+  }
+ },
+ "v2-nuit-suisse": {
+  "sans-anim": {
+   "passages": [
+    {
+     "lcp_ms": 1028,
+     "element": "H1.c-h1",
+     "candidats": [
+      "1028 H1.c-h1"
+     ]
+    },
+    {
+     "lcp_ms": 1092,
+     "element": "H1.c-h1",
+     "candidats": [
+      "1092 H1.c-h1"
+     ]
+    },
+    {
+     "lcp_ms": 1100,
+     "element": "H1.c-h1",
+     "candidats": [
+      "1100 H1.c-h1"
+     ]
+    }
+   ],
+   "mediane_ms": 1092
+  },
+  "anim-h1": {
+   "passages": [
+    {
+     "lcp_ms": 2480,
+     "element": "IMG.hero-photo",
+     "candidats": [
+      "1068 P.c-hsub",
+      "2480 IMG.hero-photo"
+     ]
+    },
+    {
+     "lcp_ms": 2504,
+     "element": "IMG.hero-photo",
+     "candidats": [
+      "1116 P.c-hsub",
+      "2504 IMG.hero-photo"
+     ]
+    },
+    {
+     "lcp_ms": 2508,
+     "element": "IMG.hero-photo",
+     "candidats": [
+      "1132 P.c-hsub",
+      "2508 IMG.hero-photo"
+     ]
+    }
+   ],
+   "mediane_ms": 2504
+  },
+  "apres": {
+   "passages": [
+    {
+     "lcp_ms": 1104,
+     "element": "H1.c-h1",
+     "candidats": [
+      "1104 H1.c-h1"
+     ]
+    },
+    {
+     "lcp_ms": 1504,
+     "element": "H1.c-h1",
+     "candidats": [
+      "1504 H1.c-h1"
+     ]
+    },
+    {
+     "lcp_ms": 1144,
+     "element": "H1.c-h1",
+     "candidats": [
+      "1144 H1.c-h1"
+     ]
+    }
+   ],
+   "mediane_ms": 1144
+  }
+ }
+}

@@ -690,3 +690,53 @@ Lecture : V1 gagne 3 photos (+273 Ko à 1440 px, +110 Ko en mobile) ; le chargem
 - `scripts/anime-pages.js`, `scripts/verifie-animations.js`, `scripts/video-animations.js` (nouveaux)
 - `mesures/animations/` : `verifications.json`, quatre vidéos `.webm`
 - `mesures/v2-controles/` (rapports régénérés)
+
+## Étape 17 — Corrections d'animation (skills Emil Kowalski), H1 sans retard de LCP, canvas du héros V2 supprimé, vidéos hors Git (2026-09-25)
+
+### Ce qui a été fait
+
+- **Corrections issues des skills `emil-design-eng` et `animate`** (installés depuis https://github.com/emilkowalski/skills, licence MIT ; `review-animations` est réservé à l'appel manuel, `/review-animations`) :
+  - le survol de la flèche des boutons est limité aux appareils qui savent survoler (`@media (hover: hover) and (pointer: fine)`) ; le focus clavier reste actif partout ;
+  - courbes : `--ease-out: cubic-bezier(0.23, 1, 0.32, 1)` et `--ease-in-out: cubic-bezier(0.77, 0, 0.175, 1)` remplacent `cubic-bezier(.22,1,.36,1)`, `ease-out` et la courbe des traits ;
+  - durées raccourcies : apparition des cartes 300 ms (décalage 60 ms, au lieu de 500 et 90), mots des H2 400 ms (décalage 45 ms), flèche 200 ms, libellé de champ 200 ms, halo de la timeline 300 ms, barre de focus 300 ms, coche 400 ms puis 300 ms. Restent à 600 ms : le tracé des repères de section (V2) et le comptage des chiffres.
+- **Héros V2 : canvas du réseau supprimé** (balise, CSS et script), ainsi que les variables `STATIC_MODE` et `reduceMotion` devenues inutiles ; commentaire d'en-tête de la page mis à jour. Le zoom lent du paysage est conservé.
+- **H1 : plus d'apparition mot par mot ni d'animation d'opacité.** Le H1 de la V2 est visible à 100 % dès le premier affichage ; il fait seulement un léger glissement vertical (`translateY(10px)` vers 0, 400 ms, `transform` seul, animation CSS lancée avant tout script). Le H1 de la V1 n'a jamais été animé. Les H2 de la V2 gardent l'apparition mot par mot.
+- **Filet de sécurité du script d'animation** : la classe `anim` est maintenant retirée à l'événement `load` (ou après 8 s) si le script n'a pas démarré, au lieu de 3 s (voir « Problèmes rencontrés »).
+- **Vidéos** : `mesures/animations/*.webm` retirés du suivi (`git rm --cached`), fichiers locaux conservés, formats vidéo ajoutés à `.gitignore` (`mesures/animations/*.webm`, `.mp4`, `.mov`, `.mkv`, `.avi`). Les vidéos ont été refaites avec la version finale.
+
+### Mesures
+
+**LCP** (`scripts/mesure-lcp.js` : Chromium, émulation Pixel 5, réseau « Slow 4G » de Lighthouse — 150 ms de latence, 1,6 Mb/s descendant, 750 kb/s montant —, sans cache, pages servies en HTTP local, polices Google Fonts réelles, 3 passages par cas dans un ordre entrelacé, médiane ; pas de limitation du processeur) :
+
+| Page | Variante | Passages (ms) | Médiane (ms) | Élément LCP |
+|---|---|---|---|---|
+| V1 | sans animations (commit `4d9d4ff`) | 1104 / 908 / 912 | 912 | H1 |
+| V1 | animations, avant cette étape (commit `020ef39`) | 928 / 948 / 1008 | 948 | H1 |
+| V1 | après cette étape | 968 / 940 / 1436 | 968 | H1 |
+| V2 | sans animations (commit `4d9d4ff`) | 1028 / 1092 / 1100 | 1092 | H1 |
+| V2 | animations, H1 mot par mot (commit `020ef39`) | 2480 / 2504 / 2508 | 2504 | photo du héros |
+| V2 | après cette étape | 1104 / 1504 / 1144 | 1144 | H1 |
+
+Lecture : avec l'apparition mot par mot, le H1 de la V2 était masqué au chargement et le LCP retombait sur la photo du héros, à 2,5 s (+1,4 s par rapport à la version sans animation). H1 visible dès le départ, il revient à 1,1 s (médiane), soit 52 ms de plus que la version sans animation, dans la dispersion des passages (1104 à 1504 ms). La V1 n'était pas concernée (H1 jamais animé) : ses trois médianes (912, 948, 968 ms) sont dans le bruit de mesure, avec un passage à 1436 ms attribuable au réseau réel des polices. Détail : `mesures/animations/lcp.md` et `lcp.json`.
+
+**Contrôles après modification** (`verifie-animations.js`, 4 modes × 2 pages × 2 largeurs) : 0 erreur de console, 0 défilement horizontal, 0 élément resté masqué, hauteur des titres identique entre mode animé et mode statique, classe `anim` absente en `?statique`, mouvement réduit et sans JavaScript. CLS : V1 inchangé (0,0008 à 1440 px, 0,0022 à 390 px, égal au mode statique) ; V2 animée 0,0005 à 1440 px (égal au mode statique) et 0 à 390 px. Cela corrige une lecture de l'étape 16 : le CLS animé de la V2 y valait 0 parce que le H1 masqué n'était pas compté ; H1 visible, il rejoint le mode statique. `controle-v2.js` : 0 échec de contraste (29 et 30 couples).
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Une exécution de `verifie-animations.js` a montré la V1 à 1440 px sans classe `anim` en mode animé : les animations ne démarraient pas | Le script d'animation, en fin de page, attend la feuille de polices Google ; au premier chargement lent, le délai de 3 s retirait la classe avant qu'il s'exécute. Filet déclenché à `load` ou après 8 s. |
+| `tar` de Git Bash refusait le chemin Windows (`H:\…`) dans `mesure-lcp.js` | Chemin relatif au dossier du dépôt. |
+
+### Réserves
+
+- Mesures de LCP faites dans un seul navigateur (Chromium), avec un réseau réel pour les polices Google : les valeurs absolues varient d'une exécution à l'autre ; seule la comparaison entre variantes, mesurées dans le même passage, est fiable. Aucune limitation du processeur.
+- Les vidéos restent dans l'historique Git (commit `020ef39`, 14 Mo) : `git rm --cached` les retire seulement des commits suivants. Les purger de l'historique demanderait de le réécrire, ce que je n'ai pas fait.
+- Le zoom de 20 s du héros V2 reste la seule durée hors de la fourchette 300 à 600 ms.
+
+### Fichiers produits
+
+- `livrable/v1-clarte.html`, `livrable/v2-nuit-suisse.html` (modifiés)
+- `scripts/anime-pages.js` (modifié), `scripts/mesure-lcp.js` (nouveau)
+- `mesures/animations/` : `lcp.md`, `lcp.json`, `verifications.json` ; vidéos `.webm` locales seulement
+- `mesures/v2-controles/` (rapports régénérés), `.gitignore`

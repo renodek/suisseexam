@@ -31,8 +31,8 @@
 <script>
 /* Animations : classe "anim" posée seulement si l'utilisateur n'a pas demandé moins de mouvement, si l'URL ne contient
    pas ?statique et si IntersectionObserver existe. Sans elle, la page s'affiche directement dans son état final.
-   Filet de sécurité : si le script d'animation n'a pas démarré au bout de 3 s, la classe est retirée. */
-(function(){var d=document.documentElement;if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!/[?&]statique/.test(location.search)&&'IntersectionObserver' in window){d.classList.add('anim');setTimeout(function(){if(!d.hasAttribute('data-anim-ok'))d.classList.remove('anim')},3000)}})();
+   Filet de sécurité : si le script d'animation n'a pas démarré une fois la page chargée (ou après 8 s), la classe est retirée. */
+(function(){var d=document.documentElement;if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!/[?&]statique/.test(location.search)&&'IntersectionObserver' in window){d.classList.add('anim');var f=function(){if(!d.hasAttribute('data-anim-ok'))d.classList.remove('anim')};window.addEventListener('load',f);setTimeout(f,8000)}})();
 </script>
 <!-- ANIM:fin -->
 <title>V1 — Clarté | MZI Consulting</title>
@@ -442,31 +442,33 @@
   /* Animations natives (CSS, SVG, IntersectionObserver, requestAnimationFrame) — propriétés animées : transform, opacity
      et stroke-dashoffset uniquement, donc aucun décalage de mise en page. Tout ce qui suit est réservé à <html class="anim">
      (voir le script de l'en-tête) ; sans cette classe, le contenu est dans son état final. */
+  :root{--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-in-out:cubic-bezier(0.77,0,0.175,1)}
   .cnt-live,.field-bar{display:none}
   @keyframes draw{to{stroke-dashoffset:0}}
   .sent-check{width:56px;height:56px;margin-bottom:4px}
   .sent-check circle,.sent-check path{fill:none;stroke:var(--sent-color);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
   .anim [data-reveal]{opacity:0;transform:translateY(18px)}
-  .anim [data-reveal].in{opacity:1;transform:none;transition:opacity .5s ease-out var(--d,0ms),transform .5s cubic-bezier(.22,1,.36,1) var(--d,0ms)}
+  .anim [data-reveal].in{opacity:1;transform:none;transition:opacity .3s var(--ease-out) var(--d,0ms),transform .3s var(--ease-out) var(--d,0ms)}
   .anim .cnt{position:relative;display:inline-block}
   .anim .cnt-live{display:block;position:absolute;left:0;top:0;white-space:nowrap}
   .anim .cnt:not(.done) .cnt-final{opacity:0}
   .anim .cnt.done .cnt-live{display:none}
   .anim .form-group{position:relative}
-  .anim .field-bar{display:block;position:absolute;left:14px;right:14px;bottom:1px;height:2px;border-radius:2px;background:var(--bar-color);transform:scaleX(0);transform-origin:0 50%;pointer-events:none;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+  .anim .field-bar{display:block;position:absolute;left:14px;right:14px;bottom:1px;height:2px;border-radius:2px;background:var(--bar-color);transform:scaleX(0);transform-origin:0 50%;pointer-events:none;transition:transform .3s var(--ease-out)}
   .anim .form-group:focus-within .field-bar{transform:scaleX(1)}
-  .anim .form-group label{transition:transform .3s cubic-bezier(.22,1,.36,1)}
+  .anim .form-group label{transition:transform .2s var(--ease-out)}
   .anim .form-group:focus-within label{transform:translateX(3px)}
-  .anim .btn svg{transition:transform .3s cubic-bezier(.22,1,.36,1)}
-  .anim .btn:hover svg,.anim .btn:focus-visible svg{transform:translateX(5px)}
-  .anim .sc-ring{stroke-dasharray:151;stroke-dashoffset:151;animation:draw .5s ease-out .05s forwards}
-  .anim .sc-tick{stroke-dasharray:34;stroke-dashoffset:34;animation:draw .35s ease-out .45s forwards}
+  .anim .btn svg{transition:transform .2s var(--ease-out)}
+  .anim .btn:focus-visible svg{transform:translateX(5px)}
+  @media (hover:hover) and (pointer:fine){ .anim .btn:hover svg{transform:translateX(5px)} }
+  .anim .sc-ring{stroke-dasharray:151;stroke-dashoffset:151;animation:draw .4s var(--ease-out) .05s forwards}
+  .anim .sc-tick{stroke-dasharray:34;stroke-dashoffset:34;animation:draw .3s var(--ease-out) .4s forwards}
   :root{--sent-color:var(--teal);--bar-color:var(--teal)}
   /* V1 : timeline de la méthode — la ligne bleu pétrole se remplit avec le défilement (variable --f, de 0 à 1, posée par le script),
      l'étape franchie reçoit un halo (classe "on"). */
   .step-circle{position:relative;isolation:isolate}
   .anim .step-circle::before{content:"";position:absolute;inset:-7px;border-radius:50%;background:var(--teal);opacity:0;transform:scale(.6);z-index:-1}
-  .anim .methode-step.on .step-circle::before{opacity:.14;transform:scale(1);transition:opacity .4s ease-out,transform .5s cubic-bezier(.22,1,.36,1)}
+  .anim .methode-step.on .step-circle::before{opacity:.14;transform:scale(1);transition:opacity .3s var(--ease-out),transform .3s var(--ease-out)}
   .step-line{position:relative}
   .anim .step-line::after{content:"";position:absolute;inset:0;background:var(--teal);transform:scaleX(var(--f,0));transform-origin:0 50%}
   /* ANIM:CSS fin */
@@ -1148,7 +1150,7 @@
     var reveal = function(el){
       var i = 0;
       for (var s = el.previousElementSibling; s; s = s.previousElementSibling) if (s.hasAttribute('data-reveal')) i++;
-      el.style.setProperty('--d', Math.min(i, 4) * 90 + 'ms');
+      el.style.setProperty('--d', Math.min(i, 4) * 60 + 'ms');
       io.observe(el);
     };
 

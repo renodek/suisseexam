@@ -6,3 +6,10 @@ compare-*.log
 
 # Originaux Unsplash des images de fond (retéléchargés par scripts/fonds-images.js)
 source/images/fonds/
+
+# Vidéos de défilement des animations (locales, non versionnées)
+mesures/animations/*.webm
+mesures/animations/*.mp4
+mesures/animations/*.mov
+mesures/animations/*.mkv
+mesures/animations/*.avi

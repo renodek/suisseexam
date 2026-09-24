@@ -13,8 +13,9 @@
   l'étiquette [À CONFIRMER : zones d'intervention réelles]) : reprises telles
   quelles.
 
-  Fond animé du héros et apparitions au défilement : repris à l'identique,
-  coupés si prefers-reduced-motion est actif ou si l'URL contient ?statique.
+  Animations (zoom du héros, repères de section, chiffres, titres, apparitions) :
+  natives, voir le bloc « Animations » ; désactivées si prefers-reduced-motion est actif
+  ou si l'URL contient ?statique. Le fond animé en réseau du héros a été supprimé.
 
   Polices : Geist et Geist Mono depuis Google Fonts ; Fraunces limitée aux
   seules instances utilisées (3 styles, optical size fixé, glyphes de la page
@@ -32,8 +33,8 @@
 <script>
 /* Animations : classe "anim" posée seulement si l'utilisateur n'a pas demandé moins de mouvement, si l'URL ne contient
    pas ?statique et si IntersectionObserver existe. Sans elle, la page s'affiche directement dans son état final.
-   Filet de sécurité : si le script d'animation n'a pas démarré au bout de 3 s, la classe est retirée. */
-(function(){var d=document.documentElement;if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!/[?&]statique/.test(location.search)&&'IntersectionObserver' in window){d.classList.add('anim');setTimeout(function(){if(!d.hasAttribute('data-anim-ok'))d.classList.remove('anim')},3000)}})();
+   Filet de sécurité : si le script d'animation n'a pas démarré une fois la page chargée (ou après 8 s), la classe est retirée. */
+(function(){var d=document.documentElement;if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!/[?&]statique/.test(location.search)&&'IntersectionObserver' in window){d.classList.add('anim');var f=function(){if(!d.hasAttribute('data-anim-ok'))d.classList.remove('anim')};window.addEventListener('load',f);setTimeout(f,8000)}})();
 </script>
 <!-- ANIM:fin -->
 <title>V2 — Nuit suisse | MZI Consulting</title>
@@ -352,7 +353,6 @@
   /* Héros */
   .hero-sec{background:var(--night);padding:0 clamp(10px,1.6vw,24px) clamp(10px,1.6vw,24px)}
   .hero{position:relative;max-width:1400px;margin:0 auto;border-radius:clamp(22px,2.4vw,32px);background:var(--night2);border:1px solid rgba(126,141,163,.22);overflow:hidden}
-  .hero-canvas{position:absolute;left:0;top:0;width:100%}
   /* Fond photo du héros (Pascal Debrunner) : l'image occupe le bas du cadre, le ciel se fond dans le bleu nuit ;
      le dégradé bleu nuit passe sous le texte (fort) et s'éclaircit dans la zone libre du bas, où la montagne se lit. */
   .hero-bg{position:absolute;left:0;right:0;bottom:0;height:66%;display:block}
@@ -364,7 +364,6 @@
     .hero-bg{height:148vw}
   }
   .hero-body{z-index:2}
-  .hero-canvas{z-index:1}
   .hero-body{position:relative;padding:clamp(40px,6vw,88px) var(--gutter) 0}
   .chips{display:flex;flex-wrap:wrap;gap:8px}
   .chip{font:400 12.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--t2);border:1px solid rgba(126,141,163,.5);border-radius:999px;padding:8px 14px}
@@ -539,40 +538,44 @@
   /* Animations natives (CSS, SVG, IntersectionObserver, requestAnimationFrame) — propriétés animées : transform, opacity
      et stroke-dashoffset uniquement, donc aucun décalage de mise en page. Tout ce qui suit est réservé à <html class="anim">
      (voir le script de l'en-tête) ; sans cette classe, le contenu est dans son état final. */
+  :root{--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-in-out:cubic-bezier(0.77,0,0.175,1)}
   .cnt-live,.field-bar{display:none}
   @keyframes draw{to{stroke-dashoffset:0}}
   .sent-check{width:56px;height:56px;margin-bottom:4px}
   .sent-check circle,.sent-check path{fill:none;stroke:var(--sent-color);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
   .anim [data-reveal]{opacity:0;transform:translateY(18px)}
-  .anim [data-reveal].in{opacity:1;transform:none;transition:opacity .5s ease-out var(--d,0ms),transform .5s cubic-bezier(.22,1,.36,1) var(--d,0ms)}
+  .anim [data-reveal].in{opacity:1;transform:none;transition:opacity .3s var(--ease-out) var(--d,0ms),transform .3s var(--ease-out) var(--d,0ms)}
   .anim .cnt{position:relative;display:inline-block}
   .anim .cnt-live{display:block;position:absolute;left:0;top:0;white-space:nowrap}
   .anim .cnt:not(.done) .cnt-final{opacity:0}
   .anim .cnt.done .cnt-live{display:none}
   .anim .form-group{position:relative}
-  .anim .field-bar{display:block;position:absolute;left:14px;right:14px;bottom:1px;height:2px;border-radius:2px;background:var(--bar-color);transform:scaleX(0);transform-origin:0 50%;pointer-events:none;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+  .anim .field-bar{display:block;position:absolute;left:14px;right:14px;bottom:1px;height:2px;border-radius:2px;background:var(--bar-color);transform:scaleX(0);transform-origin:0 50%;pointer-events:none;transition:transform .3s var(--ease-out)}
   .anim .form-group:focus-within .field-bar{transform:scaleX(1)}
-  .anim .form-group label{transition:transform .3s cubic-bezier(.22,1,.36,1)}
+  .anim .form-group label{transition:transform .2s var(--ease-out)}
   .anim .form-group:focus-within label{transform:translateX(3px)}
-  .anim .btn svg{transition:transform .3s cubic-bezier(.22,1,.36,1)}
-  .anim .btn:hover svg,.anim .btn:focus-visible svg{transform:translateX(5px)}
-  .anim .sc-ring{stroke-dasharray:151;stroke-dashoffset:151;animation:draw .5s ease-out .05s forwards}
-  .anim .sc-tick{stroke-dasharray:34;stroke-dashoffset:34;animation:draw .35s ease-out .45s forwards}
+  .anim .btn svg{transition:transform .2s var(--ease-out)}
+  .anim .btn:focus-visible svg{transform:translateX(5px)}
+  @media (hover:hover) and (pointer:fine){ .anim .btn:hover svg{transform:translateX(5px)} }
+  .anim .sc-ring{stroke-dasharray:151;stroke-dashoffset:151;animation:draw .4s var(--ease-out) .05s forwards}
+  .anim .sc-tick{stroke-dasharray:34;stroke-dashoffset:34;animation:draw .3s var(--ease-out) .4s forwards}
   :root{--sent-color:var(--cyan);--bar-color:var(--cyan)}
-  /* V2 : repères de section (le trait cyan se dessine, le numéro apparaît en fin de tracé), zoom lent du héros, titres mot par mot. */
+  /* V2 : repères de section (le trait cyan se dessine, le numéro apparaît en fin de tracé), zoom lent du héros, H1 en simple glissement (transform seul, opacité 1 d'emblée), H2 mot par mot. */
   .eyebrow-row{--rule:var(--line-cyan)}
   .light .eyebrow-row{--rule:#0e7490}
   .anim .eyebrow-row{position:relative;border-top-color:transparent}
   .anim .eyebrow-row::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--rule);transform:scaleX(0);transform-origin:0 50%}
-  .anim .eyebrow-row.in::before{transform:scaleX(1);transition:transform .6s cubic-bezier(.65,0,.35,1)}
+  .anim .eyebrow-row.in::before{transform:scaleX(1);transition:transform .6s var(--ease-in-out)}
   .anim .eyebrow-row .num{opacity:0}
-  .anim .eyebrow-row.in .num{opacity:1;transition:opacity .3s ease-out .55s}
+  .anim .eyebrow-row.in .num{opacity:1;transition:opacity .3s var(--ease-out) .55s}
   @keyframes hero-zoom{from{transform:scale(1)}to{transform:scale(1.06)}}
   .hero-bg{overflow:hidden}
   .anim .hero-photo{transform-origin:50% 100%;animation:hero-zoom 20s cubic-bezier(.25,.6,.35,1) 1 forwards}
+  @keyframes h1-glisse{from{transform:translateY(10px)}}
+  .anim h1.hero-title{animation:h1-glisse .4s var(--ease-out) both}
   .anim [data-words]:not(.split){opacity:0}
   .anim .w{display:inline-block;opacity:0;transform:translateY(.3em)}
-  .anim .in .w{opacity:1;transform:none;transition:opacity .5s ease-out calc(var(--i)*55ms),transform .5s cubic-bezier(.22,1,.36,1) calc(var(--i)*55ms)}
+  .anim .in .w{opacity:1;transform:none;transition:opacity .4s var(--ease-out) calc(var(--i)*45ms),transform .4s var(--ease-out) calc(var(--i)*45ms)}
   /* ANIM:CSS fin */
 </style>
 </head>
@@ -624,7 +627,6 @@
       <source media="(max-width:760px)" srcset="assets/img/fonds/v2-hero-mobile-800.webp 800w, assets/img/fonds/v2-hero-mobile-1400.webp 1400w, assets/img/fonds/v2-hero-mobile-2200.webp 2200w" sizes="100vw">
       <img class="hero-photo" src="assets/img/fonds/v2-hero-bureau-1400.webp" srcset="assets/img/fonds/v2-hero-bureau-800.webp 800w, assets/img/fonds/v2-hero-bureau-1400.webp 1400w, assets/img/fonds/v2-hero-bureau-2200.webp 2200w" sizes="(max-width:1400px) 100vw, 1400px" width="1400" height="933" alt="Montagne enneigée sous un ciel de nuages, éclairée par la lumière du soir" fetchpriority="high">
     </picture>
-    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
     <div class="hero-body">
       <div class="chips">
         <span class="chip accent">Agence d'automatisation IA</span>
@@ -1097,9 +1099,6 @@
 <script>
 (function(){
   "use strict";
-  var STATIC_MODE = new URLSearchParams(location.search).has('statique');
-  var reduceMotion = STATIC_MODE || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   // Menu mobile
   var toggle = document.getElementById('menu-toggle');
   var panel = document.getElementById('mobile-nav');
@@ -1137,73 +1136,6 @@
       form.hidden = true;
       sent.hidden = false;
       sent.focus();
-    });
-  }
-
-  // Fond animé du héros (18 nœuds max), coupé si prefers-reduced-motion ou ?statique
-  var canvas = document.getElementById('hero-canvas');
-  var hero = document.getElementById('hero');
-  if (canvas && hero) {
-    var ctx = canvas.getContext('2d');
-    var nodes = [], w = 0, h = 0;
-
-    var setup = function(){
-      var dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = hero.offsetWidth; h = hero.offsetHeight * 0.6;
-      canvas.style.height = h + 'px';
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var count = Math.round(Math.min(18, w / 70));
-      nodes = [];
-      for (var i = 0; i < count; i++) {
-        nodes.push({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .18, vy: (Math.random() - .5) * .18 });
-      }
-    };
-
-    var draw = function(move){
-      var D = 220;
-      ctx.clearRect(0, 0, w, h);
-      if (move) {
-        for (var i = 0; i < nodes.length; i++) {
-          var p = nodes[i];
-          p.x += p.vx; p.y += p.vy;
-          if (p.x < 0 || p.x > w) p.vx *= -1;
-          if (p.y < 0 || p.y > h) p.vy *= -1;
-        }
-      }
-      for (var a = 0; a < nodes.length; a++) {
-        for (var b = a + 1; b < nodes.length; b++) {
-          var dx = nodes[a].x - nodes[b].x, dy = nodes[a].y - nodes[b].y;
-          var d = Math.sqrt(dx * dx + dy * dy);
-          if (d < D) {
-            ctx.strokeStyle = 'rgba(16,215,253,' + ((1 - d / D) * 0.14) + ')';
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(nodes[a].x, nodes[a].y);
-            ctx.lineTo(nodes[b].x, nodes[b].y);
-            ctx.stroke();
-          }
-        }
-      }
-      ctx.fillStyle = 'rgba(16,215,253,.35)';
-      for (var n = 0; n < nodes.length; n++) ctx.fillRect(nodes[n].x - 1.5, nodes[n].y - 1.5, 3, 3);
-    };
-
-    setup();
-    if (reduceMotion) {
-      draw(false);
-    } else {
-      var last = 0;
-      var loop = function(t){
-        requestAnimationFrame(loop);
-        if (t - last < 50) return;
-        last = t; draw(true);
-      };
-      requestAnimationFrame(loop);
-    }
-    window.addEventListener('resize', function(){
-      setup();
-      if (reduceMotion) draw(false);
     });
   }
 
@@ -1264,14 +1196,14 @@
     var reveal = function(el){
       var i = 0;
       for (var s = el.previousElementSibling; s; s = s.previousElementSibling) if (s.hasAttribute('data-reveal')) i++;
-      el.style.setProperty('--d', Math.min(i, 4) * 90 + 'ms');
+      el.style.setProperty('--d', Math.min(i, 4) * 60 + 'ms');
       io.observe(el);
     };
 
     // Chiffres-clés (grands chiffres en Geist Mono) : chiffres du bandeau et bénéfices.
     counters('.stat-value, .benefit-value');
 
-    // Titres H1 et H2 : apparition mot par mot. Le texte complet reste dans le HTML ; le découpage se fait ici, à l'exécution,
+    // Titres H2 : apparition mot par mot (le H1 n'est pas animé en opacité, pour ne pas retarder le LCP). Le texte complet reste dans le HTML ; le découpage se fait ici, à l'exécution,
     // en conservant les balises et les espaces d'origine (espaces insécables inclus : on ne coupe que sur espace ordinaire).
     var split = function(el){
       var i = 0;
@@ -1293,7 +1225,7 @@
         });
       })(el);
     };
-    all('h1.hero-title, h2.h2').forEach(function(h){
+    all('h2.h2').forEach(function(h){
       h.removeAttribute('data-reveal');
       h.setAttribute('data-words', '');
       split(h);

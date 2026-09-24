@@ -1,6 +1,6 @@
 # Recette de v2-nuit-suisse.html — contrôles automatisés
 
-Généré le 2026-09-24T22:30:43.732Z par `scripts/controle-v2.js`.
+Généré le 2026-09-24T23:01:55.762Z par `scripts/controle-v2.js`.
 
 ## Synthèse
 
