@@ -47,3 +47,33 @@
 - `source/logo/favicon.jpg`, `Group-61.png`, `Logo-MZI-Agency.jpg`, `mzi-consulting-logo-fond-sombre.svg`, `mzi-consulting-logo-fond-clair.svg`
 - `source/contenu.md`
 - `.gitignore`
+
+### Compléments (suite de l'étape 1)
+
+#### Ce qui a été fait
+
+- Recherche des fichiers logo originaux sans suffixe de taille WordPress : `Group-61.png` (230×86, au lieu de `Group-61-1-1.png` 100×37) et `Logo-MZI-Agency.jpg` (1080×1080, au lieu de `Logo-MZI-Agency-300x300.jpg`), aucune variante `srcset` plus grande trouvée dans le HTML.
+- Reconstruction vectorielle SVG du logo « MZI Consulting » (symbole + texte), en 2 déclinaisons fond sombre / fond clair, la version raster du vrai logo du site (230×86) restant insuffisante pour un usage à grande échelle.
+- Création de `livrable/index.html`, page d'attente minimale (fond bleu nuit, texte blanc, `noindex`).
+- Création de `scripts/collecte-images.js` : inventaire et téléchargement de toutes les images de l'accueil en taille originale (DOM + feuilles de style CSS), avec détection automatique de la plus grande variante disponible (suffixes de taille et de dédoublonnage WordPress) et génération de `source/images/inventaire.md`.
+- Mise en place et push des commits Git au fur et à mesure (dépôt `github.com/renodek/suisseexam`).
+
+#### Décisions prises et leur justification
+
+- **`Logo-MZI-Agency.jpg` (1080×1080) et le logo réel du site `Group-61.png` (230×86) conservés comme deux fichiers distincts** plutôt que fusionnés : ce sont deux déclinaisons de marque différentes trouvées sur le site (icône carrée « MZI Agency » utilisée comme favicon, logo horizontal « MZI Consulting » affiché sur la page). La reconstruction SVG n'a été faite que pour le second, seul insuffisant en résolution.
+- **Détection de l'image originale par suppression de suffixe** (taille `-300x234` puis dédoublonnage `-1-1`) plutôt que recherche manuelle systématique : généralise la méthode qui avait fonctionné pour les logos, applicable à toute image WordPress du site.
+- **Les icônes (étoiles, flèche, horloge...) ne sont pas téléchargées** : ce sont des `<svg>` inline (Font Awesome/Elementor) directement dans le HTML, pas des fichiers image séparés — noté explicitement dans `inventaire.md` plutôt que passé sous silence.
+
+#### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| La détection automatique de la « section » d'une image (recherche du plus proche ancêtre avec un `id`) retournait `#page`, un wrapper générique sans signification, pour l'image de la section « Pourquoi nous » | Exclusion des `id` génériques (`page`, `content`, `main`...) et repli sur une recherche du titre le plus proche dans l'arborescence ; vérifié manuellement par inspection directe du DOM que l'image appartient bien à la section « Pourquoi nous choisir ? ». |
+| Le script d'inventaire récupérait par défaut `Group-61-1-1.png` (100×37, l'URL réellement utilisée par le site) au lieu de la version originale déjà identifiée dans une étape précédente | Ajout d'une étape de suppression du suffixe de dédoublonnage (`-1-1`) en plus du suffixe de taille, avant téléchargement. |
+
+#### Fichiers produits
+
+- `livrable/index.html`
+- `scripts/collecte-images.js`
+- `source/images/94833.jpg`, `creative-polygonal-brain-on-virtual-screen-ai-and-2026-03-26-05-25-54-utc-1-3.jpg`, `Group-61.png`, `Logo-MZI-Agency.jpg`, `inventaire.md`
+- `source/logo/mzi-consulting-logo-fond-sombre.svg`, `mzi-consulting-logo-fond-clair.svg` (remplacement de `Group-61-1-1.png` et `Logo-MZI-Agency-300x300.jpg` par leurs versions originales plus grandes)
