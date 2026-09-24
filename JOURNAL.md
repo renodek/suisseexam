@@ -160,3 +160,27 @@ Aucun.
 ### Fichiers produits
 
 Aucun nouveau fichier — corrections dans `livrable/audit.html` et `CLAUDE.md`.
+
+## Étape 5 — Lisibilité des sources dans l'audit (2026-09-24)
+
+### Ce qui a été fait
+
+- Remplacement, dans `livrable/audit.html`, de toutes les références visibles à des chemins de fichiers internes (`source/tech/…`, `source/html/…`, `source/design-system-mzi/…`, `source/images/…`, `source/captures/…`) par des formulations lisibles : « le code source de la page d'accueil », « le relevé des balises SEO de la page d'accueil », « le rapport Lighthouse mobile du 24/09/2026 », « le rapport PageSpeed Insights du 24/09/2026 », « le relevé des styles CSS réels du site », « l'inventaire des images du site », « le contenu textuel extrait de la page d'accueil », « le sitemap XML du site », « le fichier robots.txt du site », « le relevé de débordement mobile », « le design system de référence (disponible sur demande) ». Environ 35 occurrences corrigées.
+- Les URLs réelles du site audité (ex. `https://mzi-consulting.com/mention-legale/`) ont été conservées telles quelles : ce ne sont pas des chemins internes, mais des liens vérifiables vers le site du client.
+- Vérification par rendu du fichier (Playwright) : aucune erreur JS, aucune occurrence résiduelle de `source/` dans le texte affiché.
+
+### Décisions prises et leur justification
+
+- **Les chemins encapsulés dans des balises `<code>`** (ex. `<code>source/design-system-mzi/readme.md</code>`) **ont été dépouillés de leur mise en forme monospace** en plus d'être reformulés : une fois devenus une formulation en prose, les laisser en style code aurait été incohérent visuellement.
+- **Aucune source n'a été supprimée, seulement reformulée** : chaque « Preuve » garde le même niveau de précision (nom de fichier explicite, numéro de ligne, nom d'audit Lighthouse), seul le chemin technique disparaît.
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Un premier remplacement du renvoi au design system dans le constat sur le canvas animé (§11) a ajouté une phrase redondante au lieu de corriger la phrase existante | Correction immédiate : phrase dupliquée retirée, seule la référence technique reformulée. |
+| Un remplacement initial du lien vers les mentions légales du site (§4) a été fait par erreur — ce n'est pas un chemin interne mais l'URL réelle du site client | Reverti : l'URL `https://mzi-consulting.com/mention-legale/` reste affichée telle quelle. |
+
+### Fichiers produits
+
+Aucun nouveau fichier — corrections dans `livrable/audit.html`.
