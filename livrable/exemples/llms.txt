@@ -1,0 +1,24 @@
+# Audit §7 : llms.txt du site réel décrit une activité qui n'est plus en ligne
+# ("# Consultant IA Genève", lien vers /consultant-ia-a-annemasse/ qui renvoie une
+# erreur 404, positionnement "Genève" absent du contenu actuel de l'accueil).
+# Source : https://mzi-consulting.com/llms.txt (vérifié le 24/09/2026).
+# Correction demandée par l'audit : "Régénérer llms.txt avec le contenu réel du site,
+# ou le retirer en attendant, plutôt que de laisser une description trompeuse en ligne."
+#
+# Version corrigée ci-dessous : décrit fidèlement l'activité actuelle (PME d'Annemasse
+# et de Haute-Savoie ; le Grand Genève et la Suisse romande sont une opportunité à
+# proposer, non une clientèle confirmée — cf. correction de la FAQ dans v1-clarte.html)
+# et ne référence que les pages réellement en ligne aujourd'hui (le site est un
+# one-pager, cf. §2 : aucune des pages de service/zone proposées en §2 n'existe encore).
+
+# MZI Consulting
+
+> Agence d'automatisation IA basée à Annemasse (Haute-Savoie, France). Propose un
+> audit IA gratuit et des solutions d'automatisation sur-mesure aux PME de la région.
+
+## Pages
+
+- [Accueil](https://mzi-consulting.com/): Audit IA gratuit et automatisation pour PME à Annemasse et en Haute-Savoie.
+- [Mentions légales](https://mzi-consulting.com/mention-legale/)
+- [Politique de confidentialité](https://mzi-consulting.com/politique-de-confidentialite/)
+- [Politique de cookies](https://mzi-consulting.com/politique-de-cookies-ue/)

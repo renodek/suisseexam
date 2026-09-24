@@ -28,9 +28,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>V1 — Clarté | MZI Consulting</title>
+
+<!-- Audit §2, §3 : title actuel du site réel dilue 3 intentions à la fois et omet la marque
+     (constat "Title générique, marque absente"). Meta description absente à l'origine ; ciblée
+     ici sur l'intention retenue en §2 (table de mots-clés : "audit IA gratuit entreprise"). -->
+<meta name="description" content="Audit IA gratuit pour PME à Annemasse et en Haute-Savoie : analyse de vos processus, recommandations concrètes, sans engagement, réponse sous 24 h.">
+
+<!-- Audit §4 : cinq formulations différentes du nom de l'entreprise relevées sur le site réel
+     (copyright, meta description, title, og:site_name, JSON-LD) — unifiées ici sur « MZI Consulting ». -->
+<!-- Audit §6 : og:image sous-dimensionnée sur le site réel (375×423, aucune variante 1200×630
+     disponible sur le serveur) et og:site_name = « Agence IA à Annemasse » au lieu de la marque. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mzi-consulting.com/">
+<meta property="og:site_name" content="MZI Consulting">
+<meta property="og:title" content="Audit IA gratuit pour PME à Annemasse | MZI Consulting">
+<meta property="og:description" content="Audit IA gratuit pour PME à Annemasse et en Haute-Savoie : analyse de vos processus, recommandations concrètes, sans engagement, réponse sous 24 h.">
+<meta property="og:image" content="https://mzi-consulting.com/assets/img/v1-og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Photo d'illustration : réunion de travail — MZI Consulting, agence d'automatisation IA à Annemasse">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Audit IA gratuit pour PME à Annemasse | MZI Consulting">
+<meta name="twitter:description" content="Audit IA gratuit pour PME à Annemasse et en Haute-Savoie : analyse de vos processus, recommandations concrètes, sans engagement, réponse sous 24 h.">
+<meta name="twitter:image" content="https://mzi-consulting.com/assets/img/v1-og-image.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Audit §5 : le graphe JSON-LD du site réel se limite à WebPage/WebSite/Organization (sans
+     adresse ni téléphone) et un BreadcrumbList à un seul niveau ("Aucun schéma
+     LocalBusiness/ProfessionalService", "Aucun schéma Service", "Aucun schéma FAQPage").
+     Adresse et téléphone volontairement absents ci-dessous : non confirmés (§4) — un
+     schema.org PostalAddress avec des champs vides serait invalide, pas simplement "à
+     compléter", donc omis plutôt que rempli de valeurs inventées ou vides. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://mzi-consulting.com/#organization",
+      "name": "MZI Consulting",
+      "url": "https://mzi-consulting.com/",
+      "email": "contact@mzi-consulting.com",
+      "areaServed": [
+        { "@type": "City", "name": "Annemasse" },
+        { "@type": "AdministrativeArea", "name": "Haute-Savoie" }
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@id": "https://mzi-consulting.com/#service-audit" } },
+        { "@type": "Offer", "itemOffered": { "@id": "https://mzi-consulting.com/#service-automatisation" } },
+        { "@type": "Offer", "itemOffered": { "@id": "https://mzi-consulting.com/#service-integration" } }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mzi-consulting.com/#service-audit",
+      "name": "Audit IA gratuit",
+      "serviceType": "Audit d'intelligence artificielle",
+      "provider": { "@id": "https://mzi-consulting.com/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Annemasse" },
+        { "@type": "AdministrativeArea", "name": "Haute-Savoie" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mzi-consulting.com/#service-automatisation",
+      "name": "Automatisation IA",
+      "serviceType": "Automatisation de processus par intelligence artificielle",
+      "provider": { "@id": "https://mzi-consulting.com/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Annemasse" },
+        { "@type": "AdministrativeArea", "name": "Haute-Savoie" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mzi-consulting.com/#service-integration",
+      "name": "Intégration IA sur-mesure",
+      "serviceType": "Intégration d'outils d'intelligence artificielle",
+      "provider": { "@id": "https://mzi-consulting.com/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Annemasse" },
+        { "@type": "AdministrativeArea", "name": "Haute-Savoie" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "L'audit IA est-il vraiment gratuit ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, l'audit est gratuit et sans engagement. Vous repartez avec une analyse de vos processus et des recommandations concrètes, que vous décidiez ou non de poursuivre avec nous." }
+        },
+        {
+          "@type": "Question",
+          "name": "En quoi consiste l'audit IA ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nous analysons vos processus, vos outils et votre organisation, puis nous identifions les tâches automatisables les plus rentables. Vous recevez ensuite une liste de recommandations priorisées." }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il des compétences techniques dans mon équipe ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Non. Nous traduisons les sujets techniques en langage clair et accompagnons vos équipes à chaque étape, de la stratégie à la mise en place." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles entreprises accompagnez-vous ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nous accompagnons des PME d'Annemasse et de Haute-Savoie, et pouvons intervenir dans le Grand Genève. Chaque audit est adapté à votre secteur, vos objectifs et votre culture d'entreprise." }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il après l'audit ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Vous recevez une feuille de route IA personnalisée. Si vous le souhaitez, nous mettons ensuite en place les outils et les automatisations, puis nous suivons les performances." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte la mise en place des solutions ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le coût dépend des recommandations retenues : il est chiffré après l'audit, sur la base de votre situation réelle." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mzi-consulting.com/" }
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
   :root{
     --night:#0a0e1a; --cyan:#10d7fd; --cyan-dark:#09c6eb; --teal:#0e7490; --teal-dark:#0b5c73;
@@ -64,7 +194,7 @@
   .btn-teal:hover{background:var(--teal-dark);color:#fff}
   .link-underline{font:500 19px var(--font-display);color:#fff;padding:10px 2px;border-bottom:1px solid #7e8da3;text-decoration:none}
   .link-underline:hover{color:var(--cyan);border-color:var(--cyan)}
-  .link-teal{font:600 17px var(--font-body);color:var(--teal);text-decoration:none}
+  .link-teal{display:inline-flex;align-items:center;min-height:24px;font:600 17px var(--font-body);color:var(--teal);text-decoration:none}
   .link-teal:hover{color:var(--teal-dark)}
 
   /* Badges "À confirmer" */
@@ -77,7 +207,12 @@
   .header-inner{max-width:1280px;margin:0 auto;height:80px;padding:0 clamp(20px,5.5vw,80px);display:flex;align-items:center;justify-content:space-between;gap:24px}
   .logo-link{display:flex;align-items:center;flex-shrink:0}
   .nav-desktop{display:none;align-items:center;gap:36px}
-  .nav-link{font:500 16px var(--font-body);color:#e3e8f0;text-decoration:none}
+  /* Audit §12 : "Zones tactiles trop petites en pied de page" sur le site réel (lien de
+     152,5×19,5px, minimum requis 24×24px, audit Lighthouse target-size en échec). Les liens
+     texte de navigation ci-dessous reçoivent un padding vertical pour que chaque zone
+     cliquable atteigne au moins 24px de hauteur, sans changer leur apparence visuelle
+     (le texte reste identique, seule sa zone de clic/tap s'agrandit). */
+  .nav-link{display:inline-flex;align-items:center;padding:6px 0;font:500 16px var(--font-body);color:#e3e8f0;text-decoration:none;min-height:24px}
   .nav-link:hover{color:var(--cyan)}
   .menu-toggle{display:flex;width:48px;height:48px;border-radius:12px;border:1px solid rgba(126,141,163,.5);background:transparent;align-items:center;justify-content:center;cursor:pointer;color:#fff}
   .menu-toggle svg{width:20px;height:20px}
@@ -231,20 +366,26 @@
   .footer-brand{flex:1 1 280px;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
   .footer-brand p{margin:0;font:400 16px/1.55 var(--font-body);color:var(--gray-text);max-width:300px}
   .footer-contact{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
-  .footer-email{font:500 15px var(--font-body);color:var(--gray-text);text-decoration:none}
+  .footer-email{display:inline-flex;align-items:center;min-height:24px;font:500 15px var(--font-body);color:var(--gray-text);text-decoration:none}
   .footer-email:hover{color:var(--cyan)}
-  .footer-nav{flex:0 1 200px;display:flex;flex-direction:column;gap:12px}
+  .footer-nav{flex:0 1 200px;display:flex;flex-direction:column;gap:6px}
   .footer-nav-title{font:700 16px var(--font-display);color:#fff;margin-bottom:4px}
-  .footer-link{font:400 15px var(--font-body);color:var(--gray-text);text-decoration:none}
+  /* Audit §12 : zones tactiles ≥24×24px (voir commentaire sur .nav-link) — padding vertical
+     ajouté et gap de la colonne réduit d'autant pour garder le même espacement visuel global. */
+  .footer-link{display:inline-flex;align-items:center;min-height:24px;padding:3px 0;font:400 15px var(--font-body);color:var(--gray-text);text-decoration:none}
   .footer-link:hover{color:var(--cyan)}
   .footer-bottom{border-top:1px solid rgba(221,221,221,.18);padding-top:24px;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
   .footer-copy{margin:0;font:400 14px var(--font-body);color:var(--gray-text)}
   .footer-legal{display:flex;flex-wrap:wrap;gap:12px 28px}
-  .footer-legal-link{font:400 14px var(--font-body);color:var(--gray-text);text-decoration:none}
+  .footer-legal-link{display:inline-flex;align-items:center;min-height:24px;padding:4px 0;font:400 14px var(--font-body);color:var(--gray-text);text-decoration:none}
   .footer-legal-link:hover{color:var(--cyan)}
 </style>
 </head>
 <body>
+<!-- Audit §12 : le site réel n'a aucun repère <main> ("landmark-one-main" en échec) et son
+     lien d'évitement pointe vers un id="content" qui n'existe nulle part dans la page (présent
+     mais non fonctionnel). Ici, <main id="contenu"> existe et le lien ci-dessous y mène
+     réellement. -->
 <a class="skip-link" href="#contenu">Aller au contenu principal</a>
 
 <header class="site-header" id="site-header">
@@ -260,6 +401,11 @@
       <a class="nav-link" href="/contact/">Contact</a>
     </nav>
     <a class="btn btn-cyan compact" href="#contact">Réserver mon audit gratuit</a>
+    <!-- Audit §7, §12 : le bouton "retour en haut" du site réel n'a ni texte ni aria-label —
+         seule une icône SVG masquée aux technologies d'assistance (aria-hidden="true"), en échec
+         sur l'audit Lighthouse agent-accessibility-tree ET sur l'accessibilité humaine (même
+         cause racine, un seul correctif sert les deux audiences). Tous les boutons icône-seule
+         ci-dessous portent un aria-label explicite. -->
     <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
       <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"/></svg>
     </button>
@@ -308,6 +454,11 @@
         </div>
       </div>
     </div>
+    <!-- Audit §3 : sur le site réel, les trois chiffres-clés du héros sont balisés en <h3>
+         sans <h2> parent ("Hiérarchie de titres rompue par les chiffres-clés" — H1 → H3 → H3 →
+         H3 → premier H2, sans contexte lisible pour un lecteur d'écran). Ici, un seul <h1> pour
+         la page, un seul <h2> par section, et ces chiffres restent du texte simple (<p><strong>),
+         jamais balisés en Hn. -->
     <div class="hero-stats">
       <p><strong>50+</strong> entreprises accompagnées</p>
       <p><strong>3x</strong> productivité moyenne</p>

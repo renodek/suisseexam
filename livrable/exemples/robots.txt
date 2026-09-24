@@ -1,0 +1,12 @@
+# Audit §7 : robots.txt du site réel — point positif, conservé tel quel en exemple.
+# "User-agent: * / Disallow: (vide) — aucune restriction de crawl, y compris pour les
+# robots IA (GPTBot, ClaudeBot… ne sont pas mentionnés, donc non bloqués)."
+# Source : fichier robots.txt de mzi-consulting.com (vérifié le 24/09/2026).
+#
+# Aucune correction nécessaire sur ce fichier — reproduit ici pour mémoire, à publier
+# tel quel une fois l'arborescence proposée en §2 déployée (Sitemap ci-dessous).
+
+User-agent: *
+Disallow:
+
+Sitemap: https://mzi-consulting.com/sitemap.xml

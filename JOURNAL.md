@@ -280,3 +280,37 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html`.
 - `livrable/credits.txt`
 - `livrable/assets/img/v1-hero-reunion.webp`, `livrable/assets/img/v1-methode-atelier.webp`
 - `source/images/design-v1/hero-reunion.jpg`, `source/images/design-v1/methode-atelier.jpg` (sources brutes, avant conversion WebP)
+
+## Étape 9 — Socle SEO de v1-clarte.html (2026-09-24)
+
+### Ce qui a été fait
+
+- Relu `livrable/audit.html` pour retrouver, section par section (§1 à §13), le constat exact justifiant chaque bloc SEO demandé, avant d'écrire quoi que ce soit — chaque ajout ci-dessous porte un commentaire HTML `<!-- Audit §n : ... -->` citant le constat correspondant.
+- `<title>` conservé inchangé (« V1 — Clarté | MZI Consulting », convention de nommage interne des livrables) ; ajout d'une `<meta name="description">` de 147 caractères ciblant « audit IA gratuit PME Annemasse » (constat §3 « Title générique, marque absente » + table de mots-clés §2).
+- Vérifié la hiérarchie de titres : un seul `<h1>` sur la page (mesuré), un `<h2>` par section de contenu (mesuré sur les 8 sections après le héros), `<h3>` pour les cartes, chiffres-clés du héros en texte simple (`<p><strong>`), jamais balisés en `<h3>` — commentaire ajouté citant le constat inverse du site réel (§3 « Hiérarchie de titres rompue par les chiffres-clés »).
+- JSON-LD `@graph` ajouté en tête de page : `ProfessionalService` (nom, e-mail, `areaServed` Annemasse + Haute-Savoie), un `Service` par offre du pied de page (Audit IA gratuit, Automatisation IA, Intégration IA sur-mesure), `FAQPage` reprenant mot pour mot les 6 questions/réponses affichées (y compris la réponse corrigée sur les zones d'intervention), `BreadcrumbList` à un seul niveau (« Accueil »), cohérent avec la structure one-pager réelle du site. Validé par un parseur JSON (`JSON.parse`) après écriture.
+- Balises Open Graph et Twitter Card ajoutées (`og:type/url/site_name/title/description/image[:width/height/alt]/locale`, `twitter:card/title/description/image`), avec une image dédiée `livrable/assets/img/v1-og-image.jpg` (1200×630, JPEG) générée par recadrage de la photo du héros (constat §6 « Image Open Graph sous-dimensionnée », 375×423 sur le site réel, aucune variante 1200×630 disponible).
+- Accessibilité : `<main id="contenu">` et lien d'évitement fonctionnel déjà en place depuis l'étape 8 (commentaires ajoutés citant §12 pour expliquer pourquoi, contrairement au site réel où `landmark-one-main` échoue et le lien d'évitement ne mène nulle part) ; zones tactiles des liens texte (navigation d'en-tête, liens du pied de page, lien « Toutes les questions ») portées à 24px de hauteur minimum par un padding vertical ajouté en CSS, sans changement visuel du texte (constat §12 « Zones tactiles trop petites en pied de page », 19,5px mesurés sur le site réel contre 24px minimum requis) ; commentaire ajouté sur le bouton hamburger, seul contrôle icône-seule de la page, confirmant son `aria-label` (constat §12/§7 « Bouton retour en haut sans nom accessible »).
+- `livrable/exemples/robots.txt` créé : reproduction du robots.txt réel du site (déjà correct — point positif §7), avec ajout d'une ligne `Sitemap:` en prévision de l'arborescence proposée en §2.
+- `livrable/exemples/llms.txt` créé : version corrigée décrivant fidèlement l'activité réelle (PME d'Annemasse et de Haute-Savoie ; Grand Genève/Suisse romande présentés comme opportunité, pas comme clientèle confirmée, cohérent avec la correction apportée à la FAQ de v1-clarte.html à l'étape 8) et ne listant que les pages réellement en ligne aujourd'hui (le site actuel est un one-pager — aucune des pages de service proposées en §2 n'existe encore), en remplacement du fichier réel qui décrit un positionnement « Consultant IA Genève » disparu et un lien mort (constat §7).
+- Revérifié par Playwright après toutes les modifications : un seul `<h1>`, un `<h2>` par section, JSON-LD valide (`JSON.parse` réussi, 6 types dans le graphe), toutes les zones tactiles mesurées ≥24px, hauteur de l'en-tête inchangée (80px), accordéon FAQ/menu mobile/formulaire toujours fonctionnels, aucune erreur console.
+
+### Décisions prises et leur justification
+
+- **Adresse et téléphone omis du JSON-LD `ProfessionalService`, plutôt que remplis avec des chaînes vides** : un `PostalAddress` schema.org avec des champs vides est invalide (échec de validation), ce n'est pas la même chose qu'un champ simplement absent. Omettre est l'équivalent structurellement correct de « laisser vide » demandé — un commentaire HTML l'explique juste au-dessus du script, avec renvoi au constat §4 (adresse non confirmée).
+- **`og:url`/`og:image` pointant vers le domaine réel `mzi-consulting.com`, pas vers l'URL de prévisualisation Vercel de ce livrable** : ces balises décrivent la page telle qu'elle serait une fois adoptée en production par le client — cohérent avec le fait que `audit.html` et `v0-existant.html` référencent déjà directement le domaine réel à des fins de comparaison.
+- **`<title>` non modifié malgré la recommandation §3 d'un title plus ciblé** : l'instruction du client était explicite (« garde le title actuel ») ; la recommandation §3 est appliquée à la place sur `og:title`/`twitter:title`, qui déterminent l'aperçu affiché lors d'un partage — c'est là que ce titre ciblé a le plus de valeur immédiate.
+- **Recadrage de la photo du héros en `position:"south"` plutôt que `"attention"` (détection automatique de zone d'intérêt)** : comparaison visuelle des deux recadrages — `"attention"` isolait les deux personnes tout en bas de l'image avec un grand bandeau de fenêtre vide au-dessus ; `"south"` cadre les sujets en pied et centre, bien plus adapté à un format 1200×630 utilisé en aperçu de partage.
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Premier recadrage automatique de l'image Open Graph (`fit:"cover", position:"attention"`) laissait un grand espace vide de fenêtre en haut du cadre et les deux personnes tassées tout en bas | Comparé plusieurs valeurs de `position` (`entropy`, `south`) par génération et inspection visuelle directe des fichiers produits ; retenu `"south"`, qui cadre les sujets correctement. |
+
+### Fichiers produits
+
+- `livrable/v1-clarte.html` (modifié)
+- `livrable/assets/img/v1-og-image.jpg`
+- `livrable/exemples/robots.txt`
+- `livrable/exemples/llms.txt`
