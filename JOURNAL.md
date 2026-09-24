@@ -184,3 +184,34 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html` et `CLAUDE.md`.
 ### Fichiers produits
 
 Aucun nouveau fichier — corrections dans `livrable/audit.html`.
+
+## Étape 6 — V0 existant (livrable/v0-existant.html) (2026-09-24)
+
+### Ce qui a été fait
+
+- Construction de `livrable/v0-existant.html` : reproduction fidèle, en HTML/CSS/JS vanilla entièrement réécrits (aucun balisage Elementor ni script WordPress copié), de la page d'accueil actuelle de mzi-consulting.com.
+- Exploité en priorité `source/design-system-mzi/components/*.jsx` et `ui_kits/site/Sections.jsx` comme référence de valeurs exactes (copie, couleurs, tailles, ombres, easing, icônes SVG, algorithme du canvas) déjà extraites lors d'une session précédente à partir des mêmes sources (`source/tech/styles-reels.md`, tokens) — puis vérifié et corrigé chaque valeur contre `source/html/accueil.html` avant de l'utiliser, plutôt que de la recopier telle quelle.
+- Reproduit les comportements demandés : fond animé « réseau neuronal » (canvas, algorithme identique à celui déjà validé dans le design system), en-tête qui se masque au défilement vers le bas et réapparaît en remontant (après 300px), halos des icônes, survols des cartes/boutons, reflet radial derrière le formulaire, bouton retour en haut, animations d'entrée (fondu + translation au scroll — détails exacts non déterminés dans les sources, cf. audit, donc reprise raisonnable assumée comme telle).
+- Reproduit tous les défauts documentés dans l'audit, vérifiés un à un par un script Playwright dédié (voir Problèmes rencontrés) : contraste de survol, libellé timeline invisible, chiffres-clés en `<h3>`, `alt="default-logo"`, « Demarrer » sans accent, bordures `#333333`, H1 à graisse incohérente, absence de `<main>`, lien d'évitement non fonctionnel, bouton retour en haut sans nom accessible, débordement mobile.
+- Formulaire strictement visuel : `preventDefault()` sur la soumission, aucun appel réseau, aucun reCAPTCHA.
+- Paramètre `?statique` : fige le canvas sur un rendu unique (pas de boucle d'animation) et révèle immédiatement tous les éléments à animation d'entrée, via une classe globale qui neutralise transitions/animations.
+- Commentaire HTML explicatif ajouté en tête de fichier, `<meta name="robots" content="noindex">` présent.
+
+### Décisions prises et leur justification
+
+- **Corrigé deux erreurs propres en cours de construction plutôt que de les laisser** : le fichier utilisait d'abord un vrai `<main>` et un lien d'évitement pointant vers un `id="content"` existant — cela aurait *corrigé* deux défauts au lieu de les reproduire. Remplacé par un simple `<div>` sans id, conformément à l'audit.
+- **Ancres réelles utilisées plutôt que celles, simplifiées, du design system** : vérifié directement dans `source/html/accueil.html` que les CTA pointent vers `#audit` (pas `#contact`) et que le lien « Pourquoi nous » pointe vers `#pourquoi-nous` (pas `#pourquoi`) — la fidélité prime sur la référence pré-existante.
+- **Libellés de timeline tous rendus dans la couleur « invisible »**, plutôt que seulement celui de « Stratégie IA » cité dans l'audit : un bug de couleur par défaut non surchargée s'appliquerait, en réalité, à toutes les instances du même composant, pas à une seule choisie arbitrairement — plus cohérent avec la nature probable du défaut.
+- **Débordement mobile obtenu par une règle CSS ciblée** (`min-width` sur la ligne d'étoiles en mobile) plutôt qu'en essayant de reproduire l'algorithme exact d'espacement d'Elementor (non nécessaire, non demandé) : le but demandé est un débordement mesurable d'environ 8px, obtenu et vérifié (~14px, du même ordre de grandeur).
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Premier jet : `<main>` réel utilisé et lien d'évitement pointant vers un `id="content"` existant — corrigeait deux défauts au lieu de les reproduire | Remplacé par un `<div class="page-sections">` sans repère, id retiré du conteneur ciblé par le lien d'évitement ; règle CSS `main{}` renommée en `.page-sections{}`. |
+| La ligne d'étoiles des témoignages ne débordait pas du tout en mobile (0px) avec une implémentation flex simple | Ajout d'une règle `min-width` ciblée en media query mobile sur `.stars`, ajustée empiriquement (335px → 346px) jusqu'à obtenir un débordement du même ordre que celui mesuré dans l'audit (404px de large de page pour un viewport de 390px, soit +14px). |
+| Vérification manuelle de chaque défaut fastidieuse à l'œil | Script Playwright dédié vérifiant par le DOM et les styles calculés : absence de `<main>`, cible du lien d'évitement inexistante, `alt` du logo, graisses du H1, couleur du bouton au survol, couleur du libellé de timeline, largeur de défilement mobile, comportement du mode `?statique` — toutes les vérifications passent. |
+
+### Fichiers produits
+
+- `livrable/v0-existant.html`
