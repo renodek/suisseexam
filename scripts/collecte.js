@@ -107,12 +107,16 @@ const STYLE_SELECTORS = [
   { key: 'bouton formulaire de contact', selector: '.wpcf7-submit' },
 ];
 
-// Les 2 URLs réelles du logo (confirmées via data-lazy-src sur le widget
-// hfe-site-logo — l'ancienne détection heuristique récupérait par erreur
-// l'icône SVG du menu hamburger, qui matchait aussi le motif "logo").
+// Les 2 URLs réelles du logo, en résolution originale (sans suffixe de taille
+// WordPress). Confirmées via data-lazy-src sur le widget hfe-site-logo — la
+// détection heuristique d'origine récupérait par erreur l'icône SVG du menu
+// hamburger, qui matchait aussi le motif "logo". Les variantes suffixées
+// (Group-61-1-1.png 100x37, Logo-MZI-Agency-300x300.jpg 300x300) sont des
+// copies redimensionnées ; ces URLs pointent vers les fichiers sources
+// (230x86 et 1080x1080), plus grands.
 const REAL_LOGO_URLS = [
-  'https://mzi-consulting.com/wp-content/uploads/2025/12/Group-61-1-1.png',
-  'https://mzi-consulting.com/wp-content/uploads/2025/12/Logo-MZI-Agency-300x300.jpg',
+  'https://mzi-consulting.com/wp-content/uploads/2025/12/Group-61.png',
+  'https://mzi-consulting.com/wp-content/uploads/2025/12/Logo-MZI-Agency.jpg',
 ];
 
 const HERO_BUTTONS = [
