@@ -250,5 +250,47 @@
     "hauteur": 2933,
     "octets": 184160,
     "qualite": 60
+  },
+  {
+    "fichier": "v2-benefices-bureau-800.webp",
+    "largeur": 800,
+    "hauteur": 450,
+    "octets": 39786,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-benefices-bureau-1400.webp",
+    "largeur": 1400,
+    "hauteur": 788,
+    "octets": 89550,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-benefices-bureau-2200.webp",
+    "largeur": 2200,
+    "hauteur": 1238,
+    "octets": 167978,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-benefices-mobile-800.webp",
+    "largeur": 800,
+    "hauteur": 900,
+    "octets": 57220,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-benefices-mobile-1400.webp",
+    "largeur": 1400,
+    "hauteur": 1575,
+    "octets": 121034,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-benefices-mobile-2200.webp",
+    "largeur": 2200,
+    "hauteur": 2475,
+    "octets": 190990,
+    "qualite": 76
   }
 ]

@@ -19,6 +19,7 @@ const SOURCES = {
   'v2-hero': 'photo-1546204904-3aac0e546fdd',
   'v2-architecture': 'photo-1697859654625-7498a7ea84a8',
   'v2-contact': 'photo-1699470740879-bde4d7db985c',
+  'v2-benefices': 'photo-1623278589118-e2c26079ca5d',
 };
 const JOBS = [
   { nom: 'v1-hero-bureau', src: 'v1-hero', crop: { x: 0, y: 0, l: 1, h: 0.556 } },
@@ -33,6 +34,8 @@ const JOBS = [
   { nom: 'v2-architecture-mobile', src: 'v2-architecture', crop: { x: 0, y: 0, l: 0.64, h: 1 } },
   { nom: 'v2-contact-bureau', src: 'v2-contact', crop: { x: 0, y: 0.05, l: 1, h: 0.85 } },
   { nom: 'v2-contact-mobile', src: 'v2-contact', crop: { x: 0.28, y: 0, l: 0.5, h: 1 } },
+  { nom: 'v2-benefices-bureau', src: 'v2-benefices', crop: { x: 0, y: 0, l: 1, h: 1 } },
+  { nom: 'v2-benefices-mobile', src: 'v2-benefices', crop: { x: 0.28, y: 0, l: 0.5, h: 1 } },
 ];
 
 async function telecharge(nom, id) {

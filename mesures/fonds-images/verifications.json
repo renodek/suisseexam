@@ -202,6 +202,13 @@
           "alt": "renseigné"
         },
         {
+          "fichier": "v2-benefices-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "320×360",
+          "alt": "(vide, décorative)"
+        },
+        {
           "fichier": "v2-architecture-mobile-800.webp",
           "chargement": "lazy",
           "priorite": null,
@@ -227,6 +234,13 @@
           "priorite": "high",
           "natif": "390×577",
           "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-benefices-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "390×438",
+          "alt": "(vide, décorative)"
         },
         {
           "fichier": "v2-architecture-mobile-800.webp",
@@ -256,6 +270,13 @@
           "alt": "renseigné"
         },
         {
+          "fichier": "v2-benefices-bureau-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "768×432",
+          "alt": "(vide, décorative)"
+        },
+        {
           "fichier": "v2-architecture-bureau-800.webp",
           "chargement": "lazy",
           "priorite": null,
@@ -281,6 +302,13 @@
           "priorite": "high",
           "natif": "1024×682",
           "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-benefices-bureau-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1024×576",
+          "alt": "(vide, décorative)"
         },
         {
           "fichier": "v2-architecture-bureau-1400.webp",
@@ -310,6 +338,13 @@
           "alt": "renseigné"
         },
         {
+          "fichier": "v2-benefices-bureau-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1121×630",
+          "alt": "(vide, décorative)"
+        },
+        {
           "fichier": "v2-architecture-bureau-1400.webp",
           "chargement": "lazy",
           "priorite": null,
@@ -337,6 +372,13 @@
           "alt": "renseigné"
         },
         {
+          "fichier": "v2-benefices-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1439×810",
+          "alt": "(vide, décorative)"
+        },
+        {
           "fichier": "v2-architecture-bureau-2200.webp",
           "chargement": "lazy",
           "priorite": null,
@@ -362,6 +404,13 @@
           "priorite": "high",
           "natif": "1400×933",
           "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-benefices-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1919×1080",
+          "alt": "(vide, décorative)"
         },
         {
           "fichier": "v2-architecture-bureau-2200.webp",

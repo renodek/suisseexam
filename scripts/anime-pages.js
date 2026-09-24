@@ -55,7 +55,7 @@ const CSS_V1 = String.raw`  :root{--sent-color:var(--teal);--bar-color:var(--tea
   .anim .step-line::after{content:"";position:absolute;inset:0;background:var(--teal);transform:scaleX(var(--f,0));transform-origin:0 50%}
 `;
 
-const CSS_V2 = String.raw`  :root{--sent-color:var(--cyan);--bar-color:var(--cyan)}
+const CSS_V2 = String.raw`  :root{--sent-color:var(--g1);--bar-color:var(--g1)}
   /* V2 : repères de section (le trait cyan se dessine, le numéro apparaît en fin de tracé), zoom lent du héros, H1 en simple glissement (transform seul, opacité 1 d'emblée), H2 mot par mot. */
   .eyebrow-row{--rule:var(--line-cyan)}
   .light .eyebrow-row{--rule:#0e7490}

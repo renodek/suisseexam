@@ -740,3 +740,53 @@ Lecture : avec l'apparition mot par mot, le H1 de la V2 était masqué au charge
 - `scripts/anime-pages.js` (modifié), `scripts/mesure-lcp.js` (nouveau)
 - `mesures/animations/` : `lcp.md`, `lcp.json`, `verifications.json` ; vidéos `.webm` locales seulement
 - `mesures/v2-controles/` (rapports régénérés), `.gitignore`
+
+## Étape 18 — Rythme des fonds de la V2 (sections 01 à 05), échelle de gris, cyan restreint (2026-09-25)
+
+### Ce qui a été fait
+
+- **Skill `taste`** (étape préalable) : `.claude/skills/taste/` (SKILL.md, README, références, `SOURCE.txt`) et `source/tech/taste/` (analyses Cohere et Linear) commités. Une seule modification du skill : `disable-model-invocation: true` dans l'en-tête, pour qu'il ne se lance que sur appel explicite.
+- **Rythme des fonds** : 01 Chiffres-clés sur bande glacier `#eef3f8` ; 02 Défis sur `#0a0e1a` ; 03 Solution sur bleu ardoise `#1c2c48` ; 04 Méthode sur `#0a0e1a` ; 05 Bénéfices sur photo. Les deux fonds sombres d'avant (`#0a0e1a` et `#0f1526`) ne se distinguaient pas (1,06:1) ; l'ardoise `#1c2c48` est à 1,38:1 de `#0a0e1a` (les 1,22:1 de `#16233a`, valeur suggérée, étaient trop proches à l'œil).
+- **Section 01 (glacier)** : chiffres en bleu nuit `#0a0e1a`, libellés en gris ardoise `#334155`, symboles et numéro en bleu pétrole `#0e7490` (aucun cyan sur fond clair), étiquette « À CONFIRMER » en variante claire.
+- **Section 05** : photo de Jonathan Ansel Moy de Vitry (« A couple of boats that are sitting in the water »), voile bleu nuit à 80 %, fondu vers `#0a0e1a` en haut et en bas, cartes translucides (`rgba(15,21,38,.62)`, anneau inset de 1 px, rayon 16 px). 6 variantes WebP (800, 1400, 2200 px de large, bureau et mobile, 40 à 191 Ko), crédit visible, `credits.txt` à jour.
+- **Grands chiffres** : Geist Mono remplacé par Fraunces 500 (`font-variant-numeric: lining-nums tabular-nums`) pour les chiffres-clés et les bénéfices ; symboles (+, x, %) à 55 % de la taille, en couleur d'accent (bleu pétrole sur le glacier, cyan sur fond sombre). Geist Mono reste pour les numéros de section et d'étape. Le comptage animé compte le chiffre sans toucher aux symboles.
+- **Échelle de gris en quatre niveaux** (remplace `--t2`, `--t3`, `--t4`, `--muted`) : `--g1 #f0f4fa`, `--g2 #c9d1de`, `--g3 #a3afc1`, `--g4 #8b98ae` ; rapports 17,4 / 12,5 / 8,7 / 6,6 sur `#0a0e1a` et 12,7 / 9,1 / 6,3 / 4,8 sur l'ardoise (le plus bas reste au-dessus de 4,5:1 sur le fond le plus clair). Texte courant en `--g2`, libellés en `--g3`, mentions en `--g4`.
+- **Bords et rayons** : anneau inset de 1 px (`rgba(240,244,250,.1)`) à la place de l'ombre de 30 px/60 px du formulaire ; rayons ramenés de 28 px à 20 px (panneaux photo, témoignages, formulaire, emplacement du fondateur), de 22-32 px à 16-20 px pour le cadre du héros.
+- **Photos Méthode et Solution fondues** : masque en dégradé sur les quatre bords (`mask-image` en deux dégradés, intersection) ; les voiles de teinte (`.multiply`, `.methode-dim`) sont déplacés dans le calque masqué pour se fondre avec la photo.
+- **Cyan restreint** : conservé pour les mots en italique des H1 et H2, le bouton principal, les numéros, les traits de section et les symboles des chiffres. Retiré (blanc ou gris clair) : carrés de coche des listes, icône « + » de la FAQ, liens et survols de liens (menu, pied de page, e-mail, liens de texte), anneau de focus des champs, barre de focus et coche de confirmation, étiquette d'accent du héros, libellé « Annemasse · Haute-Savoie · Grand Genève », titres de colonnes du pied de page.
+- **Survol à 120 ms** (couleur, bordure, fond) sur liens, boutons et icône « + » des lignes de la FAQ ; réservé à `html.anim`, donc absent en mouvement réduit et en `?statique` ; apparitions inchangées.
+- **Polices** : sous-ensembles de glyphes recalculés (`fraunces-subset.js` : Fraunces gagne « % » et « + », Geist Mono les perd) et liens Google Fonts mis à jour ; `node scripts/mesure-cls.js --appliquer --seul` relancé pour régénérer la précharge.
+
+### Mesures
+
+**Contrastes AA sur les pixels rendus** (`scripts/contraste-fonds.js`, pire pixel de chaque ligne de texte, seuil 4,5:1 ou 3:1 pour le grand texte) : 0 échec en 1440, 768 et 390 px. Pire rapport par zone :
+
+| Zone | 1440 px | 768 px | 390 px |
+|---|---|---|---|
+| 01 Chiffres-clés (glacier) | 4,80 | 4,80 | 4,80 |
+| 02 Défis | 11,15 | 11,15 | 11,15 |
+| 03 Solution (ardoise) | 8,09 | 8,09 | 8,09 |
+| 04 Méthode | 11,15 | 11,15 | 11,15 |
+| 05 Bénéfices (grand texte, seuil 3) | 6,20 | 8,43 | 6,96 |
+| Héros, Qui sommes-nous, Contact (hors périmètre, recontrôlés) | 6,06 à 7,13 | 4,77 à 6,43 | 6,01 à 7,40 |
+
+Le plus bas (4,80) est le numéro « 01 » en bleu pétrole sur le glacier. `controle-v2.js` : 43 couples de couleurs par largeur, 0 échec.
+
+**CLS** (14 largeurs de 320 à 1920 px, modes statique et animé, défilement complet ; `mesure-cls.js` appliqué, mesure faite avec un balayage dédié) : maximum 0,0097 à 320 px, donc sous 0,01 ; 0 à 0,0002 de 360 à 1920 px. À 320 px, le seul décalage est le bloc du bouton du héros (28 px), avec le fond du héros. Marge de 0,0003 seulement : ce résidu existait déjà (0,0079 à l'étape 14) et il est un peu plus grand aujourd'hui. `verifie-animations.js` : 0,0008 (1440 px) et 0,0009 (390 px) en mode animé, 0 en mode statique ; 0 erreur de console, 0 élément masqué, 0 défilement horizontal.
+
+**Captures avant/après des sections 01 à 05** : `mesures/rythme-fonds/` (`avant-NN-<1440|390>.jpg`, `apres-NN-<1440|390>.jpg`, `comparaison-01-05-<1440|390>.jpg`, avant à gauche).
+
+### Réserves
+
+- Marge de CLS de 0,0003 à 320 px : le moindre changement de texte du héros peut la consommer.
+- Les variantes mobiles de la photo des bateaux sont agrandies : la photo d'origine fait 3664 px de large, alors que les recadrages mobiles demandent 2200 px ; la variante de 800 px, la plus utilisée, n'est pas concernée.
+- La photo de la section 05 est peu visible (voile de 80 % et cartes de 62 %) : elle se lit surtout en haut et sur les côtés. Un voile à 70 % la révélerait davantage au prix de 1 à 2 points de contraste.
+- LCP de la V2 non remesuré après ces changements.
+- L'étiquette d'accent du héros (« Agence d'automatisation IA ») a perdu son cyan : elle n'était dans aucune des exceptions demandées ; à rétablir si vous la voulez cyan.
+- Le lien d'évitement reste cyan (bouton visible au seul focus clavier).
+
+### Fichiers produits
+
+- `livrable/v2-nuit-suisse.html`, `livrable/credits.txt` (modifiés) ; `livrable/assets/img/fonds/v2-benefices-*.webp` (6)
+- `scripts/fonds-images.js`, `scripts/contraste-fonds.js` (options `PAGE`, `ZONES`, `SORTIE`), `scripts/anime-pages.js` (couleur de focus et de coche) ; `.claude/skills/taste/`, `source/tech/taste/`
+- `mesures/rythme-fonds/` (captures, `contrastes-apres.*`, `contrastes-autres-zones.*`) ; `mesures/animations/verifications.json`, `mesures/v2-controles/` (régénérés)

@@ -69,6 +69,14 @@ Photo « A tall building lit up with blue lights » (texture de la section Qui s
   Fichiers : assets/img/fonds/v2-architecture-bureau-800.webp, -1400.webp, -2200.webp
              assets/img/fonds/v2-architecture-mobile-800.webp, -1400.webp, -2200.webp
 
+Photo « A couple of boats that are sitting in the water » (fond de la section 05 Bénéfices)
+  Auteur   : Jonathan Ansel Moy de Vitry
+  Source   : https://unsplash.com/photos/pvgfkvHu3pM
+  Profil   : https://unsplash.com/@jmdv
+  Licence  : Unsplash License (https://unsplash.com/license)
+  Fichiers : assets/img/fonds/v2-benefices-bureau-800.webp, -1400.webp, -2200.webp
+             assets/img/fonds/v2-benefices-mobile-800.webp, -1400.webp, -2200.webp
+
 Photo « chaîne de montagnes enneigées » (fond de la section contact et image Open Graph)
   Auteur   : T Fang
   Source   : https://unsplash.com/@tqfang

@@ -51,7 +51,6 @@
     {
       "element": "Lien « Découvrir notre méthode »",
       "v1_change": [
-        "color",
         "borderBottom"
       ],
       "design_change": [
@@ -59,9 +58,9 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
+        "color": "rgb(255, 255, 255)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "1px rgb(16, 215, 253)",
+        "borderBottom": "1px rgb(255, 255, 255)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -72,7 +71,7 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Bouton section Solution",
@@ -133,9 +132,9 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
+        "color": "rgb(255, 255, 255)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(16, 215, 253)",
+        "borderBottom": "0px rgb(255, 255, 255)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -146,12 +145,11 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Lien « Toutes les questions »",
       "v1_change": [
-        "color",
         "borderBottom"
       ],
       "design_change": [
@@ -159,9 +157,9 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
+        "color": "rgb(255, 255, 255)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "1px rgb(16, 215, 253)",
+        "borderBottom": "1px rgb(255, 255, 255)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -172,22 +170,19 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Lien e-mail du bloc contact",
-      "v1_change": [
-        "color",
-        "borderBottom"
-      ],
+      "v1_change": [],
       "design_change": [
         "color",
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
+        "color": "rgb(255, 255, 255)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(16, 215, 253)",
+        "borderBottom": "0px rgb(255, 255, 255)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -198,7 +193,7 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Lien de pied de page « Audit IA gratuit »",
@@ -211,9 +206,9 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
+        "color": "rgb(255, 255, 255)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(16, 215, 253)",
+        "borderBottom": "0px rgb(255, 255, 255)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -224,7 +219,7 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Lien légal « Mentions légales »",
@@ -237,9 +232,9 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
+        "color": "rgb(255, 255, 255)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(16, 215, 253)",
+        "borderBottom": "0px rgb(255, 255, 255)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -250,16 +245,16 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Carte défi",
       "v1_change": [],
       "design_change": [],
       "v1_survol": {
-        "color": "rgb(185, 193, 206)",
+        "color": "rgb(201, 209, 222)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(185, 193, 206)",
+        "borderBottom": "0px rgb(201, 209, 222)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -277,9 +272,9 @@
       "v1_change": [],
       "design_change": [],
       "v1_survol": {
-        "color": "rgb(185, 193, 206)",
+        "color": "rgb(201, 209, 222)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(185, 193, 206)",
+        "borderBottom": "0px rgb(201, 209, 222)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -297,10 +292,10 @@
       "v1_change": [],
       "design_change": [],
       "v1_survol": {
-        "color": "rgb(185, 193, 206)",
-        "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(185, 193, 206)",
-        "boxShadow": "none",
+        "color": "rgb(201, 209, 222)",
+        "background": "rgba(15, 21, 38, 0.62)",
+        "borderBottom": "0px rgb(201, 209, 222)",
+        "boxShadow": "rgba(240, 244, 250, 0.1) 0px 0px 0px 1px inset",
         "transform": "none"
       },
       "design_survol": {
@@ -317,7 +312,7 @@
       "v1_change": [],
       "design_change": [],
       "v1_survol": {
-        "color": "rgb(185, 193, 206)",
+        "color": "rgb(201, 209, 222)",
         "background": "rgb(255, 255, 255)",
         "borderBottom": "1px rgb(223, 228, 234)",
         "boxShadow": "none",
@@ -335,7 +330,7 @@
   ],
   "focus": {
     "390": {
-      "total": 44,
+      "total": 46,
       "sansIndicateurVisible": [],
       "masquesParEntete": [],
       "zonesSous24px": [
@@ -344,6 +339,8 @@
         "a « Mimi Thian » 59×16",
         "a « Unsplash » 48×16",
         "a « Annie Spratt » 66×16",
+        "a « Unsplash » 48×16",
+        "a « Jonathan Ansel Moy de Vitry » 151×16",
         "a « Unsplash » 48×16",
         "a « Howei Wang » 67×16",
         "a « Unsplash » 48×16",
@@ -353,7 +350,7 @@
       ]
     },
     "1440": {
-      "total": 49,
+      "total": 51,
       "sansIndicateurVisible": [],
       "masquesParEntete": [],
       "zonesSous24px": [
@@ -362,6 +359,8 @@
         "a « Mimi Thian » 59×16",
         "a « Unsplash » 48×16",
         "a « Annie Spratt » 66×16",
+        "a « Unsplash » 48×16",
+        "a « Jonathan Ansel Moy de Vitry » 151×16",
         "a « Unsplash » 48×16",
         "a « Howei Wang » 67×16",
         "a « Unsplash » 48×16",
@@ -459,9 +458,37 @@
   },
   "contrastes": {
     "390": {
-      "couples": 29,
+      "couples": 43,
       "echecs": [],
       "tous": [
+        {
+          "fg": "#0e7490",
+          "bg": "#eef3f8",
+          "ratio": 4.8,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "01"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0e7490",
+          "bg": "#eef3f8",
+          "ratio": 4.8,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "+",
+            "x",
+            "%"
+          ],
+          "note": ""
+        },
         {
           "fg": "#0e7490",
           "bg": "#f3f5f8",
@@ -504,9 +531,9 @@
           "note": ""
         },
         {
-          "fg": "#8b96a9",
+          "fg": "#8b98ae",
           "bg": "#0f1526",
-          "ratio": 6.09,
+          "ratio": 6.23,
           "large": false,
           "required": 4.5,
           "ok": true,
@@ -525,24 +552,79 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 9,
+          "count": 10,
           "samples": [
+            "À CONFIRMER : source et période",
             "À CONFIRMER : entreprise",
-            "À CONFIRMER : date",
-            "À CONFIRMER : lien vers l'avis"
+            "À CONFIRMER : date"
           ],
           "note": ""
         },
         {
-          "fg": "#aab3c2",
+          "fg": "#10d7fd",
+          "bg": "#1c2c48",
+          "ratio": 8.09,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 4,
+          "samples": [
+            "03",
+            "01",
+            "02"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#1c2c48",
+          "ratio": 8.09,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "personnalisé"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#a3afc1",
           "bg": "#0f1526",
-          "ratio": 8.6,
+          "ratio": 8.19,
           "large": false,
           "required": 4.5,
           "ok": true,
           "count": 1,
           "samples": [
             "Vos données servent uniquement à vous re"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#3d4655",
+          "bg": "#eef3f8",
+          "ratio": 8.53,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "Chiffres-clés"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#a3afc1",
+          "bg": "#0a0e1a",
+          "ratio": 8.67,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 2,
+          "samples": [
+            "Agence d'automatisation IA à Annemasse, ",
+            "© 2026 MZI Consulting. Tous droits réser"
           ],
           "note": ""
         },
@@ -561,44 +643,32 @@
           "note": ""
         },
         {
-          "fg": "#aab3c2",
-          "bg": "#0a0e1a",
-          "ratio": 9.11,
+          "fg": "#c9d1de",
+          "bg": "#1c2c48",
+          "ratio": 9.09,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 2,
+          "count": 5,
           "samples": [
-            "Agence d'automatisation IA à Annemasse, ",
-            "© 2026 MZI Consulting. Tous droits réser"
+            "La solution",
+            "En tant qu'agence IA à Annemasse, nous v",
+            "Nous analysons vos processus, vos outils"
           ],
           "note": ""
         },
         {
-          "fg": "#b9c1ce",
-          "bg": "#181d2d",
-          "ratio": 9.21,
+          "fg": "#334155",
+          "bg": "#eef3f8",
+          "ratio": 9.28,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 1,
+          "count": 3,
           "samples": [
-            "Photo du fondateur"
-          ],
-          "note": ""
-        },
-        {
-          "fg": "#b9c1ce",
-          "bg": "#0f1526",
-          "ratio": 10.02,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 23,
-          "samples": [
-            "Gagnez du temps et augmentez votre chiff",
-            "Sans engagement",
-            "Réponse sous 24 h"
+            "entreprises accompagnées",
+            "productivité moyenne",
+            "de temps économisé"
           ],
           "note": ""
         },
@@ -621,14 +691,14 @@
           "fg": "#10d7fd",
           "bg": "#0f1526",
           "ratio": 10.52,
-          "large": false,
-          "required": 4.5,
+          "large": true,
+          "required": 3,
           "ok": true,
-          "count": 18,
+          "count": 3,
           "samples": [
-            "Agence d'automatisation IA",
-            "01",
-            "02"
+            "à Annemasse",
+            "à Annemasse",
+            "à Annemasse ?"
           ],
           "note": ""
         },
@@ -636,29 +706,42 @@
           "fg": "#10d7fd",
           "bg": "#0f1526",
           "ratio": 10.52,
-          "large": true,
-          "required": 3,
+          "large": false,
+          "required": 4.5,
           "ok": true,
-          "count": 6,
+          "count": 5,
           "samples": [
-            "à Annemasse",
-            "ces défis ?",
-            "structurée"
+            "01",
+            "02",
+            "03"
           ],
           "note": ""
         },
         {
-          "fg": "#b9c1ce",
-          "bg": "#0a0e1a",
-          "ratio": 10.62,
+          "fg": "#10d7fd",
+          "bg": "#0d1221",
+          "ratio": 10.78,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "%",
+            "x",
+            "+"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
+          "bg": "#181d2d",
+          "ratio": 10.86,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 21,
+          "count": 1,
           "samples": [
-            "Chiffres-clés",
-            "entreprises accompagnées",
-            "productivité moyenne"
+            "Photo du fondateur"
           ],
           "note": ""
         },
@@ -669,11 +752,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 7,
+          "count": 6,
           "samples": [
             "À CONFIRMER : source et période",
-            "À CONFIRMER : source et période",
-            "À CONFIRMER : durée et format de l’audit"
+            "À CONFIRMER : durée et format de l’audit",
+            "À CONFIRMER : zones d’intervention réell"
           ],
           "note": ""
         },
@@ -699,11 +782,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 22,
+          "count": 18,
           "samples": [
-            "01",
-            "03",
-            "01"
+            "02",
+            "A",
+            "B"
           ],
           "note": ""
         },
@@ -714,11 +797,41 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 3,
+          "count": 5,
           "samples": [
-            "personnalisé",
-            "concrets",
-            "fréquentes"
+            "ces défis ?",
+            "structurée",
+            "et éprouvée"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
+          "bg": "#0f1526",
+          "ratio": 11.82,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 12,
+          "samples": [
+            "Gagnez du temps et augmentez votre chiff",
+            "Sans engagement",
+            "Réponse sous 24 h"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
+          "bg": "#0d1221",
+          "ratio": 12.1,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 4,
+          "samples": [
+            "Réduction du temps passé sur les tâches ",
+            "Plus de résultats avec les mêmes ressour",
+            "Augmentation significative de l'acquisit"
           ],
           "note": ""
         },
@@ -742,26 +855,71 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 14,
+          "count": 43,
           "samples": [
-            "Audit IA gratuit",
-            "Automatisation IA",
-            "Intégration IA sur-mesure"
+            "Les défis",
+            "Les entreprises qui n'adoptent pas l'int",
+            "Vos équipes passent trop de temps sur de"
           ],
           "note": ""
         },
         {
-          "fg": "#d5dbe5",
-          "bg": "#0f1526",
-          "ratio": 13.06,
+          "fg": "#ffffff",
+          "bg": "#1c2c48",
+          "ratio": 13.97,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "IA",
+            "Un audit",
+            "pour votre entreprise"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#1c2c48",
+          "ratio": 13.97,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 11,
+          "count": 3,
           "samples": [
+            "Analyse détaillée et complète",
+            "Identification des opportunités IA",
+            "Recommandations concrètes"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#f0f4fa",
+          "bg": "#0f1526",
+          "ratio": 16.46,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 13,
+          "samples": [
+            "Agence d'automatisation IA",
             "Annemasse",
-            "Grand Genève",
-            "Analyse de vos processus"
+            "Grand Genève"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#eef3f8",
+          "ratio": 17.25,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "50",
+            "3",
+            "40"
           ],
           "note": ""
         },
@@ -785,7 +943,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 19,
+          "count": 11,
           "samples": [
             "Automatisez répétitives",
             "les tâches",
@@ -800,11 +958,56 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 11,
+          "count": 7,
           "samples": [
             "Découvrir notre méthode",
-            "Perte de temps massive",
-            "Manque d'automatisation"
+            "Expert certifié",
+            "Approche personnalisée"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0d1322",
+          "ratio": 18.47,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Photo by on",
+            "Mimi Thian",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0d1221",
+          "ratio": 18.61,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 4,
+          "samples": [
+            "40",
+            "3",
+            "60"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0d1221",
+          "ratio": 18.61,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 4,
+          "samples": [
+            "Gain de temps immédiat",
+            "Productivité décuplée",
+            "Plus de clients potentiels"
           ],
           "note": ""
         },
@@ -815,7 +1018,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 12,
+          "count": 9,
           "samples": [
             "Photo by on",
             "Pascal Debrunner",
@@ -845,11 +1048,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 14,
+          "count": 11,
           "samples": [
-            "50+",
-            "3x",
-            "40"
+            "fait face à",
+            "Votre entreprise",
+            "à Annemasse"
           ],
           "note": ""
         },
@@ -886,9 +1089,37 @@
       ]
     },
     "1440": {
-      "couples": 30,
+      "couples": 43,
       "echecs": [],
       "tous": [
+        {
+          "fg": "#0e7490",
+          "bg": "#eef3f8",
+          "ratio": 4.8,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "01"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0e7490",
+          "bg": "#eef3f8",
+          "ratio": 4.8,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "+",
+            "x",
+            "%"
+          ],
+          "note": ""
+        },
         {
           "fg": "#0e7490",
           "bg": "#f3f5f8",
@@ -931,9 +1162,9 @@
           "note": ""
         },
         {
-          "fg": "#8b96a9",
+          "fg": "#8b98ae",
           "bg": "#0f1526",
-          "ratio": 6.09,
+          "ratio": 6.23,
           "large": false,
           "required": 4.5,
           "ok": true,
@@ -952,24 +1183,79 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 9,
+          "count": 10,
           "samples": [
+            "À CONFIRMER : source et période",
             "À CONFIRMER : entreprise",
-            "À CONFIRMER : date",
-            "À CONFIRMER : lien vers l'avis"
+            "À CONFIRMER : date"
           ],
           "note": ""
         },
         {
-          "fg": "#aab3c2",
+          "fg": "#10d7fd",
+          "bg": "#1c2c48",
+          "ratio": 8.09,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 4,
+          "samples": [
+            "03",
+            "01",
+            "02"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#1c2c48",
+          "ratio": 8.09,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "personnalisé"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#a3afc1",
           "bg": "#0f1526",
-          "ratio": 8.6,
+          "ratio": 8.19,
           "large": false,
           "required": 4.5,
           "ok": true,
           "count": 1,
           "samples": [
             "Vos données servent uniquement à vous re"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#3d4655",
+          "bg": "#eef3f8",
+          "ratio": 8.53,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "Chiffres-clés"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#a3afc1",
+          "bg": "#0a0e1a",
+          "ratio": 8.67,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 2,
+          "samples": [
+            "Agence d'automatisation IA à Annemasse, ",
+            "© 2026 MZI Consulting. Tous droits réser"
           ],
           "note": ""
         },
@@ -988,44 +1274,32 @@
           "note": ""
         },
         {
-          "fg": "#aab3c2",
-          "bg": "#0a0e1a",
-          "ratio": 9.11,
+          "fg": "#c9d1de",
+          "bg": "#1c2c48",
+          "ratio": 9.09,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 2,
+          "count": 5,
           "samples": [
-            "Agence d'automatisation IA à Annemasse, ",
-            "© 2026 MZI Consulting. Tous droits réser"
+            "La solution",
+            "En tant qu'agence IA à Annemasse, nous v",
+            "Nous analysons vos processus, vos outils"
           ],
           "note": ""
         },
         {
-          "fg": "#b9c1ce",
-          "bg": "#181d2d",
-          "ratio": 9.21,
+          "fg": "#334155",
+          "bg": "#eef3f8",
+          "ratio": 9.28,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 1,
+          "count": 3,
           "samples": [
-            "Photo du fondateur"
-          ],
-          "note": ""
-        },
-        {
-          "fg": "#b9c1ce",
-          "bg": "#0f1526",
-          "ratio": 10.02,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 23,
-          "samples": [
-            "Gagnez du temps et augmentez votre chiff",
-            "Sans engagement",
-            "Réponse sous 24 h"
+            "entreprises accompagnées",
+            "productivité moyenne",
+            "de temps économisé"
           ],
           "note": ""
         },
@@ -1048,14 +1322,14 @@
           "fg": "#10d7fd",
           "bg": "#0f1526",
           "ratio": 10.52,
-          "large": false,
-          "required": 4.5,
+          "large": true,
+          "required": 3,
           "ok": true,
-          "count": 18,
+          "count": 3,
           "samples": [
-            "Agence d'automatisation IA",
-            "01",
-            "02"
+            "à Annemasse",
+            "à Annemasse",
+            "à Annemasse ?"
           ],
           "note": ""
         },
@@ -1063,29 +1337,42 @@
           "fg": "#10d7fd",
           "bg": "#0f1526",
           "ratio": 10.52,
-          "large": true,
-          "required": 3,
+          "large": false,
+          "required": 4.5,
           "ok": true,
-          "count": 6,
+          "count": 5,
           "samples": [
-            "à Annemasse",
-            "ces défis ?",
-            "structurée"
+            "01",
+            "02",
+            "03"
           ],
           "note": ""
         },
         {
-          "fg": "#b9c1ce",
-          "bg": "#0a0e1a",
-          "ratio": 10.62,
+          "fg": "#10d7fd",
+          "bg": "#0d1221",
+          "ratio": 10.78,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "%",
+            "x",
+            "+"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
+          "bg": "#181d2d",
+          "ratio": 10.86,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 21,
+          "count": 1,
           "samples": [
-            "Chiffres-clés",
-            "entreprises accompagnées",
-            "productivité moyenne"
+            "Photo du fondateur"
           ],
           "note": ""
         },
@@ -1096,11 +1383,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 7,
+          "count": 6,
           "samples": [
             "À CONFIRMER : source et période",
-            "À CONFIRMER : source et période",
-            "À CONFIRMER : durée et format de l’audit"
+            "À CONFIRMER : durée et format de l’audit",
+            "À CONFIRMER : zones d’intervention réell"
           ],
           "note": ""
         },
@@ -1126,11 +1413,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 22,
+          "count": 18,
           "samples": [
-            "01",
-            "03",
-            "01"
+            "02",
+            "A",
+            "B"
           ],
           "note": ""
         },
@@ -1141,11 +1428,41 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 3,
+          "count": 5,
           "samples": [
-            "personnalisé",
-            "concrets",
-            "fréquentes"
+            "ces défis ?",
+            "structurée",
+            "et éprouvée"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
+          "bg": "#0f1526",
+          "ratio": 11.82,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 12,
+          "samples": [
+            "Gagnez du temps et augmentez votre chiff",
+            "Sans engagement",
+            "Réponse sous 24 h"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
+          "bg": "#0d1221",
+          "ratio": 12.1,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 4,
+          "samples": [
+            "Réduction du temps passé sur les tâches ",
+            "Plus de résultats avec les mêmes ressour",
+            "Augmentation significative de l'acquisit"
           ],
           "note": ""
         },
@@ -1169,33 +1486,78 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 14,
+          "count": 43,
           "samples": [
-            "Audit IA gratuit",
-            "Automatisation IA",
-            "Intégration IA sur-mesure"
+            "Les défis",
+            "Les entreprises qui n'adoptent pas l'int",
+            "Vos équipes passent trop de temps sur de"
           ],
           "note": ""
         },
         {
-          "fg": "#d5dbe5",
-          "bg": "#0f1526",
-          "ratio": 13.06,
+          "fg": "#ffffff",
+          "bg": "#1c2c48",
+          "ratio": 13.97,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "IA",
+            "Un audit",
+            "pour votre entreprise"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#1c2c48",
+          "ratio": 13.97,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 11,
+          "count": 3,
           "samples": [
-            "Annemasse",
-            "Grand Genève",
-            "Analyse de vos processus"
+            "Analyse détaillée et complète",
+            "Identification des opportunités IA",
+            "Recommandations concrètes"
           ],
           "note": ""
         },
         {
-          "fg": "#d5dbe5",
+          "fg": "#f0f4fa",
+          "bg": "#0f1526",
+          "ratio": 16.46,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 13,
+          "samples": [
+            "Agence d'automatisation IA",
+            "Annemasse",
+            "Grand Genève"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#0a0e1a",
+          "bg": "#eef3f8",
+          "ratio": 17.25,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "50",
+            "3",
+            "40"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#f0f4fa",
           "bg": "#0a0e1a",
-          "ratio": 13.84,
+          "ratio": 17.44,
           "large": false,
           "required": 4.5,
           "ok": true,
@@ -1227,7 +1589,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 19,
+          "count": 11,
           "samples": [
             "Automatisez répétitives",
             "les tâches",
@@ -1242,11 +1604,41 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 11,
+          "count": 7,
           "samples": [
             "Découvrir notre méthode",
-            "Perte de temps massive",
-            "Manque d'automatisation"
+            "Expert certifié",
+            "Approche personnalisée"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0d1322",
+          "ratio": 18.47,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Photo by on",
+            "Mimi Thian",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0d1221",
+          "ratio": 18.61,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 8,
+          "samples": [
+            "40",
+            "Gain de temps immédiat",
+            "3"
           ],
           "note": ""
         },
@@ -1257,7 +1649,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 12,
+          "count": 9,
           "samples": [
             "Photo by on",
             "Pascal Debrunner",
@@ -1272,11 +1664,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 18,
+          "count": 11,
           "samples": [
-            "50+",
-            "3x",
-            "40"
+            "fait face à",
+            "Votre entreprise",
+            "à Annemasse"
           ],
           "note": ""
         },
@@ -1287,13 +1679,13 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 14,
+          "count": 18,
           "samples": [
-            "Photo by on",
-            "Mimi Thian",
-            "Unsplash"
+            "Perte de temps massive",
+            "Manque d'automatisation",
+            "Concurrence plus rapide"
           ],
-          "note": "fond = photo (variable)"
+          "note": ""
         },
         {
           "fg": "#0a0e1a",
@@ -1343,9 +1735,9 @@
     },
     {
       "element": "Lien « Découvrir notre méthode »",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 19.25
     },
     {
       "element": "Bouton section Solution",
@@ -1361,33 +1753,33 @@
     },
     {
       "element": "Lien de navigation « Services »",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 19.25
     },
     {
       "element": "Lien « Toutes les questions »",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 19.25
     },
     {
       "element": "Lien e-mail du bloc contact",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 19.25
     },
     {
       "element": "Lien de pied de page « Audit IA gratuit »",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 19.25
     },
     {
       "element": "Lien légal « Mentions légales »",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 19.25
     }
   ],
   "composantsInterface": [
@@ -2644,11 +3036,15 @@
       },
       {
         "texte": "Photo by Mimi Thian on Unsplas",
-        "pireContraste": 16.98
+        "pireContraste": 18.23
       },
       {
         "texte": "Photo by Annie Spratt on Unspl",
-        "pireContraste": 16.25
+        "pireContraste": 18.23
+      },
+      {
+        "texte": "Photo by Jonathan Ansel Moy de",
+        "pireContraste": 19.39
       },
       {
         "texte": "Photo by Howei Wang on Unsplas",
@@ -2666,19 +3062,23 @@
       },
       {
         "texte": "Photo by Mimi Thian on Unsplas",
-        "pireContraste": 16.98
+        "pireContraste": 18.2
       },
       {
         "texte": "Photo by Annie Spratt on Unspl",
-        "pireContraste": 16.83
+        "pireContraste": 18.55
+      },
+      {
+        "texte": "Photo by Jonathan Ansel Moy de",
+        "pireContraste": 19.36
       },
       {
         "texte": "Photo by Howei Wang on Unsplas",
-        "pireContraste": 19.24
+        "pireContraste": 18.54
       },
       {
         "texte": "Photo by T Fang on Unsplash",
-        "pireContraste": 19.24
+        "pireContraste": 17.9
       }
     ],
     "1440": [
@@ -2688,11 +3088,15 @@
       },
       {
         "texte": "Photo by Mimi Thian on Unsplas",
-        "pireContraste": 16.64
+        "pireContraste": 18.39
       },
       {
         "texte": "Photo by Annie Spratt on Unspl",
-        "pireContraste": 18
+        "pireContraste": 19.11
+      },
+      {
+        "texte": "Photo by Jonathan Ansel Moy de",
+        "pireContraste": 19.36
       },
       {
         "texte": "Photo by Howei Wang on Unsplas",
@@ -2706,6 +3110,20 @@
   },
   "couplesDemandes": {
     "couplesReellementUtilises": {
+      "#0e7490 sur #eef3f8": {
+        "ratio": 4.8,
+        "requis": 4.5,
+        "ok": true,
+        "occurrences": 1,
+        "exemple": "01"
+      },
+      "#0e7490 sur #eef3f8 (grand texte)": {
+        "ratio": 4.8,
+        "requis": 3,
+        "ok": true,
+        "occurrences": 3,
+        "exemple": "+"
+      },
       "#0e7490 sur #f3f5f8": {
         "ratio": 4.91,
         "requis": 4.5,
@@ -2727,54 +3145,54 @@
         "occurrences": 3,
         "exemple": "«"
       },
-      "#8b96a9 sur #0f1526": {
-        "ratio": 6.09,
+      "#10d7fd sur #1c2c48": {
+        "ratio": 8.09,
         "requis": 4.5,
         "ok": true,
-        "occurrences": 3,
-        "exemple": "Adresse"
+        "occurrences": 4,
+        "exemple": "03"
       },
-      "#aab3c2 sur #0f1526": {
-        "ratio": 8.6,
-        "requis": 4.5,
+      "#10d7fd sur #1c2c48 (grand texte)": {
+        "ratio": 8.09,
+        "requis": 3,
         "ok": true,
         "occurrences": 1,
-        "exemple": "Vos données servent uniquement à vous re"
-      },
-      "#aab3c2 sur #0a0e1a": {
-        "ratio": 9.11,
-        "requis": 4.5,
-        "ok": true,
-        "occurrences": 2,
-        "exemple": "Agence d'automatisation IA à Annemasse, "
-      },
-      "#10d7fd sur #0f1526": {
-        "ratio": 10.52,
-        "requis": 4.5,
-        "ok": true,
-        "occurrences": 18,
-        "exemple": "Agence d'automatisation IA"
+        "exemple": "personnalisé"
       },
       "#10d7fd sur #0f1526 (grand texte)": {
         "ratio": 10.52,
         "requis": 3,
         "ok": true,
-        "occurrences": 6,
+        "occurrences": 3,
         "exemple": "à Annemasse"
+      },
+      "#10d7fd sur #0f1526": {
+        "ratio": 10.52,
+        "requis": 4.5,
+        "ok": true,
+        "occurrences": 5,
+        "exemple": "01"
+      },
+      "#10d7fd sur #0d1221 (grand texte)": {
+        "ratio": 10.78,
+        "requis": 3,
+        "ok": true,
+        "occurrences": 5,
+        "exemple": "%"
       },
       "#10d7fd sur #0a0e1a": {
         "ratio": 11.15,
         "requis": 4.5,
         "ok": true,
-        "occurrences": 22,
-        "exemple": "01"
+        "occurrences": 18,
+        "exemple": "02"
       },
       "#10d7fd sur #0a0e1a (grand texte)": {
         "ratio": 11.15,
         "requis": 3,
         "ok": true,
-        "occurrences": 3,
-        "exemple": "personnalisé"
+        "occurrences": 5,
+        "exemple": "ces défis ?"
       }
     },
     "matriceTheorique": [

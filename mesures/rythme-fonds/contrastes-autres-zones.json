@@ -1,0 +1,118 @@
+{
+  "v2-nuit-suisse": {
+    "390": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [],
+        "pire": {
+          "texte": "02",
+          "ratio": 6.01,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "Qui sommes-nous",
+        "lignes": 23,
+        "echecs": [],
+        "pire": {
+          "texte": "Qui sommes-nous",
+          "ratio": 7.4,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 29,
+        "echecs": [],
+        "pire": {
+          "texte": "Adresse",
+          "ratio": 6.23,
+          "seuil": 4.5,
+          "taille": 12,
+          "ok": true
+        }
+      }
+    ],
+    "768": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [],
+        "pire": {
+          "texte": "03",
+          "ratio": 4.77,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "Qui sommes-nous",
+        "lignes": 23,
+        "echecs": [],
+        "pire": {
+          "texte": "À CONFIRMER : noms des certifications",
+          "ratio": 6.43,
+          "seuil": 4.5,
+          "taille": 12,
+          "ok": true
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 29,
+        "echecs": [],
+        "pire": {
+          "texte": "Adresse",
+          "ratio": 5.66,
+          "seuil": 4.5,
+          "taille": 12,
+          "ok": true
+        }
+      }
+    ],
+    "1440": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [],
+        "pire": {
+          "texte": "Sans engagement",
+          "ratio": 6.47,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "Qui sommes-nous",
+        "lignes": 23,
+        "echecs": [],
+        "pire": {
+          "texte": "À CONFIRMER : nom du fondateur",
+          "ratio": 7.13,
+          "seuil": 4.5,
+          "taille": 12,
+          "ok": true
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 29,
+        "echecs": [],
+        "pire": {
+          "texte": "Adresse",
+          "ratio": 6.06,
+          "seuil": 4.5,
+          "taille": 12,
+          "ok": true
+        }
+      }
+    ]
+  }
+}

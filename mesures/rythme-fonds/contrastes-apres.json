@@ -1,0 +1,190 @@
+{
+  "v2-nuit-suisse": {
+    "390": [
+      {
+        "region": "01 Chiffres-clés",
+        "lignes": 12,
+        "echecs": [],
+        "pire": {
+          "texte": "01",
+          "ratio": 4.8,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "02 Défis",
+        "lignes": 19,
+        "echecs": [],
+        "pire": {
+          "texte": "02",
+          "ratio": 11.15,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "03 Solution",
+        "lignes": 21,
+        "echecs": [],
+        "pire": {
+          "texte": "03",
+          "ratio": 8.09,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "04 Méthode",
+        "lignes": 22,
+        "echecs": [],
+        "pire": {
+          "texte": "04",
+          "ratio": 11.15,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "05 Bénéfices",
+        "lignes": 27,
+        "echecs": [],
+        "pire": {
+          "texte": "Les bénéfices",
+          "ratio": 6.96,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      }
+    ],
+    "768": [
+      {
+        "region": "01 Chiffres-clés",
+        "lignes": 12,
+        "echecs": [],
+        "pire": {
+          "texte": "01",
+          "ratio": 4.8,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "02 Défis",
+        "lignes": 19,
+        "echecs": [],
+        "pire": {
+          "texte": "02",
+          "ratio": 11.15,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "03 Solution",
+        "lignes": 21,
+        "echecs": [],
+        "pire": {
+          "texte": "03",
+          "ratio": 8.09,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "04 Méthode",
+        "lignes": 22,
+        "echecs": [],
+        "pire": {
+          "texte": "04",
+          "ratio": 11.15,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "05 Bénéfices",
+        "lignes": 27,
+        "echecs": [],
+        "pire": {
+          "texte": "concrets",
+          "ratio": 8.43,
+          "seuil": 3,
+          "taille": 34,
+          "ok": true
+        }
+      }
+    ],
+    "1440": [
+      {
+        "region": "01 Chiffres-clés",
+        "lignes": 12,
+        "echecs": [],
+        "pire": {
+          "texte": "01",
+          "ratio": 4.8,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "02 Défis",
+        "lignes": 19,
+        "echecs": [],
+        "pire": {
+          "texte": "02",
+          "ratio": 11.15,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "03 Solution",
+        "lignes": 21,
+        "echecs": [],
+        "pire": {
+          "texte": "03",
+          "ratio": 8.09,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "04 Méthode",
+        "lignes": 22,
+        "echecs": [],
+        "pire": {
+          "texte": "04",
+          "ratio": 11.15,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "05 Bénéfices",
+        "lignes": 27,
+        "echecs": [],
+        "pire": {
+          "texte": "concrets",
+          "ratio": 6.2,
+          "seuil": 3,
+          "taille": 63.36,
+          "ok": true
+        }
+      }
+    ]
+  }
+}

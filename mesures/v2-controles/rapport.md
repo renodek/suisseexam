@@ -1,18 +1,18 @@
 # Recette de v2-nuit-suisse.html — contrôles automatisés
 
-Généré le 2026-09-24T23:01:55.762Z par `scripts/controle-v2.js`.
+Généré le 2026-09-24T23:51:59.602Z par `scripts/controle-v2.js`.
 
 ## Synthèse
 
 | Contrôle | Résultat |
 |---|---|
-| Survols identiques au design | oui (10 éléments interactifs) |
-| Focus clavier visible | oui (390 : 44, 1440 : 49, 390-menu-ouvert : 8) |
+| Survols identiques au design | **NON** (9 éléments interactifs) |
+| Focus clavier visible | oui (390 : 46, 1440 : 51, 390-menu-ouvert : 8) |
 | Focus non masqué par l'en-tête | oui |
 | Menu mobile : Échap, sortie du focus | oui |
 | FAQ (clic, clavier) | oui |
 | Formulaire (validation, confirmation) | oui |
-| Contrastes texte/fond | 0 échec(s) sur 29 + 30 couples |
+| Contrastes texte/fond | 0 échec(s) sur 43 + 43 couples |
 | Titres Fraunces sans débordement (390/360/320 px) | oui |
 | Aucun mot coupé au milieu | oui |
 | Aucun défilement horizontal (1440 → 320 px) | oui |
@@ -22,16 +22,18 @@ Généré le 2026-09-24T23:01:55.762Z par `scripts/controle-v2.js`.
 
 | Texte / fond | Ratio | Requis | OK | Occurrences (exemple) |
 |---|---|---|---|---|
+| #0e7490 sur #eef3f8 | 4.8:1 | 4.5:1 | oui | 1 (« 01 ») |
+| #0e7490 sur #eef3f8 (grand texte) | 4.8:1 | 3:1 | oui | 3 (« + ») |
 | #0e7490 sur #f3f5f8 | 4.91:1 | 4.5:1 | oui | 1 (« 07 ») |
 | #0e7490 sur #f3f5f8 (grand texte) | 4.91:1 | 3:1 | oui | 1 (« nos clients ») |
 | #0e7490 sur #ffffff (grand texte) | 5.36:1 | 3:1 | oui | 3 (« « ») |
-| #8b96a9 sur #0f1526 | 6.09:1 | 4.5:1 | oui | 3 (« Adresse ») |
-| #aab3c2 sur #0f1526 | 8.6:1 | 4.5:1 | oui | 1 (« Vos données servent uniquement à vous re ») |
-| #aab3c2 sur #0a0e1a | 9.11:1 | 4.5:1 | oui | 2 (« Agence d'automatisation IA à Annemasse,  ») |
-| #10d7fd sur #0f1526 | 10.52:1 | 4.5:1 | oui | 18 (« Agence d'automatisation IA ») |
-| #10d7fd sur #0f1526 (grand texte) | 10.52:1 | 3:1 | oui | 6 (« à Annemasse ») |
-| #10d7fd sur #0a0e1a | 11.15:1 | 4.5:1 | oui | 22 (« 01 ») |
-| #10d7fd sur #0a0e1a (grand texte) | 11.15:1 | 3:1 | oui | 3 (« personnalisé ») |
+| #10d7fd sur #1c2c48 | 8.09:1 | 4.5:1 | oui | 4 (« 03 ») |
+| #10d7fd sur #1c2c48 (grand texte) | 8.09:1 | 3:1 | oui | 1 (« personnalisé ») |
+| #10d7fd sur #0f1526 (grand texte) | 10.52:1 | 3:1 | oui | 3 (« à Annemasse ») |
+| #10d7fd sur #0f1526 | 10.52:1 | 4.5:1 | oui | 5 (« 01 ») |
+| #10d7fd sur #0d1221 (grand texte) | 10.78:1 | 3:1 | oui | 5 (« % ») |
+| #10d7fd sur #0a0e1a | 11.15:1 | 4.5:1 | oui | 18 (« 02 ») |
+| #10d7fd sur #0a0e1a (grand texte) | 11.15:1 | 3:1 | oui | 5 (« ces défis ? ») |
 
 Matrice théorique (texte normal, seuil 4,5:1) :
 
@@ -44,9 +46,9 @@ Matrice théorique (texte normal, seuil 4,5:1) :
 
 ## Texte posé sur photo (pixels rendus, pire cas)
 
-- 390 px : Photo by Pascal Debrunner on U → 17.61:1 ; Photo by Mimi Thian on Unsplas → 16.98:1 ; Photo by Annie Spratt on Unspl → 16.25:1 ; Photo by Howei Wang on Unsplas → 19.24:1 ; Photo by T Fang on Unsplash → 18.52:1
-- 768 px : Photo by Pascal Debrunner on U → 17.07:1 ; Photo by Mimi Thian on Unsplas → 16.98:1 ; Photo by Annie Spratt on Unspl → 16.83:1 ; Photo by Howei Wang on Unsplas → 19.24:1 ; Photo by T Fang on Unsplash → 19.24:1
-- 1440 px : Photo by Pascal Debrunner on U → 17.07:1 ; Photo by Mimi Thian on Unsplas → 16.64:1 ; Photo by Annie Spratt on Unspl → 18:1 ; Photo by Howei Wang on Unsplas → 19.24:1 ; Photo by T Fang on Unsplash → 17.9:1
+- 390 px : Photo by Pascal Debrunner on U → 17.61:1 ; Photo by Mimi Thian on Unsplas → 18.23:1 ; Photo by Annie Spratt on Unspl → 18.23:1 ; Photo by Jonathan Ansel Moy de → 19.39:1 ; Photo by Howei Wang on Unsplas → 19.24:1 ; Photo by T Fang on Unsplash → 18.52:1
+- 768 px : Photo by Pascal Debrunner on U → 17.07:1 ; Photo by Mimi Thian on Unsplas → 18.2:1 ; Photo by Annie Spratt on Unspl → 18.55:1 ; Photo by Jonathan Ansel Moy de → 19.36:1 ; Photo by Howei Wang on Unsplas → 18.54:1 ; Photo by T Fang on Unsplash → 17.9:1
+- 1440 px : Photo by Pascal Debrunner on U → 17.07:1 ; Photo by Mimi Thian on Unsplas → 18.39:1 ; Photo by Annie Spratt on Unspl → 19.11:1 ; Photo by Jonathan Ansel Moy de → 19.36:1 ; Photo by Howei Wang on Unsplas → 19.24:1 ; Photo by T Fang on Unsplash → 17.9:1
 
 ## Titres en Fraunces sur petits écrans
 

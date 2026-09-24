@@ -5,6 +5,7 @@
 // clair, 0,5 % pour un texte sombre) et calculer le rapport WCAG. Seuil 4,5:1, ou 3:1 pour le grand texte
 // (≥ 24 px, ou ≥ 18,66 px en gras).
 // Usage : node scripts/contraste-fonds.js [avant|apres]   -> mesures/fonds-images/contrastes-<état>.json et .md
+// Options (variables d'environnement) : PAGE=v2-nuit-suisse, ZONES="^0[1-5]" (filtre sur le nom de zone), SORTIE=dossier.
 // Contrôle négatif : CSS_TEST="..." injecte du CSS (ex. supprimer les voiles) pour vérifier que la mesure détecte les échecs.
 // Durée maximale : 90 s par page et par largeur.
 const { chromium } = require('playwright');
@@ -25,9 +26,16 @@ const PAGES = {
     { nom: 'Héros', sel: '.hero-sec' },
     { nom: 'Qui sommes-nous', sel: '[data-screen-label="06 Qui sommes-nous"]' },
     { nom: 'Contact', sel: '#contact' },
+    { nom: '01 Chiffres-clés', sel: '[data-screen-label="01 Chiffres-clés"]' },
+    { nom: '02 Défis', sel: '[data-screen-label="02 Défis"]' },
+    { nom: '03 Solution', sel: '[data-screen-label="03 Solution"]' },
+    { nom: '04 Méthode', sel: '[data-screen-label="04 Méthode"]' },
+    { nom: '05 Bénéfices', sel: '[data-screen-label="05 Bénéfices"]' },
   ],
 };
-const SORTIE = path.resolve('mesures/fonds-images');
+if (process.env.PAGE) for (const k of Object.keys(PAGES)) if (k !== process.env.PAGE) delete PAGES[k];
+if (process.env.ZONES) for (const k of Object.keys(PAGES)) PAGES[k] = PAGES[k].filter((r) => new RegExp(process.env.ZONES).test(r.nom));
+const SORTIE = path.resolve(process.env.SORTIE || 'mesures/fonds-images');
 fs.mkdirSync(SORTIE, { recursive: true });
 
 const lin = (c) => { c /= 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
