@@ -27,6 +27,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<!-- ANIM:début -->
+<script>
+/* Animations : classe "anim" posée seulement si l'utilisateur n'a pas demandé moins de mouvement, si l'URL ne contient
+   pas ?statique et si IntersectionObserver existe. Sans elle, la page s'affiche directement dans son état final.
+   Filet de sécurité : si le script d'animation n'a pas démarré au bout de 3 s, la classe est retirée. */
+(function(){var d=document.documentElement;if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!/[?&]statique/.test(location.search)&&'IntersectionObserver' in window){d.classList.add('anim');setTimeout(function(){if(!d.hasAttribute('data-anim-ok'))d.classList.remove('anim')},3000)}})();
+</script>
+<!-- ANIM:fin -->
 <title>V1 — Clarté | MZI Consulting</title>
 
 <!-- Audit §2, §3 : title actuel du site réel dilue 3 intentions à la fois et omet la marque
@@ -430,6 +438,38 @@
   .footer-legal{display:flex;flex-wrap:wrap;gap:12px 28px}
   .footer-legal-link{display:inline-flex;align-items:center;min-height:24px;padding:4px 0;margin:-4px 0;font:400 14px var(--font-body);color:var(--gray-text);text-decoration:none}
   .footer-legal-link:hover{color:var(--cyan)}
+  /* ANIM:CSS début */
+  /* Animations natives (CSS, SVG, IntersectionObserver, requestAnimationFrame) — propriétés animées : transform, opacity
+     et stroke-dashoffset uniquement, donc aucun décalage de mise en page. Tout ce qui suit est réservé à <html class="anim">
+     (voir le script de l'en-tête) ; sans cette classe, le contenu est dans son état final. */
+  .cnt-live,.field-bar{display:none}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .sent-check{width:56px;height:56px;margin-bottom:4px}
+  .sent-check circle,.sent-check path{fill:none;stroke:var(--sent-color);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+  .anim [data-reveal]{opacity:0;transform:translateY(18px)}
+  .anim [data-reveal].in{opacity:1;transform:none;transition:opacity .5s ease-out var(--d,0ms),transform .5s cubic-bezier(.22,1,.36,1) var(--d,0ms)}
+  .anim .cnt{position:relative;display:inline-block}
+  .anim .cnt-live{display:block;position:absolute;left:0;top:0;white-space:nowrap}
+  .anim .cnt:not(.done) .cnt-final{opacity:0}
+  .anim .cnt.done .cnt-live{display:none}
+  .anim .form-group{position:relative}
+  .anim .field-bar{display:block;position:absolute;left:14px;right:14px;bottom:1px;height:2px;border-radius:2px;background:var(--bar-color);transform:scaleX(0);transform-origin:0 50%;pointer-events:none;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+  .anim .form-group:focus-within .field-bar{transform:scaleX(1)}
+  .anim .form-group label{transition:transform .3s cubic-bezier(.22,1,.36,1)}
+  .anim .form-group:focus-within label{transform:translateX(3px)}
+  .anim .btn svg{transition:transform .3s cubic-bezier(.22,1,.36,1)}
+  .anim .btn:hover svg,.anim .btn:focus-visible svg{transform:translateX(5px)}
+  .anim .sc-ring{stroke-dasharray:151;stroke-dashoffset:151;animation:draw .5s ease-out .05s forwards}
+  .anim .sc-tick{stroke-dasharray:34;stroke-dashoffset:34;animation:draw .35s ease-out .45s forwards}
+  :root{--sent-color:var(--teal);--bar-color:var(--teal)}
+  /* V1 : timeline de la méthode — la ligne bleu pétrole se remplit avec le défilement (variable --f, de 0 à 1, posée par le script),
+     l'étape franchie reçoit un halo (classe "on"). */
+  .step-circle{position:relative;isolation:isolate}
+  .anim .step-circle::before{content:"";position:absolute;inset:-7px;border-radius:50%;background:var(--teal);opacity:0;transform:scale(.6);z-index:-1}
+  .anim .methode-step.on .step-circle::before{opacity:.14;transform:scale(1);transition:opacity .4s ease-out,transform .5s cubic-bezier(.22,1,.36,1)}
+  .step-line{position:relative}
+  .anim .step-line::after{content:"";position:absolute;inset:0;background:var(--teal);transform:scaleX(var(--f,0));transform-origin:0 50%}
+  /* ANIM:CSS fin */
 </style>
 </head>
 <body>
@@ -865,15 +905,15 @@
       <form class="contact-form" id="contact-form">
         <div class="form-group">
           <label for="f-nom">Nom complet</label>
-          <input class="form-field" id="f-nom" name="nom" required autocomplete="name">
+          <input class="form-field" id="f-nom" name="nom" required autocomplete="name"><span class="field-bar" aria-hidden="true"></span>
         </div>
         <div class="form-group">
           <label for="f-email">E-mail professionnel</label>
-          <input class="form-field" id="f-email" name="email" type="email" required autocomplete="email">
+          <input class="form-field" id="f-email" name="email" type="email" required autocomplete="email"><span class="field-bar" aria-hidden="true"></span>
         </div>
         <div class="form-group">
           <label for="f-msg">Comment pouvons-nous vous aider ?</label>
-          <textarea class="form-field" id="f-msg" name="message" rows="4"></textarea>
+          <textarea class="form-field" id="f-msg" name="message" rows="4"></textarea><span class="field-bar" aria-hidden="true"></span>
         </div>
         <button type="submit" class="btn btn-teal">Réserver mon audit gratuit
           <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
@@ -881,6 +921,7 @@
         <p class="form-note">Vos données servent uniquement à vous recontacter. <a href="/politique-de-confidentialite/">Politique de confidentialité</a></p>
       </form>
       <div class="form-sent" id="form-sent" role="status" tabindex="-1" hidden>
+        <svg class="sent-check" viewBox="0 0 52 52" aria-hidden="true"><circle class="sc-ring" cx="26" cy="26" r="24"/><path class="sc-tick" d="M15 27l8 8 15-16"/></svg>
         <div class="form-sent-title">Merci, votre demande est envoyée.</div>
         <p class="form-sent-text">Nous revenons vers vous sous 24 h pour planifier votre audit.</p>
       </div>
@@ -1052,5 +1093,103 @@
   }
 })();
 </script>
+<!-- ANIM:début -->
+<script>
+/* Animations natives (voir le bloc CSS « Animations »). Rien ne s'exécute sans <html class="anim">. Toute erreur retire la classe :
+   la page revient alors à son état final visible. */
+(function(){
+  var root = document.documentElement;
+  if (!root.classList.contains('anim')) return;
+  try {
+    var all = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+    var ease = function(t){ return 1 - Math.pow(1 - t, 3); };
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+
+    // Chiffres : le texte final reste dans le HTML (.cnt-final, invisible pendant le comptage) ; une copie décorative
+    // en position absolue (.cnt-live, aria-hidden) compte de 0 à la valeur, une seule fois, en 600 ms.
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        cio.unobserve(e.target);
+        var o = e.target.__cnt, t0 = null;
+        var step = function(t){
+          if (t0 === null) t0 = t;
+          var p = Math.min(1, (t - t0) / 600);
+          o.tn.nodeValue = o.pre + Math.round(o.to * ease(p)) + o.suf;
+          if (p < 1) requestAnimationFrame(step); else e.target.classList.add('done');
+        };
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    var counters = function(sel){
+      all(sel).forEach(function(el){
+        var fin = document.createElement('span');
+        fin.className = 'cnt-final';
+        while (el.firstChild) fin.appendChild(el.firstChild);
+        var live = fin.cloneNode(true);
+        live.className = 'cnt-live';
+        live.setAttribute('aria-hidden', 'true');
+        var tn = null;
+        (function find(n){ for (var c = n.firstChild; c && !tn; c = c.nextSibling) { if (c.nodeType === 3 && /\d/.test(c.nodeValue)) tn = c; else if (c.nodeType === 1) find(c); } })(live);
+        var m = tn && /^(\D*)(\d+)(.*)$/.exec(tn.nodeValue);
+        el.appendChild(fin);
+        if (!m) return;
+        el.appendChild(live);
+        el.classList.add('cnt');
+        el.__cnt = { tn: tn, pre: m[1], to: parseInt(m[2], 10), suf: m[3] };
+        tn.nodeValue = m[1] + '0' + m[3];
+        cio.observe(el);
+      });
+    };
+
+    // Apparition en cascade : décalage selon le rang parmi les éléments frères à révéler.
+    var reveal = function(el){
+      var i = 0;
+      for (var s = el.previousElementSibling; s; s = s.previousElementSibling) if (s.hasAttribute('data-reveal')) i++;
+      el.style.setProperty('--d', Math.min(i, 4) * 90 + 'ms');
+      io.observe(el);
+    };
+
+    // Chiffres-clés : héros et bénéfices.
+    counters('.hero-stats strong, .benefit-value');
+
+    // Cartes (défis, solution, bénéfices, témoignages) : fondu et glissement vers le haut, en cascade.
+    ['.challenge-grid', '.solution-grid', '.benefit-grid', '.testimonial-grid'].forEach(function(g){
+      all(g).forEach(function(grid){
+        Array.prototype.forEach.call(grid.children, function(c){ c.setAttribute('data-reveal', ''); });
+      });
+    });
+    all('[data-reveal]').forEach(reveal);
+
+    // Timeline de la méthode : la ligne se remplit au fil du défilement, chaque étape s'active à son passage.
+    var list = document.querySelector('.methode-steps');
+    var steps = all('.methode-step');
+    if (list && steps.length) {
+      var ticking = false;
+      var update = function(){
+        ticking = false;
+        var vh = window.innerHeight, r = list.getBoundingClientRect();
+        var p = Math.min(1, Math.max(0, (vh * 0.8 - r.top) / Math.max(r.height, vh * 0.5)));
+        steps.forEach(function(s, i){
+          s.style.setProperty('--f', Math.min(1, Math.max(0, p * steps.length - i)).toFixed(3));
+          s.classList.toggle('on', p * steps.length > i);
+        });
+      };
+      var onScroll = function(){ if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+      new IntersectionObserver(function(es){
+        if (es[0].isIntersecting) { window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onScroll); update(); }
+        else { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); }
+      }, { rootMargin: '25% 0px 25% 0px' }).observe(list);
+    }
+
+    root.setAttribute('data-anim-ok', '');
+  } catch (err) {
+    root.classList.remove('anim');
+  }
+})();
+</script>
+<!-- ANIM:fin -->
 </body>
 </html>

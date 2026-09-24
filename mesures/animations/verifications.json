@@ -1,0 +1,278 @@
+{
+ "v1-clarte 1440 anime": {
+  "anim": true,
+  "ok": true,
+  "cls": 0.0008204521692011746,
+  "shifts": [
+   {
+    "v": 0.0006451447663483797,
+    "s": "#text|btn btn-cyan compact|link-underline|[object SVGAnimatedString]"
+   },
+   {
+    "v": 0.0001753074028527949,
+    "s": "#text|nav-desktop|P|todo dark"
+   }
+  ],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 7,
+  "compteurs_termines": 7,
+  "debordement": 0,
+  "erreurs": [],
+  "titres_differents_du_statique": 0
+ },
+ "v1-clarte 1440 statique": {
+  "anim": false,
+  "ok": false,
+  "cls": 0.0008204521692011746,
+  "shifts": [
+   {
+    "v": 0.0006451447663483797,
+    "s": "#text|btn btn-cyan compact|link-underline|[object SVGAnimatedString]"
+   },
+   {
+    "v": 0.0001753074028527949,
+    "s": "#text|nav-desktop|P|todo dark"
+   }
+  ],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v1-clarte 1440 reduit": {
+  "anim": false,
+  "ok": false,
+  "cls": 0.000820002183534808,
+  "shifts": [
+   {
+    "v": 0.0001748574171864283,
+    "s": "#text|nav-desktop|P|todo dark"
+   },
+   {
+    "v": 0.0006451447663483797,
+    "s": "#text|btn btn-cyan compact|link-underline|[object SVGAnimatedString]"
+   }
+  ],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v1-clarte 1440 sansjs": {
+  "anim": false,
+  "ok": false,
+  "cls": 0,
+  "shifts": [],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v1-clarte 390 anime": {
+  "anim": true,
+  "ok": true,
+  "cls": 0.0022370152738208295,
+  "shifts": [
+   {
+    "v": 0.0007486926242481798,
+    "s": "::after|[object SVGAnimatedString]"
+   },
+   {
+    "v": 0.0014883226495726496,
+    "s": "::after|hero-checklist|[object SVGAnimatedString]"
+   }
+  ],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 7,
+  "compteurs_termines": 7,
+  "debordement": 0,
+  "erreurs": [],
+  "titres_differents_du_statique": 0
+ },
+ "v1-clarte 390 statique": {
+  "anim": false,
+  "ok": false,
+  "cls": 0.0022370152738208295,
+  "shifts": [
+   {
+    "v": 0.0007486926242481798,
+    "s": "::after|[object SVGAnimatedString]"
+   },
+   {
+    "v": 0.0014883226495726496,
+    "s": "::after|hero-checklist|[object SVGAnimatedString]"
+   }
+  ],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v1-clarte 390 reduit": {
+  "anim": false,
+  "ok": false,
+  "cls": 0.0022536273345995566,
+  "shifts": [
+   {
+    "v": 0.001485181623931624,
+    "s": "::after|hero-checklist|[object SVGAnimatedString]"
+   },
+   {
+    "v": 0.0007684457106679328,
+    "s": "::after|[object SVGAnimatedString]"
+   }
+  ],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v1-clarte 390 sansjs": {
+  "anim": false,
+  "ok": false,
+  "cls": 0,
+  "shifts": [],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v2-nuit-suisse 1440 anime": {
+  "anim": true,
+  "ok": true,
+  "cls": 0,
+  "shifts": [],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 59,
+  "compteurs": 7,
+  "compteurs_termines": 7,
+  "debordement": 0,
+  "erreurs": [],
+  "titres_differents_du_statique": 0
+ },
+ "v2-nuit-suisse 1440 statique": {
+  "anim": false,
+  "ok": false,
+  "cls": 0.0004708423755787037,
+  "shifts": [
+   {
+    "v": 0.0004708423755787037,
+    "s": "#text"
+   }
+  ],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v2-nuit-suisse 1440 reduit": {
+  "anim": false,
+  "ok": false,
+  "cls": 0.0004708423755787037,
+  "shifts": [
+   {
+    "v": 0.0004708423755787037,
+    "s": "#text"
+   }
+  ],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v2-nuit-suisse 1440 sansjs": {
+  "anim": false,
+  "ok": false,
+  "cls": 0,
+  "shifts": [],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v2-nuit-suisse 390 anime": {
+  "anim": true,
+  "ok": true,
+  "cls": 0,
+  "shifts": [],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 59,
+  "compteurs": 7,
+  "compteurs_termines": 7,
+  "debordement": 0,
+  "erreurs": [],
+  "titres_differents_du_statique": 0
+ },
+ "v2-nuit-suisse 390 statique": {
+  "anim": false,
+  "ok": false,
+  "cls": 0,
+  "shifts": [],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v2-nuit-suisse 390 reduit": {
+  "anim": false,
+  "ok": false,
+  "cls": 0,
+  "shifts": [],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ },
+ "v2-nuit-suisse 390 sansjs": {
+  "anim": false,
+  "ok": false,
+  "cls": 0,
+  "shifts": [],
+  "masques": 0,
+  "exemples_masques": [],
+  "mots": 0,
+  "compteurs": 0,
+  "compteurs_termines": 0,
+  "debordement": 0,
+  "erreurs": []
+ }
+}

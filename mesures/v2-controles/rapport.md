@@ -1,6 +1,6 @@
 # Recette de v2-nuit-suisse.html — contrôles automatisés
 
-Généré le 2026-09-24T21:03:20.109Z par `scripts/controle-v2.js`.
+Généré le 2026-09-24T22:30:43.732Z par `scripts/controle-v2.js`.
 
 ## Synthèse
 
@@ -45,7 +45,7 @@ Matrice théorique (texte normal, seuil 4,5:1) :
 ## Texte posé sur photo (pixels rendus, pire cas)
 
 - 390 px : Photo by Pascal Debrunner on U → 17.61:1 ; Photo by Mimi Thian on Unsplas → 16.98:1 ; Photo by Annie Spratt on Unspl → 16.25:1 ; Photo by Howei Wang on Unsplas → 19.24:1 ; Photo by T Fang on Unsplash → 18.52:1
-- 768 px : Photo by Pascal Debrunner on U → 17.07:1 ; Photo by Mimi Thian on Unsplas → 16.98:1 ; Photo by Annie Spratt on Unspl → 16.83:1 ; Photo by Howei Wang on Unsplas → 18.54:1 ; Photo by T Fang on Unsplash → 17.9:1
+- 768 px : Photo by Pascal Debrunner on U → 17.07:1 ; Photo by Mimi Thian on Unsplas → 16.98:1 ; Photo by Annie Spratt on Unspl → 16.83:1 ; Photo by Howei Wang on Unsplas → 19.24:1 ; Photo by T Fang on Unsplash → 19.24:1
 - 1440 px : Photo by Pascal Debrunner on U → 17.07:1 ; Photo by Mimi Thian on Unsplas → 16.64:1 ; Photo by Annie Spratt on Unspl → 18:1 ; Photo by Howei Wang on Unsplas → 19.24:1 ; Photo by T Fang on Unsplash → 17.9:1
 
 ## Titres en Fraunces sur petits écrans

@@ -634,3 +634,59 @@ Lecture : V1 gagne 3 photos (+273 Ko à 1440 px, +110 Ko en mobile) ; le chargem
 - `scripts/fonds-images.js`, `scripts/unsplash-recherche.js`, `scripts/contraste-fonds.js`, `scripts/poids-fonds.js`, `scripts/verifie-fonds.js` (nouveaux) ; `.gitignore` (originaux `source/images/fonds/`)
 - `mesures/fonds-images/` : comparaisons avant/après (`comparaison-<page>-<1440|390>.jpg`, avant à gauche), `sections/` (zones après, 1440 et 390 px), `contrastes-apres.md/json`, `contrastes-temoin-sans-voile.md/json`, `poids-avant.json`, `poids-apres.json`, `variantes.json`, `verifications.json`
 - `mesures/v1-controles/` et `mesures/v2-controles/` (rapports régénérés)
+
+## Étape 16 — Animations natives dans les deux propositions (2026-09-24)
+
+### Ce qui a été fait
+
+- **Mécanisme commun** (`scripts/anime-pages.js`, idempotent : blocs encadrés par des marqueurs `ANIM:début` / `ANIM:fin`, relancer l'outil les remplace) : un petit script en tête de page pose `<html class="anim">` uniquement si `prefers-reduced-motion` n'est pas actif, si l'URL ne contient pas `?statique` et si `IntersectionObserver` existe. Tout le CSS des animations est préfixé par `.anim` : sans cette classe, ou sans JavaScript, le contenu est dans son état final (le HTML source n'est pas masqué). Filet de sécurité : si le script d'animation n'a pas démarré après 3 s, ou s'il lève une erreur, la classe est retirée.
+- **Propriétés animées : `transform`, `opacity` et `stroke-dashoffset` seulement.** Durées de 300 à 600 ms, courbes `ease-out` ou `cubic-bezier(.22,1,.36,1)`, aucune boucle. Une seule exception, demandée : le zoom du héros V2 (20 s, une fois).
+- **Chiffres qui comptent (V1 et V2)** : le texte final reste dans le HTML (`.cnt-final`, invisible pendant le comptage) ; une copie décorative en position absolue (`.cnt-live`, `aria-hidden`) compte de 0 à la valeur en 600 ms, une seule fois, à l'apparition (seuil 60 %). Aucune largeur de texte ne change dans le flux : pas de décalage.
+- **Cascade d'apparition** : fondu et glissement de 18 px vers le haut en 500 ms, décalage de 90 ms par carte (4 rangs au plus).
+- **Micro-interactions (V1 et V2)** : la flèche des boutons avance de 5 px au survol et au focus clavier (300 ms) ; au focus d'un champ, une barre (teal en V1, cyan en V2) se déploie sous le champ et le libellé se décale de 3 px ; à l'envoi, une coche SVG se dessine dans un cercle (`stroke-dashoffset`, 500 ms puis 350 ms). Le style de focus existant (bordure et halo) est inchangé et reste instantané.
+- **V1 « Clarté »** : chiffres du héros et des bénéfices ; cartes des défis, de la solution, des bénéfices et des témoignages en cascade ; timeline de la méthode : la ligne bleu pétrole de chaque étape se remplit au fil du défilement (variable `--f` de 0 à 1 posée par `requestAnimationFrame`, transformée en `scaleX`), l'étape franchie reçoit un halo (classe `on`).
+- **V2 « Nuit suisse »** : trait cyan des repères de section qui se dessine (`scaleX`, 600 ms) puis numéro qui apparaît en fin de tracé ; zoom du héros de 1,00 à 1,06 en 20 s, une seule fois, sur la photo (recadrée par `overflow:hidden`) ; chiffres en Geist Mono (bandeau et bénéfices) ; H1 et H2 mot par mot (500 ms par mot, 55 ms de décalage) ; l'ancien mécanisme d'apparition de la page (styles en ligne, 0,7 s) est remplacé par le mécanisme commun.
+- **Titres mot par mot, sans masquer le texte** : le HTML source contient le titre entier ; le découpage en `<span class="w">` se fait à l'exécution, sur les seuls espaces ordinaires (les espaces insécables et fines insécables des règles typographiques ne sont pas coupés), en conservant les balises `em` et `.nb`.
+- Outils : `scripts/anime-pages.js`, `scripts/verifie-animations.js`, `scripts/video-animations.js`.
+
+### Décisions prises et leur justification
+
+- **Activation de l'étape de la timeline par un halo, pas par un remplissage coloré** : changer une couleur n'est pas `transform`/`opacity` ; un disque teal à 14 % qui grossit (`scale`, `opacity`) donne le même repère sans autre propriété.
+- **Focus des champs : barre qui se déploie plutôt qu'une bordure qui change de couleur**, pour la même raison.
+- **Comptage sur une copie superposée** : modifier le texte du chiffre lui-même aurait changé sa largeur à chaque image et déplacé le texte voisin.
+- **État masqué avant apparition uniquement sous `.anim`** : il n'existe jamais sans JavaScript ni en mode statique.
+- **Les fonds animés existants ne sont pas touchés** (canvas des héros). Sections avec photo de fond : aucun effet de fond ajouté, hors le zoom du héros V2 demandé.
+
+### Mesures
+
+**CLS et console** (`scripts/verifie-animations.js`, Chromium, défilement complet ; 4 modes × 2 pages × 2 largeurs) :
+
+| Page | Largeur | Animé | `?statique` | Mouvement réduit | Sans JavaScript |
+|---|---|---|---|---|---|
+| V1 | 1440 px | 0,0008 | 0,0008 | 0,0008 | 0,0000 |
+| V1 | 390 px | 0,0022 | 0,0022 | 0,0023 | 0,0000 |
+| V2 | 1440 px | 0,0000 | 0,0005 | 0,0005 | 0,0000 |
+| V2 | 390 px | 0,0000 | 0,0000 | 0,0000 | 0,0000 |
+
+- Les animations n'ajoutent aucun décalage : le CLS animé est égal ou inférieur à celui du mode statique. Le CLS de la V1 (0,0008 et 0,0022, soit 1 à 2 % du seuil « bon » de 0,1) est présent à l'identique en mode statique ; les éléments déplacés sont du texte de la navigation et de la liste du héros, ce qui évoque le changement de police au chargement (cause probable, non vérifiée). Il est nul sans JavaScript, sans que j'en aie élucidé la raison. Le CLS de la V2 animée est nul ; la raison n'est pas vérifiée non plus (les titres sont masqués au chargement, ce qui peut les exclure du calcul).
+- 0 erreur de console ou de page dans les 16 mesures ; 0 défilement horizontal.
+- **Rendu final** : après défilement complet en mode animé, 0 élément resté masqué (`data-reveal`, numéros, titres, chiffres) ; les 7 chiffres de chaque page sont arrivés à leur valeur ; la hauteur de tous les titres est identique en mode animé et en mode statique.
+- **`?statique` et mouvement réduit** : pas de classe `anim`, aucun mot découpé, aucun chiffre enveloppé ; les captures pleine page en 1440 et 390 px sont identiques pixel pour pixel (0 pixel différent sur 4 captures) à celles d'avant l'étape. Sans JavaScript : tout le contenu visible.
+- Contrôles d'interaction et de contraste (`controle-v1.js`, `controle-v2.js`) : 0 échec (26 à 30 couples).
+- **Vidéos du défilement** (`scripts/video-animations.js`, `mesures/animations/`) : `v1-clarte-1440.webm` (4,4 Mo), `v1-clarte-390.webm` (3,0 Mo), `v2-nuit-suisse-1440.webm` (3,7 Mo), `v2-nuit-suisse-390.webm` (3,3 Mo). 3 s au sommet, défilement continu à 520 px/s (bureau) ou 620 px/s (mobile), 1,5 s en bas. Je n'ai pas pu les visionner moi-même : j'ai vérifié le rendu sur des captures prises aux moments clés (mots du H1 en cours d'apparition, comptage, trait de repère, timeline à trois niveaux d'avancement, focus de champ, coche de confirmation).
+
+### Réserves
+
+- **Héros V2 : trois mouvements superposés** (fond animé du canvas existant, zoom lent, titre mot par mot), plus que « un seul effet marquant par section ». Je les ai gardés parce que le zoom et le titre sont demandés et que le canvas existait ; à arbitrer après visionnage (couper le canvas sous `.anim` est une ligne de CSS).
+- **LCP de la V2 non mesuré** : le H1 apparaît mot par mot (environ 1 s pour le titre du héros), donc le texte principal est peint plus tard qu'avant.
+- La rapidité du comptage (600 ms) est la limite haute des durées demandées ; le zoom de 20 s est la seule durée hors fourchette.
+- Le CLS résiduel de la V1 n'est pas traité : la V1 n'a pas de police de secours à métriques ajustées comme la V2.
+- Mesures et vidéos faites avec Chromium seul ; les lecteurs d'écran n'ont pas été testés sur les titres découpés en mots.
+- Les vidéos pèsent 14 Mo au total dans le dépôt.
+
+### Fichiers produits
+
+- `livrable/v1-clarte.html`, `livrable/v2-nuit-suisse.html` (modifiés)
+- `scripts/anime-pages.js`, `scripts/verifie-animations.js`, `scripts/video-animations.js` (nouveaux)
+- `mesures/animations/` : `verifications.json`, quatre vidéos `.webm`
+- `mesures/v2-controles/` (rapports régénérés)
