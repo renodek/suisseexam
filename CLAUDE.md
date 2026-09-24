@@ -2,7 +2,7 @@
 
 ## Contexte
 
-Test de recrutement pour MZI Consulting (mzi-consulting.com), agence d'automatisation IA à Annemasse. Cible : PME d'Annemasse, du Grand Genève et de Suisse romande. Demande du recruteur : améliorations SEO et design livrées en HTML. Il insiste fortement sur la qualité du design.
+Test de recrutement pour MZI Consulting (mzi-consulting.com), agence d'automatisation IA à Annemasse. Cible : PME d'Annemasse et de Haute-Savoie ; Grand Genève et Suisse romande = opportunité à proposer, non confirmée par le client. Demande du recruteur : améliorations SEO et design livrées en HTML. Il insiste fortement sur la qualité du design.
 
 Le site actuel est un one-pager WordPress/Elementor : une seule URL, menu à ancres (`#probleme`, `#solution`, `#methodologie`, `#pourquoi-nous`), 3 pages légales.
 

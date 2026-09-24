@@ -302,11 +302,11 @@
     <div class="hero-audit">
       <span class="eyebrow">Audit SEO &amp; Design — mzi-consulting.com</span>
       <h1>Un site bien construit qui freine ses propres ambitions.</h1>
-      <p class="lede">Le site actuel exécute proprement l'existant qu'il documente : SEO mécanique impeccable (100/100), zéro décalage de mise en page, une identité visuelle marquante. Mais il reste structurellement une carte de visite là où le brief demande un site qui couvre trois marchés (Annemasse, Grand Genève, Suisse romande), génère des leads mesurables et résiste à l'examen d'un lecteur humain comme d'un agent IA.</p>
+      <p class="lede">Le site actuel exécute proprement l'existant qu'il documente : SEO mécanique impeccable (100/100), zéro décalage de mise en page, une identité visuelle marquante. Mais il reste structurellement une carte de visite : une seule page, aucun lead mesurable identifiable, une résistance limitée à l'examen d'un lecteur humain comme d'un agent IA — et une adresse suisse inscrite dans ses propres mentions légales (§4) qui suggère une ambition géographique jamais formalisée dans son contenu.</p>
       <div class="hero-meta">
         <span><strong>Périmètre</strong> accueil (seule page indexable substantielle)</span>
         <span><strong>Outils</strong> Lighthouse 13.x, PageSpeed Insights, lecture directe du DOM rendu</span>
-        <span><strong>Convention</strong> chaque constat cite sa preuve — voir <code>source/</code> dans le dépôt de collecte</span>
+        <span><strong>Convention</strong> chaque constat cite sa preuve — sources de collecte disponibles sur demande</span>
       </div>
     </div>
 
@@ -378,8 +378,8 @@
         </li>
         <li>
           <div>
-            <h4>Sortir du modèle une-page pour couvrir le marché suisse</h4>
-            <p>Le brief cible Annemasse, le Grand Genève et la Suisse romande ; le site actuel ne mentionne jamais « Genève » ni « Suisse ». Sans pages dédiées, cette partie du marché est structurellement invisible en recherche (§2, §4).</p>
+            <h4>Clarifier l'ambition envers le marché suisse</h4>
+            <p>Le contenu actuel ne mentionne jamais « Genève » ni « Suisse ». Pourtant Annemasse appartient à l'agglomération transfrontalière du Grand Genève, le <code>llms.txt</code> du site décrivait autrefois l'activité comme « Consultant IA Genève », et ses mentions légales déclarent une adresse à Genève pour le propriétaire du site (§4, §7). Si MZI souhaite capter cette clientèle, cela suppose des pages dédiées, aujourd'hui absentes (§2, §4).</p>
           </div>
         </li>
         <li>
@@ -391,7 +391,7 @@
         <li>
           <div>
             <h4>Corriger les erreurs on-page à faible effort</h4>
-            <p>Espace manquant dans le H1, <code>alt="default-logo"</code>, image Open Graph sous-dimensionnée, faute dans un CTA, <code>llms.txt</code> obsolète. Gains rapides, effort minimal (§3, §6, §7).</p>
+            <p><code>alt="default-logo"</code>, image Open Graph sous-dimensionnée, faute dans un CTA, <code>llms.txt</code> obsolète. Gains rapides, effort minimal (§3, §6, §7).</p>
           </div>
         </li>
         <li>
@@ -447,7 +447,7 @@
       </div>
 
       <h3>Arborescence proposée (10 pages + 3 pages légales existantes)</h3>
-      <p>Structure minimale pour couvrir les 3 marchés cités dans le brief, les intentions transactionnelles (recherche d'un prestataire), informationnelles (comprendre l'IA appliquée) et de réassurance (preuve, méthode).</p>
+      <p>Structure proposée si MZI souhaite développer sa présence au-delà d'Annemasse — vers le Grand Genève et la Suisse romande, un marché qu'elle n'adresse pas aujourd'hui mais semble avoir visé par le passé (§4, §7) — organisée par intentions transactionnelles (recherche d'un prestataire), informationnelles (comprendre l'IA appliquée) et de réassurance (preuve, méthode).</p>
 
       <div class="tree">
         <span class="tree-root">/ — Accueil (hub)</span>
@@ -524,11 +524,11 @@
       </div>
 
       <div class="finding">
-        <div class="finding-head"><h4>Espace manquant dans le H1</h4><div class="badges"><span class="badge p-haute">Priorité haute</span><span class="badge effort">Effort faible</span></div></div>
+        <div class="finding-head"><h4>Le texte brut du H1 se lit « votrebusiness », sans espace</h4><div class="badges"><span class="badge p-basse">Priorité basse</span><span class="badge effort">Effort faible</span></div></div>
         <dl>
-          <dt>Preuve</dt><dd><code>Automatisez votre&lrm;business avec l'IA</code> — les mots « votre » et « business » sont collés.<span class="src">Source : source/tech/seo-existant.md (Balises Hn) et source/html/accueil.html</span></dd>
-          <dt>Impact</dt><dd>Faute visible sur l'élément le plus important de la page ; nuit à la crédibilité et à la lisibilité du mot-clé.</dd>
-          <dt>Correction</dt><dd>Ajouter l'espace manquant dans le balisage source (probablement une balise fermante collée au texte suivant sans espace).</dd>
+          <dt>Preuve</dt><dd>Balisage source : <code>&lt;span&gt;Automatisez votre&lt;/span&gt;&lt;br&gt;business avec l'IA</code>. L'affichage est correct — le <code>&lt;br&gt;</code> sépare visuellement « votre » et « business » sur deux lignes, sans faute visible à l'écran. Mais il n'y a pas d'espace dans le texte source avant le <code>&lt;br&gt;</code> : le texte brut, tel que le lisent un outil, un moteur de recherche ou certains agents IA (qui ignorent la mise en forme visuelle), devient « votrebusiness ».<span class="src">Source : source/tech/seo-existant.md (Balises Hn) et source/html/accueil.html</span></dd>
+          <dt>Impact</dt><dd>Aucun impact visuel pour un visiteur humain. Effet limité mais réel sur l'extraction automatique du texte (recherche, lecteurs d'écran en mode texte brut, agents IA) où « votre » et « business » sont lus comme un seul mot.</dd>
+          <dt>Correction</dt><dd>Ajouter un espace avant le <code>&lt;br&gt;</code> dans le balisage source.</dd>
         </dl>
       </div>
 
@@ -589,7 +589,7 @@
     <!-- ============ 4. SEO LOCAL ============ -->
     <section id="seo-local">
       <div class="section-head"><span class="num">04</span><h2>SEO local</h2></div>
-      <p class="section-intro">Le brief cible explicitement Annemasse, le Grand Genève et la Suisse romande. Aucun signal de localisation exploitable n'a été trouvé dans les sources collectées au-delà du nom de ville dans le texte courant.</p>
+      <p class="section-intro">MZI Consulting n'a jamais communiqué, dans le contenu actuel du site, une ambition envers la Suisse. Mais deux sources l'indiquent indirectement : le <code>llms.txt</code> du site (§7) décrivait autrefois l'activité comme « Consultant IA Genève », et ses propres mentions légales déclarent une adresse à Genève pour le propriétaire du site (ci-dessous). Le contenu visible, lui, ne mentionne la Suisse nulle part.</p>
 
       <div class="finding">
         <div class="finding-head"><h4>Aucune adresse ni téléphone visibles sur le site</h4><div class="badges"><span class="badge p-haute">Priorité haute</span><span class="badge effort">Effort moyen</span></div></div>
@@ -623,11 +623,20 @@
       </div>
 
       <div class="finding">
-        <div class="finding-head"><h4>La Suisse (Genève, Suisse romande) n'apparaît nulle part dans le contenu</h4><div class="badges"><span class="badge p-haute">Priorité haute</span><span class="badge effort">élevé (dépend de §2)</span></div></div>
+        <div class="finding-head"><h4>Les mentions légales déclarent une adresse à Genève, jamais reprise ailleurs sur le site</h4><div class="badges"><span class="badge p-haute">Priorité haute</span><span class="badge effort">Effort faible</span></div></div>
+        <dl>
+          <dt>Preuve</dt><dd>Page <code>/mention-legale/</code> : « <strong>Propriétaire du site :</strong> MZI Consulting – Contact : contact@mzi-consulting.com – Adresse : Chemin des Mines 2, 1202 Genève. » et « <strong>Directeur de publication :</strong> M. Murenzi. » Le pied de page de l'accueil, lui, affiche uniquement « Agence IA à Annemasse | Haute-Savoie, France » — aucune des deux pages ne mentionne l'autre adresse.<span class="src">Source : https://mzi-consulting.com/mention-legale/ (collectée le 24/09/2026), source/contenu.md</span></dd>
+          <dt>Impact</dt><dd>Le propriétaire légal du site est déclaré à Genève, alors que le reste du site (title, H2, footer) positionne l'activité comme exclusivement française, à Annemasse. C'est, avec le <code>llms.txt</code> (§7), un second indice concret que le marché suisse fait partie de l'histoire de l'entreprise — sans être assumé dans la communication actuelle du site.</dd>
+          <dt>Correction</dt><dd>Clarifier la structure réelle (entité suisse, entité française, ou une seule entité opérant dans les deux pays) avant de publier une adresse complète sur le site. Si MZI souhaite capter la clientèle genevoise, cette adresse existante est un point de départ concret pour une page locale Genève (§2).</dd>
+        </dl>
+      </div>
+
+      <div class="finding">
+        <div class="finding-head"><h4>La Suisse (Genève, Suisse romande) n'apparaît nulle part dans le contenu visible</h4><div class="badges"><span class="badge p-moyenne">Priorité moyenne</span><span class="badge effort">élevé (dépend de §2)</span></div></div>
         <dl>
           <dt>Preuve</dt><dd>Aucune occurrence de « Genève » ou « Suisse » dans le texte visible de l'accueil ; toutes les mentions géographiques portent sur « Annemasse ».<span class="src">Source : source/contenu.md</span></dd>
-          <dt>Impact</dt><dd>Deux des trois marchés cibles cités dans le brief (Grand Genève, Suisse romande) sont absents du contenu indexable — aucune requête locale suisse ne peut faire remonter ce site.</dd>
-          <dt>Correction</dt><dd>Pages locales dédiées (voir §2) plutôt qu'une simple mention ajoutée à l'accueil, pour éviter de diluer le positionnement Annemasse déjà établi.</dd>
+          <dt>Impact</dt><dd>Si MZI Consulting souhaite capter la clientèle du Grand Genève et de Suisse romande — une hypothèse crédible compte tenu de l'adresse genevoise de son propre propriétaire (ci-dessus) et de l'ancien positionnement « Consultant IA Genève » de son <code>llms.txt</code> (§7) — ce marché est aujourd'hui structurellement invisible en recherche : aucune requête locale suisse ne peut faire remonter ce site.</dd>
+          <dt>Correction</dt><dd>Si cette ambition est confirmée : des pages locales dédiées (voir §2) plutôt qu'une simple mention ajoutée à l'accueil, pour éviter de diluer le positionnement Annemasse déjà établi.</dd>
         </dl>
       </div>
     </section>
@@ -702,7 +711,7 @@
       <div class="finding">
         <div class="finding-head"><h4>og:site_name n'utilise pas le nom de marque</h4><div class="badges"><span class="badge p-basse">Priorité basse</span><span class="badge effort">Effort faible</span></div></div>
         <dl>
-          <dt>Preuve</dt><dd><code>og:site_name</code> = « Agence IA à Annemasse », alors que la marque déposée au pied de page est « MZI Consulting ».<span class="src">Source : source/tech/seo-existant.md</span></dd>
+          <dt>Preuve</dt><dd><code>og:site_name</code> = « Agence IA à Annemasse », alors que le nom de marque au pied de page est « MZI Consulting ».<span class="src">Source : source/tech/seo-existant.md</span></dd>
           <dt>Impact</dt><dd>Même problème de cohérence de nom qu'en §4, visible cette fois dans les partages sociaux.</dd>
           <dt>Correction</dt><dd>Aligner sur « MZI Consulting », cohérent avec la correction proposée en §4.</dd>
         </dl>
@@ -783,7 +792,7 @@
             <blockquote class="testimonial">« L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé. Une agence à l'écoute et très pro sur Annemasse. »<cite>Jean-Pierre Morel — aucune entreprise, aucun lien vérifiable</cite></blockquote>
             <span class="src">Source : source/contenu.md, lignes 99–114</span>
           </dd>
-          <dt>Impact</dt><dd>Un lecteur — humain ou moteur — ne peut vérifier qu'un seul de ces témoignages existe réellement. Le fait que les 8 soient uniformément notés 5/5, sans aucun avis mitigé, renforce l'impression de contenu généré plutôt que collecté.</dd>
+          <dt>Impact</dt><dd>Un lecteur — humain ou moteur — ne peut vérifier qu'un seul de ces témoignages existe réellement : aucun ne peut être recoupé avec une entreprise, un profil ou une plateforme d'avis identifiable.</dd>
           <dt>Correction</dt><dd>Remplacer progressivement par des témoignages nommés (entreprise + lien, avec consentement du client), ou les héberger sur une plateforme tierce (Google, Trustpilot) et les afficher par API/widget plutôt qu'en texte statique.</dd>
         </dl>
       </div>
@@ -809,18 +818,18 @@
       <div class="finding">
         <div class="finding-head"><h4>Aucun profil d'expert nommé</h4><div class="badges"><span class="badge p-moyenne">Priorité moyenne</span><span class="badge effort">Effort moyen</span></div></div>
         <dl>
-          <dt>Preuve</dt><dd>La section « Pourquoi nous choisir ? » présente 4 arguments génériques (Expert certifié, Approche personnalisée, Résultats concrets, Vision business + technique) sans nom, photo ni lien vers un profil individuel (LinkedIn ou autre).<span class="src">Source : source/contenu.md, lignes 125–143</span></dd>
+          <dt>Preuve</dt><dd>La section « Pourquoi nous choisir ? » présente 4 arguments génériques (Expert certifié, Approche personnalisée, Résultats concrets, Vision business + technique) sans nom, photo ni lien vers un profil individuel (LinkedIn ou autre). Un nom existe pourtant : les mentions légales désignent « M. Murenzi » comme directeur de publication (§4) — jamais repris ni présenté ailleurs sur le site.<span class="src">Source : source/contenu.md, lignes 125–143 ; https://mzi-consulting.com/mention-legale/</span></dd>
           <dt>Impact</dt><dd>E-E-A-T valorise l'expertise d'individus identifiables, pas seulement celle d'une structure abstraite.</dd>
-          <dt>Correction</dt><dd>Ajouter une page « À propos » ou une section avec le ou les fondateurs/consultants nommés, leur parcours réel et un lien LinkedIn.</dd>
+          <dt>Correction</dt><dd>Ajouter une page « À propos » ou une section présentant nommément le ou les fondateurs/consultants (M. Murenzi et/ou autres), leur parcours réel et un lien LinkedIn.</dd>
         </dl>
       </div>
 
       <div class="finding">
-        <div class="finding-head"><h4>Contenu des mentions légales non audité</h4><div class="badges"><span class="badge p-basse">Priorité basse</span><span class="badge effort">Effort faible</span></div></div>
+        <div class="finding-head"><h4>Mentions légales : hébergeur et responsable identifiés, aucun numéro d'immatriculation</h4><div class="badges"><span class="badge p-moyenne">Priorité moyenne</span><span class="badge effort">Effort faible</span></div></div>
         <dl>
-          <dt>Preuve</dt><dd>La page <code>/mention-legale/</code> existe et est liée depuis le pied de page, mais son contenu n'a pas été collecté (hors périmètre de l'étape 1 de collecte, qui a exclu les pages légales).<span class="src">Source : source/contenu.md (lien du pied de page uniquement)</span></dd>
-          <dt>Impact</dt><dd>Impossible d'évaluer ici si les mentions légales exposent les informations attendues (SIREN/SIRET, représentant légal, hébergeur).</dd>
-          <dt>Correction</dt><dd><strong>[À CONFIRMER : contenu réel des mentions légales]</strong> — à vérifier séparément avant de conclure sur ce point.</dd>
+          <dt>Preuve</dt><dd>La page <code>/mention-legale/</code> identifie un hébergeur complet (O2Switch, adresse et téléphone) et un directeur de publication nommé (M. Murenzi). En revanche, aucun numéro d'immatriculation n'y figure — ni SIRET français, ni numéro IDE/UID suisse (format CHE-xxx.xxx.xxx) — alors que l'adresse déclarée du propriétaire du site y est en Suisse (§4).<span class="src">Source : https://mzi-consulting.com/mention-legale/ (collectée le 24/09/2026)</span></dd>
+          <dt>Impact</dt><dd>Pour une entreprise commerciale, l'absence de tout numéro d'immatriculation empêche un client potentiel — ou Google — de vérifier l'existence légale de MZI Consulting auprès d'un registre officiel. Un manque de preuve de plus, dans la continuité des chiffres-clés et témoignages non sourcés ci-dessus.</dd>
+          <dt>Correction</dt><dd>Ajouter le numéro d'immatriculation pertinent selon la structure juridique réelle de l'entreprise (SIRET si l'activité est enregistrée en France, IDE/UID si l'entité est suisse) — à clarifier en même temps que l'adresse du propriétaire du site (§4).</dd>
         </dl>
       </div>
     </section>
@@ -1111,7 +1120,7 @@
     </section>
 
     <hr class="rule">
-    <p class="footnote">Audit produit à partir de la collecte du 24/09/2026 (voir <code>JOURNAL.md</code> et <code>source/</code> dans le dépôt <a href="https://github.com/renodek/suisseexam" target="_blank" rel="noopener">github.com/renodek/suisseexam</a>). Chaque constat cite son fichier source ; les recommandations sans donnée chiffrée disponible sont formulées qualitativement, conformément à la règle de contenu du projet.</p>
+    <p class="footnote">Audit produit à partir de la collecte du 24/09/2026. Chaque constat cite son fichier source ; les recommandations sans donnée chiffrée disponible sont formulées qualitativement, conformément à la règle de contenu du projet. Sources de collecte disponibles sur demande.</p>
     <p class="print-only footnote">Version imprimée — les liens externes sont indiqués entre parenthèses.</p>
   </main>
 </div>

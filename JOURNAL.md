@@ -130,3 +130,33 @@ Aucun.
 
 - `livrable/audit.html`
 - `livrable/assets/img/audit-desktop-hero.webp`, `audit-mobile-hero.webp`, `logo-mzi-consulting.webp`
+
+## Étape 4 — Corrections de l'audit (2026-09-24)
+
+### Ce qui a été fait
+
+- Suppression de toutes les mentions « le brief » dans `livrable/audit.html` (synthèse, priorité 2, §2, §4) : le ciblage Genève/Suisse romande était une hypothèse de travail de `CLAUDE.md`, jamais un brief confirmé par le client. Reformulation au conditionnel (« si MZI souhaite capter la clientèle genevoise »).
+- Correction de `CLAUDE.md` : la cible devient « PME d'Annemasse et de Haute-Savoie ; Grand Genève et Suisse romande = opportunité à proposer, non confirmée par le client ».
+- Collecte du contenu de `/mention-legale/` (non fait à l'étape 1) : découverte que le propriétaire du site y est déclaré à une adresse à **Genève** (Chemin des Mines 2, 1202 Genève), avec un directeur de publication nommé (M. Murenzi) — alors que le reste du site se présente uniquement comme une activité française à Annemasse. Aucun numéro d'immatriculation (ni SIRET, ni IDE/UID suisse) n'est publié.
+- Reformulation du constat sur le H1 : le rendu visuel est correct (retour à la ligne avant « business »), seul le texte brut (lu par les outils/moteurs/agents) perd l'espace — passage en priorité basse, retiré de la liste des corrections rapides à fort impact.
+- Constat sur les témoignages recentré sur la vérifiabilité (suppression du jugement sur une « impression de contenu généré »), conformément à l'exigence d'un ton constructif adressé à l'entreprise elle-même.
+- Remplacement de « la marque déposée » par « le nom de marque » (terme juridique inexact — aucun dépôt de marque n'a été vérifié).
+- Suppression du lien vers le dépôt GitHub et des renvois à `source/` dans le document ; remplacés par « Sources de collecte disponibles sur demande ».
+- Vérification de l'URL de l'étude Google/Deloitte (`web.dev/case-studies/milliseconds-make-millions`) : répond 200, contenu confirmé conforme — aucun changement nécessaire.
+- Relecture complète de l'audit pour repérer d'autres affirmations reposant sur `CLAUDE.md` plutôt que sur les sources : aucune autre trouvée.
+
+### Décisions prises et leur justification
+
+- **L'adresse genevoise découverte dans les mentions légales est devenue la preuve principale de l'opportunité suisse**, reléguant la géographie du Grand Genève et l'historique du `llms.txt` au rang de preuves complémentaires : c'est la source la plus directe et la plus forte, largement supérieure à une déduction géographique.
+- **Le constat sur l'adresse suisse est classé en Priorité haute** (alors que la demande initiale suggérait de traiter tout le sujet Genève/Suisse comme secondaire) : l'incohérence entre l'adresse légale et le positionnement marketing du site est un fait vérifié, pas une hypothèse — elle relève du même registre que les autres incohérences de nom d'entité déjà classées « haute » en §4.
+- **Le constat H1 reste présent mais déclassé, plutôt que supprimé** : la distinction rendu visuel / texte brut reste un constat réel et sourcé, seulement moins impactant qu'initialement présenté.
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| La correction demandée traitait Genève/Suisse comme une simple hypothèse à nuancer, mais la collecte des mentions légales (demandée dans la même série de corrections) a révélé une preuve directe et plus forte (adresse à Genève) | Les deux constats ont été conservés et articulés ensemble : l'adresse légale comme preuve principale, la géographie et le llms.txt comme preuves d'appui — la recommandation reste conditionnelle comme demandé. |
+
+### Fichiers produits
+
+Aucun nouveau fichier — corrections dans `livrable/audit.html` et `CLAUDE.md`.
