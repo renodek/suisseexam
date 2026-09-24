@@ -77,3 +77,25 @@
 - `scripts/collecte-images.js`
 - `source/images/94833.jpg`, `creative-polygonal-brain-on-virtual-screen-ai-and-2026-03-26-05-25-54-utc-1-3.jpg`, `Group-61.png`, `Logo-MZI-Agency.jpg`, `inventaire.md`
 - `source/logo/mzi-consulting-logo-fond-sombre.svg`, `mzi-consulting-logo-fond-clair.svg` (remplacement de `Group-61-1-1.png` et `Logo-MZI-Agency-300x300.jpg` par leurs versions originales plus grandes)
+
+## Étape 2 — Cadrage du projet (CLAUDE.md) (2026-09-24)
+
+### Ce qui a été fait
+
+- Création de `CLAUDE.md` à la racine : contexte du test de recrutement (MZI Consulting, cible PME Annemasse/Grand Genève/Suisse romande), structure attendue du livrable (`/livrable` : `index.html`, `audit.html`, `v0-existant.html`, `v1-clarte.html`, `v2-nuit-suisse.html`, déployé sur Vercel), identité de marque (couleurs, polices, logo de référence, règle de contraste cyan clair/sombre), règles techniques (HTML/CSS/JS vanilla, mobile-first, WCAG AA, Google Fonts, images WebP locales, noindex), règle de contenu (aucune donnée inventée, espaces réservés `[À CONFIRMER : ...]`), et méthode de travail (journal + commit + push après chaque étape).
+- Constat de la présence de `source/design-system-mzi/` (tokens CSS, composants React documentés, cartes de guidelines HTML, `SKILL.md`, kit UI) : un système de design déjà construit à partir des livrables de l'étape 1 (`styles-reels.md`, logos, captures), produit dans une autre session, non créé par cette conversation. Commité tel quel puisque `CLAUDE.md` le désigne comme source de vérité pour l'identité de marque.
+
+### Décisions prises et leur justification
+
+- **`CLAUDE.md` reprend le texte fourni par l'utilisateur sans reformulation** : c'est un cahier des charges directement actionnable (couleurs, ratios de contraste, structure de fichiers précis) — le reformuler risquerait d'en perdre la précision.
+- **La méthode « journal + commit + push après chaque étape » définie dans `CLAUDE.md` s'applique désormais par défaut** aux prochaines étapes, sans qu'il soit nécessaire de redemander confirmation avant chaque push.
+- **`source/design-system-mzi/` intégré sans modification** : son contenu est cohérent avec les données déjà collectées (mêmes couleurs, mêmes fichiers logo/image référencés) et explicitement requis par `CLAUDE.md` ; il n'y avait pas lieu de le retravailler.
+
+### Problèmes rencontrés et leur solution
+
+Aucun.
+
+### Fichiers produits
+
+- `CLAUDE.md`
+- `source/design-system-mzi/` (trouvé déjà présent, non généré par cette conversation — voir ci-dessus)

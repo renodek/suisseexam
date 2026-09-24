@@ -1,0 +1,16 @@
+<!-- @dsCard group="Constats" viewport="700x470" subtitle="Écarts relevés sur le site actuel" name="Constats" -->
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;background:#0a0e1a;color:#fff;font-family:var(--font-text);font-size:13px}.w{padding:20px;display:flex;flex-direction:column;gap:12px}.row{display:flex;gap:16px;flex-wrap:wrap}
+.r{color:#9ca3af;font-size:12px;line-height:1.45}.mono{font-family:ui-monospace,Menlo,monospace;font-size:12px}.t{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:start;font-size:12px}.h{color:#7e8da3;font-size:11px;text-transform:uppercase;letter-spacing:.04em}.ko{color:#ff7a7a}.warn{color:#f5b401}
+</style></head><body><div class="w">
+<div class="t" style="grid-template-columns:150px 1fr">
+<span class="h">Constat</span><span class="h">Détail</span>
+<span class="ko">Contraste en échec</span><span class="r">Texte blanc sur #09c6eb au survol des boutons principaux (« Réserver un audit IA gratuit », « Demarrer votre audit », « Demander un audit ») : 2,04:1, seuil AA 4,5:1 (3:1 en grand texte).</span>
+<span class="ko">Texte invisible</span><span class="r">Timeline : libellé secondaire « stratégie IA » en #0c0f14 (couleur par défaut du plugin = --e-global-color-text) sur #0a0e1a : 1.00:1.</span>
+<span class="warn">Police inutilisée</span><span class="r">Roboto Slab chargée (9 graisses, typographie secondaire Elementor) sans aucun élément qui l'utilise.</span>
+<span class="warn">Bordures héritées</span><span class="r">Badges de section, cartes bénéfices et cadre du formulaire : bordure sans couleur définie, héritée de #333333 (couleur du body). Héritées, non intentionnelles ; conservées telles quelles.</span>
+<span class="warn">Fond non lisible</span><span class="r">Le fond #0a0e1a est peint par un canvas fixe : Lighthouse ne le lit pas et signale 0 échec de contraste. Les ratios de ce système sont calculés à la main.</span>
+<span class="warn">Débordement mobile</span><span class="r">Liste d'étoiles des témoignages : +8 px à 390 px (page à 409 px).</span>
+<span class="warn">Graisse du H1</span><span class="r">Première ligne « Automatisez votre » forcée en 700 par style inline ; la 2e ligne est en 800.</span>
+<span class="r">Divers</span><span class="r">« Demarrer votre audit » sans accent ; alt « default-logo » sur le logo ; image « Pourquoi nous » sans texte alternatif.</span>
+</div></div></body></html>

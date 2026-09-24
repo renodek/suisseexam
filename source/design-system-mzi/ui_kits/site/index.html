@@ -1,0 +1,22 @@
+<!-- @dsCard group="Site mzi-consulting.com" viewport="1440x900" name="Accueil" subtitle="Recréation de la page d'accueil" -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MZI Consulting — Accueil (UI kit)</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>html,body{margin:0;background:#0a0e1a;color:#fff;font-family:Lato,sans-serif}a{color:#10d7fd}a:hover{color:#09c6eb}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="../../components/_ns.js" data-root="../../"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="Sections.jsx"></script>
+<script type="text/babel">
+window.__MZI_ready.then((ns) => { window.MZI = ns; ReactDOM.createRoot(document.getElementById("root")).render(<window.MZIHome />); });
+</script>
+</body>
+</html>
