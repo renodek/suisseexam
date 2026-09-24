@@ -1,0 +1,384 @@
+{
+  "v1-clarte": {
+    "320": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v1-hero-mobile-800.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "320×799",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v1-bande-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "320×270",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v1-contact-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "320×427",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "390": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v1-hero-mobile-800.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "390×974",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v1-bande-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "390×329",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v1-contact-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "390×520",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "768": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v1-hero-mobile-800.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "768×1919",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v1-bande-bureau-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "768×256",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v1-contact-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "768×1025",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "1024": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v1-hero-mobile-1400.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "1024×2558",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v1-bande-bureau-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1024×341",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v1-contact-mobile-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1024×1367",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "1121": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v1-hero-bureau-1400.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "851×710",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v1-bande-bureau-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1121×373",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v1-contact-bureau-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1121×523",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "1440": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v1-hero-bureau-1400.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "1094×912",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v1-bande-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1439×479",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v1-contact-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1439×672",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "1920": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v1-hero-bureau-2200.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "1459×1216",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v1-bande-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1919×639",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v1-contact-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1919×897",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    }
+  },
+  "v2-nuit-suisse": {
+    "320": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v2-hero-mobile-800.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "320×474",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-architecture-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "320×333",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v2-contact-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "320×426",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "390": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v2-hero-mobile-800.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "390×577",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-architecture-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "390×406",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v2-contact-mobile-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "390×520",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "768": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v2-hero-bureau-800.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "768×511",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-architecture-bureau-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "768×486",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v2-contact-bureau-800.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "768×434",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "1024": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v2-hero-bureau-1400.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "1024×682",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-architecture-bureau-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1024×648",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v2-contact-bureau-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1024×580",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "1121": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v2-hero-bureau-1400.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "1121×747",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-architecture-bureau-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1121×709",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v2-contact-bureau-1400.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1121×634",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "1440": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v2-hero-bureau-1400.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "1400×933",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-architecture-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1439×911",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v2-contact-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1439×816",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    },
+    "1920": {
+      "debordement": 0,
+      "images": [
+        {
+          "fichier": "v2-hero-bureau-1400.webp",
+          "chargement": "auto",
+          "priorite": "high",
+          "natif": "1400×933",
+          "alt": "renseigné"
+        },
+        {
+          "fichier": "v2-architecture-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1919×1215",
+          "alt": "(vide, décorative)"
+        },
+        {
+          "fichier": "v2-contact-bureau-2200.webp",
+          "chargement": "lazy",
+          "priorite": null,
+          "natif": "1919×1088",
+          "alt": "(vide, décorative)"
+        }
+      ],
+      "erreurs_console": []
+    }
+  }
+}

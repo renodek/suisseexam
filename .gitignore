@@ -3,3 +3,6 @@ collecte.log
 collecte-images.log
 compare-*.log
 *.zip
+
+# Originaux Unsplash des images de fond (retéléchargés par scripts/fonds-images.js)
+source/images/fonds/

@@ -1,0 +1,234 @@
+{
+  "v1-clarte": {
+    "390": [
+      {
+        "region": "Héros",
+        "lignes": 26,
+        "echecs": [],
+        "pire": {
+          "texte": "entreprises accompagnées",
+          "ratio": 5.59,
+          "seuil": 4.5,
+          "taille": 17,
+          "ok": true
+        }
+      },
+      {
+        "region": "Bande de transition",
+        "lignes": 7,
+        "echecs": [],
+        "pire": {
+          "texte": "unique",
+          "ratio": 3.85,
+          "seuil": 3,
+          "taille": 28,
+          "ok": true
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 22,
+        "echecs": [],
+        "pire": {
+          "texte": "Réserver mon audit gratuit",
+          "ratio": 5.36,
+          "seuil": 4.5,
+          "taille": 18,
+          "ok": true
+        }
+      }
+    ],
+    "768": [
+      {
+        "region": "Héros",
+        "lignes": 26,
+        "echecs": [],
+        "pire": {
+          "texte": "productivité moyenne",
+          "ratio": 6.81,
+          "seuil": 4.5,
+          "taille": 17,
+          "ok": true
+        }
+      },
+      {
+        "region": "Bande de transition",
+        "lignes": 7,
+        "echecs": [],
+        "pire": {
+          "texte": "unique",
+          "ratio": 4.22,
+          "seuil": 3,
+          "taille": 28,
+          "ok": true
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 22,
+        "echecs": [],
+        "pire": {
+          "texte": "Réserver mon audit gratuit",
+          "ratio": 5.36,
+          "seuil": 4.5,
+          "taille": 18,
+          "ok": true
+        }
+      }
+    ],
+    "1440": [
+      {
+        "region": "Héros",
+        "lignes": 26,
+        "echecs": [],
+        "pire": {
+          "texte": "Gagnez du temps et augmentez votre chiffre d'affaires grâce ",
+          "ratio": 7.14,
+          "seuil": 4.5,
+          "taille": 21,
+          "ok": true
+        }
+      },
+      {
+        "region": "Bande de transition",
+        "lignes": 7,
+        "echecs": [],
+        "pire": {
+          "texte": "unique",
+          "ratio": 3.96,
+          "seuil": 3,
+          "taille": 48,
+          "ok": true
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 22,
+        "echecs": [],
+        "pire": {
+          "texte": "Réserver mon audit gratuit",
+          "ratio": 5.36,
+          "seuil": 4.5,
+          "taille": 18,
+          "ok": true
+        }
+      }
+    ]
+  },
+  "v2-nuit-suisse": {
+    "390": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [],
+        "pire": {
+          "texte": "Analyse de vos processus",
+          "ratio": 5.27,
+          "seuil": 4.5,
+          "taille": 16,
+          "ok": true
+        }
+      },
+      {
+        "region": "Qui sommes-nous",
+        "lignes": 23,
+        "echecs": [],
+        "pire": {
+          "texte": "Qui sommes-nous",
+          "ratio": 6.29,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 29,
+        "echecs": [],
+        "pire": {
+          "texte": "Adresse",
+          "ratio": 6.09,
+          "seuil": 4.5,
+          "taille": 12,
+          "ok": true
+        }
+      }
+    ],
+    "768": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [],
+        "pire": {
+          "texte": "03",
+          "ratio": 4.77,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "Qui sommes-nous",
+        "lignes": 23,
+        "echecs": [],
+        "pire": {
+          "texte": "Photo du fondateur",
+          "ratio": 6.43,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 29,
+        "echecs": [],
+        "pire": {
+          "texte": "Réservez votre audit IA gratuit et découvrez concrètement co",
+          "ratio": 5.52,
+          "seuil": 4.5,
+          "taille": 18,
+          "ok": true
+        }
+      }
+    ],
+    "1440": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [],
+        "pire": {
+          "texte": "Recommandations concrètes",
+          "ratio": 5.3,
+          "seuil": 4.5,
+          "taille": 16,
+          "ok": true
+        }
+      },
+      {
+        "region": "Qui sommes-nous",
+        "lignes": 23,
+        "echecs": [],
+        "pire": {
+          "texte": "Photo du fondateur",
+          "ratio": 7.07,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 29,
+        "echecs": [],
+        "pire": {
+          "texte": "Adresse",
+          "ratio": 5.92,
+          "seuil": 4.5,
+          "taille": 12,
+          "ok": true
+        }
+      }
+    ]
+  }
+}

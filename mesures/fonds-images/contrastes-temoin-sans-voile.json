@@ -1,0 +1,1365 @@
+{
+  "v1-clarte": {
+    "390": [
+      {
+        "region": "Héros",
+        "lignes": 26,
+        "echecs": [
+          {
+            "texte": "50+",
+            "ratio": 1.18,
+            "seuil": 3,
+            "taille": 22,
+            "ok": false
+          },
+          {
+            "texte": "entreprises accompagnées",
+            "ratio": 1.46,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "3x",
+            "ratio": 1.08,
+            "seuil": 3,
+            "taille": 22,
+            "ok": false
+          },
+          {
+            "texte": "productivité moyenne",
+            "ratio": 1.41,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "40 %",
+            "ratio": 1.07,
+            "seuil": 3,
+            "taille": 22,
+            "ok": false
+          },
+          {
+            "texte": "de temps économisé",
+            "ratio": 1.41,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : source et période",
+            "ratio": 1.35,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "À CONFIRMER : source et période",
+          "ratio": 1.35,
+          "seuil": 4.5,
+          "taille": 12.5,
+          "ok": false
+        }
+      },
+      {
+        "region": "Bande de transition",
+        "lignes": 7,
+        "echecs": [
+          {
+            "texte": "unique",
+            "ratio": 1.14,
+            "seuil": 3,
+            "taille": 28,
+            "ok": false
+          },
+          {
+            "texte": ", adapté à votre secteur, vos objectifs et votre culture d'e",
+            "ratio": 1.01,
+            "seuil": 3,
+            "taille": 28,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": ", adapté à votre secteur, vos objectifs et votre culture d'e",
+          "ratio": 1.01,
+          "seuil": 3,
+          "taille": 28,
+          "ok": false
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 22,
+        "echecs": [
+          {
+            "texte": "Contact",
+            "ratio": 1.36,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "Prêt à transformer votre entreprise avec l'IA",
+            "ratio": 1.19,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "à Annemasse ?",
+            "ratio": 1.38,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "Réservez votre audit IA gratuit et découvrez concrètement co",
+            "ratio": 1.54,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": false
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 3.2,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 3.31,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "Contact",
+          "ratio": 1.36,
+          "seuil": 4.5,
+          "taille": 14,
+          "ok": false
+        }
+      }
+    ],
+    "768": [
+      {
+        "region": "Héros",
+        "lignes": 26,
+        "echecs": [
+          {
+            "texte": "50+",
+            "ratio": 2.27,
+            "seuil": 3,
+            "taille": 22,
+            "ok": false
+          },
+          {
+            "texte": "entreprises accompagnées",
+            "ratio": 1.3,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "productivité moyenne",
+            "ratio": 1.08,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "40 %",
+            "ratio": 2.62,
+            "seuil": 3,
+            "taille": 22,
+            "ok": false
+          },
+          {
+            "texte": "de temps économisé",
+            "ratio": 1.24,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : source et période",
+            "ratio": 1.07,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "À CONFIRMER : source et période",
+          "ratio": 1.07,
+          "seuil": 4.5,
+          "taille": 12.5,
+          "ok": false
+        }
+      },
+      {
+        "region": "Bande de transition",
+        "lignes": 7,
+        "echecs": [
+          {
+            "texte": "Chaque audit est",
+            "ratio": 1.56,
+            "seuil": 3,
+            "taille": 28,
+            "ok": false
+          },
+          {
+            "texte": "unique",
+            "ratio": 1.88,
+            "seuil": 3,
+            "taille": 28,
+            "ok": false
+          },
+          {
+            "texte": ", adapté à votre secteur, vos objectifs et votre culture d'e",
+            "ratio": 2.14,
+            "seuil": 3,
+            "taille": 28,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "Chaque audit est",
+          "ratio": 1.56,
+          "seuil": 3,
+          "taille": 28,
+          "ok": false
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 22,
+        "echecs": [
+          {
+            "texte": "Contact",
+            "ratio": 1.32,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "Prêt à transformer votre entreprise avec l'IA",
+            "ratio": 1.28,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "à Annemasse ?",
+            "ratio": 1.17,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "Réservez votre audit IA gratuit et découvrez concrètement co",
+            "ratio": 1.13,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": false
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 1.04,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 1,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "Adresse",
+            "ratio": 3.24,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "Annemasse, Haute-Savoie",
+            "ratio": 2.26,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : adresse complète",
+            "ratio": 1.7,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          },
+          {
+            "texte": "Téléphone",
+            "ratio": 1.54,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : numéro de téléphone",
+            "ratio": 2.06,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "Réponse sous 24 h",
+          "ratio": 1,
+          "seuil": 4.5,
+          "taille": 17,
+          "ok": false
+        }
+      }
+    ],
+    "1440": [
+      {
+        "region": "Héros",
+        "lignes": 26,
+        "echecs": [
+          {
+            "texte": "Agence d'automatisation IA · Annemasse · Grand Genève",
+            "ratio": 1.49,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "Automatisez les tâches répétitives de votre PME, à Annemasse",
+            "ratio": 1.23,
+            "seuil": 3,
+            "taille": 66,
+            "ok": false
+          },
+          {
+            "texte": "Gagnez du temps et augmentez votre chiffre d'affaires grâce ",
+            "ratio": 1.91,
+            "seuil": 4.5,
+            "taille": 21,
+            "ok": false
+          },
+          {
+            "texte": "Découvrir notre méthode",
+            "ratio": 2.66,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": false
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 3.9,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "entreprises accompagnées",
+            "ratio": 3.37,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "40 %",
+            "ratio": 1.29,
+            "seuil": 3,
+            "taille": 22,
+            "ok": false
+          },
+          {
+            "texte": "de temps économisé",
+            "ratio": 1.32,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : source et période",
+            "ratio": 1.42,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "de temps économisé",
+          "ratio": 1.32,
+          "seuil": 4.5,
+          "taille": 17,
+          "ok": false
+        }
+      },
+      {
+        "region": "Bande de transition",
+        "lignes": 7,
+        "echecs": [
+          {
+            "texte": "unique",
+            "ratio": 1.32,
+            "seuil": 3,
+            "taille": 48,
+            "ok": false
+          },
+          {
+            "texte": ", adapté à votre secteur, vos objectifs et votre culture d'e",
+            "ratio": 1.38,
+            "seuil": 3,
+            "taille": 48,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "unique",
+          "ratio": 1.32,
+          "seuil": 3,
+          "taille": 48,
+          "ok": false
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 22,
+        "echecs": [
+          {
+            "texte": "Contact",
+            "ratio": 1.33,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "Prêt à transformer votre entreprise avec l'IA",
+            "ratio": 1.2,
+            "seuil": 3,
+            "taille": 50,
+            "ok": false
+          },
+          {
+            "texte": "à Annemasse ?",
+            "ratio": 1.38,
+            "seuil": 3,
+            "taille": 50,
+            "ok": false
+          },
+          {
+            "texte": "Réservez votre audit IA gratuit et découvrez concrètement co",
+            "ratio": 1.08,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": false
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 1.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 2.13,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : adresse complète",
+            "ratio": 1.03,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : numéro de téléphone",
+            "ratio": 2.56,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "À CONFIRMER : adresse complète",
+          "ratio": 1.03,
+          "seuil": 4.5,
+          "taille": 12.5,
+          "ok": false
+        }
+      }
+    ]
+  },
+  "v2-nuit-suisse": {
+    "390": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [
+          {
+            "texte": "Découvrir notre méthode",
+            "ratio": 1.27,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 1.36,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 1.28,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Audit personnalisé",
+            "ratio": 1.47,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "L'audit IA gratuit",
+            "ratio": 1.1,
+            "seuil": 3,
+            "taille": 26,
+            "ok": false
+          },
+          {
+            "texte": "01",
+            "ratio": 1.07,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Analyse de vos processus",
+            "ratio": 1.27,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "02",
+            "ratio": 1.06,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Identification des opportunités IA",
+            "ratio": 1.03,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "03",
+            "ratio": 3.09,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Recommandations concrètes",
+            "ratio": 3.19,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "Identification des opportunités IA",
+          "ratio": 1.03,
+          "seuil": 4.5,
+          "taille": 16,
+          "ok": false
+        }
+      },
+      {
+        "region": "Qui sommes-nous",
+        "lignes": 23,
+        "echecs": [
+          {
+            "texte": "06",
+            "ratio": 1.16,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Qui sommes-nous",
+            "ratio": 1.72,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Photo du fondateur",
+            "ratio": 1.54,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "06",
+          "ratio": 1.16,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": false
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 29,
+        "echecs": [
+          {
+            "texte": "09",
+            "ratio": 1,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Contact",
+            "ratio": 1.06,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Annemasse · Haute-Savoie · Grand Genève",
+            "ratio": 1.03,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          },
+          {
+            "texte": "Prêt",
+            "ratio": 1.1,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "à transformer",
+            "ratio": 1.11,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "à Annemasse ?",
+            "ratio": 1.48,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "Réservez votre audit IA gratuit et découvrez concrètement co",
+            "ratio": 3.89,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": false
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 4.22,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "Audit personnalisé",
+            "ratio": 2.37,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "09",
+          "ratio": 1,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": false
+        }
+      }
+    ],
+    "768": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [
+          {
+            "texte": "Gagnez du temps et augmentez votre chiffre d'affaires grâce ",
+            "ratio": 1.25,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": false
+          },
+          {
+            "texte": "Découvrir notre méthode",
+            "ratio": 1.36,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 1.08,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 1.57,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Audit personnalisé",
+            "ratio": 1.5,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "L'audit IA gratuit",
+            "ratio": 1.69,
+            "seuil": 3,
+            "taille": 26,
+            "ok": false
+          },
+          {
+            "texte": "01",
+            "ratio": 1.27,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Analyse de vos processus",
+            "ratio": 1.11,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "02",
+            "ratio": 1.23,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Identification des opportunités IA",
+            "ratio": 1.03,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "03",
+            "ratio": 1.36,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Recommandations concrètes",
+            "ratio": 1.03,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "Identification des opportunités IA",
+          "ratio": 1.03,
+          "seuil": 4.5,
+          "taille": 16,
+          "ok": false
+        }
+      },
+      {
+        "region": "Qui sommes-nous",
+        "lignes": 23,
+        "echecs": [
+          {
+            "texte": "06",
+            "ratio": 1.78,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Qui sommes-nous",
+            "ratio": 1.79,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Photo du fondateur",
+            "ratio": 1.19,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "de confiance",
+            "ratio": 1.47,
+            "seuil": 3,
+            "taille": 34,
+            "ok": false
+          },
+          {
+            "texte": "à Annemasse",
+            "ratio": 1.06,
+            "seuil": 3,
+            "taille": 34,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : nom du fondateur",
+            "ratio": 2.28,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : parcours du fondateur",
+            "ratio": 1,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          },
+          {
+            "texte": "Expert certifié",
+            "ratio": 1.48,
+            "seuil": 4.5,
+            "taille": 20,
+            "ok": false
+          },
+          {
+            "texte": "Formation approfondie et certifications reconnues en intelli",
+            "ratio": 1.57,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : noms des certifications",
+            "ratio": 1.49,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          },
+          {
+            "texte": "Approche personnalisée",
+            "ratio": 1.33,
+            "seuil": 4.5,
+            "taille": 20,
+            "ok": false
+          },
+          {
+            "texte": "Chaque audit est unique, adapté à votre secteur, vos objecti",
+            "ratio": 1.56,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "Résultats concrets",
+            "ratio": 2.79,
+            "seuil": 4.5,
+            "taille": 20,
+            "ok": false
+          },
+          {
+            "texte": "Nos recommandations sont actionnables immédiatement, avec un",
+            "ratio": 1.03,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "Vision business et technique",
+            "ratio": 2.85,
+            "seuil": 4.5,
+            "taille": 20,
+            "ok": false
+          },
+          {
+            "texte": "Une alliance rare entre compréhension business et maîtrise t",
+            "ratio": 1.05,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "À CONFIRMER : parcours du fondateur",
+          "ratio": 1,
+          "seuil": 4.5,
+          "taille": 12,
+          "ok": false
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 29,
+        "echecs": [
+          {
+            "texte": "09",
+            "ratio": 1.08,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Contact",
+            "ratio": 1.01,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Annemasse · Haute-Savoie · Grand Genève",
+            "ratio": 1.04,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          },
+          {
+            "texte": "Prêt",
+            "ratio": 1.73,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "à transformer",
+            "ratio": 1.72,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "votre entreprise",
+            "ratio": 1.72,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "avec l'IA",
+            "ratio": 1.71,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "à Annemasse ?",
+            "ratio": 1.01,
+            "seuil": 3,
+            "taille": 32,
+            "ok": false
+          },
+          {
+            "texte": "Réservez votre audit IA gratuit et découvrez concrètement co",
+            "ratio": 1.06,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": false
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 1.22,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 1.19,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "Audit personnalisé",
+            "ratio": 1.35,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": false
+          },
+          {
+            "texte": "Adresse",
+            "ratio": 1.76,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          },
+          {
+            "texte": "Annemasse, Haute-Savoie",
+            "ratio": 1.19,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : adresse complète",
+            "ratio": 1.17,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          },
+          {
+            "texte": "Téléphone",
+            "ratio": 4.2,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : numéro de téléphone",
+            "ratio": 3.96,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          },
+          {
+            "texte": "E-mail",
+            "ratio": 3.75,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "Contact",
+          "ratio": 1.01,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": false
+        }
+      }
+    ],
+    "1440": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [
+          {
+            "texte": "de votre PME,",
+            "ratio": 1.54,
+            "seuil": 3,
+            "taille": 92.16,
+            "ok": false
+          },
+          {
+            "texte": "à Annemasse",
+            "ratio": 1.47,
+            "seuil": 3,
+            "taille": 92.16,
+            "ok": false
+          },
+          {
+            "texte": "Gagnez du temps et augmentez votre chiffre d'affaires grâce ",
+            "ratio": 1.43,
+            "seuil": 4.5,
+            "taille": 20.88,
+            "ok": false
+          },
+          {
+            "texte": "Découvrir notre méthode",
+            "ratio": 1.45,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": false
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 1.68,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 1.42,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Audit personnalisé",
+            "ratio": 1.39,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "L'audit IA gratuit",
+            "ratio": 1.15,
+            "seuil": 3,
+            "taille": 26,
+            "ok": false
+          },
+          {
+            "texte": "01",
+            "ratio": 1.22,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Analyse de vos processus",
+            "ratio": 1.13,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "02",
+            "ratio": 3.11,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Identification des opportunités IA",
+            "ratio": 2.99,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "03",
+            "ratio": 2.42,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Recommandations concrètes",
+            "ratio": 1.1,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "Recommandations concrètes",
+          "ratio": 1.1,
+          "seuil": 4.5,
+          "taille": 16,
+          "ok": false
+        }
+      },
+      {
+        "region": "Qui sommes-nous",
+        "lignes": 23,
+        "echecs": [
+          {
+            "texte": "06",
+            "ratio": 1.16,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Qui sommes-nous",
+            "ratio": 1.17,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Photo du fondateur",
+            "ratio": 1.21,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Votre agence",
+            "ratio": 1.53,
+            "seuil": 3,
+            "taille": 63.36,
+            "ok": false
+          },
+          {
+            "texte": "IA",
+            "ratio": 1.6,
+            "seuil": 3,
+            "taille": 63.36,
+            "ok": false
+          },
+          {
+            "texte": "de confiance",
+            "ratio": 1.59,
+            "seuil": 3,
+            "taille": 63.36,
+            "ok": false
+          },
+          {
+            "texte": "à Annemasse",
+            "ratio": 1.1,
+            "seuil": 3,
+            "taille": 63.36,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : nom du fondateur",
+            "ratio": 1.01,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          },
+          {
+            "texte": "Expert certifié",
+            "ratio": 1.57,
+            "seuil": 4.5,
+            "taille": 20,
+            "ok": false
+          },
+          {
+            "texte": "Formation approfondie et certifications reconnues en intelli",
+            "ratio": 1.23,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          },
+          {
+            "texte": "À CONFIRMER : noms des certifications",
+            "ratio": 1.08,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          },
+          {
+            "texte": "Résultats concrets",
+            "ratio": 1.62,
+            "seuil": 4.5,
+            "taille": 20,
+            "ok": false
+          },
+          {
+            "texte": "Nos recommandations sont actionnables immédiatement, avec un",
+            "ratio": 1.01,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "À CONFIRMER : nom du fondateur",
+          "ratio": 1.01,
+          "seuil": 4.5,
+          "taille": 12,
+          "ok": false
+        }
+      },
+      {
+        "region": "Contact",
+        "lignes": 29,
+        "echecs": [
+          {
+            "texte": "09",
+            "ratio": 1.05,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Contact",
+            "ratio": 1.01,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": false
+          },
+          {
+            "texte": "Annemasse · Haute-Savoie · Grand Genève",
+            "ratio": 1.01,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": false
+          },
+          {
+            "texte": "Prêt",
+            "ratio": 1.74,
+            "seuil": 3,
+            "taille": 57.6,
+            "ok": false
+          },
+          {
+            "texte": "à transformer",
+            "ratio": 1.07,
+            "seuil": 3,
+            "taille": 57.6,
+            "ok": false
+          },
+          {
+            "texte": "votre entreprise",
+            "ratio": 1.06,
+            "seuil": 3,
+            "taille": 57.6,
+            "ok": false
+          },
+          {
+            "texte": "avec l'IA",
+            "ratio": 1.55,
+            "seuil": 3,
+            "taille": 57.6,
+            "ok": false
+          },
+          {
+            "texte": "à Annemasse ?",
+            "ratio": 2.16,
+            "seuil": 3,
+            "taille": 57.6,
+            "ok": false
+          },
+          {
+            "texte": "Adresse",
+            "ratio": 4.37,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": false
+          }
+        ],
+        "pire": {
+          "texte": "Contact",
+          "ratio": 1.01,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": false
+        }
+      }
+    ]
+  }
+}

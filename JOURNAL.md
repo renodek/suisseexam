@@ -566,3 +566,71 @@ Lecture : la précharge seule n'améliore pas le CLS (la police arrive plus tôt
 - `scripts/typo-fr.js`, `scripts/groupes-titres.js`, `scripts/mesure-cls.js`, `scripts/verifie-ponctuation.js` (nouveaux) ; `scripts/controle-v2-extra.js`, `scripts/fraunces-subset.js` (mis à jour)
 - `mesures/v2-controles/polices-cls.json` et section « Polices » de `rapport.md` ; `mesures/typo-fr/rapport.json` ; `mesures/v2-diff/` (recapturé)
 - `CLAUDE.md` (règle « Budget de temps »)
+
+## Étape 15 — Images de fond dans les deux propositions (2026-09-24)
+
+### Ce qui a été fait
+
+- Photos choisies par recherche Unsplash (`scripts/unsplash-recherche.js`, planches de miniatures ; les photos « premium » Unsplash+ sont écartées) puis téléchargées à 5000 px (`source/images/fonds/`, non versionné ; `scripts/fonds-images.js` les retélécharge). `scripts/fonds-images.js` recadre une version bureau et une version mobile de chaque image et produit des WebP de 800, 1400 et 2200 px de large dans `livrable/assets/img/fonds/`, chacun sous 195 Ko (36 variantes, de 21 à 193 Ko ; qualité réduite au besoin, `mesures/fonds-images/variantes.json`).
+- **V1 « Clarté »** : (1) héros : photo de ThisisEngineering derrière le texte, dégradé `#0a0e1a` opaque à gauche qui s'estompe vers la droite, carte « L'audit IA gratuit » conservée par-dessus ; (2) bande de transition entre Témoignages et FAQ : photo lumineuse de Clay Banks, voile blanc à 74 %, phrase tirée de `contenu.md` (« Chaque audit est unique, adapté à votre secteur, vos objectifs et votre culture d'entreprise ») ; (3) contact : photo de Muhammad Faiz Zulkeflee sous voile bleu nuit (90 → 70 %), formulaire sur carte blanche. Les autres sections restent inchangées.
+- **V2 « Nuit suisse »** : (1) héros : « Snow mountain under clouds » de Pascal Debrunner, dégradé bleu nuit sous le texte ; la bande alpine est fusionnée avec ce fond (image supprimée, zone libre de même hauteur conservée pour que la montagne se lise, crédit déplacé dedans) ; (2) « Qui sommes-nous » : façade de nuit de Howei Wang sous voile bleu nuit à 85 % ; (3) contact : le paysage de T Fang s'étend à toute la section sous voile bleu nuit, le bandeau est supprimé, formulaire sur surface `#0f1526`.
+- Chaque image de fond a un crédit visible : 12 px (10 px avant), blanc sur bleu nuit à 82 % (noir à 55 % avant), liens soulignés. `livrable/credits.txt` mis à jour (auteur, page de la photo, profil, fichiers). Trois images devenues inutiles supprimées : `v1-hero-audit.webp`, `v2-hero-alpes.webp`, `v2-contact-alpes.webp`.
+- Chargement : héros en `fetchpriority="high"` sans `loading="lazy"` ; toutes les autres images de fond en `loading="lazy"` avec `srcset` et `sizes`. Aucun effet de parallaxe. Fonds animés inchangés : le canvas s'arrête (une image fixe est dessinée) avec `prefers-reduced-motion` ou `?statique`.
+- Outils de mesure : `scripts/contraste-fonds.js`, `scripts/poids-fonds.js`, `scripts/verifie-fonds.js`.
+
+### Décisions prises et leur justification
+
+- **Héros V1 : la photo couvre les 76 % de droite, pas 100 % de la largeur.** Les personnes occupent toute la largeur du cadre ; en plein cadre, les visages seraient sous le texte. Le dégradé étant opaque sur la partie gauche, l'effet est celui d'une photo plein écran dont la scène apparaît à droite. Choix non retenu : retourner la photo (les visages seraient passés à gauche, sous le texte).
+- **Sous 1120 px (colonnes empilées), le héros V1 change de mise en page** : l'image se cale derrière la carte, le dégradé devient vertical (bleu nuit plein sous le texte, voile léger sur les visages, voile fort sous les chiffres-clés). Le recadrage mobile écarte la femme de droite, dont le visage est déjà coupé par le bord de la photo d'origine : on ne montre que des visages entiers.
+- **Héros V2 : dégradé surtout vertical.** Le H1 occupe les 12 colonnes, un dégradé horizontal ne protégerait pas le texte. Voile de 80 % sous le titre, 64 % vers le milieu, 10 % dans la zone libre du bas. La photo (crépusculaire) est éclaircie de 35 % à la fabrication, sinon la montagne restait invisible ; c'est la seule retouche (indiquée dans `credits.txt`).
+- **Texture d'architecture placée sur « Qui sommes-nous » plutôt que sur « Méthode »** : la Méthode porte déjà un panneau photo, deux photos d'affilée après la Solution auraient été lourdes.
+- **Sous 1120 px (V1 contact) et 760 px (V2), l'image ne couvre que le haut de la section**, puis se fond dans le fond uni : la section fait environ 1 500 px de haut, un `cover` sur toute la hauteur aurait agrandi la photo de 4 fois.
+- **Phrase de la bande V1** : reprise mot pour mot de `contenu.md` ; elle existe déjà, à peu de chose près, dans la réponse de la FAQ « Quelles entreprises accompagnez-vous ? » (V1), c'est donc une répétition volontaire, pas un contenu nouveau.
+- **Deux textes déplacés** : les libellés « Annemasse · Haute-Savoie » et « Grand Genève » du bandeau de contact V2 sont devenus une ligne sous l'étiquette « Contact » ; les champs du formulaire V2 passent à `#0a0e1a` pour rester visibles sur la surface `#0f1526`.
+- **Images décoratives (bande, contacts, texture) avec `alt=""`** ; les photos des héros gardent leur `alt` descriptif.
+
+### Mesures
+
+**Contraste du texte sur les images, sur les pixels rendus, au pire endroit** (`scripts/contraste-fonds.js` : capture du fond sans texte, pixel le plus défavorable de chaque ligne de texte, percentile 99,5 %). 0 échec sur 18 zones (3 zones × 3 largeurs × 2 pages). Pire rapport par zone (seuil 4,5:1 ; 3:1 pour le texte de 24 px et plus) :
+
+| Zone | 1440 px | 768 px | 390 px |
+|---|---|---|---|
+| V1 héros | 7,14 | 6,81 | 5,59 |
+| V1 bande (« unique », grand texte, seuil 3) | 3,96 | 4,22 | 3,85 |
+| V1 contact | 5,36 | 5,36 | 5,36 |
+| V2 héros | 5,30 | 4,77 | 5,27 |
+| V2 Qui sommes-nous | 7,07 | 6,43 | 6,29 |
+| V2 contact | 5,92 | 5,52 | 6,09 |
+
+Témoin : voiles supprimés par CSS, la même mesure donne 1,0 à 1,6 : elle détecte bien les échecs (`contrastes-temoin-sans-voile.md`). Les crédits sont inclus dans la mesure. Les scripts `controle-v1.js` et `controle-v2.js` (interactions, 26 à 30 couples de couleurs) repassent sans échec.
+
+**Poids total des pages** (`scripts/poids-fonds.js`, octets décodés : HTML, polices, images ; « complet » = après défilement, images différées chargées) :
+
+| Page | Largeur | Chargement avant → après | Complet avant → après | Complet compressé avant → après |
+|---|---|---|---|---|
+| V1 | 1440 px | 425,0 → 449,1 Ko | 425,0 → 698,2 Ko | 372,6 → 641,2 Ko |
+| V1 | 390 px | 190,9 → 207,8 Ko | 425,0 → 534,8 Ko | 372,6 → 477,8 Ko |
+| V2 | 1440 px | 363,3 → 349,7 Ko | 667,3 → 787,4 Ko | 606,0 → 724,1 Ko |
+| V2 | 390 px | 363,3 → 329,9 Ko | 667,3 → 633,3 Ko | 606,0 → 570,0 Ko |
+
+Lecture : V1 gagne 3 photos (+273 Ko à 1440 px, +110 Ko en mobile) ; le chargement initial n'augmente que de 17 à 24 Ko (héros seul). V2 échange deux bandeaux contre trois fonds : +120 Ko à 1440 px, −34 Ko en mobile (variantes 800 px). HTML : +6,1 Ko (V1) et +2,7 Ko (V2).
+
+**Variantes choisies par le navigateur** (`scripts/verifie-fonds.js`, 320 à 1920 px) : versions mobiles jusqu'à 1120 px (V1) ou 760 px (V2), 800 px de large à 320-768 px, 1400 px vers 1024-1440 px, 2200 px pour les fonds de section à 1440 px et plus. Aucun défilement horizontal, aucune erreur console.
+
+**Visages et sujet principal en mobile** (inspection des captures à 390 px, `mesures/fonds-images/sections/`) : héros V1 : la femme du centre est entière, la carte recouvre son buste, pas son visage ; bande V1 : pièce et bureaux entiers, sans personne ; contact V1 : recadrage entre deux silhouettes, trois silhouettes entières et aucune coupée par le bord ; héros V2 : la montagne principale est entière ; texture d'architecture et contact V2 : pas de sujet unique (motif de façade ; deux sommets visibles sous le voile). À 768 px (V1), le visage de la femme reste entier, la carte en recouvre le menton.
+
+### Réserves
+
+- Sur le héros V1 en bureau, le visage de la femme de droite est coupé par le bord de la photo d'origine (elle l'était déjà dans la maquette précédente) ; ce n'est pas un recadrage ajouté.
+- Le CLS de la V2 n'a pas été remesuré : les images de fond sont en position absolue et la zone libre du héros garde sa hauteur, mais aucun balayage n'a été refait (règle « Budget de temps »).
+- La mesure de contraste prend le pire pixel du rectangle de chaque ligne de texte : elle est prudente. Le canvas du héros est compris dans la mesure, pour une image fixe tirée au hasard à chaque chargement.
+- Les variantes mobiles de 2200 px (rarement choisies) ont une qualité WebP plus basse (36 à 56) pour tenir sous 200 Ko.
+- Profils des photographes obtenus par l'interface publique d'Unsplash (les pages de profil, elles, répondent 401 aux robots) ; à recouper avant publication.
+- Les zones les plus proches du seuil : héros V2 à 768 px (4,77:1) et bande V1 (3,85:1 pour du grand texte, seuil 3:1).
+
+### Fichiers produits
+
+- `livrable/v1-clarte.html`, `livrable/v2-nuit-suisse.html`, `livrable/credits.txt` (modifiés) ; `livrable/assets/img/fonds/` (36 WebP) ; trois images supprimées (voir plus haut)
+- `scripts/fonds-images.js`, `scripts/unsplash-recherche.js`, `scripts/contraste-fonds.js`, `scripts/poids-fonds.js`, `scripts/verifie-fonds.js` (nouveaux) ; `.gitignore` (originaux `source/images/fonds/`)
+- `mesures/fonds-images/` : comparaisons avant/après (`comparaison-<page>-<1440|390>.jpg`, avant à gauche), `sections/` (zones après, 1440 et 390 px), `contrastes-apres.md/json`, `contrastes-temoin-sans-voile.md/json`, `poids-avant.json`, `poids-apres.json`, `variantes.json`, `verifications.json`
+- `mesures/v1-controles/` et `mesures/v2-controles/` (rapports régénérés)

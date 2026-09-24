@@ -1,0 +1,250 @@
+{
+  "v1-clarte": {
+    "390": {
+      "chargement": {
+        "total": 207797,
+        "total_gzip": 150761,
+        "par_type": {
+          "html": 69291,
+          "images": 79390,
+          "css-google": 6668,
+          "polices": 52448
+        },
+        "requetes": 6
+      },
+      "apres_defilement": {
+        "total": 534801,
+        "total_gzip": 477765,
+        "par_type": {
+          "html": 69291,
+          "images": 406394,
+          "css-google": 6668,
+          "polices": 52448
+        },
+        "requetes": 9
+      },
+      "images_chargement": [
+        {
+          "fichier": "logo-mzi-consulting.webp",
+          "octets": 5392
+        },
+        {
+          "fichier": "v1-hero-mobile-800.webp",
+          "octets": 73998
+        }
+      ],
+      "images_apres_defilement": [
+        {
+          "fichier": "logo-mzi-consulting.webp",
+          "octets": 5392
+        },
+        {
+          "fichier": "v1-hero-mobile-800.webp",
+          "octets": 73998
+        },
+        {
+          "fichier": "v1-methode-atelier.webp",
+          "octets": 234118
+        },
+        {
+          "fichier": "v1-bande-mobile-800.webp",
+          "octets": 49996
+        },
+        {
+          "fichier": "v1-contact-mobile-800.webp",
+          "octets": 42890
+        }
+      ]
+    },
+    "1440": {
+      "chargement": {
+        "total": 449083,
+        "total_gzip": 392047,
+        "par_type": {
+          "html": 69291,
+          "images": 320676,
+          "css-google": 6668,
+          "polices": 52448
+        },
+        "requetes": 7
+      },
+      "apres_defilement": {
+        "total": 698197,
+        "total_gzip": 641161,
+        "par_type": {
+          "html": 69291,
+          "images": 569790,
+          "css-google": 6668,
+          "polices": 52448
+        },
+        "requetes": 9
+      },
+      "images_chargement": [
+        {
+          "fichier": "logo-mzi-consulting.webp",
+          "octets": 5392
+        },
+        {
+          "fichier": "v1-hero-bureau-1400.webp",
+          "octets": 81166
+        },
+        {
+          "fichier": "v1-methode-atelier.webp",
+          "octets": 234118
+        }
+      ],
+      "images_apres_defilement": [
+        {
+          "fichier": "logo-mzi-consulting.webp",
+          "octets": 5392
+        },
+        {
+          "fichier": "v1-hero-bureau-1400.webp",
+          "octets": 81166
+        },
+        {
+          "fichier": "v1-methode-atelier.webp",
+          "octets": 234118
+        },
+        {
+          "fichier": "v1-bande-bureau-2200.webp",
+          "octets": 123328
+        },
+        {
+          "fichier": "v1-contact-bureau-2200.webp",
+          "octets": 125786
+        }
+      ]
+    }
+  },
+  "v2-nuit-suisse": {
+    "390": {
+      "chargement": {
+        "total": 329959,
+        "total_gzip": 266644,
+        "par_type": {
+          "html": 76806,
+          "images": 129790,
+          "css-google": 9215,
+          "polices": 114148
+        },
+        "requetes": 11
+      },
+      "apres_defilement": {
+        "total": 633327,
+        "total_gzip": 570012,
+        "par_type": {
+          "html": 76806,
+          "images": 433158,
+          "css-google": 9215,
+          "polices": 114148
+        },
+        "requetes": 14
+      },
+      "images_chargement": [
+        {
+          "fichier": "logo-mzi-consulting.webp",
+          "octets": 5392
+        },
+        {
+          "fichier": "v2-hero-mobile-800.webp",
+          "octets": 79548
+        },
+        {
+          "fichier": "v2-solution-personnes.webp",
+          "octets": 44850
+        }
+      ],
+      "images_apres_defilement": [
+        {
+          "fichier": "logo-mzi-consulting.webp",
+          "octets": 5392
+        },
+        {
+          "fichier": "v2-hero-mobile-800.webp",
+          "octets": 79548
+        },
+        {
+          "fichier": "v2-solution-personnes.webp",
+          "octets": 44850
+        },
+        {
+          "fichier": "v2-methode-atelier.webp",
+          "octets": 205318
+        },
+        {
+          "fichier": "v2-architecture-mobile-800.webp",
+          "octets": 49320
+        },
+        {
+          "fichier": "v2-contact-mobile-800.webp",
+          "octets": 48730
+        }
+      ]
+    },
+    "1440": {
+      "chargement": {
+        "total": 349665,
+        "total_gzip": 286307,
+        "par_type": {
+          "html": 76806,
+          "images": 154342,
+          "css-google": 9285,
+          "polices": 109232
+        },
+        "requetes": 11
+      },
+      "apres_defilement": {
+        "total": 787445,
+        "total_gzip": 724087,
+        "par_type": {
+          "html": 76806,
+          "images": 592122,
+          "css-google": 9285,
+          "polices": 109232
+        },
+        "requetes": 14
+      },
+      "images_chargement": [
+        {
+          "fichier": "logo-mzi-consulting.webp",
+          "octets": 5392
+        },
+        {
+          "fichier": "v2-hero-bureau-1400.webp",
+          "octets": 104100
+        },
+        {
+          "fichier": "v2-solution-personnes.webp",
+          "octets": 44850
+        }
+      ],
+      "images_apres_defilement": [
+        {
+          "fichier": "logo-mzi-consulting.webp",
+          "octets": 5392
+        },
+        {
+          "fichier": "v2-hero-bureau-1400.webp",
+          "octets": 104100
+        },
+        {
+          "fichier": "v2-solution-personnes.webp",
+          "octets": 44850
+        },
+        {
+          "fichier": "v2-methode-atelier.webp",
+          "octets": 205318
+        },
+        {
+          "fichier": "v2-architecture-bureau-2200.webp",
+          "octets": 97738
+        },
+        {
+          "fichier": "v2-contact-bureau-2200.webp",
+          "octets": 134724
+        }
+      ]
+    }
+  }
+}

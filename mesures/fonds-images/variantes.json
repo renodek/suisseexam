@@ -1,0 +1,254 @@
+[
+  {
+    "fichier": "v1-hero-bureau-800.webp",
+    "largeur": 800,
+    "hauteur": 667,
+    "octets": 36330,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-hero-bureau-1400.webp",
+    "largeur": 1400,
+    "hauteur": 1167,
+    "octets": 81166,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-hero-bureau-2200.webp",
+    "largeur": 2200,
+    "hauteur": 1834,
+    "octets": 179698,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-hero-mobile-800.webp",
+    "largeur": 800,
+    "hauteur": 1999,
+    "octets": 73998,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-hero-mobile-1400.webp",
+    "largeur": 1400,
+    "hauteur": 3498,
+    "octets": 158124,
+    "qualite": 76
+  },
+  {
+    "fichier": "v1-hero-mobile-2200.webp",
+    "largeur": 2200,
+    "hauteur": 5497,
+    "octets": 185552,
+    "qualite": 36
+  },
+  {
+    "fichier": "v1-bande-bureau-800.webp",
+    "largeur": 800,
+    "hauteur": 267,
+    "octets": 25436,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-bande-bureau-1400.webp",
+    "largeur": 1400,
+    "hauteur": 467,
+    "octets": 61500,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-bande-bureau-2200.webp",
+    "largeur": 2200,
+    "hauteur": 733,
+    "octets": 123328,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-bande-mobile-800.webp",
+    "largeur": 800,
+    "hauteur": 675,
+    "octets": 49996,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-bande-mobile-1400.webp",
+    "largeur": 1400,
+    "hauteur": 1181,
+    "octets": 137292,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-bande-mobile-2200.webp",
+    "largeur": 2200,
+    "hauteur": 1856,
+    "octets": 189462,
+    "qualite": 64
+  },
+  {
+    "fichier": "v1-contact-bureau-800.webp",
+    "largeur": 800,
+    "hauteur": 374,
+    "octets": 26952,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-contact-bureau-1400.webp",
+    "largeur": 1400,
+    "hauteur": 654,
+    "octets": 62772,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-contact-bureau-2200.webp",
+    "largeur": 2200,
+    "hauteur": 1028,
+    "octets": 125786,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-contact-mobile-800.webp",
+    "largeur": 800,
+    "hauteur": 1068,
+    "octets": 42890,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-contact-mobile-1400.webp",
+    "largeur": 1400,
+    "hauteur": 1869,
+    "octets": 103176,
+    "qualite": 80
+  },
+  {
+    "fichier": "v1-contact-mobile-2200.webp",
+    "largeur": 2200,
+    "hauteur": 2937,
+    "octets": 169520,
+    "qualite": 76
+  },
+  {
+    "fichier": "v2-hero-bureau-800.webp",
+    "largeur": 800,
+    "hauteur": 533,
+    "octets": 39658,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-hero-bureau-1400.webp",
+    "largeur": 1400,
+    "hauteur": 933,
+    "octets": 104100,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-hero-bureau-2200.webp",
+    "largeur": 2200,
+    "hauteur": 1467,
+    "octets": 191278,
+    "qualite": 76
+  },
+  {
+    "fichier": "v2-hero-mobile-800.webp",
+    "largeur": 800,
+    "hauteur": 1185,
+    "octets": 79548,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-hero-mobile-1400.webp",
+    "largeur": 1400,
+    "hauteur": 2074,
+    "octets": 176664,
+    "qualite": 76
+  },
+  {
+    "fichier": "v2-hero-mobile-2200.webp",
+    "largeur": 2200,
+    "hauteur": 3259,
+    "octets": 191900,
+    "qualite": 36
+  },
+  {
+    "fichier": "v2-architecture-bureau-800.webp",
+    "largeur": 800,
+    "hauteur": 507,
+    "octets": 26692,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-architecture-bureau-1400.webp",
+    "largeur": 1400,
+    "hauteur": 886,
+    "octets": 55108,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-architecture-bureau-2200.webp",
+    "largeur": 2200,
+    "hauteur": 1393,
+    "octets": 97738,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-architecture-mobile-800.webp",
+    "largeur": 800,
+    "hauteur": 833,
+    "octets": 49320,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-architecture-mobile-1400.webp",
+    "largeur": 1400,
+    "hauteur": 1458,
+    "octets": 95800,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-architecture-mobile-2200.webp",
+    "largeur": 2200,
+    "hauteur": 2291,
+    "octets": 173080,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-contact-bureau-800.webp",
+    "largeur": 800,
+    "hauteur": 453,
+    "octets": 20920,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-contact-bureau-1400.webp",
+    "largeur": 1400,
+    "hauteur": 793,
+    "octets": 58694,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-contact-bureau-2200.webp",
+    "largeur": 2200,
+    "hauteur": 1247,
+    "octets": 134724,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-contact-mobile-800.webp",
+    "largeur": 800,
+    "hauteur": 1067,
+    "octets": 48730,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-contact-mobile-1400.webp",
+    "largeur": 1400,
+    "hauteur": 1866,
+    "octets": 142218,
+    "qualite": 80
+  },
+  {
+    "fichier": "v2-contact-mobile-2200.webp",
+    "largeur": 2200,
+    "hauteur": 2933,
+    "octets": 184160,
+    "qualite": 60
+  }
+]

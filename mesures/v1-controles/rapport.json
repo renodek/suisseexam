@@ -313,26 +313,34 @@
   ],
   "focus": {
     "390": {
-      "total": 37,
+      "total": 41,
       "sansIndicateurVisible": [],
       "masquesParEntete": [],
       "zonesSous24px": [
-        "a « Christin Hume » 63×14",
-        "a « Unsplash » 40×14",
-        "a « Annie Spratt » 55×14",
-        "a « Unsplash » 40×14",
+        "a « ThisisEngineering » 92×16",
+        "a « Unsplash » 48×16",
+        "a « Annie Spratt » 66×16",
+        "a « Unsplash » 48×16",
+        "a « Clay Banks » 56×16",
+        "a « Unsplash » 48×16",
+        "a « Muhammad Faiz Zulkeflee » 139×16",
+        "a « Unsplash » 48×16",
         "a « Politique de confidentialité » 168×17"
       ]
     },
     "1440": {
-      "total": 42,
+      "total": 46,
       "sansIndicateurVisible": [],
       "masquesParEntete": [],
       "zonesSous24px": [
-        "a « Christin Hume » 63×14",
-        "a « Unsplash » 40×14",
-        "a « Annie Spratt » 55×14",
-        "a « Unsplash » 40×14"
+        "a « ThisisEngineering » 92×16",
+        "a « Unsplash » 48×16",
+        "a « Annie Spratt » 66×16",
+        "a « Unsplash » 48×16",
+        "a « Clay Banks » 56×16",
+        "a « Unsplash » 48×16",
+        "a « Muhammad Faiz Zulkeflee » 139×16",
+        "a « Unsplash » 48×16"
       ]
     },
     "390-menu-ouvert": {
@@ -424,24 +432,9 @@
   },
   "contrastes": {
     "390": {
-      "couples": 25,
+      "couples": 26,
       "echecs": [],
       "tous": [
-        {
-          "fg": "#ffffff",
-          "bg": "#737373",
-          "ratio": 4.76,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 3,
-          "samples": [
-            "Photo by on",
-            "Annie Spratt",
-            "Unsplash"
-          ],
-          "note": "fond = photo (variable)"
-        },
         {
           "fg": "#0e7490",
           "bg": "#f3f5f8",
@@ -449,7 +442,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 4,
+          "count": 3,
           "samples": [
             "La solution",
             "Les bénéfices",
@@ -464,7 +457,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 4,
+          "count": 3,
           "samples": [
             "personnalisé",
             "concrets",
@@ -494,9 +487,9 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 8,
+          "count": 9,
           "samples": [
-            "ces défis ?",
+            "ces défis ?",
             "structurée et éprouvée",
             "40 %"
           ],
@@ -531,20 +524,6 @@
         },
         {
           "fg": "#5b6576",
-          "bg": "#f3f5f8",
-          "ratio": 5.39,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 2,
-          "samples": [
-            "Adresse",
-            "Téléphone"
-          ],
-          "note": ""
-        },
-        {
-          "fg": "#5b6576",
           "bg": "#ffffff",
           "ratio": 5.89,
           "large": false,
@@ -565,11 +544,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 19,
+          "count": 17,
           "samples": [
-            "À CONFIRMER : source et période",
-            "À CONFIRMER : photo du fondateur",
-            "À CONFIRMER : nom du fondateur"
+            "À CONFIRMER : source et période",
+            "À CONFIRMER : photo du fondateur",
+            "À CONFIRMER : nom du fondateur"
           ],
           "note": ""
         },
@@ -595,7 +574,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 7,
+          "count": 6,
           "samples": [
             "Vos équipes passent trop de temps sur de",
             "Sans système performant pour accélérer v",
@@ -619,17 +598,31 @@
           "note": ""
         },
         {
+          "fg": "#b6c0d0",
+          "bg": "#0a0e1a",
+          "ratio": 10.49,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 2,
+          "samples": [
+            "Adresse",
+            "Téléphone"
+          ],
+          "note": ""
+        },
+        {
           "fg": "#f4c96e",
           "bg": "#1a1b20",
           "ratio": 10.98,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 3,
+          "count": 5,
           "samples": [
-            "À CONFIRMER : source et période",
-            "À CONFIRMER : adresse complète",
-            "À CONFIRMER : téléphone"
+            "À CONFIRMER : source et période",
+            "À CONFIRMER : adresse complète",
+            "À CONFIRMER : numéro de téléphone"
           ],
           "note": ""
         },
@@ -655,13 +648,41 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 4,
+          "count": 5,
           "samples": [
             "Agence d'automatisation IA · Annemasse ·",
             "01",
             "02"
           ],
           "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0a0e1a",
+          "ratio": 11.15,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "à Annemasse ?"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#363943",
+          "ratio": 11.46,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 6,
+          "samples": [
+            "Photo by on",
+            "Annie Spratt",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
         },
         {
           "fg": "#c9d1de",
@@ -679,17 +700,15 @@
           "note": ""
         },
         {
-          "fg": "#1d2433",
-          "bg": "#f3f5f8",
-          "ratio": 14.22,
+          "fg": "#d5dce8",
+          "bg": "#0a0e1a",
+          "ratio": 13.97,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 4,
+          "count": 1,
           "samples": [
-            "Sans engagement",
-            "Réponse sous 24 h",
-            "Audit personnalisé"
+            "Réservez votre audit IA gratuit et décou"
           ],
           "note": ""
         },
@@ -702,9 +721,24 @@
           "ok": true,
           "count": 6,
           "samples": [
-            "« L'audit réalisé a été un véritable tou",
-            "« Une expertise rare qui allie vision bu",
-            "« Le langage technique est vulgarisé ave"
+            "« L'audit réalisé a été un véritable tou",
+            "« Une expertise rare qui allie vision bu",
+            "« Le langage technique est vulgarisé ave"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#e8edf4",
+          "bg": "#0a0e1a",
+          "ratio": 16.37,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Sans engagement",
+            "Réponse sous 24 h",
+            "Audit personnalisé"
           ],
           "note": ""
         },
@@ -715,7 +749,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 8,
+          "count": 7,
           "samples": [
             "Perte de temps massive",
             "Manque d'automatisation",
@@ -730,7 +764,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 10,
+          "count": 17,
           "samples": [
             "Services",
             "Méthode",
@@ -745,7 +779,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 4,
+          "count": 5,
           "samples": [
             "Automatisez les tâches répétitives de vo",
             "50+",
@@ -760,7 +794,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 25,
+          "count": 26,
           "samples": [
             "Votre entreprise à Annemasse fait face à",
             "Analyse détaillée et complète",
@@ -782,43 +816,13 @@
             "Yohanna B."
           ],
           "note": ""
-        },
-        {
-          "fg": "#ffffff",
-          "bg": "#05060c",
-          "ratio": 20.22,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 3,
-          "samples": [
-            "Photo by on",
-            "Christin Hume",
-            "Unsplash"
-          ],
-          "note": "fond = photo (variable)"
         }
       ]
     },
     "1440": {
-      "couples": 26,
+      "couples": 27,
       "echecs": [],
       "tous": [
-        {
-          "fg": "#ffffff",
-          "bg": "#737373",
-          "ratio": 4.76,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 3,
-          "samples": [
-            "Photo by on",
-            "Annie Spratt",
-            "Unsplash"
-          ],
-          "note": "fond = photo (variable)"
-        },
         {
           "fg": "#0e7490",
           "bg": "#f3f5f8",
@@ -826,7 +830,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 4,
+          "count": 3,
           "samples": [
             "La solution",
             "Les bénéfices",
@@ -841,7 +845,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 4,
+          "count": 3,
           "samples": [
             "personnalisé",
             "concrets",
@@ -871,9 +875,9 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 8,
+          "count": 9,
           "samples": [
-            "ces défis ?",
+            "ces défis ?",
             "structurée et éprouvée",
             "40 %"
           ],
@@ -908,20 +912,6 @@
         },
         {
           "fg": "#5b6576",
-          "bg": "#f3f5f8",
-          "ratio": 5.39,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 2,
-          "samples": [
-            "Adresse",
-            "Téléphone"
-          ],
-          "note": ""
-        },
-        {
-          "fg": "#5b6576",
           "bg": "#ffffff",
           "ratio": 5.89,
           "large": false,
@@ -942,11 +932,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 19,
+          "count": 17,
           "samples": [
-            "À CONFIRMER : source et période",
-            "À CONFIRMER : photo du fondateur",
-            "À CONFIRMER : nom du fondateur"
+            "À CONFIRMER : source et période",
+            "À CONFIRMER : photo du fondateur",
+            "À CONFIRMER : nom du fondateur"
           ],
           "note": ""
         },
@@ -972,7 +962,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 7,
+          "count": 6,
           "samples": [
             "Vos équipes passent trop de temps sur de",
             "Sans système performant pour accélérer v",
@@ -996,17 +986,31 @@
           "note": ""
         },
         {
+          "fg": "#b6c0d0",
+          "bg": "#0a0e1a",
+          "ratio": 10.49,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 2,
+          "samples": [
+            "Adresse",
+            "Téléphone"
+          ],
+          "note": ""
+        },
+        {
           "fg": "#f4c96e",
           "bg": "#1a1b20",
           "ratio": 10.98,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 3,
+          "count": 5,
           "samples": [
-            "À CONFIRMER : source et période",
-            "À CONFIRMER : adresse complète",
-            "À CONFIRMER : téléphone"
+            "À CONFIRMER : source et période",
+            "À CONFIRMER : adresse complète",
+            "À CONFIRMER : numéro de téléphone"
           ],
           "note": ""
         },
@@ -1032,13 +1036,41 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 4,
+          "count": 5,
           "samples": [
             "Agence d'automatisation IA · Annemasse ·",
             "01",
             "02"
           ],
           "note": ""
+        },
+        {
+          "fg": "#10d7fd",
+          "bg": "#0a0e1a",
+          "ratio": 11.15,
+          "large": true,
+          "required": 3,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "à Annemasse ?"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#363943",
+          "ratio": 11.46,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 6,
+          "samples": [
+            "Photo by on",
+            "Annie Spratt",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
         },
         {
           "fg": "#c9d1de",
@@ -1056,17 +1088,15 @@
           "note": ""
         },
         {
-          "fg": "#1d2433",
-          "bg": "#f3f5f8",
-          "ratio": 14.22,
+          "fg": "#d5dce8",
+          "bg": "#0a0e1a",
+          "ratio": 13.97,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 4,
+          "count": 1,
           "samples": [
-            "Sans engagement",
-            "Réponse sous 24 h",
-            "Audit personnalisé"
+            "Réservez votre audit IA gratuit et décou"
           ],
           "note": ""
         },
@@ -1079,9 +1109,9 @@
           "ok": true,
           "count": 6,
           "samples": [
-            "« L'audit réalisé a été un véritable tou",
-            "« Une expertise rare qui allie vision bu",
-            "« Le langage technique est vulgarisé ave"
+            "« L'audit réalisé a été un véritable tou",
+            "« Une expertise rare qui allie vision bu",
+            "« Le langage technique est vulgarisé ave"
           ],
           "note": ""
         },
@@ -1101,13 +1131,28 @@
           "note": ""
         },
         {
+          "fg": "#e8edf4",
+          "bg": "#0a0e1a",
+          "ratio": 16.37,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Sans engagement",
+            "Réponse sous 24 h",
+            "Audit personnalisé"
+          ],
+          "note": ""
+        },
+        {
           "fg": "#0a0e1a",
           "bg": "#f3f5f8",
           "ratio": 17.63,
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 8,
+          "count": 7,
           "samples": [
             "Perte de temps massive",
             "Manque d'automatisation",
@@ -1122,7 +1167,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 4,
+          "count": 5,
           "samples": [
             "Automatisez les tâches répétitives de vo",
             "50+",
@@ -1137,11 +1182,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 5,
+          "count": 12,
           "samples": [
             "Découvrir notre méthode",
             "L'audit IA gratuit",
-            "Services"
+            "Photo by on"
           ],
           "note": ""
         },
@@ -1152,7 +1197,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 25,
+          "count": 26,
           "samples": [
             "Votre entreprise à Annemasse fait face à",
             "Analyse détaillée et complète",
@@ -1174,21 +1219,6 @@
             "Yohanna B."
           ],
           "note": ""
-        },
-        {
-          "fg": "#ffffff",
-          "bg": "#05060c",
-          "ratio": 20.22,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 3,
-          "samples": [
-            "Photo by on",
-            "Christin Hume",
-            "Unsplash"
-          ],
-          "note": "fond = photo (variable)"
         }
       ]
     }

@@ -335,34 +335,38 @@
   ],
   "focus": {
     "390": {
-      "total": 42,
+      "total": 44,
       "sansIndicateurVisible": [],
       "masquesParEntete": [],
       "zonesSous24px": [
-        "a « T Fang » 29×14",
-        "a « Unsplash » 40×14",
-        "a « Mimi Thian » 49×14",
-        "a « Unsplash » 40×14",
-        "a « Annie Spratt » 55×14",
-        "a « Unsplash » 40×14",
-        "a « T Fang » 29×14",
-        "a « Unsplash » 40×14",
+        "a « Pascal Debrunner » 92×16",
+        "a « Unsplash » 48×16",
+        "a « Mimi Thian » 59×16",
+        "a « Unsplash » 48×16",
+        "a « Annie Spratt » 66×16",
+        "a « Unsplash » 48×16",
+        "a « Howei Wang » 67×16",
+        "a « Unsplash » 48×16",
+        "a « T Fang » 35×16",
+        "a « Unsplash » 48×16",
         "a « Politique de confidentialité » 166×18"
       ]
     },
     "1440": {
-      "total": 47,
+      "total": 49,
       "sansIndicateurVisible": [],
       "masquesParEntete": [],
       "zonesSous24px": [
-        "a « T Fang » 29×14",
-        "a « Unsplash » 40×14",
-        "a « Mimi Thian » 49×14",
-        "a « Unsplash » 40×14",
-        "a « Annie Spratt » 55×14",
-        "a « Unsplash » 40×14",
-        "a « T Fang » 29×14",
-        "a « Unsplash » 40×14",
+        "a « Pascal Debrunner » 92×16",
+        "a « Unsplash » 48×16",
+        "a « Mimi Thian » 59×16",
+        "a « Unsplash » 48×16",
+        "a « Annie Spratt » 66×16",
+        "a « Unsplash » 48×16",
+        "a « Howei Wang » 67×16",
+        "a « Unsplash » 48×16",
+        "a « T Fang » 35×16",
+        "a « Unsplash » 48×16",
         "a « Politique de confidentialité » 166×18"
       ]
     },
@@ -455,7 +459,7 @@
   },
   "contrastes": {
     "390": {
-      "couples": 30,
+      "couples": 29,
       "echecs": [],
       "tous": [
         {
@@ -530,6 +534,19 @@
           "note": ""
         },
         {
+          "fg": "#aab3c2",
+          "bg": "#0f1526",
+          "ratio": 8.6,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "Vos données servent uniquement à vous re"
+          ],
+          "note": ""
+        },
+        {
           "fg": "#3d4655",
           "bg": "#f3f5f8",
           "ratio": 8.72,
@@ -550,9 +567,8 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 3,
+          "count": 2,
           "samples": [
-            "Vos données servent uniquement à vous re",
             "Agence d'automatisation IA à Annemasse, ",
             "© 2026 MZI Consulting. Tous droits réser"
           ],
@@ -608,7 +624,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 17,
+          "count": 18,
           "samples": [
             "Agence d'automatisation IA",
             "01",
@@ -683,7 +699,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 23,
+          "count": 22,
           "samples": [
             "01",
             "03",
@@ -741,26 +757,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 8,
+          "count": 11,
           "samples": [
             "Annemasse",
             "Grand Genève",
             "Analyse de vos processus"
-          ],
-          "note": ""
-        },
-        {
-          "fg": "#d5dbe5",
-          "bg": "#0a0e1a",
-          "ratio": 13.84,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 3,
-          "samples": [
-            "Nom complet",
-            "E-mail professionnel",
-            "Comment pouvons-nous vous aider ?"
           ],
           "note": ""
         },
@@ -799,7 +800,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 12,
+          "count": 11,
           "samples": [
             "Découvrir notre méthode",
             "Perte de temps massive",
@@ -809,12 +810,27 @@
         },
         {
           "fg": "#ffffff",
+          "bg": "#0b0f1c",
+          "ratio": 19.08,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 12,
+          "samples": [
+            "Photo by on",
+            "Pascal Debrunner",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
+        },
+        {
+          "fg": "#ffffff",
           "bg": "#0a0e1a",
           "ratio": 19.25,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 20,
+          "count": 23,
           "samples": [
             "Services",
             "Méthode",
@@ -866,36 +882,6 @@
             "Yohanna B."
           ],
           "note": ""
-        },
-        {
-          "fg": "#ffffff",
-          "bg": "#070911",
-          "ratio": 19.85,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 9,
-          "samples": [
-            "Photo by on",
-            "T Fang",
-            "Unsplash"
-          ],
-          "note": "fond = photo (variable)"
-        },
-        {
-          "fg": "#ffffff",
-          "bg": "#05060c",
-          "ratio": 20.22,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 3,
-          "samples": [
-            "Photo by on",
-            "Mimi Thian",
-            "Unsplash"
-          ],
-          "note": "fond = photo (variable)"
         }
       ]
     },
@@ -975,6 +961,19 @@
           "note": ""
         },
         {
+          "fg": "#aab3c2",
+          "bg": "#0f1526",
+          "ratio": 8.6,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 1,
+          "samples": [
+            "Vos données servent uniquement à vous re"
+          ],
+          "note": ""
+        },
+        {
           "fg": "#3d4655",
           "bg": "#f3f5f8",
           "ratio": 8.72,
@@ -995,9 +994,8 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 3,
+          "count": 2,
           "samples": [
-            "Vos données servent uniquement à vous re",
             "Agence d'automatisation IA à Annemasse, ",
             "© 2026 MZI Consulting. Tous droits réser"
           ],
@@ -1053,7 +1051,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 17,
+          "count": 18,
           "samples": [
             "Agence d'automatisation IA",
             "01",
@@ -1128,7 +1126,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 23,
+          "count": 22,
           "samples": [
             "01",
             "03",
@@ -1186,7 +1184,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 8,
+          "count": 11,
           "samples": [
             "Annemasse",
             "Grand Genève",
@@ -1201,7 +1199,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 8,
+          "count": 5,
           "samples": [
             "Services",
             "Méthode",
@@ -1244,13 +1242,28 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 12,
+          "count": 11,
           "samples": [
             "Découvrir notre méthode",
             "Perte de temps massive",
             "Manque d'automatisation"
           ],
           "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0b0f1c",
+          "ratio": 19.08,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 12,
+          "samples": [
+            "Photo by on",
+            "Pascal Debrunner",
+            "Unsplash"
+          ],
+          "note": "fond = photo (variable)"
         },
         {
           "fg": "#ffffff",
@@ -1274,13 +1287,13 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 11,
+          "count": 14,
           "samples": [
-            "Analyse détaillée et complète",
-            "Identification des opportunités IA",
-            "Recommandations concrètes"
+            "Photo by on",
+            "Mimi Thian",
+            "Unsplash"
           ],
-          "note": ""
+          "note": "fond = photo (variable)"
         },
         {
           "fg": "#0a0e1a",
@@ -1311,36 +1324,6 @@
             "Yohanna B."
           ],
           "note": ""
-        },
-        {
-          "fg": "#ffffff",
-          "bg": "#070911",
-          "ratio": 19.85,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 9,
-          "samples": [
-            "Photo by on",
-            "T Fang",
-            "Unsplash"
-          ],
-          "note": "fond = photo (variable)"
-        },
-        {
-          "fg": "#ffffff",
-          "bg": "#05060c",
-          "ratio": 20.22,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 3,
-          "samples": [
-            "Photo by on",
-            "Mimi Thian",
-            "Unsplash"
-          ],
-          "note": "fond = photo (variable)"
         }
       ]
     }
@@ -2656,80 +2639,68 @@
   "textesSurPhoto": {
     "390": [
       {
-        "texte": "Photo by T Fang on Unsplash",
-        "pireContraste": 17.48
+        "texte": "Photo by Pascal Debrunner on U",
+        "pireContraste": 17.61
       },
       {
         "texte": "Photo by Mimi Thian on Unsplas",
-        "pireContraste": 13.81
+        "pireContraste": 16.98
       },
       {
         "texte": "Photo by Annie Spratt on Unspl",
-        "pireContraste": 14.5
+        "pireContraste": 16.25
+      },
+      {
+        "texte": "Photo by Howei Wang on Unsplas",
+        "pireContraste": 19.24
       },
       {
         "texte": "Photo by T Fang on Unsplash",
-        "pireContraste": 19.68
-      },
-      {
-        "texte": "ANNEMASSE · HAUTE-SAVOIE",
-        "pireContraste": 9.61
-      },
-      {
-        "texte": "GRAND GENÈVE",
-        "pireContraste": 16.56
+        "pireContraste": 18.52
       }
     ],
     "768": [
       {
-        "texte": "Photo by T Fang on Unsplash",
-        "pireContraste": 18.73
+        "texte": "Photo by Pascal Debrunner on U",
+        "pireContraste": 17.07
       },
       {
         "texte": "Photo by Mimi Thian on Unsplas",
-        "pireContraste": 13.1
+        "pireContraste": 16.98
       },
       {
         "texte": "Photo by Annie Spratt on Unspl",
-        "pireContraste": 15.33
+        "pireContraste": 16.83
+      },
+      {
+        "texte": "Photo by Howei Wang on Unsplas",
+        "pireContraste": 18.54
       },
       {
         "texte": "Photo by T Fang on Unsplash",
-        "pireContraste": 19.77
-      },
-      {
-        "texte": "ANNEMASSE · HAUTE-SAVOIE",
-        "pireContraste": 10.07
-      },
-      {
-        "texte": "GRAND GENÈVE",
-        "pireContraste": 16.94
+        "pireContraste": 17.9
       }
     ],
     "1440": [
       {
-        "texte": "Photo by T Fang on Unsplash",
-        "pireContraste": 17.79
+        "texte": "Photo by Pascal Debrunner on U",
+        "pireContraste": 17.07
       },
       {
         "texte": "Photo by Mimi Thian on Unsplas",
-        "pireContraste": 14.99
+        "pireContraste": 16.64
       },
       {
         "texte": "Photo by Annie Spratt on Unspl",
-        "pireContraste": 17.4
+        "pireContraste": 18
+      },
+      {
+        "texte": "Photo by Howei Wang on Unsplas",
+        "pireContraste": 19.24
       },
       {
         "texte": "Photo by T Fang on Unsplash",
-        "pireContraste": 18.48
-      },
-      {
-        "texte": "ANNEMASSE · HAUTE-SAVOIE",
-        "pireContraste": 9.08
-      },
-      {
-        "texte": "GRAND GENÈVE",
-        "pireContraste": 15.44
+        "pireContraste": 17.9
       }
     ]
   },
@@ -2763,18 +2734,25 @@
         "occurrences": 3,
         "exemple": "Adresse"
       },
+      "#aab3c2 sur #0f1526": {
+        "ratio": 8.6,
+        "requis": 4.5,
+        "ok": true,
+        "occurrences": 1,
+        "exemple": "Vos données servent uniquement à vous re"
+      },
       "#aab3c2 sur #0a0e1a": {
         "ratio": 9.11,
         "requis": 4.5,
         "ok": true,
-        "occurrences": 3,
-        "exemple": "Vos données servent uniquement à vous re"
+        "occurrences": 2,
+        "exemple": "Agence d'automatisation IA à Annemasse, "
       },
       "#10d7fd sur #0f1526": {
         "ratio": 10.52,
         "requis": 4.5,
         "ok": true,
-        "occurrences": 17,
+        "occurrences": 18,
         "exemple": "Agence d'automatisation IA"
       },
       "#10d7fd sur #0f1526 (grand texte)": {
@@ -2788,7 +2766,7 @@
         "ratio": 11.15,
         "requis": 4.5,
         "ok": true,
-        "occurrences": 23,
+        "occurrences": 22,
         "exemple": "01"
       },
       "#10d7fd sur #0a0e1a (grand texte)": {

@@ -247,11 +247,18 @@
 
   /* Héros */
   .hero{position:relative;background:var(--night);overflow:hidden;padding:0}
-  .hero-canvas{position:absolute;left:0;top:0;width:100%;height:100%;mask-image:linear-gradient(90deg,#000 0%,#000 35%,transparent 80%);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 35%,transparent 80%)}
-  .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,26,.3) 0%,rgba(10,14,26,.8) 35%,rgba(10,14,26,.5) 65%,rgba(10,14,26,0) 100%);pointer-events:none}
-  .hero-inner{position:relative;max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,5.5vw,80px) 0}
+  /* Fond photo : la scène occupe la droite du héros ; le dégradé bleu nuit (#0a0e1a, opaque à gauche sous
+     le texte) la fait apparaître vers la droite. Sur écran étroit, l'image se cale derrière la carte
+     « L'audit IA gratuit » (voir @media plus bas) et le dégradé devient vertical. */
+  .hero-bg{position:absolute;top:0;right:0;bottom:0;left:24%;display:block;background:var(--night)}
+  .hero-photo{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+  .hero-bg::after{content:"";position:absolute;inset:0;pointer-events:none;background:
+    linear-gradient(0deg,rgba(10,14,26,.95) 0,rgba(10,14,26,.7) 130px,rgba(10,14,26,0) 300px),
+    linear-gradient(90deg,#0a0e1a 0%,#0a0e1a 22%,rgba(10,14,26,.88) 40%,rgba(10,14,26,.5) 62%,rgba(10,14,26,.12) 100%)}
+  .hero-canvas{z-index:1;position:absolute;left:0;top:0;width:100%;height:100%;mask-image:linear-gradient(90deg,#000 0%,#000 35%,transparent 80%);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 35%,transparent 80%)}
+  .hero-inner{max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(20px,5.5vw,80px) 0}
   .hero-grid{display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,72px);align-items:center}
-  .hero-text{flex:1 1 560px;min-width:0;display:flex;flex-direction:column}
+  .hero-text{position:relative;z-index:2;flex:1 1 560px;min-width:0;display:flex;flex-direction:column}
   .hero-text .eyebrow{line-height:1.5}
   .hero-actions .btn{font-size:19px}
   .hero-actions .btn svg{width:16px;height:16px}
@@ -261,17 +268,22 @@
   .hero-checklist{margin:36px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:12px 28px;font:500 16px var(--font-body);color:#c9d1de}
   .hero-checklist li{display:flex;align-items:center;gap:10px}
   .hero-checklist svg{width:14px;height:14px;color:var(--cyan);flex-shrink:0}
-  .hero-media{flex:1 1 380px;min-width:0;position:relative;height:clamp(440px,44vw,620px)}
-  .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;border-radius:28px}
-  .photo-credit{position:absolute;left:6px;bottom:6px;max-width:calc(100% - 12px);padding:3px 7px;border-radius:5px;background:rgba(0,0,0,.55);color:#fff;font:10px/1.2 system-ui,-apple-system,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;backdrop-filter:blur(6px)}
-  .photo-credit a,.photo-credit a:hover{color:inherit;text-decoration:none}
-  .photo-credit a:hover{text-decoration:underline}
-  .hero-card{position:absolute;left:20px;bottom:20px;width:min(300px,calc(100% - 40px));background:var(--night);border:1px solid rgba(126,141,163,.35);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 48px rgba(0,0,0,.35)}
+  .hero-media{flex:1 1 380px;min-width:0;height:clamp(440px,44vw,620px);display:flex;align-items:flex-end}
+  /* Crédit de photo : 12 px, blanc sur fond bleu nuit à 82 % (contraste mesuré sur les pixels rendus). */
+  .photo-credit{position:absolute;right:12px;bottom:12px;z-index:3;max-width:calc(100% - 24px);padding:4px 9px;border-radius:6px;background:rgba(10,14,26,.82);color:#fff;font:12px/1.3 system-ui,-apple-system,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .photo-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+  @media (max-width:1120px){
+    .hero-media{position:relative}
+    .hero-bg{left:calc(-1 * clamp(20px,5.5vw,80px));right:calc(-1 * clamp(20px,5.5vw,80px));top:0;bottom:-420px}
+    .hero-bg::after{background:linear-gradient(180deg,#0a0e1a 0%,rgba(10,14,26,.3) 7%,rgba(10,14,26,.2) 30%,rgba(10,14,26,.45) 52%,rgba(10,14,26,.9) 66%,#0a0e1a 78%)}
+    .hero .hero-stats{padding-bottom:56px}
+  }
+  .hero-card{position:relative;z-index:2;margin:0 0 20px 20px;width:min(300px,calc(100% - 40px));background:var(--night);border:1px solid rgba(126,141,163,.35);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 48px rgba(0,0,0,.35)}
   .hero-card-title{font:700 18px var(--font-display);color:#fff}
   .hero-steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.35 var(--font-body);color:#c9d1de}
   .hero-steps li{display:flex;gap:10px}
   .hero-steps span{font:700 13px var(--font-display);color:var(--cyan);min-width:18px}
-  .hero-stats{margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(126,141,163,.3);padding:28px 0 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 48px}
+  .hero-stats{position:relative;z-index:2;margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(126,141,163,.3);padding:28px 0 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 48px}
   .hero-stats p{margin:0;font:400 17px var(--font-body);color:#c9d1de}
   .hero-stats strong{font:700 22px var(--font-display);color:#fff}
 
@@ -343,8 +355,34 @@
   .faq-body{padding:0 60px 26px 0;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
   .faq-answer{margin:0;font:400 17px/1.6 var(--font-body);color:var(--body);text-wrap:pretty}
 
-  /* Contact */
-  .contact-grid{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px clamp(40px,6vw,88px);align-items:flex-start}
+  /* Bande de transition entre deux sections claires : photo lumineuse d'espace de travail, voile blanc léger */
+  .photo-band{position:relative;overflow:hidden;background:#fff;padding:clamp(72px,9vw,128px) clamp(20px,5.5vw,80px);display:flex;justify-content:center;text-align:center}
+  .photo-band picture{position:absolute;inset:0;display:block}
+  .photo-band img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+  .photo-band::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(255,255,255,.74)}
+  .band-phrase{position:relative;z-index:2;margin:0;max-width:880px;font:800 clamp(28px,3.6vw,48px)/1.15 var(--font-display);letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
+  .band-phrase .accent{color:var(--teal)}
+
+  /* Contact : photo de fond sous voile bleu nuit, formulaire sur carte blanche */
+  .contact-sec{position:relative;overflow:hidden;background:var(--night)}
+  .contact-bg{position:absolute;inset:0;display:block}
+  .contact-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+  .contact-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,26,.9) 0%,rgba(10,14,26,.82) 45%,rgba(10,14,26,.7) 100%)}
+  .contact-sec .photo-credit{top:12px;bottom:auto}
+  .contact-sec h2{color:#fff}
+  .contact-sec h2 .accent{color:var(--cyan)}
+  .contact-sec .section-lead{color:#d5dce8}
+  .contact-sec .contact-checklist{color:#e8edf4}
+  .contact-sec .contact-checklist svg{color:var(--cyan)}
+  .contact-sec .contact-address{border-top-color:rgba(126,141,163,.45)}
+  .contact-sec .address-label{color:#b6c0d0}
+  .contact-sec .address-value{color:#fff}
+  .contact-sec .contact-form-wrap{border-color:transparent;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+  @media (max-width:1120px){
+    .contact-bg{bottom:auto;height:140vw}
+    .contact-bg::after{background:linear-gradient(180deg,rgba(10,14,26,.84) 0%,rgba(10,14,26,.84) 60%,#0a0e1a 100%)}
+  }
+  .contact-grid{position:relative;z-index:2;max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px clamp(40px,6vw,88px);align-items:flex-start}
   .contact-info{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:20px}
   .contact-checklist{margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font:500 17px var(--font-body);color:var(--slate)}
   .contact-checklist li{display:flex;align-items:center;gap:12px}
@@ -436,7 +474,6 @@
 <main id="contenu">
 <section class="hero" id="hero">
   <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
-  <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-grid">
       <div class="hero-text">
@@ -456,8 +493,12 @@
         </ul>
       </div>
       <div class="hero-media">
-        <img class="hero-photo" src="assets/img/v1-hero-audit.webp" width="434" height="620" alt="Séance de travail autour de documents, illustrant l'analyse de processus lors d'un audit" fetchpriority="high">
-        <span class="photo-credit">Photo by <a href="https://unsplash.com/photos/8Jw2WhafOOg?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">ThisisEngineering</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
+      <!-- Photo de fond du héros (Unsplash, ThisisEngineering). Recadrage propre au mobile : les visages
+           restent dans la zone visible au-dessus de la carte ; le voile bleu nuit est le ::after de .hero-bg. -->
+      <picture class="hero-bg">
+        <source media="(max-width:1120px)" srcset="assets/img/fonds/v1-hero-mobile-800.webp 800w, assets/img/fonds/v1-hero-mobile-1400.webp 1400w, assets/img/fonds/v1-hero-mobile-2200.webp 2200w" sizes="100vw">
+        <img class="hero-photo" src="assets/img/fonds/v1-hero-bureau-1400.webp" srcset="assets/img/fonds/v1-hero-bureau-800.webp 800w, assets/img/fonds/v1-hero-bureau-1400.webp 1400w, assets/img/fonds/v1-hero-bureau-2200.webp 2200w" sizes="76vw" width="1400" height="1167" alt="Séance de travail autour de documents, illustrant l'analyse de processus lors d'un audit" fetchpriority="high">
+      </picture>
         <div class="hero-card">
           <div class="hero-card-title">L'audit IA gratuit</div>
           <ol class="hero-steps">
@@ -480,6 +521,7 @@
       <span class="todo dark">À CONFIRMER : source et période</span>
     </div>
   </div>
+  <span class="photo-credit">Photo by <a href="https://unsplash.com/photos/8Jw2WhafOOg?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">ThisisEngineering</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
 </section>
 
 <section class="bg-white" data-screen-label="Défis">
@@ -709,6 +751,17 @@
   </div>
 </section>
 
+<!-- Bande de transition (photo Clay Banks) : phrase reprise telle quelle du contenu du site actuel
+     (contenu.md, « Approche personnalisée »). Image décorative : alt vide. -->
+<div class="photo-band" data-screen-label="Bande de transition">
+  <picture>
+    <source media="(max-width:760px)" srcset="assets/img/fonds/v1-bande-mobile-800.webp 800w, assets/img/fonds/v1-bande-mobile-1400.webp 1400w, assets/img/fonds/v1-bande-mobile-2200.webp 2200w" sizes="100vw">
+    <img src="assets/img/fonds/v1-bande-bureau-1400.webp" srcset="assets/img/fonds/v1-bande-bureau-800.webp 800w, assets/img/fonds/v1-bande-bureau-1400.webp 1400w, assets/img/fonds/v1-bande-bureau-2200.webp 2200w" sizes="100vw" width="1400" height="467" alt="" loading="lazy">
+  </picture>
+  <p class="band-phrase">Chaque audit est <span class="accent">unique</span>, adapté à votre secteur, vos objectifs et votre culture d'entreprise.</p>
+  <span class="photo-credit">Photo by <a href="https://unsplash.com/photos/Mb-lGau6K5U?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Clay Banks</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
+</div>
+
 <section class="bg-white" data-screen-label="FAQ">
   <div class="faq-layout">
     <div class="faq-head">
@@ -778,10 +831,17 @@
   </div>
 </section>
 
-<section class="bg-light" id="contact" data-screen-label="Contact" style="scroll-margin-top:80px">
+<section class="contact-sec" id="contact" data-screen-label="Contact" style="scroll-margin-top:80px">
+  <!-- Photo de fond (Unsplash, Muhammad Faiz Zulkeflee) sous voile bleu nuit ; sous 1120 px, image limitée
+       au haut de la section et fondue dans le fond uni. Décorative : alt vide. -->
+  <picture class="contact-bg">
+    <source media="(max-width:1120px)" srcset="assets/img/fonds/v1-contact-mobile-800.webp 800w, assets/img/fonds/v1-contact-mobile-1400.webp 1400w, assets/img/fonds/v1-contact-mobile-2200.webp 2200w" sizes="100vw">
+    <img src="assets/img/fonds/v1-contact-bureau-1400.webp" srcset="assets/img/fonds/v1-contact-bureau-800.webp 800w, assets/img/fonds/v1-contact-bureau-1400.webp 1400w, assets/img/fonds/v1-contact-bureau-2200.webp 2200w" sizes="100vw" width="1400" height="654" alt="" loading="lazy">
+  </picture>
+  <span class="photo-credit">Photo by <a href="https://unsplash.com/photos/CrfmU6jKCnY?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Muhammad Faiz Zulkeflee</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
   <div class="contact-grid">
     <div class="contact-info">
-      <div class="eyebrow">Contact</div>
+      <div class="eyebrow on-dark">Contact</div>
       <h2>Prêt à transformer votre entreprise avec l'IA <span class="accent">à Annemasse ?</span></h2>
       <p class="section-lead">Réservez votre audit IA gratuit et découvrez concrètement comment exploiter l'intelligence artificielle dans votre entreprise.</p>
       <ul class="contact-checklist">
@@ -793,11 +853,11 @@
         <div class="address-item">
           <span class="address-label">Adresse</span>
           <span class="address-value">Annemasse, Haute-Savoie</span>
-          <span class="todo">À CONFIRMER : adresse complète</span>
+          <span class="todo dark">À CONFIRMER : adresse complète</span>
         </div>
         <div class="address-item">
           <span class="address-label">Téléphone</span>
-          <span class="todo">À CONFIRMER : numéro de téléphone</span>
+          <span class="todo dark">À CONFIRMER : numéro de téléphone</span>
         </div>
       </address>
     </div>

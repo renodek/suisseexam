@@ -6,7 +6,14 @@ pour représenter des scènes de travail ou de paysage génériques. Aucune ne
 montre un membre réel de l'équipe MZI Consulting.
 
 Chaque photo n'est créditée qu'une fois, même lorsqu'elle sert dans les deux
-versions ou dans plusieurs sections d'une même version.
+versions ou dans plusieurs sections d'une même version. Sur les pages, chaque
+image de fond porte en plus un crédit visible (« Photo by … on Unsplash »).
+
+Les images de fond (dossier assets/img/fonds/) sont recadrées (une version
+bureau et une version mobile), redimensionnées en WebP de 800, 1400 et
+2200 px de large et recouvertes d'un voile bleu nuit ou blanc en CSS. La photo
+du héros de la V2 est en outre éclaircie de 35 % à la fabrication (luminosité).
+Aucune n'est retournée ni retouchée autrement. Fabrication : scripts/fonds-images.js.
 
 V1 « Clarté » et V2 « Nuit suisse »
 
@@ -19,20 +26,55 @@ Photo « atelier de travail » (section méthode, V1 et V2)
 
 V1 « Clarté » uniquement
 
-Photo « People reviewing documents at workspace » (section héros et image Open Graph)
+Photo « People reviewing documents at workspace » (fond plein écran du héros et image Open Graph)
   Auteur   : ThisisEngineering
   Source   : https://unsplash.com/photos/8Jw2WhafOOg
+  Profil   : https://unsplash.com/@thisisengineering
   Licence  : Unsplash License (https://unsplash.com/license)
-  Fichiers : assets/img/v1-hero-audit.webp, assets/img/v1-og-image.jpg
+  Fichiers : assets/img/fonds/v1-hero-bureau-800.webp, -1400.webp, -2200.webp
+             assets/img/fonds/v1-hero-mobile-800.webp, -1400.webp, -2200.webp (recadrage mobile)
+             assets/img/v1-og-image.jpg
+
+Photo « Bright room with bookshelves and two desks by windows » (bande de transition avant la FAQ)
+  Auteur   : Clay Banks
+  Source   : https://unsplash.com/photos/Mb-lGau6K5U
+  Profil   : https://unsplash.com/@claybanks
+  Licence  : Unsplash License (https://unsplash.com/license)
+  Fichiers : assets/img/fonds/v1-bande-bureau-800.webp, -1400.webp, -2200.webp
+             assets/img/fonds/v1-bande-mobile-800.webp, -1400.webp, -2200.webp
+
+Photo « People standing near railings viewing buildings » (fond de la section contact)
+  Auteur   : Muhammad Faiz Zulkeflee
+  Source   : https://unsplash.com/photos/CrfmU6jKCnY
+  Profil   : https://unsplash.com/@fzeo
+  Licence  : Unsplash License (https://unsplash.com/license)
+  Fichiers : assets/img/fonds/v1-contact-bureau-800.webp, -1400.webp, -2200.webp
+             assets/img/fonds/v1-contact-mobile-800.webp, -1400.webp, -2200.webp
 
 V2 « Nuit suisse » uniquement
 
-Photo « chaîne de montagnes enneigées » (bandeau du héros, bandeau de la section contact et
-image Open Graph)
+Photo « Snow mountain under clouds » (fond plein écran du héros)
+  Auteur   : Pascal Debrunner
+  Source   : https://unsplash.com/photos/xsbLx28ewOw
+  Profil   : https://unsplash.com/@debrupas
+  Licence  : Unsplash License (https://unsplash.com/license)
+  Fichiers : assets/img/fonds/v2-hero-bureau-800.webp, -1400.webp, -2200.webp
+             assets/img/fonds/v2-hero-mobile-800.webp, -1400.webp, -2200.webp
+
+Photo « A tall building lit up with blue lights » (texture de la section Qui sommes-nous)
+  Auteur   : Howei Wang
+  Source   : https://unsplash.com/photos/AV4mRRZxBrM
+  Profil   : https://unsplash.com/@howei
+  Licence  : Unsplash License (https://unsplash.com/license)
+  Fichiers : assets/img/fonds/v2-architecture-bureau-800.webp, -1400.webp, -2200.webp
+             assets/img/fonds/v2-architecture-mobile-800.webp, -1400.webp, -2200.webp
+
+Photo « chaîne de montagnes enneigées » (fond de la section contact et image Open Graph)
   Auteur   : T Fang
   Source   : https://unsplash.com/@tqfang
   Licence  : Unsplash License (https://unsplash.com/license)
-  Fichiers : assets/img/v2-hero-alpes.webp, assets/img/v2-contact-alpes.webp,
+  Fichiers : assets/img/fonds/v2-contact-bureau-800.webp, -1400.webp, -2200.webp
+             assets/img/fonds/v2-contact-mobile-800.webp, -1400.webp, -2200.webp
              assets/img/v2-og-image.jpg
 
 Photo « deux personnes devant un ordinateur portable » (section solution)
