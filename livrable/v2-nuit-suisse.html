@@ -65,7 +65,7 @@
      la ligne des titres — hero +94 px, citations −33 px — donc le rendu du design. -->
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;display=swap&amp;text=%20'%2B%2C-.0123456789%3A%3F%40ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%89%C3%A0%C3%A2%C3%A8%C3%A9%C3%AA%C3%AE%C3%BB%E2%80%99" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400&amp;display=swap&amp;text=%20%25'%2B-.0123456789%3A%3FABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C2%A9%C2%B7%C3%80%C3%88%C3%89%C3%A8%C3%A9%E2%80%99" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500,0,0;1,9..144,400,0,0;1,9..144,500,0,0&amp;display=swap&amp;text=%20'%2C.0123456789%3B%3FABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C2%AB%C3%A0%C3%A2%C3%A9%C3%AA%C3%AE" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500,0,0;1,9..144,400,0,0;1,9..144,500,0,0&amp;display=swap&amp;text=%20'%2C.0123456789%3B%3FABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C2%A0%C2%AB%C3%A0%C3%A2%C3%A9%C3%AA%C3%AE" rel="stylesheet">
 
 <!-- Audit §5 : le graphe JSON-LD du site réel se limite à WebPage/WebSite/Organization (sans
      adresse ni téléphone) et un BreadcrumbList à un seul niveau ("Aucun schéma
@@ -194,6 +194,11 @@
   .skip-link{position:absolute;left:16px;top:-60px;z-index:100;background:var(--cyan);color:var(--night);font:500 15px var(--sans);padding:12px 18px;border-radius:8px;text-decoration:none;transition:top .15s}
   .skip-link:focus{top:16px}
 
+  /* Titres et citations en Fraunces : les mots courts restent collés au mot suivant (et « ? » à son mot)
+     sur petit écran uniquement, pour éviter un article ou un « un » isolé en fin de ligne. Le design
+     n'est pas modifié au-dessus de 600 px. */
+  @media (max-width:600px){ .nb{white-space:nowrap} }
+
   /* Grille 12 colonnes : une colonne sous 900px (comme le composant source) */
   .grid12,.grid4,.grid3,.grid2{display:grid;grid-template-columns:minmax(0,1fr);column-gap:var(--colgap)}
   .grid12>*{grid-column:1 / -1}
@@ -319,7 +324,8 @@
   .grade-a{filter:saturate(.7) brightness(.85)}
   .grade-b{filter:grayscale(.45) brightness(.9)}
   .band-fade{position:absolute;inset:0;background:linear-gradient(180deg,#0f1526 0%,rgba(15,21,38,.35) 45%,rgba(10,14,26,.25) 100%);pointer-events:none}
-  .photo-credit{position:absolute;left:6px;bottom:6px;max-width:calc(100% - 12px);padding:3px 7px;border-radius:5px;background:rgba(0,0,0,.55);color:#fff;font:10px/1.2 system-ui,-apple-system,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;backdrop-filter:blur(6px);z-index:1}
+  .photo-credit{position:absolute;left:6px;bottom:6px;max-width:calc(100% - 12px);padding:3px 7px;border-radius:5px;background:rgba(0,0,0,.55);color:#fff;font:10px/1.2 system-ui,-apple-system,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;backdrop-filter:blur(6px);z-index:2}
+  .photo-credit.right{left:auto;right:6px}
   .photo-credit a,.photo-credit a:hover{color:inherit;text-decoration:none}
   .photo-credit a:hover{text-decoration:underline}
 
@@ -405,6 +411,12 @@
   /* 09 Contact */
   .contact-banner{margin-top:clamp(40px,5vw,72px);position:relative;height:clamp(160px,18vw,260px);border-radius:28px;overflow:hidden}
   .banner-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,21,38,.85) 0%,rgba(15,21,38,.2) 60%);pointer-events:none}
+  /* Contraste (WCAG 1.4.3) : sur petit écran le cadrage de la photo place les libellés sur une zone
+     claire (cyan à 2,8:1 mesuré sur les pixels rendus) ; le design ne prévoit aucun fond derrière
+     eux. Un dégradé sombre ajouté en bas du bandeau, sous 900 px seulement, les porte à ≥ 4,5:1. */
+  @media (max-width:899px){
+    .banner-fade{background:linear-gradient(0deg,rgba(15,21,38,.92) 0%,rgba(15,21,38,.75) 45%,rgba(15,21,38,0) 85%),linear-gradient(90deg,rgba(15,21,38,.85) 0%,rgba(15,21,38,.2) 60%)}
+  }
   .banner-labels{position:absolute;left:clamp(20px,3vw,40px);bottom:clamp(18px,2.4vw,32px);display:flex;flex-direction:column;gap:4px;pointer-events:none}
   .banner-labels span{font:400 12.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#fff}
   .banner-labels span:first-child{color:var(--cyan)}
@@ -506,7 +518,7 @@
         <span class="chip">Grand Genève</span>
       </div>
       <div class="grid12 hero-grid">
-        <h1 class="c-h1 hero-title">Automatisez les tâches répétitives de votre PME, <em>à Annemasse</em></h1>
+        <h1 class="c-h1 hero-title">Automatisez les tâches répétitives <span class="nb">de votre</span> PME, <em><span class="nb">à Annemasse</span></em></h1>
         <p class="c-hsub hero-sub">Gagnez du temps et augmentez votre chiffre d'affaires grâce à nos solutions IA sur-mesure.</p>
         <div class="c-hcta hero-cta">
           <div class="hero-actions">
@@ -534,9 +546,9 @@
     <div class="hero-band">
       <div class="photo-layer grade-a">
         <img src="assets/img/v2-hero-alpes.webp" width="1496" height="340" alt="Chaîne de montagnes enneigées éclairée par la lumière du soir, sous un ciel dégagé" fetchpriority="high">
-        <span class="photo-credit">Photo by <a href="https://unsplash.com/@tqfang?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">T Fang</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
       </div>
       <div class="band-fade" aria-hidden="true"></div>
+      <span class="photo-credit">Photo by <a href="https://unsplash.com/@tqfang?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">T Fang</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
     </div>
   </div>
 </section>
@@ -545,11 +557,11 @@
   <div class="wrap">
     <div class="eyebrow-row split">
       <!-- Audit §3 : sur le site réel, les trois chiffres-clés du héros sont balisés en <h3>
-           sans <h2> parent ("Hiérarchie de titres rompue par les chiffres-clés" — H1 → H3 → H3 →
-           H3 → premier H2, sans contexte lisible pour un lecteur d'écran). Ici, un seul <h1>
-           pour la page, un <h2> par section (celui-ci, visuellement identique à l'étiquette du
-           design, donne son titre à la section) et les chiffres restent du texte simple (<p>),
-           jamais balisés en Hn. -->
+           sans <h2> parent ("Hiérarchie <span class="nb">de titres</span> rompue par <span class="nb">les chiffres-clés"</span> — H1 → H3 → H3 →
+           H3 → premier H2, sans contexte lisible pour <span class="nb">un lecteur</span> d'écran). Ici, <span class="nb">un seul</span> <h1>
+           pour <span class="nb">la page,</span> un <h2> par section (celui-ci, visuellement identique <span class="nb">à l'étiquette</span> du
+           design, donne son titre <span class="nb">à la section)</span> <span class="nb">et les chiffres</span> restent <span class="nb">du texte</span> simple (<p>),
+           jamais balisés <span class="nb">en Hn.</span> -->
       <div class="lab-group"><span class="num">01</span><h2 class="lab">Chiffres-clés</h2></div>
       <span class="todo">À CONFIRMER : source et période</span>
     </div>
@@ -574,7 +586,7 @@
   <div class="wrap">
     <div class="eyebrow-row"><span class="num">02</span><span class="lab">Les défis</span></div>
     <div class="grid12 head-grid">
-      <h2 class="c-h2 h2 balance" data-reveal>Votre entreprise à Annemasse fait face à <em>ces défis ?</em></h2>
+      <h2 class="c-h2 h2 balance" data-reveal>Votre entreprise <span class="nb">à Annemasse</span> fait face à <em>ces <span class="nb">défis ?</span></em></h2>
       <p class="c-intro lead pretty" data-reveal>Les entreprises qui n'adoptent pas l'intelligence artificielle perdent un avantage concurrentiel majeur. Pourtant, des solutions simples existent pour renverser cette tendance rapidement.</p>
     </div>
     <div class="grid4 challenge-grid">
@@ -609,12 +621,12 @@
       <div class="c-left5 photo-box" data-reveal>
         <div class="photo-layer grade-b">
           <img src="assets/img/v2-solution-personnes.webp" width="600" height="780" alt="Deux personnes travaillant ensemble devant un ordinateur portable, une main posée sur le clavier" loading="lazy">
-          <span class="photo-credit">Photo by <a href="https://unsplash.com/@mimithian?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Mimi Thian</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
         </div>
         <div class="multiply" aria-hidden="true"></div>
+        <span class="photo-credit">Photo by <a href="https://unsplash.com/@mimithian?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Mimi Thian</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
       </div>
       <div class="c-right6 solution-text">
-        <h2 class="h2 balance" data-reveal>Un audit IA <em>personnalisé</em> pour votre entreprise</h2>
+        <h2 class="h2 balance" data-reveal><span class="nb">Un audit</span> IA <em>personnalisé</em> pour votre entreprise</h2>
         <p class="lead pretty" data-reveal>En tant qu'agence IA à Annemasse, nous vous accompagnons pour transformer votre activité grâce à l'intelligence artificielle.</p>
         <ol class="solution-list">
           <li data-reveal>
@@ -642,15 +654,15 @@
   <div class="wrap">
     <div class="eyebrow-row"><span class="num">04</span><span class="lab">La méthode</span></div>
     <div class="grid12 head-grid">
-      <h2 class="c-h2 h2 balance" data-reveal>Une approche <em>structurée et éprouvée</em></h2>
+      <h2 class="c-h2 h2 balance" data-reveal>Une approche <em>structurée <span class="nb">et éprouvée</span></em></h2>
       <p class="c-intro lead" data-reveal>Notre accompagnement en intelligence artificielle à Annemasse suit un processus en 4 étapes.</p>
     </div>
     <div class="methode-photo" data-reveal>
       <div class="photo-layer grade-b">
         <img src="assets/img/v2-methode-atelier.webp" width="1290" height="469" alt="Atelier de travail : plusieurs personnes devant leurs ordinateurs portables autour d'une table en bois" loading="lazy">
-        <span class="photo-credit">Photo by <a href="https://unsplash.com/@anniespratt?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Annie Spratt</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
       </div>
       <div class="methode-dim" aria-hidden="true"></div>
+      <span class="photo-credit">Photo by <a href="https://unsplash.com/@anniespratt?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Annie Spratt</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
     </div>
     <ol class="grid4 steps">
       <li class="step" data-reveal>
@@ -727,7 +739,7 @@
         <span class="todo">À CONFIRMER : photo du fondateur</span>
       </div>
       <div class="c-right6 qui-text">
-        <h2 class="h2 balance" data-reveal>Votre agence IA de confiance <em>à Annemasse</em></h2>
+        <h2 class="h2 balance" data-reveal>Votre agence IA de confiance <em><span class="nb">à Annemasse</span></em></h2>
         <div class="qui-tags">
           <span class="todo">À CONFIRMER : nom du fondateur</span>
           <span class="todo">À CONFIRMER : parcours du fondateur</span>
@@ -760,13 +772,13 @@
   <div class="wrap">
     <div class="eyebrow-row"><span class="num">07</span><span class="lab">Témoignages</span></div>
     <div class="grid12 head-grid">
-      <h2 class="c-h2 h2" data-reveal>Ce que disent <em>nos clients</em></h2>
+      <h2 class="c-h2 h2" data-reveal><span class="nb">Ce que</span> disent <em><span class="nb">nos clients</span></em></h2>
       <p class="c-intro lead" data-reveal>Chaque avis est publié avec son auteur, son entreprise, sa date et un lien vers la source d'origine.</p>
     </div>
     <div class="grid3 testimonial-grid">
       <figure class="testimonial" data-reveal>
         <span class="quote-mark" aria-hidden="true">«</span>
-        <blockquote>L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.</blockquote>
+        <blockquote>L'audit réalisé <span class="nb">a été</span> <span class="nb">un véritable</span> tournant pour notre structure. Nous perdions <span class="nb">un temps</span> fou sur <span class="nb">la saisie</span> <span class="nb">de données ;</span> aujourd'hui, tout est automatisé.</blockquote>
         <figcaption class="testimonial-foot">
           <div class="testimonial-name">Jean-Pierre Morel</div>
           <div class="testimonial-tags">
@@ -778,7 +790,7 @@
       </figure>
       <figure class="testimonial" data-reveal>
         <span class="quote-mark" aria-hidden="true">«</span>
-        <blockquote>Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.</blockquote>
+        <blockquote>Une expertise rare qui allie vision business <span class="nb">et maîtrise</span> technique. <span class="nb">En seulement</span> deux mois, nous avons triplé notre capacité <span class="nb">de traitement</span> <span class="nb">de leads</span> grâce aux outils d'IA recommandés.</blockquote>
         <figcaption class="testimonial-foot">
           <div class="testimonial-name">Clara Vallet</div>
           <div class="testimonial-tags">
@@ -790,7 +802,7 @@
       </figure>
       <figure class="testimonial" data-reveal>
         <span class="quote-mark" aria-hidden="true">«</span>
-        <blockquote>Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs.</blockquote>
+        <blockquote><span class="nb">Le langage</span> technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans <span class="nb">nos processus</span> <span class="nb">de recrutement</span> sans friction. L'approche est structurée <span class="nb">et rassurante</span> pour <span class="nb">les collaborateurs.</span></blockquote>
         <figcaption class="testimonial-foot">
           <div class="testimonial-name">Yohanna B.</div>
           <div class="testimonial-tags">
@@ -863,9 +875,9 @@
     <div class="contact-banner" data-reveal>
       <div class="photo-layer grade-a">
         <img src="assets/img/v2-contact-alpes.webp" width="1362" height="260" alt="Chaîne de montagnes enneigées au coucher du soleil, vue panoramique" loading="lazy">
-        <span class="photo-credit">Photo by <a href="https://unsplash.com/@tqfang?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">T Fang</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
       </div>
       <div class="banner-fade" aria-hidden="true"></div>
+      <span class="photo-credit right">Photo by <a href="https://unsplash.com/@tqfang?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">T Fang</a> on <a href="https://unsplash.com/?utm_source=mzi_consulting&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
       <div class="banner-labels">
         <span>Annemasse · Haute-Savoie</span>
         <span>Grand Genève</span>
@@ -873,7 +885,7 @@
     </div>
     <div class="grid12 contact-grid">
       <div class="c-left5 contact-info">
-        <h2 class="h2 balance" data-reveal>Prêt à transformer votre entreprise avec l'IA <em>à Annemasse ?</em></h2>
+        <h2 class="h2 balance" data-reveal>Prêt <span class="nb">à transformer</span> votre entreprise avec l'IA <em><span class="nb">à Annemasse ?</span></em></h2>
         <p class="lead pretty">Réservez votre audit IA gratuit et découvrez concrètement comment exploiter l'intelligence artificielle dans votre entreprise.</p>
         <ul class="ticks contact-ticks">
           <li><i aria-hidden="true"></i>Sans engagement</li>

@@ -14,7 +14,20 @@ const fs = require('fs');
 const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, 'mesures', 'v2-controles');
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg' };
+const extra = require('./controle-v2-extra');
 const report = { survol: [], focus: {}, menu: {}, faq: {}, formulaire: {}, contrastes: {} };
+const consoleErrors = [];
+// Chaque contexte ouvert sur la page v2 remonte ses erreurs de console, erreurs de page et requêtes en échec.
+const newCtx = async (browser, opts) => {
+  const ctx = await browser.newContext(opts);
+  ctx.on('page', (p) => {
+    const mine = () => p.url().includes('v2-nuit-suisse');
+    p.on('console', (m) => { if (m.type() === 'error' && mine()) consoleErrors.push({ type: 'console.error', text: m.text() }); });
+    p.on('pageerror', (e) => { if (mine()) consoleErrors.push({ type: 'pageerror', text: e.message }); });
+    p.on('requestfailed', (r) => { if (mine()) consoleErrors.push({ type: 'requestfailed', text: r.url() }); });
+  });
+  return ctx;
+};
 
 function serve() {
   return new Promise((resolve) => {
@@ -122,7 +135,7 @@ async function main() {
   ];
   const hoverData = { v1: {}, design: {} };
   for (const [key, url] of [['v1', V1], ['design', DESIGN]]) {
-    const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
+    const ctx = await newCtx(browser, { viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     await page.goto(url, { waitUntil: 'networkidle' });
     if (key === 'design') await page.waitForSelector('h1');
@@ -172,7 +185,7 @@ async function main() {
         return {
           nom: (el.getAttribute('aria-label') || el.innerText || el.id || el.tagName).replace(/\s+/g, ' ').trim().slice(0, 50),
           tag: el.tagName.toLowerCase(), rect: { x: r.left, y: r.top, width: r.width, height: r.height },
-          masque: !(top === el || el.contains(top)) && r.top < 90,
+          masque: r.top < 90 && [[cx, cy], [r.left + 8, r.top + 8], [r.right - 8, r.top + 8], [r.left + 8, r.bottom - 8], [r.right - 8, r.bottom - 8]].some(([x, y]) => { const t = document.elementFromPoint(Math.min(Math.max(x, 1), innerWidth - 1), Math.min(Math.max(y, 1), innerHeight - 1)); return t && !(t === el || el.contains(t) || t.contains(el)); }),
         };
       });
       const vp = page.viewportSize();
@@ -193,7 +206,7 @@ async function main() {
   }
 
   for (const [name, vw, vh, openMenu] of [['1440', 1440, 900, false], ['390', 390, 844, false], ['390-menu-ouvert', 390, 844, true]]) {
-    const ctx = await browser.newContext({ viewport: { width: vw, height: vh }, reducedMotion: 'reduce' });
+    const ctx = await newCtx(browser, { viewport: { width: vw, height: vh }, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     await page.goto(V1, { waitUntil: 'networkidle' });
     await page.addStyleTag({ content: freeze });
@@ -210,7 +223,7 @@ async function main() {
 
   // ============ 3. MENU MOBILE ============
   {
-    const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
+    const ctx = await newCtx(browser, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     await page.goto(V1, { waitUntil: 'networkidle' });
     const state = () => page.evaluate(() => ({
@@ -242,7 +255,7 @@ async function main() {
 
   // ============ 4. FAQ ============
   {
-    const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
+    const ctx = await newCtx(browser, { viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     await page.goto(V1, { waitUntil: 'networkidle' });
     const items = page.locator('details.faq-item');
@@ -268,7 +281,7 @@ async function main() {
 
   // ============ 5. FORMULAIRE ============
   {
-    const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
+    const ctx = await newCtx(browser, { viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     const requests = [];
     page.on('request', (r) => { if (r.method() !== 'GET') requests.push(r.method() + ' ' + r.url()); });
@@ -295,7 +308,7 @@ async function main() {
 
   // ============ 6. CONTRASTES ============
   for (const [name, vw, menu] of [['1440', 1440, false], ['390', 390, true]]) {
-    const ctx = await browser.newContext({ viewport: { width: vw, height: 900 }, reducedMotion: 'reduce' });
+    const ctx = await newCtx(browser, { viewport: { width: vw, height: 900 }, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     await page.goto(V1, { waitUntil: 'networkidle' });
     await page.addStyleTag({ content: freeze });
@@ -319,12 +332,19 @@ async function main() {
     { element: 'Bordure de champ au focus (#10d7fd) sur le fond du champ (#0f1526)', ratio: cr({ r: 16, g: 215, b: 253 }, { r: 15, g: 21, b: 38 }), requis: 3 },
   ];
 
+  report.titresFraunces = await extra.titres(browser, V1);
+  report.defilementHorizontal = await extra.defilement(browser, V1);
+  report.textesSurPhoto = await extra.surPhoto(browser, V1);
+  report.couplesDemandes = extra.couples(report.contrastes);
+  report.console = consoleErrors;
+
   await browser.close();
   server.close();
   fs.writeFileSync(path.join(OUT, 'rapport.json'), JSON.stringify(report, null, 2));
+  fs.writeFileSync(path.join(OUT, 'rapport.md'), extra.markdown(report));
   console.log(JSON.stringify({
     survol: report.survol.map((s) => ({ e: s.element, v1: s.v1_change, design: s.design_change, identique: s.identiqueAuDesign })),
-    focus: report.focus, menu: report.menu, contrastesSurvol: report.contrastesSurvol, composantsInterface: report.composantsInterface, faq: report.faq, formulaire: report.formulaire,
+    focus: report.focus, menu: report.menu, titres: Object.fromEntries(Object.entries(report.titresFraunces).map(([w, t]) => [w, { total: t.total, debordements: t.debordements, motsCoupes: t.motsCoupes, orphelins: t.orphelins, motsOutils: t.motsOutilsEnFinDeLigne, tresCourtes: t.lignesTresCourtes }])), defilement: report.defilementHorizontal, surPhoto: report.textesSurPhoto, console: report.console, contrastesSurvol: report.contrastesSurvol, composantsInterface: report.composantsInterface, faq: report.faq, formulaire: report.formulaire,
     contrastes: Object.fromEntries(Object.entries(report.contrastes).map(([k, v]) => [k, { couples: v.couples, echecs: v.echecs }])),
   }, null, 1));
 }

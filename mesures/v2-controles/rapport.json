@@ -623,11 +623,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 5,
+          "count": 7,
           "samples": [
             "à Annemasse",
-            "ces défis ?",
-            "structurée et éprouvée"
+            "ces",
+            "défis ?"
           ],
           "note": ""
         },
@@ -771,9 +771,10 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 1,
+          "count": 2,
           "samples": [
-            "Ce que disent"
+            "disent",
+            "Ce que"
           ],
           "note": ""
         },
@@ -784,11 +785,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 10,
+          "count": 13,
           "samples": [
-            "Automatisez les tâches répétitives de vo",
-            "L'audit IA gratuit",
-            "Votre entreprise à Annemasse fait face à"
+            "Automatisez les tâches répétitives PME,",
+            "de votre",
+            "L'audit IA gratuit"
           ],
           "note": ""
         },
@@ -829,7 +830,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 11,
+          "count": 12,
           "samples": [
             "50+",
             "3x",
@@ -844,11 +845,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 3,
+          "count": 17,
           "samples": [
-            "L'audit réalisé a été un véritable tourn",
-            "Une expertise rare qui allie vision busi",
-            "Le langage technique est vulgarisé avec "
+            "L'audit réalisé tournant pour notre stru",
+            "a été",
+            "un véritable"
           ],
           "note": ""
         },
@@ -1068,11 +1069,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 5,
+          "count": 7,
           "samples": [
             "à Annemasse",
-            "ces défis ?",
-            "structurée et éprouvée"
+            "ces",
+            "défis ?"
           ],
           "note": ""
         },
@@ -1216,9 +1217,10 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 1,
+          "count": 2,
           "samples": [
-            "Ce que disent"
+            "disent",
+            "Ce que"
           ],
           "note": ""
         },
@@ -1229,11 +1231,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 10,
+          "count": 13,
           "samples": [
-            "Automatisez les tâches répétitives de vo",
-            "L'audit IA gratuit",
-            "Votre entreprise à Annemasse fait face à"
+            "Automatisez les tâches répétitives PME,",
+            "de votre",
+            "L'audit IA gratuit"
           ],
           "note": ""
         },
@@ -1259,7 +1261,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 15,
+          "count": 16,
           "samples": [
             "50+",
             "3x",
@@ -1289,11 +1291,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 3,
+          "count": 17,
           "samples": [
-            "L'audit réalisé a été un véritable tourn",
-            "Une expertise rare qui allie vision busi",
-            "Le langage technique est vulgarisé avec "
+            "L'audit réalisé tournant pour notre stru",
+            "a été",
+            "un véritable"
           ],
           "note": ""
         },
@@ -1423,5 +1425,768 @@
       "ratio": 10.52,
       "requis": 3
     }
-  ]
+  ],
+  "titresFraunces": {
+    "320": {
+      "total": 13,
+      "debordements": [],
+      "motsCoupes": [],
+      "orphelins": [],
+      "motsOutilsEnFinDeLigne": [
+        {
+          "titre": "Un audit IA / personnalisé pour / votre entreprise",
+          "mots": [
+            "pour"
+          ]
+        },
+        {
+          "titre": "Des bénéfices / concrets pour / votre entreprise",
+          "mots": [
+            "pour"
+          ]
+        },
+        {
+          "titre": "L'audit réalisé a été / un véritable / tournant pour / notre structure. / Nous perdions / un temps fou sur / la saisie / de données ; / aujourd'hui, tout / est automatisé.",
+          "mots": [
+            "pour",
+            "sur"
+          ]
+        },
+        {
+          "titre": "Une expertise rare / qui allie vision / business / et maîtrise / technique. / En seulement deux / mois, nous avons / triplé notre / capacité / de traitement / de leads grâce aux / outils d'IA / recommandés.",
+          "mots": [
+            "notre",
+            "aux"
+          ]
+        },
+        {
+          "titre": "Le langage / technique est / vulgarisé avec / brio. Nous avons / pu intégrer l'IA / dans nos processus / de recrutement / sans friction. / L'approche est / structurée / et rassurante pour / les collaborateurs.",
+          "mots": [
+            "avec",
+            "pour"
+          ]
+        }
+      ],
+      "lignesTresCourtes": [],
+      "detail": [
+        {
+          "balise": "h1.c-h1",
+          "taille": "40px",
+          "lignes": [
+            "Automatisez",
+            "les tâches",
+            "répétitives",
+            "de votre PME,",
+            "à Annemasse"
+          ]
+        },
+        {
+          "balise": "div.c-auditL",
+          "taille": "26px",
+          "lignes": [
+            "L'audit IA gratuit"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Votre entreprise",
+            "à Annemasse fait",
+            "face à ces défis ?"
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "34px",
+          "lignes": [
+            "Un audit IA",
+            "personnalisé pour",
+            "votre entreprise"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Une approche",
+            "structurée",
+            "et éprouvée"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Des bénéfices",
+            "concrets pour",
+            "votre entreprise"
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "34px",
+          "lignes": [
+            "Votre agence",
+            "IA de confiance",
+            "à Annemasse"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Ce que disent",
+            "nos clients"
+          ]
+        },
+        {
+          "balise": "blockquote",
+          "taille": "26px",
+          "lignes": [
+            "L'audit réalisé a été",
+            "un véritable",
+            "tournant pour",
+            "notre structure.",
+            "Nous perdions",
+            "un temps fou sur",
+            "la saisie",
+            "de données ;",
+            "aujourd'hui, tout",
+            "est automatisé."
+          ]
+        },
+        {
+          "balise": "blockquote",
+          "taille": "26px",
+          "lignes": [
+            "Une expertise rare",
+            "qui allie vision",
+            "business",
+            "et maîtrise",
+            "technique.",
+            "En seulement deux",
+            "mois, nous avons",
+            "triplé notre",
+            "capacité",
+            "de traitement",
+            "de leads grâce aux",
+            "outils d'IA",
+            "recommandés."
+          ]
+        },
+        {
+          "balise": "blockquote",
+          "taille": "26px",
+          "lignes": [
+            "Le langage",
+            "technique est",
+            "vulgarisé avec",
+            "brio. Nous avons",
+            "pu intégrer l'IA",
+            "dans nos processus",
+            "de recrutement",
+            "sans friction.",
+            "L'approche est",
+            "structurée",
+            "et rassurante pour",
+            "les collaborateurs."
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "34px",
+          "lignes": [
+            "Questions",
+            "fréquentes"
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "32px",
+          "lignes": [
+            "Prêt à transformer",
+            "votre entreprise",
+            "avec l'IA",
+            "à Annemasse ?"
+          ]
+        }
+      ]
+    },
+    "360": {
+      "total": 13,
+      "debordements": [],
+      "motsCoupes": [],
+      "orphelins": [],
+      "motsOutilsEnFinDeLigne": [
+        {
+          "titre": "Un audit IA / personnalisé pour / votre entreprise",
+          "mots": [
+            "pour"
+          ]
+        },
+        {
+          "titre": "Des bénéfices / concrets pour / votre entreprise",
+          "mots": [
+            "pour"
+          ]
+        },
+        {
+          "titre": "L'audit réalisé a été / un véritable tournant / pour notre structure. / Nous perdions / un temps fou sur / la saisie de données ; / aujourd'hui, tout est / automatisé.",
+          "mots": [
+            "sur"
+          ]
+        },
+        {
+          "titre": "Une expertise rare qui / allie vision business / et maîtrise technique. / En seulement deux / mois, nous avons triplé / notre capacité / de traitement de leads / grâce aux outils d'IA / recommandés.",
+          "mots": [
+            "qui"
+          ]
+        },
+        {
+          "titre": "Le langage technique / est vulgarisé avec brio. / Nous avons pu / intégrer l'IA dans / nos processus / de recrutement sans / friction. L'approche est / structurée / et rassurante pour / les collaborateurs.",
+          "mots": [
+            "dans",
+            "pour"
+          ]
+        },
+        {
+          "titre": "Prêt à transformer / votre entreprise avec / l'IA à Annemasse ?",
+          "mots": [
+            "avec"
+          ]
+        }
+      ],
+      "lignesTresCourtes": [],
+      "detail": [
+        {
+          "balise": "h1.c-h1",
+          "taille": "40px",
+          "lignes": [
+            "Automatisez",
+            "les tâches",
+            "répétitives",
+            "de votre PME,",
+            "à Annemasse"
+          ]
+        },
+        {
+          "balise": "div.c-auditL",
+          "taille": "26px",
+          "lignes": [
+            "L'audit IA gratuit"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Votre entreprise",
+            "à Annemasse fait",
+            "face à ces défis ?"
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "34px",
+          "lignes": [
+            "Un audit IA",
+            "personnalisé pour",
+            "votre entreprise"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Une approche",
+            "structurée",
+            "et éprouvée"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Des bénéfices",
+            "concrets pour",
+            "votre entreprise"
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "34px",
+          "lignes": [
+            "Votre agence",
+            "IA de confiance",
+            "à Annemasse"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Ce que disent",
+            "nos clients"
+          ]
+        },
+        {
+          "balise": "blockquote",
+          "taille": "26px",
+          "lignes": [
+            "L'audit réalisé a été",
+            "un véritable tournant",
+            "pour notre structure.",
+            "Nous perdions",
+            "un temps fou sur",
+            "la saisie de données ;",
+            "aujourd'hui, tout est",
+            "automatisé."
+          ]
+        },
+        {
+          "balise": "blockquote",
+          "taille": "26px",
+          "lignes": [
+            "Une expertise rare qui",
+            "allie vision business",
+            "et maîtrise technique.",
+            "En seulement deux",
+            "mois, nous avons triplé",
+            "notre capacité",
+            "de traitement de leads",
+            "grâce aux outils d'IA",
+            "recommandés."
+          ]
+        },
+        {
+          "balise": "blockquote",
+          "taille": "26px",
+          "lignes": [
+            "Le langage technique",
+            "est vulgarisé avec brio.",
+            "Nous avons pu",
+            "intégrer l'IA dans",
+            "nos processus",
+            "de recrutement sans",
+            "friction. L'approche est",
+            "structurée",
+            "et rassurante pour",
+            "les collaborateurs."
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "34px",
+          "lignes": [
+            "Questions fréquentes"
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "32px",
+          "lignes": [
+            "Prêt à transformer",
+            "votre entreprise avec",
+            "l'IA à Annemasse ?"
+          ]
+        }
+      ]
+    },
+    "390": {
+      "total": 13,
+      "debordements": [],
+      "motsCoupes": [],
+      "orphelins": [],
+      "motsOutilsEnFinDeLigne": [
+        {
+          "titre": "Automatisez les / tâches répétitives / de votre PME, / à Annemasse",
+          "mots": [
+            "les"
+          ]
+        },
+        {
+          "titre": "Un audit IA / personnalisé pour / votre entreprise",
+          "mots": [
+            "pour"
+          ]
+        },
+        {
+          "titre": "Votre agence IA de / confiance à Annemasse",
+          "mots": [
+            "de"
+          ]
+        },
+        {
+          "titre": "Une expertise rare qui / allie vision business / et maîtrise technique. / En seulement deux mois, / nous avons triplé notre / capacité de traitement / de leads grâce aux outils / d'IA recommandés.",
+          "mots": [
+            "qui",
+            "notre"
+          ]
+        },
+        {
+          "titre": "Prêt à transformer / votre entreprise avec / l'IA à Annemasse ?",
+          "mots": [
+            "avec"
+          ]
+        }
+      ],
+      "lignesTresCourtes": [],
+      "detail": [
+        {
+          "balise": "h1.c-h1",
+          "taille": "40px",
+          "lignes": [
+            "Automatisez les",
+            "tâches répétitives",
+            "de votre PME,",
+            "à Annemasse"
+          ]
+        },
+        {
+          "balise": "div.c-auditL",
+          "taille": "26px",
+          "lignes": [
+            "L'audit IA gratuit"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Votre entreprise",
+            "à Annemasse fait",
+            "face à ces défis ?"
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "34px",
+          "lignes": [
+            "Un audit IA",
+            "personnalisé pour",
+            "votre entreprise"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Une approche",
+            "structurée et éprouvée"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Des bénéfices concrets",
+            "pour votre entreprise"
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "34px",
+          "lignes": [
+            "Votre agence IA de",
+            "confiance à Annemasse"
+          ]
+        },
+        {
+          "balise": "h2.c-h2",
+          "taille": "34px",
+          "lignes": [
+            "Ce que disent",
+            "nos clients"
+          ]
+        },
+        {
+          "balise": "blockquote",
+          "taille": "26px",
+          "lignes": [
+            "L'audit réalisé a été",
+            "un véritable tournant",
+            "pour notre structure.",
+            "Nous perdions un temps",
+            "fou sur la saisie",
+            "de données ; aujourd'hui,",
+            "tout est automatisé."
+          ]
+        },
+        {
+          "balise": "blockquote",
+          "taille": "26px",
+          "lignes": [
+            "Une expertise rare qui",
+            "allie vision business",
+            "et maîtrise technique.",
+            "En seulement deux mois,",
+            "nous avons triplé notre",
+            "capacité de traitement",
+            "de leads grâce aux outils",
+            "d'IA recommandés."
+          ]
+        },
+        {
+          "balise": "blockquote",
+          "taille": "26px",
+          "lignes": [
+            "Le langage technique est",
+            "vulgarisé avec brio. Nous",
+            "avons pu intégrer l'IA",
+            "dans nos processus",
+            "de recrutement sans",
+            "friction. L'approche est",
+            "structurée et rassurante",
+            "pour les collaborateurs."
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "34px",
+          "lignes": [
+            "Questions fréquentes"
+          ]
+        },
+        {
+          "balise": "h2.h2",
+          "taille": "32px",
+          "lignes": [
+            "Prêt à transformer",
+            "votre entreprise avec",
+            "l'IA à Annemasse ?"
+          ]
+        }
+      ]
+    }
+  },
+  "defilementHorizontal": {
+    "320": {
+      "largeurFenetre": 320,
+      "scrollWidthDocument": 320,
+      "scrollWidthBody": 320,
+      "scrollXApresTentative": 0,
+      "defilementHorizontal": false,
+      "elementsQuiDepassent": []
+    },
+    "360": {
+      "largeurFenetre": 360,
+      "scrollWidthDocument": 360,
+      "scrollWidthBody": 360,
+      "scrollXApresTentative": 0,
+      "defilementHorizontal": false,
+      "elementsQuiDepassent": []
+    },
+    "390": {
+      "largeurFenetre": 390,
+      "scrollWidthDocument": 390,
+      "scrollWidthBody": 390,
+      "scrollXApresTentative": 0,
+      "defilementHorizontal": false,
+      "elementsQuiDepassent": []
+    },
+    "768": {
+      "largeurFenetre": 768,
+      "scrollWidthDocument": 768,
+      "scrollWidthBody": 768,
+      "scrollXApresTentative": 0,
+      "defilementHorizontal": false,
+      "elementsQuiDepassent": []
+    },
+    "1440": {
+      "largeurFenetre": 1440,
+      "scrollWidthDocument": 1440,
+      "scrollWidthBody": 1440,
+      "scrollXApresTentative": 0,
+      "defilementHorizontal": false,
+      "elementsQuiDepassent": []
+    }
+  },
+  "textesSurPhoto": {
+    "390": [
+      {
+        "texte": "Photo by T Fang on Unsplash",
+        "pireContraste": 17.48
+      },
+      {
+        "texte": "Photo by Mimi Thian on Unsplas",
+        "pireContraste": 13.81
+      },
+      {
+        "texte": "Photo by Annie Spratt on Unspl",
+        "pireContraste": 14.5
+      },
+      {
+        "texte": "Photo by T Fang on Unsplash",
+        "pireContraste": 19.68
+      },
+      {
+        "texte": "ANNEMASSE · HAUTE-SAVOIE",
+        "pireContraste": 9.62
+      },
+      {
+        "texte": "GRAND GENÈVE",
+        "pireContraste": 16.56
+      }
+    ],
+    "768": [
+      {
+        "texte": "Photo by T Fang on Unsplash",
+        "pireContraste": 18.73
+      },
+      {
+        "texte": "Photo by Mimi Thian on Unsplas",
+        "pireContraste": 13.1
+      },
+      {
+        "texte": "Photo by Annie Spratt on Unspl",
+        "pireContraste": 15.33
+      },
+      {
+        "texte": "Photo by T Fang on Unsplash",
+        "pireContraste": 19.77
+      },
+      {
+        "texte": "ANNEMASSE · HAUTE-SAVOIE",
+        "pireContraste": 10.08
+      },
+      {
+        "texte": "GRAND GENÈVE",
+        "pireContraste": 17.01
+      }
+    ],
+    "1440": [
+      {
+        "texte": "Photo by T Fang on Unsplash",
+        "pireContraste": 17.79
+      },
+      {
+        "texte": "Photo by Mimi Thian on Unsplas",
+        "pireContraste": 14.99
+      },
+      {
+        "texte": "Photo by Annie Spratt on Unspl",
+        "pireContraste": 17.4
+      },
+      {
+        "texte": "Photo by T Fang on Unsplash",
+        "pireContraste": 18.52
+      },
+      {
+        "texte": "ANNEMASSE · HAUTE-SAVOIE",
+        "pireContraste": 9.08
+      },
+      {
+        "texte": "GRAND GENÈVE",
+        "pireContraste": 15.44
+      }
+    ]
+  },
+  "couplesDemandes": {
+    "couplesReellementUtilises": {
+      "#0e7490 sur #f3f5f8": {
+        "ratio": 4.91,
+        "requis": 4.5,
+        "ok": true,
+        "occurrences": 1,
+        "exemple": "07"
+      },
+      "#0e7490 sur #f3f5f8 (grand texte)": {
+        "ratio": 4.91,
+        "requis": 3,
+        "ok": true,
+        "occurrences": 1,
+        "exemple": "nos clients"
+      },
+      "#0e7490 sur #ffffff (grand texte)": {
+        "ratio": 5.36,
+        "requis": 3,
+        "ok": true,
+        "occurrences": 3,
+        "exemple": "«"
+      },
+      "#8b96a9 sur #0f1526": {
+        "ratio": 6.09,
+        "requis": 4.5,
+        "ok": true,
+        "occurrences": 3,
+        "exemple": "Adresse"
+      },
+      "#aab3c2 sur #0a0e1a": {
+        "ratio": 9.11,
+        "requis": 4.5,
+        "ok": true,
+        "occurrences": 3,
+        "exemple": "Vos données servent uniquement à vous re"
+      },
+      "#10d7fd sur #0f1526": {
+        "ratio": 10.52,
+        "requis": 4.5,
+        "ok": true,
+        "occurrences": 17,
+        "exemple": "Agence d'automatisation IA"
+      },
+      "#10d7fd sur #0f1526 (grand texte)": {
+        "ratio": 10.52,
+        "requis": 3,
+        "ok": true,
+        "occurrences": 7,
+        "exemple": "à Annemasse"
+      },
+      "#10d7fd sur #0a0e1a": {
+        "ratio": 11.15,
+        "requis": 4.5,
+        "ok": true,
+        "occurrences": 23,
+        "exemple": "01"
+      },
+      "#10d7fd sur #0a0e1a (grand texte)": {
+        "ratio": 11.15,
+        "requis": 3,
+        "ok": true,
+        "occurrences": 3,
+        "exemple": "personnalisé"
+      }
+    },
+    "matriceTheorique": [
+      {
+        "texte": "#10d7fd",
+        "sur": {
+          "#0a0e1a": 11.15,
+          "#0f1526": 10.52,
+          "#f3f5f8": 1.58,
+          "#ffffff": 1.73
+        }
+      },
+      {
+        "texte": "#8b96a9",
+        "sur": {
+          "#0a0e1a": 6.45,
+          "#0f1526": 6.09,
+          "#f3f5f8": 2.73,
+          "#ffffff": 2.99
+        }
+      },
+      {
+        "texte": "#aab3c2",
+        "sur": {
+          "#0a0e1a": 9.11,
+          "#0f1526": 8.6,
+          "#f3f5f8": 1.94,
+          "#ffffff": 2.11
+        }
+      },
+      {
+        "texte": "#0e7490",
+        "sur": {
+          "#0a0e1a": 3.59,
+          "#0f1526": 3.39,
+          "#f3f5f8": 4.91,
+          "#ffffff": 5.36
+        }
+      }
+    ],
+    "seuilTexteNormal": 4.5
+  },
+  "console": []
 }

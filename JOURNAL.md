@@ -420,7 +420,7 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html`.
 
 - Comparaison design d'origine / page, 3 largeurs × 12 blocs : hauteurs identiques partout (écart 0 px), 0 écart de position/taille/police/couleur/interligne hors tolérance, `pixelmatch` ≤ 0,2 % par bloc (résidu : ré-encodage WebP des photos). Le seul écart voulu est le bandeau de crédit Unsplash, invisible dans l'analyse de texte car interne au composant du design.
 - Survol : 10 boutons/liens identiques au design ; les 4 types de cartes/lignes n'ont aucun effet de survol dans le design ni dans la page. Focus clavier : 47 (1440 px), 42 (390 px) et 8 éléments (menu ouvert) tous avec indicateur visible, aucun masqué par l'en-tête. Menu mobile (ouverture, Échap, fermeture au départ du focus), FAQ (6 questions indépendantes, Entrée/Espace, icône pivotée), formulaire (validation native, confirmation, aucune requête) : conformes.
-- Contrastes : 30 couples texte/fond uniques à 1440 px et à 390 px, **0 échec** AA. Étiquettes `[À CONFIRMER]` : 10,19:1 à 10,98:1 sur fond nuit (`#f4c96e`), 6,62:1 sur la section claire (`#7a4f00` sur `#fdf6e7`) ; bleu pétrole `#0e7490` sur gris clair `#f3f5f8` : 4,91:1 (5,36:1 sur blanc). Étiquettes de mono gris `#8b96a9` : 6,09:1. Survol : 13,22:1 (bouton cyan éclairci) et 11,15:1 (liens). Bordure des champs `#5d6a82` : 3,33:1 sur le champ, 3,53:1 sur le cadre (≥ 3:1) — aucune correction nécessaire ici, contrairement à la V1. Crédits photo : blanc sur bandeau noir 55 %, 14,1:1 minimum mesuré sur les pixels rendus (1440/768/390 px).
+- Contrastes : 30 couples texte/fond uniques à 1440 px et à 390 px, **0 échec** AA. Étiquettes `[À CONFIRMER]` : 10,19:1 à 10,98:1 sur fond nuit (`#f4c96e`), 6,62:1 sur la section claire (`#7a4f00` sur `#fdf6e7`) ; bleu pétrole `#0e7490` sur gris clair `#f3f5f8` : 4,91:1 (5,36:1 sur blanc). Étiquettes de mono gris `#8b96a9` : 6,09:1. Survol : 13,22:1 (bouton cyan éclairci) et 11,15:1 (liens). Bordure des champs `#5d6a82` : 3,33:1 sur le champ, 3,53:1 sur le cadre (≥ 3:1) — aucune correction nécessaire ici, contrairement à la V1. Crédits photo : ~~14,1:1 minimum mesuré sur les pixels rendus~~ — **erratum (étape 13)** : cette mesure ne comptait que le fond sous le texte, alors que les bandeaux étaient recouverts par les dégradés du design (texte assombri lui aussi) ; ils étaient en pratique quasi illisibles sur le bandeau contact. Corrigé et remesuré à l'étape 13.
 - SEO/structure vérifiés : 1 `<h1>`, 1 `<h2>` par section (hors héros), JSON-LD valide et `FAQPage` strictement identique aux 6 questions/réponses affichées, 0 lien/bouton sans nom, 0 zone tactile < 24 px (hors liens de crédit et de confidentialité, dans une phrase : exception « en ligne » de WCAG 2.5.8), 0 erreur console.
 
 ### Décisions prises et leur justification
@@ -446,3 +446,48 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html`.
 - `source/design-v2/` (export Claude Design, conservé comme source)
 - `scripts/compare-v2.js`, `scripts/controle-v2.js`, `scripts/fraunces-subset.js`
 - `mesures/v2-diff/`, `mesures/v2-controles/rapport.json`
+
+## Étape 13 — Recette approfondie de v2-nuit-suisse.html (2026-09-24)
+
+### Ce qui a été fait
+
+- Comparaison design d'origine / page repassée (`scripts/compare-v2.js`, 1440/768/390 px × 12 blocs) après chaque correction : **hauteurs identiques partout**, aucun écart de position/taille/police/couleur hors tolérance, `pixelmatch` ≤ 2 % par bloc. Seul écart voulu : « nos clients » (témoignages, 390 px) passe à la ligne d'un bloc (voir « Titres »).
+- `scripts/controle-v2.js` étendu (adapté de `controle-v1.js`) avec `scripts/controle-v2-extra.js` : surveillance de la console sur tous les chargements, détection de masquage du focus sur 5 points de l'élément, analyse des lignes des titres Fraunces à 390/360/320 px, défilement horizontal de 1440 à 320 px, contraste des textes posés sur photo, tableau des couples demandés, génération de `mesures/v2-controles/rapport.md` (+ `rapport.json`).
+
+### Écarts trouvés et corrections
+
+| Écart | Mesure | Correction |
+|---|---|---|
+| Libellé cyan « Annemasse · Haute-Savoie » du bandeau contact illisible à 390 px | 2,79:1 mesuré sur les pixels rendus (le cadrage de la photo le place sur une zone claire, le design ne prévoit aucun fond) | Dégradé sombre en bas du bandeau, sous 900 px seulement : 9,6:1 à 390 px (9,1–10,1:1 aux autres largeurs). Le bureau reste identique au design. |
+| Bandeaux de crédit Unsplash quasi invisibles | Le design les place sous les dégradés/filtres des photos : texte et fond assombris ensemble. L'étape 12 avait annoncé 14,1:1 en ne mesurant que le fond (erratum ci-dessus). | Bandeaux sortis des calques filtrés et posés au-dessus des dégradés (`z-index:2`) ; celui du bandeau contact passe à droite pour ne plus chevaucher les libellés. Mesure refaite en deux captures (texte visible/transparent) : 13,1:1 à 19,8:1. |
+| 2 liens de crédit sans indicateur de focus visible à 390 px | Recouverts par le libellé « GRAND GENÈVE » | Résolu par le déplacement des bandeaux : 42/47/8 éléments focalisables tous visibles. |
+| Faux positif « lien d'évitement masqué par l'en-tête » | Point d'échantillonnage dans le coin arrondi du lien | Points d'échantillonnage reculés de 8 px dans le script. |
+| Césures des titres à 390 px | Aucun débordement, aucun mot coupé, aucun mot isolé sur une dernière ligne ; mais « nos / clients » séparait l'expression en italique du titre « Ce que disent nos clients », et des mots de 1–2 lettres (« un », « et », « En », « de », « à ») finissaient des lignes de citation ou de titre | 35 groupes `<span class="nb">` (mot court + mot suivant, « ? » et « ; » avec leur mot) non coupables sous 600 px uniquement (`white-space:nowrap`) : le design reste identique à 768 et au-dessus. |
+
+### Titres en Fraunces (390 / 360 / 320 px)
+
+13 titres et citations analysés par largeur : 0 débordement, 0 mot coupé, 0 mot isolé en dernière ligne, 0 ligne très courte. **Réserve assumée** : 5 titres gardent un mot outil en fin de ligne à 390 px (« Automatisez les / tâches… », « personnalisé pour / », « Votre agence IA de / confiance… », « … qui / allie », « … avec / l'IA ») — j'ai retiré les groupes « les tâches » (titre du héros) et « de confiance » : ils ajoutaient une ligne (+40 px et +36 px) et cassaient la hauteur identique au design pour un gain typographique mineur.
+
+### Résultats
+
+- Survols : 10 boutons/liens identiques au design (les cartes n'ont pas d'effet de survol, ni dans le design ni dans la page). Focus visible et non masqué par l'en-tête : 47 (1440 px), 42 (390 px), 8 (menu ouvert). Menu mobile : Échap et sortie du focus referment le menu, le focus revient au bouton. FAQ : 6 questions indépendantes, clavier Entrée/Espace. Formulaire : champs vides et e-mail invalide bloqués, confirmation avec le bon texte et focus dessus, aucune requête.
+- Contrastes (30 couples uniques à 1440 px, 30 à 390 px, 0 échec) — couples demandés : cyan `#10d7fd` sur `#0f1526` **10,52:1** (sur `#0a0e1a` : 11,15:1) ; gris `#8b96a9` sur `#0f1526` **6,09:1** ; gris `#aab3c2` sur `#0a0e1a` **9,11:1** ; bleu pétrole `#0e7490` sur `#f3f5f8` **4,91:1** (5,36:1 sur blanc). Matrice théorique : `#8b96a9` (2,73:1) et `#aab3c2` (1,94:1) échoueraient sur la section claire ; ils n'y sont pas utilisés (les gris de cette section sont `#3d4655` 8,72:1 et le bleu pétrole).
+- Défilement horizontal : aucun à 1440, 768, 390, 360 et 320 px (`scrollWidth` = largeur de fenêtre). Console : 0 erreur, 0 erreur de page, 0 requête en échec.
+
+### Décisions prises et leur justification
+
+- **Groupes non coupables limités à ≤ 600 px** plutôt que des espaces insécables globales : un premier essai avec `&nbsp;` partout a fait grandir « Qui sommes-nous » de 67 px à 1440 px (hauteur différente du design) ; abandonné, la correction n'est visible qu'où le problème existe.
+- **Dégradé mobile du bandeau contact** ajouté plutôt que déplacer les libellés : la position du design est conservée, seul l'arrière-plan change.
+- **Deux outils jetables** écrits puis supprimés (regroupement des mots courts, déplacement des bandeaux) ; le premier déplacement a mal traité l'ordre des bandeaux (le curseur ne dépassait pas le bandeau inséré) : structure vérifiée puis reconstruite par un second script.
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Le shell supprime les barres obliques inversées des scripts passés en ligne (`\\s`, `\\(` devenaient `s`, `(`) : regex silencieusement fausses | Scripts écrits dans des fichiers via l'outil d'écriture, ou expressions sans barre oblique ; vérification systématique du résultat (`grep`). |
+
+### Fichiers produits
+
+- `mesures/v2-controles/rapport.md` et `rapport.json` ; `mesures/v2-diff/` (recapturé)
+- `scripts/controle-v2.js` (étendu), `scripts/controle-v2-extra.js` (nouveau), `scripts/fraunces-subset.js` (glyphes U+00A0 pris en compte)
+- `livrable/v2-nuit-suisse.html` (corrigé)

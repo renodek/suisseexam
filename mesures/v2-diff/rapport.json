@@ -11,10 +11,14 @@
     "hero": {
       "designHeight": 1100,
       "pageHeight": 1100,
-      "mismatchPct": 0.1,
+      "mismatchPct": 0.34,
       "diffs": [],
-      "missing": [],
+      "missing": [
+        "Automatisez les tâches répétitives de votre PME,"
+      ],
       "extra": [
+        "Automatisez les tâches répétitives PME,",
+        "de votre",
         "Photo by on",
         "T Fang",
         "Unsplash"
@@ -23,7 +27,7 @@
     "chiffres": {
       "designHeight": 756,
       "pageHeight": 756,
-      "mismatchPct": 0,
+      "mismatchPct": 0.13,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -31,29 +35,42 @@
     "defis": {
       "designHeight": 1456,
       "pageHeight": 1456,
-      "mismatchPct": 0,
+      "mismatchPct": 0.38,
       "diffs": [],
-      "missing": [],
-      "extra": []
+      "missing": [
+        "Votre entreprise à Annemasse fait face à",
+        "ces défis ?"
+      ],
+      "extra": [
+        "Votre entreprise fait face à",
+        "à Annemasse",
+        "ces",
+        "défis ?"
+      ]
     },
     "solution": {
       "designHeight": 1566,
       "pageHeight": 1566,
-      "mismatchPct": 0.17,
+      "mismatchPct": 0.48,
       "diffs": [],
-      "missing": [],
+      "missing": [
+        "Un audit IA pour votre entreprise"
+      ],
       "extra": [
         "Photo by on",
         "Mimi Thian",
-        "Unsplash"
+        "Unsplash",
+        "IA pour votre entreprise",
+        "Un audit"
       ]
     },
     "methode": {
       "designHeight": 1563,
       "pageHeight": 1563,
-      "mismatchPct": 0.2,
+      "mismatchPct": 0.45,
       "diffs": [],
       "missing": [
+        "structurée et éprouvée",
         "ÉTAPE",
         "01",
         "ÉTAPE",
@@ -64,6 +81,8 @@
         "04"
       ],
       "extra": [
+        "structurée",
+        "et éprouvée",
         "Photo by on",
         "Annie Spratt",
         "Unsplash",
@@ -76,7 +95,7 @@
     "benefices": {
       "designHeight": 1158,
       "pageHeight": 1158,
-      "mismatchPct": 0,
+      "mismatchPct": 0.26,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -84,7 +103,7 @@
     "qui": {
       "designHeight": 1451,
       "pageHeight": 1451,
-      "mismatchPct": 0.2,
+      "mismatchPct": 0.52,
       "diffs": [],
       "missing": [],
       "extra": [
@@ -94,15 +113,48 @@
     "temoignages": {
       "designHeight": 2126,
       "pageHeight": 2126,
-      "mismatchPct": 0,
-      "diffs": [],
-      "missing": [],
-      "extra": []
+      "mismatchPct": 1.94,
+      "diffs": [
+        {
+          "text": "nos clients",
+          "issues": [
+            "position Δ(0,36)",
+            "taille Δ(-109,-36)"
+          ]
+        }
+      ],
+      "missing": [
+        "Ce que disent",
+        "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.",
+        "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.",
+        "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs."
+      ],
+      "extra": [
+        "disent",
+        "Ce que",
+        "L'audit réalisé tournant pour notre structure. Nous perdions fou sur aujourd'hui, tout est automatisé.",
+        "a été",
+        "un véritable",
+        "un temps",
+        "la saisie",
+        "de données ;",
+        "Une expertise rare qui allie vision business technique. deux mois, nous avons triplé notre capacité grâce aux outils d'IA recommandés.",
+        "et maîtrise",
+        "En seulement",
+        "de traitement",
+        "de leads",
+        "technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans sans friction. L'approche est structurée pour",
+        "Le langage",
+        "nos processus",
+        "de recrutement",
+        "et rassurante",
+        "les collaborateurs."
+      ]
     },
     "faq": {
       "designHeight": 1258,
       "pageHeight": 1258,
-      "mismatchPct": 0,
+      "mismatchPct": 0.46,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -110,19 +162,23 @@
     "contact": {
       "designHeight": 1659,
       "pageHeight": 1659,
-      "mismatchPct": 0.04,
+      "mismatchPct": 1.04,
       "diffs": [],
-      "missing": [],
+      "missing": [
+        "Prêt à transformer votre entreprise avec l'IA"
+      ],
       "extra": [
         "Photo by on",
         "T Fang",
-        "Unsplash"
+        "Unsplash",
+        "Prêt votre entreprise avec l'IA",
+        "à transformer"
       ]
     },
     "footer": {
       "designHeight": 1051,
       "pageHeight": 1051,
-      "mismatchPct": 0,
+      "mismatchPct": 0.4,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -140,10 +196,14 @@
     "hero": {
       "designHeight": 949,
       "pageHeight": 949,
-      "mismatchPct": 0.06,
+      "mismatchPct": 0.2,
       "diffs": [],
-      "missing": [],
+      "missing": [
+        "Automatisez les tâches répétitives de votre PME,"
+      ],
       "extra": [
+        "Automatisez les tâches répétitives PME,",
+        "de votre",
         "Photo by on",
         "T Fang",
         "Unsplash"
@@ -152,7 +212,7 @@
     "chiffres": {
       "designHeight": 727,
       "pageHeight": 727,
-      "mismatchPct": 0,
+      "mismatchPct": 0.07,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -160,29 +220,42 @@
     "defis": {
       "designHeight": 1209,
       "pageHeight": 1209,
-      "mismatchPct": 0,
+      "mismatchPct": 0.22,
       "diffs": [],
-      "missing": [],
-      "extra": []
+      "missing": [
+        "Votre entreprise à Annemasse fait face à",
+        "ces défis ?"
+      ],
+      "extra": [
+        "Votre entreprise fait face à",
+        "à Annemasse",
+        "ces",
+        "défis ?"
+      ]
     },
     "solution": {
       "designHeight": 1255,
       "pageHeight": 1255,
-      "mismatchPct": 0.17,
+      "mismatchPct": 0.37,
       "diffs": [],
-      "missing": [],
+      "missing": [
+        "Un audit IA pour votre entreprise"
+      ],
       "extra": [
         "Photo by on",
         "Mimi Thian",
-        "Unsplash"
+        "Unsplash",
+        "IA pour votre entreprise",
+        "Un audit"
       ]
     },
     "methode": {
       "designHeight": 1370,
       "pageHeight": 1370,
-      "mismatchPct": 0.15,
+      "mismatchPct": 0.3,
       "diffs": [],
       "missing": [
+        "structurée et éprouvée",
         "ÉTAPE",
         "01",
         "ÉTAPE",
@@ -193,6 +266,8 @@
         "04"
       ],
       "extra": [
+        "structurée",
+        "et éprouvée",
         "Photo by on",
         "Annie Spratt",
         "Unsplash",
@@ -205,7 +280,7 @@
     "benefices": {
       "designHeight": 1039,
       "pageHeight": 1039,
-      "mismatchPct": 0,
+      "mismatchPct": 0.14,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -213,7 +288,7 @@
     "qui": {
       "designHeight": 1341,
       "pageHeight": 1341,
-      "mismatchPct": 0.17,
+      "mismatchPct": 0.35,
       "diffs": [],
       "missing": [],
       "extra": [
@@ -223,15 +298,40 @@
     "temoignages": {
       "designHeight": 1475,
       "pageHeight": 1475,
-      "mismatchPct": 0,
+      "mismatchPct": 0.31,
       "diffs": [],
-      "missing": [],
-      "extra": []
+      "missing": [
+        "Ce que disent",
+        "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.",
+        "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.",
+        "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs."
+      ],
+      "extra": [
+        "disent",
+        "Ce que",
+        "L'audit réalisé tournant pour notre structure. Nous perdions fou sur aujourd'hui, tout est automatisé.",
+        "a été",
+        "un véritable",
+        "un temps",
+        "la saisie",
+        "de données ;",
+        "Une expertise rare qui allie vision business technique. deux mois, nous avons triplé notre capacité grâce aux outils d'IA recommandés.",
+        "et maîtrise",
+        "En seulement",
+        "de traitement",
+        "de leads",
+        "technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans sans friction. L'approche est structurée pour",
+        "Le langage",
+        "nos processus",
+        "de recrutement",
+        "et rassurante",
+        "les collaborateurs."
+      ]
     },
     "faq": {
       "designHeight": 1052,
       "pageHeight": 1052,
-      "mismatchPct": 0,
+      "mismatchPct": 0.29,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -239,19 +339,23 @@
     "contact": {
       "designHeight": 1517,
       "pageHeight": 1517,
-      "mismatchPct": 0.01,
+      "mismatchPct": 1.2,
       "diffs": [],
-      "missing": [],
+      "missing": [
+        "Prêt à transformer votre entreprise avec l'IA"
+      ],
       "extra": [
         "Photo by on",
         "T Fang",
-        "Unsplash"
+        "Unsplash",
+        "Prêt votre entreprise avec l'IA",
+        "à transformer"
       ]
     },
     "footer": {
       "designHeight": 1021,
       "pageHeight": 1021,
-      "mismatchPct": 0,
+      "mismatchPct": 0.21,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -269,10 +373,14 @@
     "hero": {
       "designHeight": 1038,
       "pageHeight": 1038,
-      "mismatchPct": 0.03,
+      "mismatchPct": 0.1,
       "diffs": [],
-      "missing": [],
+      "missing": [
+        "Automatisez les tâches répétitives de votre PME,"
+      ],
       "extra": [
+        "Automatisez les tâches répétitives PME,",
+        "de votre",
         "Photo by on",
         "T Fang",
         "Unsplash"
@@ -281,7 +389,7 @@
     "chiffres": {
       "designHeight": 534,
       "pageHeight": 534,
-      "mismatchPct": 0,
+      "mismatchPct": 0.05,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -289,29 +397,42 @@
     "defis": {
       "designHeight": 881,
       "pageHeight": 881,
-      "mismatchPct": 0,
+      "mismatchPct": 0.16,
       "diffs": [],
-      "missing": [],
-      "extra": []
+      "missing": [
+        "Votre entreprise à Annemasse fait face à",
+        "ces défis ?"
+      ],
+      "extra": [
+        "Votre entreprise fait face à",
+        "à Annemasse",
+        "ces",
+        "défis ?"
+      ]
     },
     "solution": {
       "designHeight": 1172,
       "pageHeight": 1172,
-      "mismatchPct": 0,
+      "mismatchPct": 0.12,
       "diffs": [],
-      "missing": [],
+      "missing": [
+        "Un audit IA pour votre entreprise"
+      ],
       "extra": [
         "Photo by on",
         "Mimi Thian",
-        "Unsplash"
+        "Unsplash",
+        "IA pour votre entreprise",
+        "Un audit"
       ]
     },
     "methode": {
       "designHeight": 1230,
       "pageHeight": 1230,
-      "mismatchPct": 0.04,
+      "mismatchPct": 0.12,
       "diffs": [],
       "missing": [
+        "structurée et éprouvée",
         "ÉTAPE",
         "01",
         "ÉTAPE",
@@ -322,6 +443,8 @@
         "04"
       ],
       "extra": [
+        "structurée",
+        "et éprouvée",
         "Photo by on",
         "Annie Spratt",
         "Unsplash",
@@ -334,7 +457,7 @@
     "benefices": {
       "designHeight": 1216,
       "pageHeight": 1216,
-      "mismatchPct": 0,
+      "mismatchPct": 0.05,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -342,7 +465,7 @@
     "qui": {
       "designHeight": 956,
       "pageHeight": 956,
-      "mismatchPct": 0.1,
+      "mismatchPct": 0.23,
       "diffs": [],
       "missing": [],
       "extra": [
@@ -352,15 +475,40 @@
     "temoignages": {
       "designHeight": 1124,
       "pageHeight": 1124,
-      "mismatchPct": 0,
+      "mismatchPct": 0.21,
       "diffs": [],
-      "missing": [],
-      "extra": []
+      "missing": [
+        "Ce que disent",
+        "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.",
+        "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.",
+        "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs."
+      ],
+      "extra": [
+        "disent",
+        "Ce que",
+        "L'audit réalisé tournant pour notre structure. Nous perdions fou sur aujourd'hui, tout est automatisé.",
+        "a été",
+        "un véritable",
+        "un temps",
+        "la saisie",
+        "de données ;",
+        "Une expertise rare qui allie vision business technique. deux mois, nous avons triplé notre capacité grâce aux outils d'IA recommandés.",
+        "et maîtrise",
+        "En seulement",
+        "de traitement",
+        "de leads",
+        "technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans sans friction. L'approche est structurée pour",
+        "Le langage",
+        "nos processus",
+        "de recrutement",
+        "et rassurante",
+        "les collaborateurs."
+      ]
     },
     "faq": {
       "designHeight": 1054,
       "pageHeight": 1054,
-      "mismatchPct": 0,
+      "mismatchPct": 0.13,
       "diffs": [],
       "missing": [],
       "extra": []
@@ -368,19 +516,23 @@
     "contact": {
       "designHeight": 1387,
       "pageHeight": 1387,
-      "mismatchPct": 0.03,
+      "mismatchPct": 0.12,
       "diffs": [],
-      "missing": [],
+      "missing": [
+        "Prêt à transformer votre entreprise avec l'IA"
+      ],
       "extra": [
         "Photo by on",
         "T Fang",
-        "Unsplash"
+        "Unsplash",
+        "Prêt votre entreprise avec l'IA",
+        "à transformer"
       ]
     },
     "footer": {
       "designHeight": 542,
       "pageHeight": 542,
-      "mismatchPct": 0,
+      "mismatchPct": 0.21,
       "diffs": [],
       "missing": [],
       "extra": []
