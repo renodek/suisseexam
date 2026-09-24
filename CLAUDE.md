@@ -27,3 +27,5 @@ Ne jamais inventer de chiffres, de clients ou de témoignages. Toute donnée abs
 ## Méthode
 
 Après chaque étape : entrée dans JOURNAL.md, commit, push.
+
+Budget de temps : si une tâche dépasse 30 minutes, ou si trois tentatives sur le même problème échouent, s'arrêter et faire un point intermédiaire (résultat actuel, options, recommandation) avant de continuer. Viser le seuil de qualité demandé, pas la perfection. Toute mesure doit avoir une durée maximale.

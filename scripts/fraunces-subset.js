@@ -25,7 +25,7 @@ const FAMILIES = {
         let t = n.textContent;
         if (cs.textTransform === 'uppercase') t = t.toUpperCase();
         (out[fam] = out[fam] || new Set());
-        Array.from(t).forEach((c) => { if (c.trim() || c === ' ' || c.charCodeAt(0) === 160) out[fam].add(c); });
+        Array.from(t).forEach((c) => { if (c.trim() || c === ' ' || [160, 8239].includes(c.charCodeAt(0))) out[fam].add(c); });
       });
     });
     return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, Array.from(v).join('')]));

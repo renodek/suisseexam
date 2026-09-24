@@ -3,6 +3,7 @@
 // couples de contraste demandés et rapport Markdown.
 
 const { PNG } = require('pngjs');
+const fs = require('fs');
 
 const FREEZE = 'canvas{visibility:hidden!important}html{scroll-behavior:auto!important}';
 
@@ -18,7 +19,7 @@ const hexToRgb = (h) => ({ r: parseInt(h.slice(1, 3), 16), g: parseInt(h.slice(3
 
 // ---------- Titres en Fraunces : débordement et qualité des retours à la ligne ----------
 function analyseTitres() {
-  const MOTS_OUTILS = new Set(['à', 'a', 'de', 'du', 'des', 'la', 'le', 'les', 'un', 'une', 'et', 'ou', 'en', 'au', 'aux', 'ce', 'que', 'qui', 'pour', 'par', 'sur', 'avec', 'dans', 'votre', 'vos', 'nos', 'notre', 'ces', 'sa', 'son', 'ses']);
+  const MOTS_OUTILS = new Set(['à', 'a', 'de', 'du', 'des', 'la', 'le', 'les', 'un', 'une', 'et', 'ou', 'en', 'au', 'aux', 'ce', 'que', 'qui', 'pour', 'par', 'sur', 'avec', 'dans', 'sans', 'votre', 'vos', 'nos', 'notre', 'ces', 'sa', 'son', 'ses']);
   const cibles = Array.from(document.querySelectorAll('h1, h2, h3, blockquote, .audit-title, .form-sent-title'))
     .filter((el) => getComputedStyle(el).fontFamily.toLowerCase().includes('fraunces') && el.getClientRects().length);
   return cibles.map((el) => {
@@ -71,7 +72,7 @@ function analyseTitres() {
 
 async function titres(browser, url) {
   const out = {};
-  for (const w of [390, 360, 320]) {
+  for (const w of [1440, 768, 414, 393, 390, 375, 360, 320]) {
     const ctx = await browser.newContext({ viewport: { width: w, height: 844 }, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     await page.goto(url, { waitUntil: 'networkidle' });
@@ -95,7 +96,7 @@ async function titres(browser, url) {
 // ---------- Défilement horizontal ----------
 async function defilement(browser, url) {
   const out = {};
-  for (const w of [1440, 768, 390, 360, 320]) {
+  for (const w of [1440, 768, 414, 393, 390, 375, 360, 320]) {
     const ctx = await browser.newContext({ viewport: { width: w, height: 900 }, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     await page.goto(url, { waitUntil: 'networkidle' });
@@ -204,6 +205,16 @@ function markdown(r) {
   });
   L.push('## Défilement horizontal', '', '| Largeur | scrollWidth | Défilement | Éléments qui dépassent |', '|---|---|---|---|');
   Object.entries(r.defilementHorizontal).forEach(([w, d]) => L.push(`| ${w} px | ${d.scrollWidthDocument} | ${d.defilementHorizontal ? '**oui**' : 'non'} | ${d.elementsQuiDepassent.join(', ') || '—'} |`));
+  if (fs.existsSync('mesures/v2-controles/polices-cls.json')) {
+    const c = JSON.parse(fs.readFileSync('mesures/v2-controles/polices-cls.json', 'utf8'));
+    L.push('', '## Polices : précharge et police de secours (CLS)', '', 'Décalage de mise en page au chargement (`scripts/mesure-cls.js`), réseau normal et polices retardées de 1,5 s, jusqu’à 15 largeurs d’écran :', '', '| Variante | CLS max | CLS moyen | mesures > 0,1 | mesures > 0,01 |', '|---|---|---|---|---|');
+    Object.entries(c.variantes).forEach(([nom, sc]) => {
+      const e = Object.entries(sc).sort((a, b) => b[1] - a[1]);
+      const v = e.map((x) => x[1]);
+      L.push('| ' + nom + ' | ' + e[0][1] + ' (' + e[0][0] + ') | ' + (v.reduce((a, b) => a + b, 0) / v.length).toFixed(4) + ' | ' + v.filter((x) => x > 0.1).length + ' / ' + v.length + ' | ' + v.filter((x) => x > 0.01).length + ' |');
+    });
+    L.push('', 'Liens de précharge écrits dans la page :', '', '```html', c.preload, '```', '');
+  }
   L.push('', '## Console', '', r.console.length ? r.console.map((c) => `- ${c.type} : ${c.text}`).join('\n') : 'Aucune erreur de console, aucune erreur de page, aucune requête en échec.', '');
   return L.join('\n');
 }

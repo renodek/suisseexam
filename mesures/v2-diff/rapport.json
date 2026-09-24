@@ -10,15 +10,101 @@
     },
     "hero": {
       "designHeight": 1100,
-      "pageHeight": 1100,
-      "mismatchPct": 0.34,
-      "diffs": [],
+      "pageHeight": 1140,
+      "mismatchPct": 14.44,
+      "diffs": [
+        {
+          "text": "à Annemasse",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "Gagnez du temps et augmentez votre chiffre d'affaires grâce ",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "Réserver mon audit gratuit",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "Découvrir notre méthode",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "Sans engagement",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "Réponse sous 24 h",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "Audit personnalisé",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "L'audit IA gratuit",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "Analyse de vos processus",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "01",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "Identification des opportunités IA",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "02",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "Recommandations concrètes",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        },
+        {
+          "text": "03",
+          "issues": [
+            "position Δ(0,41)"
+          ]
+        }
+      ],
       "missing": [
         "Automatisez les tâches répétitives de votre PME,"
       ],
       "extra": [
-        "Automatisez les tâches répétitives PME,",
-        "de votre",
+        "Automatisez répétitives",
+        "les tâches",
+        "de votre PME,",
         "Photo by on",
         "T Fang",
         "Unsplash"
@@ -27,31 +113,43 @@
     "chiffres": {
       "designHeight": 756,
       "pageHeight": 756,
-      "mismatchPct": 0.13,
-      "diffs": [],
+      "mismatchPct": 0.64,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : source et période",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [],
       "extra": []
     },
     "defis": {
       "designHeight": 1456,
       "pageHeight": 1456,
-      "mismatchPct": 0.38,
-      "diffs": [],
+      "mismatchPct": 0.85,
+      "diffs": [
+        {
+          "text": "ces défis ?",
+          "issues": [
+            "taille Δ(-3,0)"
+          ]
+        }
+      ],
       "missing": [
-        "Votre entreprise à Annemasse fait face à",
-        "ces défis ?"
+        "Votre entreprise à Annemasse fait face à"
       ],
       "extra": [
-        "Votre entreprise fait face à",
-        "à Annemasse",
-        "ces",
-        "défis ?"
+        "fait face à",
+        "Votre entreprise",
+        "à Annemasse"
       ]
     },
     "solution": {
       "designHeight": 1566,
       "pageHeight": 1566,
-      "mismatchPct": 0.48,
+      "mismatchPct": 1.47,
       "diffs": [],
       "missing": [
         "Un audit IA pour votre entreprise"
@@ -60,14 +158,15 @@
         "Photo by on",
         "Mimi Thian",
         "Unsplash",
-        "IA pour votre entreprise",
-        "Un audit"
+        "IA",
+        "Un audit",
+        "pour votre entreprise"
       ]
     },
     "methode": {
       "designHeight": 1563,
       "pageHeight": 1563,
-      "mismatchPct": 0.45,
+      "mismatchPct": 1.79,
       "diffs": [],
       "missing": [
         "structurée et éprouvée",
@@ -95,75 +194,307 @@
     "benefices": {
       "designHeight": 1158,
       "pageHeight": 1158,
-      "mismatchPct": 0.26,
-      "diffs": [],
-      "missing": [],
-      "extra": []
+      "mismatchPct": 1.21,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : source et période",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
+      "missing": [
+        "Des bénéfices pour votre entreprise"
+      ],
+      "extra": [
+        "Des bénéfices",
+        "pour votre entreprise"
+      ]
     },
     "qui": {
       "designHeight": 1451,
-      "pageHeight": 1451,
-      "mismatchPct": 0.52,
-      "diffs": [],
-      "missing": [],
+      "pageHeight": 1487,
+      "mismatchPct": 7.34,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : photo du fondateur",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "à Annemasse",
+          "issues": [
+            "position Δ(-157,36)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : nom du fondateur",
+          "issues": [
+            "position Δ(0,36)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : parcours du fondateur",
+          "issues": [
+            "position Δ(0,36)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "Expert certifié",
+          "issues": [
+            "position Δ(0,36)"
+          ]
+        },
+        {
+          "text": "Formation approfondie et certifications reconnues en intelli",
+          "issues": [
+            "position Δ(0,36)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : noms des certifications",
+          "issues": [
+            "position Δ(0,36)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "Approche personnalisée",
+          "issues": [
+            "position Δ(0,36)"
+          ]
+        },
+        {
+          "text": "Chaque audit est unique, adapté à votre secteur, vos objecti",
+          "issues": [
+            "position Δ(0,36)"
+          ]
+        },
+        {
+          "text": "Résultats concrets",
+          "issues": [
+            "position Δ(0,36)"
+          ]
+        },
+        {
+          "text": "Nos recommandations sont actionnables immédiatement, avec un",
+          "issues": [
+            "position Δ(0,36)"
+          ]
+        },
+        {
+          "text": "Vision business et technique",
+          "issues": [
+            "position Δ(0,36)"
+          ]
+        },
+        {
+          "text": "Une alliance rare entre compréhension business et maîtrise t",
+          "issues": [
+            "position Δ(0,36)"
+          ]
+        }
+      ],
+      "missing": [
+        "Votre agence IA de confiance"
+      ],
       "extra": [
-        "Photo du fondateur"
+        "Photo du fondateur",
+        "IA",
+        "Votre agence",
+        "de confiance"
       ]
     },
     "temoignages": {
       "designHeight": 2126,
-      "pageHeight": 2126,
-      "mismatchPct": 1.94,
+      "pageHeight": 2191,
+      "mismatchPct": 7.29,
       "diffs": [
+        {
+          "text": "Ce que disent",
+          "issues": [
+            "taille Δ(-7,0)"
+          ]
+        },
         {
           "text": "nos clients",
           "issues": [
             "position Δ(0,36)",
             "taille Δ(-109,-36)"
           ]
+        },
+        {
+          "text": "À CONFIRMER : entreprise",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : date",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : lien vers l'avis",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "Clara Vallet",
+          "issues": [
+            "position Δ(0,33)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : entreprise",
+          "issues": [
+            "position Δ(0,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : date",
+          "issues": [
+            "position Δ(0,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : lien vers l'avis",
+          "issues": [
+            "position Δ(0,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "«",
+          "issues": [
+            "position Δ(0,33)"
+          ]
+        },
+        {
+          "text": "Yohanna B.",
+          "issues": [
+            "position Δ(0,65)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : entreprise",
+          "issues": [
+            "position Δ(0,65)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : date",
+          "issues": [
+            "position Δ(0,65)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : lien vers l'avis",
+          "issues": [
+            "position Δ(0,65)",
+            "taille Δ(-4,0)"
+          ]
         }
       ],
       "missing": [
-        "Ce que disent",
         "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.",
         "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.",
         "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs."
       ],
       "extra": [
-        "disent",
-        "Ce que",
-        "L'audit réalisé tournant pour notre structure. Nous perdions fou sur aujourd'hui, tout est automatisé.",
+        "L'audit réalisé tournant Nous perdions fou aujourd'hui, tout est automatisé.",
         "a été",
         "un véritable",
+        "pour notre structure.",
         "un temps",
-        "la saisie",
+        "sur la saisie",
         "de données ;",
-        "Une expertise rare qui allie vision business technique. deux mois, nous avons triplé notre capacité grâce aux outils d'IA recommandés.",
+        "rare vision business technique. deux mois, nous avons triplé grâce d'IA recommandés.",
+        "Une expertise",
+        "qui allie",
         "et maîtrise",
         "En seulement",
+        "notre capacité",
         "de traitement",
         "de leads",
-        "technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans sans friction. L'approche est structurée pour",
+        "aux outils",
+        "technique est vulgarisé Nous avons pu intégrer l'IA L'approche est structurée",
         "Le langage",
-        "nos processus",
+        "avec brio.",
+        "dans nos processus",
         "de recrutement",
+        "sans friction.",
         "et rassurante",
-        "les collaborateurs."
+        "pour les collaborateurs."
       ]
     },
     "faq": {
       "designHeight": 1258,
       "pageHeight": 1258,
-      "mismatchPct": 0.46,
-      "diffs": [],
+      "mismatchPct": 1.34,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : durée et format de l’audit",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "Faut-il des compétences techniques dans mon équipe ?",
+          "issues": [
+            "taille Δ(-34,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : fourchette de prix ou modalités",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [],
       "extra": []
     },
     "contact": {
       "designHeight": 1659,
       "pageHeight": 1659,
-      "mismatchPct": 1.04,
-      "diffs": [],
+      "mismatchPct": 1.67,
+      "diffs": [
+        {
+          "text": "à Annemasse ?",
+          "issues": [
+            "position Δ(71,0)",
+            "taille Δ(-3,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : adresse complète",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : numéro de téléphone",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "Comment pouvons-nous vous aider ?",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [
         "Prêt à transformer votre entreprise avec l'IA"
       ],
@@ -171,15 +502,30 @@
         "Photo by on",
         "T Fang",
         "Unsplash",
-        "Prêt votre entreprise avec l'IA",
-        "à transformer"
+        "Prêt",
+        "à transformer",
+        "votre entreprise",
+        "avec l'IA"
       ]
     },
     "footer": {
       "designHeight": 1051,
       "pageHeight": 1051,
-      "mismatchPct": 0.4,
-      "diffs": [],
+      "mismatchPct": 0.56,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : adresse complète",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : téléphone",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [],
       "extra": []
     }
@@ -196,14 +542,22 @@
     "hero": {
       "designHeight": 949,
       "pageHeight": 949,
-      "mismatchPct": 0.2,
-      "diffs": [],
+      "mismatchPct": 0.82,
+      "diffs": [
+        {
+          "text": "à Annemasse",
+          "issues": [
+            "position Δ(-126,0)"
+          ]
+        }
+      ],
       "missing": [
         "Automatisez les tâches répétitives de votre PME,"
       ],
       "extra": [
-        "Automatisez les tâches répétitives PME,",
-        "de votre",
+        "Automatisez répétitives",
+        "les tâches",
+        "de votre PME,",
         "Photo by on",
         "T Fang",
         "Unsplash"
@@ -212,25 +566,39 @@
     "chiffres": {
       "designHeight": 727,
       "pageHeight": 727,
-      "mismatchPct": 0.07,
-      "diffs": [],
+      "mismatchPct": 0.12,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : source et période",
+          "issues": [
+            "position Δ(4,0)",
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [],
       "extra": []
     },
     "defis": {
       "designHeight": 1209,
       "pageHeight": 1209,
-      "mismatchPct": 0.22,
-      "diffs": [],
+      "mismatchPct": 0.58,
+      "diffs": [
+        {
+          "text": "ces défis ?",
+          "issues": [
+            "position Δ(210,0)",
+            "taille Δ(-3,0)"
+          ]
+        }
+      ],
       "missing": [
-        "Votre entreprise à Annemasse fait face à",
-        "ces défis ?"
+        "Votre entreprise à Annemasse fait face à"
       ],
       "extra": [
-        "Votre entreprise fait face à",
-        "à Annemasse",
-        "ces",
-        "défis ?"
+        "fait face à",
+        "Votre entreprise",
+        "à Annemasse"
       ]
     },
     "solution": {
@@ -245,15 +613,23 @@
         "Photo by on",
         "Mimi Thian",
         "Unsplash",
-        "IA pour votre entreprise",
-        "Un audit"
+        "IA",
+        "Un audit",
+        "pour votre entreprise"
       ]
     },
     "methode": {
       "designHeight": 1370,
       "pageHeight": 1370,
       "mismatchPct": 0.3,
-      "diffs": [],
+      "diffs": [
+        {
+          "text": "Une approche",
+          "issues": [
+            "taille Δ(-7,0)"
+          ]
+        }
+      ],
       "missing": [
         "structurée et éprouvée",
         "ÉTAPE",
@@ -280,67 +656,260 @@
     "benefices": {
       "designHeight": 1039,
       "pageHeight": 1039,
-      "mismatchPct": 0.14,
-      "diffs": [],
-      "missing": [],
-      "extra": []
+      "mismatchPct": 0.18,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : source et période",
+          "issues": [
+            "position Δ(4,0)",
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
+      "missing": [
+        "Des bénéfices pour votre entreprise"
+      ],
+      "extra": [
+        "Des bénéfices",
+        "pour votre entreprise"
+      ]
     },
     "qui": {
       "designHeight": 1341,
       "pageHeight": 1341,
-      "mismatchPct": 0.35,
-      "diffs": [],
-      "missing": [],
+      "mismatchPct": 0.53,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : photo du fondateur",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : nom du fondateur",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : parcours du fondateur",
+          "issues": [
+            "position Δ(-4,0)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : noms des certifications",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
+      "missing": [
+        "Votre agence IA de confiance"
+      ],
       "extra": [
-        "Photo du fondateur"
+        "Photo du fondateur",
+        "IA",
+        "Votre agence",
+        "de confiance"
       ]
     },
     "temoignages": {
       "designHeight": 1475,
-      "pageHeight": 1475,
-      "mismatchPct": 0.31,
-      "diffs": [],
+      "pageHeight": 1507,
+      "mismatchPct": 5.62,
+      "diffs": [
+        {
+          "text": "Ce que disent",
+          "issues": [
+            "taille Δ(-7,0)"
+          ]
+        },
+        {
+          "text": "Jean-Pierre Morel",
+          "issues": [
+            "position Δ(0,33)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : entreprise",
+          "issues": [
+            "position Δ(0,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : date",
+          "issues": [
+            "position Δ(-4,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : lien vers l'avis",
+          "issues": [
+            "position Δ(-7,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "«",
+          "issues": [
+            "position Δ(0,33)"
+          ]
+        },
+        {
+          "text": "Clara Vallet",
+          "issues": [
+            "position Δ(0,33)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : entreprise",
+          "issues": [
+            "position Δ(0,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : date",
+          "issues": [
+            "position Δ(-4,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : lien vers l'avis",
+          "issues": [
+            "position Δ(-7,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "«",
+          "issues": [
+            "position Δ(0,33)"
+          ]
+        },
+        {
+          "text": "Yohanna B.",
+          "issues": [
+            "position Δ(0,33)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : entreprise",
+          "issues": [
+            "position Δ(0,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : date",
+          "issues": [
+            "position Δ(-4,33)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : lien vers l'avis",
+          "issues": [
+            "position Δ(-7,33)",
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [
-        "Ce que disent",
         "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.",
         "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.",
         "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs."
       ],
       "extra": [
-        "disent",
-        "Ce que",
-        "L'audit réalisé tournant pour notre structure. Nous perdions fou sur aujourd'hui, tout est automatisé.",
+        "L'audit réalisé tournant Nous perdions fou aujourd'hui, tout est automatisé.",
         "a été",
         "un véritable",
+        "pour notre structure.",
         "un temps",
-        "la saisie",
+        "sur la saisie",
         "de données ;",
-        "Une expertise rare qui allie vision business technique. deux mois, nous avons triplé notre capacité grâce aux outils d'IA recommandés.",
+        "rare vision business technique. deux mois, nous avons triplé grâce d'IA recommandés.",
+        "Une expertise",
+        "qui allie",
         "et maîtrise",
         "En seulement",
+        "notre capacité",
         "de traitement",
         "de leads",
-        "technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans sans friction. L'approche est structurée pour",
+        "aux outils",
+        "technique est vulgarisé Nous avons pu intégrer l'IA L'approche est structurée",
         "Le langage",
-        "nos processus",
+        "avec brio.",
+        "dans nos processus",
         "de recrutement",
+        "sans friction.",
         "et rassurante",
-        "les collaborateurs."
+        "pour les collaborateurs."
       ]
     },
     "faq": {
       "designHeight": 1052,
       "pageHeight": 1052,
-      "mismatchPct": 0.29,
-      "diffs": [],
+      "mismatchPct": 0.42,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : durée et format de l’audit",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : zones d’intervention réelles",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : fourchette de prix ou modalités",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [],
       "extra": []
     },
     "contact": {
       "designHeight": 1517,
       "pageHeight": 1517,
-      "mismatchPct": 1.2,
-      "diffs": [],
+      "mismatchPct": 1.75,
+      "diffs": [
+        {
+          "text": "à Annemasse ?",
+          "issues": [
+            "position Δ(-156,0)",
+            "taille Δ(-3,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : adresse complète",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : numéro de téléphone",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "Comment pouvons-nous vous aider ?",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [
         "Prêt à transformer votre entreprise avec l'IA"
       ],
@@ -348,15 +917,30 @@
         "Photo by on",
         "T Fang",
         "Unsplash",
-        "Prêt votre entreprise avec l'IA",
-        "à transformer"
+        "Prêt",
+        "à transformer",
+        "votre entreprise",
+        "avec l'IA"
       ]
     },
     "footer": {
       "designHeight": 1021,
       "pageHeight": 1021,
-      "mismatchPct": 0.21,
-      "diffs": [],
+      "mismatchPct": 0.33,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : adresse complète",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : téléphone",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [],
       "extra": []
     }
@@ -379,8 +963,9 @@
         "Automatisez les tâches répétitives de votre PME,"
       ],
       "extra": [
-        "Automatisez les tâches répétitives PME,",
-        "de votre",
+        "Automatisez répétitives",
+        "les tâches",
+        "de votre PME,",
         "Photo by on",
         "T Fang",
         "Unsplash"
@@ -389,31 +974,44 @@
     "chiffres": {
       "designHeight": 534,
       "pageHeight": 534,
-      "mismatchPct": 0.05,
-      "diffs": [],
+      "mismatchPct": 0.11,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : source et période",
+          "issues": [
+            "position Δ(4,0)",
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [],
       "extra": []
     },
     "defis": {
       "designHeight": 881,
       "pageHeight": 881,
-      "mismatchPct": 0.16,
-      "diffs": [],
+      "mismatchPct": 0.19,
+      "diffs": [
+        {
+          "text": "ces défis ?",
+          "issues": [
+            "taille Δ(-6,0)"
+          ]
+        }
+      ],
       "missing": [
-        "Votre entreprise à Annemasse fait face à",
-        "ces défis ?"
+        "Votre entreprise à Annemasse fait face à"
       ],
       "extra": [
-        "Votre entreprise fait face à",
-        "à Annemasse",
-        "ces",
-        "défis ?"
+        "fait face à",
+        "Votre entreprise",
+        "à Annemasse"
       ]
     },
     "solution": {
       "designHeight": 1172,
       "pageHeight": 1172,
-      "mismatchPct": 0.12,
+      "mismatchPct": 0.57,
       "diffs": [],
       "missing": [
         "Un audit IA pour votre entreprise"
@@ -422,8 +1020,9 @@
         "Photo by on",
         "Mimi Thian",
         "Unsplash",
-        "IA pour votre entreprise",
-        "Un audit"
+        "IA",
+        "Un audit",
+        "pour votre entreprise"
       ]
     },
     "methode": {
@@ -457,67 +1056,278 @@
     "benefices": {
       "designHeight": 1216,
       "pageHeight": 1216,
-      "mismatchPct": 0.05,
-      "diffs": [],
-      "missing": [],
-      "extra": []
+      "mismatchPct": 0.07,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : source et période",
+          "issues": [
+            "position Δ(4,0)",
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
+      "missing": [
+        "Des bénéfices pour votre entreprise"
+      ],
+      "extra": [
+        "Des bénéfices",
+        "pour votre entreprise"
+      ]
     },
     "qui": {
       "designHeight": 956,
-      "pageHeight": 956,
-      "mismatchPct": 0.23,
-      "diffs": [],
-      "missing": [],
+      "pageHeight": 1023,
+      "mismatchPct": 9.11,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : photo du fondateur",
+          "issues": [
+            "position Δ(0,67)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "à Annemasse",
+          "issues": [
+            "position Δ(-276,67)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : nom du fondateur",
+          "issues": [
+            "position Δ(0,67)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : parcours du fondateur",
+          "issues": [
+            "position Δ(-4,67)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "Expert certifié",
+          "issues": [
+            "position Δ(0,67)"
+          ]
+        },
+        {
+          "text": "Formation approfondie et certifications reconnues en intelli",
+          "issues": [
+            "position Δ(0,67)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : noms des certifications",
+          "issues": [
+            "position Δ(0,67)",
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "Approche personnalisée",
+          "issues": [
+            "position Δ(0,67)"
+          ]
+        },
+        {
+          "text": "Chaque audit est unique, adapté à votre secteur, vos objecti",
+          "issues": [
+            "position Δ(0,67)"
+          ]
+        },
+        {
+          "text": "Résultats concrets",
+          "issues": [
+            "position Δ(0,67)"
+          ]
+        },
+        {
+          "text": "Nos recommandations sont actionnables immédiatement, avec un",
+          "issues": [
+            "position Δ(0,67)"
+          ]
+        },
+        {
+          "text": "Vision business et technique",
+          "issues": [
+            "position Δ(0,67)"
+          ]
+        },
+        {
+          "text": "Une alliance rare entre compréhension business et maîtrise t",
+          "issues": [
+            "position Δ(0,67)"
+          ]
+        }
+      ],
+      "missing": [
+        "Votre agence IA de confiance"
+      ],
       "extra": [
-        "Photo du fondateur"
+        "Photo du fondateur",
+        "IA",
+        "Votre agence",
+        "de confiance"
       ]
     },
     "temoignages": {
       "designHeight": 1124,
       "pageHeight": 1124,
-      "mismatchPct": 0.21,
-      "diffs": [],
+      "mismatchPct": 1.22,
+      "diffs": [
+        {
+          "text": "Ce que disent",
+          "issues": [
+            "taille Δ(-12,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : entreprise",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : date",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : lien vers l'avis",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : entreprise",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : date",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : lien vers l'avis",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : entreprise",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : date",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : lien vers l'avis",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [
-        "Ce que disent",
         "L'audit réalisé a été un véritable tournant pour notre structure. Nous perdions un temps fou sur la saisie de données ; aujourd'hui, tout est automatisé.",
         "Une expertise rare qui allie vision business et maîtrise technique. En seulement deux mois, nous avons triplé notre capacité de traitement de leads grâce aux outils d'IA recommandés.",
         "Le langage technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans nos processus de recrutement sans friction. L'approche est structurée et rassurante pour les collaborateurs."
       ],
       "extra": [
-        "disent",
-        "Ce que",
-        "L'audit réalisé tournant pour notre structure. Nous perdions fou sur aujourd'hui, tout est automatisé.",
+        "L'audit réalisé tournant Nous perdions fou aujourd'hui, tout est automatisé.",
         "a été",
         "un véritable",
+        "pour notre structure.",
         "un temps",
-        "la saisie",
+        "sur la saisie",
         "de données ;",
-        "Une expertise rare qui allie vision business technique. deux mois, nous avons triplé notre capacité grâce aux outils d'IA recommandés.",
+        "rare vision business technique. deux mois, nous avons triplé grâce d'IA recommandés.",
+        "Une expertise",
+        "qui allie",
         "et maîtrise",
         "En seulement",
+        "notre capacité",
         "de traitement",
         "de leads",
-        "technique est vulgarisé avec brio. Nous avons pu intégrer l'IA dans sans friction. L'approche est structurée pour",
+        "aux outils",
+        "technique est vulgarisé Nous avons pu intégrer l'IA L'approche est structurée",
         "Le langage",
-        "nos processus",
+        "avec brio.",
+        "dans nos processus",
         "de recrutement",
+        "sans friction.",
         "et rassurante",
-        "les collaborateurs."
+        "pour les collaborateurs."
       ]
     },
     "faq": {
       "designHeight": 1054,
       "pageHeight": 1054,
-      "mismatchPct": 0.13,
-      "diffs": [],
+      "mismatchPct": 0.18,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : durée et format de l’audit",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : zones d’intervention réelles",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : fourchette de prix ou modalités",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [],
       "extra": []
     },
     "contact": {
       "designHeight": 1387,
       "pageHeight": 1387,
-      "mismatchPct": 0.12,
-      "diffs": [],
+      "mismatchPct": 0.57,
+      "diffs": [
+        {
+          "text": "à Annemasse ?",
+          "issues": [
+            "position Δ(0,61)",
+            "taille Δ(35,-61)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : adresse complète",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : numéro de téléphone",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "Comment pouvons-nous vous aider ?",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [
         "Prêt à transformer votre entreprise avec l'IA"
       ],
@@ -525,15 +1335,30 @@
         "Photo by on",
         "T Fang",
         "Unsplash",
-        "Prêt votre entreprise avec l'IA",
-        "à transformer"
+        "Prêt",
+        "à transformer",
+        "votre entreprise",
+        "avec l'IA"
       ]
     },
     "footer": {
       "designHeight": 542,
       "pageHeight": 542,
-      "mismatchPct": 0.21,
-      "diffs": [],
+      "mismatchPct": 0.41,
+      "diffs": [
+        {
+          "text": "À CONFIRMER : adresse complète",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        },
+        {
+          "text": "À CONFIRMER : téléphone",
+          "issues": [
+            "taille Δ(-4,0)"
+          ]
+        }
+      ],
       "missing": [],
       "extra": []
     }

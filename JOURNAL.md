@@ -491,3 +491,78 @@ Aucun nouveau fichier — corrections dans `livrable/audit.html`.
 - `mesures/v2-controles/rapport.md` et `rapport.json` ; `mesures/v2-diff/` (recapturé)
 - `scripts/controle-v2.js` (étendu), `scripts/controle-v2-extra.js` (nouveau), `scripts/fraunces-subset.js` (glyphes U+00A0 pris en compte)
 - `livrable/v2-nuit-suisse.html` (corrigé)
+
+## Étape 14 — Polices de la V2 (précharge, CLS), titres et typographie française (2026-09-24)
+
+### Ce qui a été fait
+
+1. **Polices de la V2** : Fraunces conservée avec son axe de taille optique (111,6 Ko, décision du client, pour préserver le rendu). Deux `<link rel="preload">` ajoutés pour les deux faces du H1 (romain 500 et italique 500). Vérifié : chaque fichier n'est demandé qu'une fois, aucun avertissement « préchargé mais non utilisé ». Police de secours à métriques ajustées (`size-adjust`, `ascent-override`, `descent-override`) pour Fraunces, Geist et Geist Mono. Blocs écrits dans la page entre les marqueurs `CLS:début` / `CLS:fin` par `node scripts/mesure-cls.js --appliquer` (idempotent).
+2. **Titres de la V2** : regroupements des mots courts rétablis (`<span class="nb">`, `scripts/groupes-titres.js`), `text-wrap: balance` sur les titres `h2`. À 375, 390, 393, 414, 768 et 1440 px : 0 débordement, 0 mot coupé, 0 mot court en fin de ligne.
+3. **Typographie française** (`scripts/typo-fr.js`) sur `v1-clarte.html`, `v2-nuit-suisse.html`, `audit.html` et `index.html` : espace fine insécable (U+202F) devant « ? ! : ; », espace insécable (U+00A0) après « et avant ». Ni le code, ni les URL, ni les attributs, ni les heures et ratios ne sont touchés ; `v0-existant.html` non modifié. Vérifié : aucun signe de ponctuation ne commence une ligne à 390, 360, 320 et 768 px sur les quatre pages (`scripts/verifie-ponctuation.js`). Option `--pourcent` pour « 67 % », utilisée sur `audit.html` seulement (un `%` commençait une ligne à 360 px).
+4. **JSON-LD de la FAQ (V1 et V2)** : questions et réponses du `FAQPage` passées à la même typographie que le texte affiché (7 espaces fines chacun). Vérifié : les 6 questions/réponses sont identiques à l'affichage, le reste du JSON-LD est inchangé.
+5. **CLAUDE.md** : règle « Budget de temps » ajoutée à la section Méthode.
+
+### Décisions du client
+
+- CLS : on s'arrête à 0,0079 au maximum, jugé largement suffisant.
+- 360 et 320 px : les mots courts qui finissent encore 5 titres sont acceptés, non traités (les groupes de 3 mots redeviennent sécables sous 375 px).
+- H1 : `text-wrap: wrap` et 12 colonnes conservés. Ces deux changements, non demandés à l'origine, suppriment une indétermination : avec `balance`, deux découpages de même hauteur alternaient selon la police chargée, et chaque alternance comptait comme un décalage (jusqu'à 0,16).
+
+### Tableau CLS avant / après (à réutiliser dans le rapport final)
+
+Décalage de mise en page (CLS) au chargement, mesuré par `scripts/mesure-cls.js` (Chromium, 15 largeurs d'écran de 320 à 1920 px, deux scénarios : réseau normal et fichiers de polices retardés de 1,5 s). « Sans » désigne la page sans précharge ni police de secours, avec les mêmes titres et le même H1.
+
+| Variante | CLS max | CLS moyen | mesures > 0,1 | mesures > 0,01 |
+|---|---|---|---|---|
+| Sans précharge ni secours | 0,3737 (900 px, polices lentes) | 0,1554 | 18 / 30 | 22 / 30 |
+| Précharge seule | 0,3705 (1024 px, polices lentes) | 0,1731 | 8 / 12 | 8 / 12 |
+| Police de secours seule | 0,0041 (1280 px, réseau normal) | 0,0008 | 0 / 12 | 0 / 12 |
+| **Précharge + police de secours (retenu)** | **0,0079 (320 px, réseau normal)** | **0,0009** | **0 / 30** | **0 / 30** |
+
+Détail par largeur (maximum des deux scénarios) :
+
+| Largeur | Sans précharge ni secours | Précharge + secours |
+|---|---|---|
+| 1920 px | 0,1999 | 0,0003 |
+| 1600 px | 0,2848 | 0,0005 |
+| 1440 px | 0,0057 | 0,0005 |
+| 1366 px | 0,0052 | 0,0007 |
+| 1280 px | 0,0055 | 0,0041 |
+| 1180 px | 0,1218 | 0,0009 |
+| 1024 px | 0,3703 | 0,0000 |
+| 900 px | 0,3737 | 0,0000 |
+| 768 px | 0,3587 | 0,0000 |
+| 600 px | 0,2920 | 0,0000 |
+| 414 px | 0,1843 | 0,0000 |
+| 390 px | 0,1016 | 0,0000 |
+| 375 px | 0,0010 | 0,0000 |
+| 360 px | 0,0182 | 0,0000 |
+| 320 px | 0,0112 | 0,0079 |
+
+Lecture : la précharge seule n'améliore pas le CLS (la police arrive plus tôt mais la police de secours ne correspond pas encore) ; c'est la police de secours à métriques ajustées qui supprime le décalage. Un seuil « bon » est 0,1 ; la variante retenue est au moins dix fois en dessous à toutes les largeurs. Cinq ordres d'arrivée des fichiers de polices (romain, italique, Geist, dans un ordre différent) ont aussi été testés de 320 à 1920 px : 0,0079 au plus.
+
+### Réserves
+
+- Les URL de précharge contiennent le sous-ensemble de glyphes (paramètre `text=` de Google Fonts) : à régénérer avec `node scripts/mesure-cls.js --appliquer --seul` dès qu'un texte en Fraunces, Geist ou Geist Mono change.
+- Écart au design causé par les regroupements de titres : hauteur du héros à 390 px (+40 px), de « Qui sommes-nous » (+67 px à 1440 px, +36 px à 390 px) et des témoignages (+32 px à 768 px, +65 px à 390 px). Accepté par le client (« la qualité typographique prime sur la hauteur identique au design »).
+- À 360 et 320 px, 5 titres finissent encore par un mot court (accepté).
+- La police de secours dépend des polices locales du poste (Georgia, Arial, Courier New) ; sans elles, le navigateur retombe sur la police générique et le CLS n'est plus garanti.
+- Mesures faites en laboratoire (Chromium local) : à recouper avec les mesures Lighthouse de l'étape 9.
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Le CLS restait élevé après chaque réglage de la police de secours (0,1 à 0,37 selon la largeur) | La largeur de Fraunces varie de 105 % à 87 % de celle de Georgia selon la taille (axe de taille optique) : une police de secours par tranche de largeur pour le H1, réglée sur le texte réel du romain et de l'italique séparément. |
+| `local("Georgia")` désignait la graisse normale : l'italique de secours était 1,7 % trop étroit | Nommer explicitement `local("Georgia Italic")` (et `Arial Bold` pour Geist 600). |
+| `text-wrap: balance` sur le H1 : deux découpages de même hauteur alternaient selon la police chargée (0,05 à 0,16 de CLS) | H1 en `text-wrap: wrap` sur 12 colonnes. |
+| Le shell supprimait les barres obliques inversées des scripts (`\\s`, `\\d` devenaient `s`, `d`) : expressions régulières fausses sans erreur | Scripts écrits dans des fichiers ; vérification des expressions par lecture du fichier généré. |
+| Faux positifs de la vérification de ponctuation (signes après un élément `<code>` ou dans un `<span>` de taille différente) | Les caractères de code restent dans la séquence sans être signalés ; ligne comparée par le bas du glyphe. |
+| Réglage du CLS trop long (plusieurs balayages de 15 à 25 minutes chacun) | Règle « Budget de temps » ajoutée à CLAUDE.md. |
+
+### Fichiers produits
+
+- `livrable/v1-clarte.html`, `livrable/v2-nuit-suisse.html`, `livrable/audit.html` (typographie française), `livrable/index.html` (aucun changement de contenu)
+- `scripts/typo-fr.js`, `scripts/groupes-titres.js`, `scripts/mesure-cls.js`, `scripts/verifie-ponctuation.js` (nouveaux) ; `scripts/controle-v2-extra.js`, `scripts/fraunces-subset.js` (mis à jour)
+- `mesures/v2-controles/polices-cls.json` et section « Polices » de `rapport.md` ; `mesures/typo-fr/rapport.json` ; `mesures/v2-diff/` (recapturé)
+- `CLAUDE.md` (règle « Budget de temps »)

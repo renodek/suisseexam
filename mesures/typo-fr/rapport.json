@@ -1,0 +1,74 @@
+{
+  "v1-clarte.html": {
+    "320": {
+      "caracteres": 6027,
+      "problemes": []
+    },
+    "360": {
+      "caracteres": 6027,
+      "problemes": []
+    },
+    "390": {
+      "caracteres": 6027,
+      "problemes": []
+    },
+    "768": {
+      "caracteres": 6027,
+      "problemes": []
+    }
+  },
+  "v2-nuit-suisse.html": {
+    "320": {
+      "caracteres": 6117,
+      "problemes": []
+    },
+    "360": {
+      "caracteres": 6117,
+      "problemes": []
+    },
+    "390": {
+      "caracteres": 6117,
+      "problemes": []
+    },
+    "768": {
+      "caracteres": 6117,
+      "problemes": []
+    }
+  },
+  "audit.html": {
+    "320": {
+      "caracteres": 41262,
+      "problemes": []
+    },
+    "360": {
+      "caracteres": 41262,
+      "problemes": []
+    },
+    "390": {
+      "caracteres": 41262,
+      "problemes": []
+    },
+    "768": {
+      "caracteres": 41262,
+      "problemes": []
+    }
+  },
+  "index.html": {
+    "320": {
+      "caracteres": 61,
+      "problemes": []
+    },
+    "360": {
+      "caracteres": 61,
+      "problemes": []
+    },
+    "390": {
+      "caracteres": 61,
+      "problemes": []
+    },
+    "768": {
+      "caracteres": 61,
+      "problemes": []
+    }
+  }
+}
