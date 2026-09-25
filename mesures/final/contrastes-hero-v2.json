@@ -1,0 +1,577 @@
+{
+  "v2-nuit-suisse": {
+    "390": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [],
+        "pire": {
+          "texte": "02",
+          "ratio": 6.01,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        },
+        "toutes": [
+          {
+            "texte": "Agence d’automatisation IA",
+            "ratio": 10.52,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "Annemasse",
+            "ratio": 16.46,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "Grand Genève",
+            "ratio": 16.46,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "Automatisez",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 40,
+            "ok": true
+          },
+          {
+            "texte": "les tâches",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 40,
+            "ok": true
+          },
+          {
+            "texte": "répétitives",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 40,
+            "ok": true
+          },
+          {
+            "texte": "de votre PME,",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 40,
+            "ok": true
+          },
+          {
+            "texte": "à Annemasse",
+            "ratio": 10.52,
+            "seuil": 3,
+            "taille": 40,
+            "ok": true
+          },
+          {
+            "texte": "Gagnez du temps et augmentez votre chiffre d’affaires grâce ",
+            "ratio": 11.82,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Réserver mon audit gratuit",
+            "ratio": 11.15,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Découvrir notre méthode",
+            "ratio": 15.05,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 8.3,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Audit personnalisé",
+            "ratio": 7.24,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "L’audit IA gratuit",
+            "ratio": 6.82,
+            "seuil": 3,
+            "taille": 26,
+            "ok": true
+          },
+          {
+            "texte": "01",
+            "ratio": 6.79,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Analyse de vos processus",
+            "ratio": 6.64,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "02",
+            "ratio": 6.01,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Identification des opportunités IA",
+            "ratio": 7.72,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "03",
+            "ratio": 8.05,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Recommandations concrètes",
+            "ratio": 8.31,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Photo by",
+            "ratio": 17.81,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          },
+          {
+            "texte": "Pascal Debrunner",
+            "ratio": 17.59,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          },
+          {
+            "texte": "on",
+            "ratio": 17.61,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          },
+          {
+            "texte": "Unsplash",
+            "ratio": 17.61,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "768": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [],
+        "pire": {
+          "texte": "03",
+          "ratio": 4.77,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        },
+        "toutes": [
+          {
+            "texte": "Agence d’automatisation IA",
+            "ratio": 10.52,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "Annemasse",
+            "ratio": 16.46,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "Grand Genève",
+            "ratio": 16.46,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "Automatisez",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 49.152,
+            "ok": true
+          },
+          {
+            "texte": "les tâches",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 49.152,
+            "ok": true
+          },
+          {
+            "texte": "répétitives",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 49.152,
+            "ok": true
+          },
+          {
+            "texte": "de votre PME,",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 49.152,
+            "ok": true
+          },
+          {
+            "texte": "à Annemasse",
+            "ratio": 10.52,
+            "seuil": 3,
+            "taille": 49.152,
+            "ok": true
+          },
+          {
+            "texte": "Gagnez du temps et augmentez votre chiffre d’affaires grâce ",
+            "ratio": 11.27,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Réserver mon audit gratuit",
+            "ratio": 11.15,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Découvrir notre méthode",
+            "ratio": 11.51,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 8.45,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 6.57,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Audit personnalisé",
+            "ratio": 5.87,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "L’audit IA gratuit",
+            "ratio": 10.92,
+            "seuil": 3,
+            "taille": 26,
+            "ok": true
+          },
+          {
+            "texte": "01",
+            "ratio": 7.14,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Analyse de vos processus",
+            "ratio": 7.72,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "02",
+            "ratio": 5.42,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Identification des opportunités IA",
+            "ratio": 6.1,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "03",
+            "ratio": 4.77,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Recommandations concrètes",
+            "ratio": 7.24,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Photo by",
+            "ratio": 17.58,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          },
+          {
+            "texte": "Pascal Debrunner",
+            "ratio": 17.23,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          },
+          {
+            "texte": "on",
+            "ratio": 17.07,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          },
+          {
+            "texte": "Unsplash",
+            "ratio": 17.05,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "1440": [
+      {
+        "region": "Héros",
+        "lignes": 25,
+        "echecs": [],
+        "pire": {
+          "texte": "Sans engagement",
+          "ratio": 6.47,
+          "seuil": 4.5,
+          "taille": 13,
+          "ok": true
+        },
+        "toutes": [
+          {
+            "texte": "Agence d’automatisation IA",
+            "ratio": 10.52,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "Annemasse",
+            "ratio": 16.46,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "Grand Genève",
+            "ratio": 16.46,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "Automatisez",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 92.16,
+            "ok": true
+          },
+          {
+            "texte": "les tâches",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 92.16,
+            "ok": true
+          },
+          {
+            "texte": "répétitives",
+            "ratio": 18.17,
+            "seuil": 3,
+            "taille": 92.16,
+            "ok": true
+          },
+          {
+            "texte": "de votre PME,",
+            "ratio": 17.84,
+            "seuil": 3,
+            "taille": 92.16,
+            "ok": true
+          },
+          {
+            "texte": "à Annemasse",
+            "ratio": 10.23,
+            "seuil": 3,
+            "taille": 92.16,
+            "ok": true
+          },
+          {
+            "texte": "Gagnez du temps et augmentez votre chiffre d’affaires grâce ",
+            "ratio": 8.7,
+            "seuil": 4.5,
+            "taille": 20.88,
+            "ok": true
+          },
+          {
+            "texte": "Réserver mon audit gratuit",
+            "ratio": 11.15,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Découvrir notre méthode",
+            "ratio": 13.74,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Sans engagement",
+            "ratio": 6.47,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Réponse sous 24 h",
+            "ratio": 6.75,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Audit personnalisé",
+            "ratio": 6.8,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "L’audit IA gratuit",
+            "ratio": 10.82,
+            "seuil": 3,
+            "taille": 26,
+            "ok": true
+          },
+          {
+            "texte": "01",
+            "ratio": 6.81,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Analyse de vos processus",
+            "ratio": 9.09,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "02",
+            "ratio": 7.83,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Identification des opportunités IA",
+            "ratio": 11.02,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "03",
+            "ratio": 7.07,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Recommandations concrètes",
+            "ratio": 6.69,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Photo by",
+            "ratio": 17.05,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          },
+          {
+            "texte": "Pascal Debrunner",
+            "ratio": 17.07,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          },
+          {
+            "texte": "on",
+            "ratio": 17.43,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          },
+          {
+            "texte": "Unsplash",
+            "ratio": 17.46,
+            "seuil": 4.5,
+            "taille": 12,
+            "ok": true
+          }
+        ]
+      }
+    ]
+  }
+}

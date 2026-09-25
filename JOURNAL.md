@@ -896,3 +896,82 @@ Aucune nouvelle mesure (consigne). Le contraste de cette étiquette en cyan n'a 
 
 - `livrable/index.html` (réécrit) ; `livrable/assets/img/vignette-*.webp` (8)
 - `scripts/contraste-fonds.js` (page `index`) ; `mesures/index/` (captures, contrastes)
+
+## Étape 22 — Corrections du hub, mesures Lighthouse finales et contrôle des 5 pages (étape 9 du plan, 2026-09-25)
+
+### A. Corrections
+
+- **Point « CLS » du hub** : reformulé en savoir-faire technique, sans comparaison au site actuel : « Mise en page stable. Sur la V2, une police de secours aux métriques ajustées maintient le CLS sous 0,01 sur 14 largeurs d'écran (0,37 sans ce réglage). » La mention « divisé par près de 40 » est retirée.
+- **Apostrophes typographiques** (`’`) dans le texte visible de `index.html`, `audit.html`, `v1-clarte.html` et `v2-nuit-suisse.html` (13, 269, 45 et 41 remplacements) et dans le JSON-LD de la FAQ, via l'option `--apostrophes` de `scripts/typo-fr.js` (mêmes zones protégées que les autres règles : code, attributs, URL, scripts, styles, commentaires, `<title>`). `v0-existant.html` n'est pas touché. Vérifié dans le navigateur : 0 apostrophe droite visible, sauf une dans un extrait de code de l'audit (`<code>`, volontairement intact) ; les 6 questions et réponses du JSON-LD de la FAQ restent identiques au texte affiché (V1 et V2) ; le nombre d'apostrophes droites dans les balises est inchangé.
+- **Polices de la V2** : la nouvelle apostrophe (U+2019) doit figurer dans les sous-ensembles de glyphes ; `fraunces-subset.js` recalculé, liens Google Fonts mis à jour, `mesure-cls.js --appliquer --seul` relancé.
+
+### B. Mesures Lighthouse (`scripts/lighthouse-final.js`)
+
+Lighthouse 13.5.0, mesures du 2026-09-25 sur les pages déployées après les corrections (vérification en ligne du déploiement avant de mesurer). Mobile puis desktop, 3 passages chacun, passage médian retenu (médian sur le score de performance). Rapports JSON et HTML des passages médians, `passages.json` (les trois passages) et `comparatif.md` dans `mesures/final/`.
+
+| Mobile (médiane) | Site actuel | V0 | V1 | V2 |
+|---|---|---|---|---|
+| Performance | 71 | 88 | 88 | 90 |
+| Accessibilité | 94 | 83 | 100 | 100 |
+| Bonnes pratiques | 100 | 96 | 96 | 96 |
+| SEO | 100 | 54 | 63 | 63 |
+| LCP | 1,30 s | 3,49 s | 3,04 s | 3,11 s |
+| CLS | 0,000 | 0,002 | 0,010 | 0,000 |
+| TBT | 2302 ms | 0 ms | 0 ms | 7 ms |
+| Poids | 184 Ko | 153 Ko | 155 Ko | 356 Ko |
+
+| Desktop (médiane) | Site actuel | V0 | V1 | V2 |
+|---|---|---|---|---|
+| Performance | 70 | 93 | 93 | 87 |
+| Accessibilité | 94 | 89 | 100 | 100 |
+| Bonnes pratiques | 100 | 96 | 96 | 96 |
+| SEO | 100 | 54 | 63 | 63 |
+| LCP | 0,48 s | 1,43 s | 1,24 s | 1,58 s |
+| CLS | 0,237 | 0,022 | 0,000 | 0,001 |
+| TBT | 400 ms | 0 ms | 0 ms | 0 ms |
+| Poids | 185 Ko | 152 Ko | 397 Ko | 380 Ko |
+
+La V0 est hébergée sur Vercel comme la V1 et la V2 : à hébergement égal, la V1 et la V2 gagnent 0 à 2 points de performance sur mobile et améliorent l'accessibilité (100 contre 83) et le LCP mobile (3,04 et 3,11 s contre 3,49 s). Le site actuel est mesuré sur son propre hébergement.
+
+### C. Hub mis à jour
+
+- Tableau comparatif rempli avec les valeurs mobiles du site actuel, de la V1 et de la V2 (lues dans `passages.json`), légende « Valeurs mobiles, médiane de 3 passages » et ligne de contexte : version de Lighthouse, date, protocole, différence d'hébergement, valeurs de la V0 (performance 88, LCP 3,49 s), et le noindex volontaire qui plafonne le SEO de la V1 et de la V2.
+- Point « LCP » de « Ce qui change » réécrit avec les mesures Lighthouse : « LCP plus court que la V0, animations comprises » (3,04 s pour la V1, 3,11 s pour la V2, contre 3,49 s pour la V0 ; le site actuel, sur son propre hébergement : 1,30 s). L'ancien titre, « LCP maîtrisé », et les valeurs de l'étape 17 (mesure locale) sont abandonnés : le protocole de Lighthouse (processeur ralenti ×4) donne des valeurs 3 fois plus longues que la mesure locale.
+
+### Valeurs de la V1 ou de la V2 moins bonnes que celles du site actuel (mobile sauf mention)
+
+- **LCP** : 3,04 s (V1) et 3,11 s (V2) contre 1,30 s ; en desktop 1,24 s et 1,58 s contre 0,48 s.
+- **Poids de la page** : 356 Ko (V2) contre 184 Ko ; en desktop 397 Ko (V1) et 380 Ko (V2) contre 185 Ko.
+- **SEO** : 63 contre 100 (mobile et desktop) : cause identifiée, l'audit « la page est indexable » échoue à cause du `noindex` volontaire des maquettes (règle du projet) ; la V0 est à 54 (elle échoue aussi sur la balise meta description absente du site actuel reproduit).
+- **Bonnes pratiques** : 96 contre 100 : cause identifiée, l'audit « erreurs dans la console » signale une requête `favicon.ico` en 404 sur Vercel (V0, V1 et V2) ; non corrigée ici (corriger demanderait une nouvelle série de mesures).
+- **CLS mobile de la V1** : 0,010 contre 0,000 (V2 : 0,000).
+- **Mieux que le site actuel** : performance (88 et 90 contre 71 sur mobile ; 93 et 87 contre 70 sur desktop), accessibilité (100 contre 94), TBT (0 et 7 ms contre 2302 ms sur mobile), CLS desktop (0,000 et 0,001 contre 0,237).
+- Le LCP de la V1 (3 043 ms) est égal à son FCP : le premier rendu attend la feuille de style Google Fonts (ressource bloquant le rendu). Piste d'amélioration, non traitée.
+
+### D. Contrôle final des 5 pages
+
+- **Étiquette cyan du héros de la V2** (« Agence d'automatisation IA ») : contraste de 10,52:1 sur les pixels rendus en 1440, 768 et 390 px (seuil 4,5:1).
+- **Contrastes AA du hub** après remplissage : 127 lignes, 0 échec, pire rapport 5,71:1.
+- **Console** : 0 erreur sur les 5 pages, de 320 à 1440 px (9 largeurs).
+- **Défilement horizontal** : 0 sur `index.html`, `v1-clarte.html`, `v2-nuit-suisse.html`. `audit.html` en avait jusqu'à 288 px à 320 px ; cause : les listes de constats (grille `110px 1fr`, colonne sans minimum) et des `<code>` longs ; corrigé (`minmax(0,1fr)`, retour à la ligne dans les `<code>` hors `<pre>`, badges réductibles) : 0 de 320 à 1440 px. `v0-existant.html` en a 84 px à 320 px, 44 à 360, 14 à 390 et 38 à 1024 px (cartes de témoignages et boutons du héros) ; non corrigé : la V0 reproduit le site actuel à l'identique et ne doit pas être modifiée ; à considérer comme un défaut hérité.
+- **Liens** : le hub mène aux 4 pages et à `credits.txt` (tous présents) ; l'audit renvoie au hub ; toutes les ancres existent, sauf `#content` de la V0 (défaut reproduit du site actuel, lien d'évitement vers un identifiant inexistant) ; 15 liens de menu de la V1 et de la V2 pointent vers l'arborescence proposée non créée (annoncé dans les notes de transparence). Aucune page (V0, V1, V2) ne renvoie vers le hub.
+- **[À CONFIRMER]** : `index.html` : 1 occurrence, la mention explicative des notes de transparence (aucune donnée à confirmer) ; `audit.html` : 2 occurrences, dans des recommandations (« [À CONFIRMER : source et méthode de calcul des chiffres…] » et « [À CONFIRMER : nom de la ou des certifications réelles] ») ; V0 : 0 ; V1 et V2 : 22 chacune (attendues).
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Mon script de remplissage du tableau a écrit les marqueurs `$1` et `$2` tels quels dans `index.html` (fonction de remplacement) et fait perdre la fin du tableau ; repéré à la capture de contrôle | `index.html` restauré depuis le commit puis remplissage rejoué avec un script corrigé ; contrôle de contraste, console et capture refaits sur la page réparée (aucune version défectueuse n'a été commitée). |
+| Le contrôle de contraste de la page entière du hub signalait 17 échecs | Artefact de la page défectueuse ci-dessus ; 0 échec après réparation. |
+
+### Réserves
+
+- La comparaison avec le site actuel mêle le code de la page et l'hébergement ; seule la V0 permet une comparaison à hébergement égal.
+- Aucune mesure de la page d'accueil elle-même (non demandée).
+- Le poids de 184 Ko du site actuel est celui rapporté par Lighthouse pour le chargement initial (octets transférés).
+
+### Fichiers produits
+
+- `livrable/index.html`, `livrable/audit.html` (corrections) ; `livrable/v1-clarte.html`, `livrable/v2-nuit-suisse.html` (apostrophes, sous-ensembles de polices)
+- `scripts/lighthouse-final.js` (nouveau), `scripts/typo-fr.js` (option `--apostrophes`), `scripts/contraste-fonds.js` (toutes les lignes conservées dans le JSON)
+- `mesures/final/` : `comparatif.md`, `passages.json`, rapports médians (JSON et HTML, 8 paires), `controle-final.json`, `contrastes-hero-v2.*` ; `mesures/index/` (contrastes)

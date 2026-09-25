@@ -1,0 +1,578 @@
+{
+  "site-actuel": {
+    "mobile": {
+      "passages": [
+        {
+          "n": 1,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 70,
+          "accessibilite": 94,
+          "bonnes_pratiques": 100,
+          "seo": 100,
+          "lcp_ms": 1626,
+          "cls": 0,
+          "tbt_ms": 3310,
+          "poids_octets": 183794,
+          "seo_echecs": [],
+          "url_finale": "https://mzi-consulting.com/"
+        },
+        {
+          "n": 2,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 71,
+          "accessibilite": 94,
+          "bonnes_pratiques": 100,
+          "seo": 100,
+          "lcp_ms": 1296,
+          "cls": 0.0004,
+          "tbt_ms": 2302,
+          "poids_octets": 183778,
+          "seo_echecs": [],
+          "url_finale": "https://mzi-consulting.com/"
+        },
+        {
+          "n": 3,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 71,
+          "accessibilite": 94,
+          "bonnes_pratiques": 100,
+          "seo": 100,
+          "lcp_ms": 1364,
+          "cls": 0.0091,
+          "tbt_ms": 2663,
+          "poids_octets": 183802,
+          "seo_echecs": [],
+          "url_finale": "https://mzi-consulting.com/"
+        }
+      ],
+      "mediane": {
+        "n": 2,
+        "date": "2026-09-25",
+        "lighthouse": "13.5.0",
+        "performance": 71,
+        "accessibilite": 94,
+        "bonnes_pratiques": 100,
+        "seo": 100,
+        "lcp_ms": 1296,
+        "cls": 0.0004,
+        "tbt_ms": 2302,
+        "poids_octets": 183778,
+        "seo_echecs": [],
+        "url_finale": "https://mzi-consulting.com/"
+      }
+    },
+    "desktop": {
+      "passages": [
+        {
+          "n": 1,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 70,
+          "accessibilite": 94,
+          "bonnes_pratiques": 100,
+          "seo": 100,
+          "lcp_ms": 484,
+          "cls": 0.237,
+          "tbt_ms": 400,
+          "poids_octets": 185159,
+          "seo_echecs": [],
+          "url_finale": "https://mzi-consulting.com/"
+        },
+        {
+          "n": 2,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 71,
+          "accessibilite": 94,
+          "bonnes_pratiques": 100,
+          "seo": 100,
+          "lcp_ms": 485,
+          "cls": 0.2309,
+          "tbt_ms": 403,
+          "poids_octets": 184443,
+          "seo_echecs": [],
+          "url_finale": "https://mzi-consulting.com/"
+        },
+        {
+          "n": 3,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 62,
+          "accessibilite": 94,
+          "bonnes_pratiques": 100,
+          "seo": 100,
+          "lcp_ms": 502,
+          "cls": 0.2309,
+          "tbt_ms": 715,
+          "poids_octets": 185156,
+          "seo_echecs": [],
+          "url_finale": "https://mzi-consulting.com/"
+        }
+      ],
+      "mediane": {
+        "n": 1,
+        "date": "2026-09-25",
+        "lighthouse": "13.5.0",
+        "performance": 70,
+        "accessibilite": 94,
+        "bonnes_pratiques": 100,
+        "seo": 100,
+        "lcp_ms": 484,
+        "cls": 0.237,
+        "tbt_ms": 400,
+        "poids_octets": 185159,
+        "seo_echecs": [],
+        "url_finale": "https://mzi-consulting.com/"
+      }
+    }
+  },
+  "v0-existant": {
+    "mobile": {
+      "passages": [
+        {
+          "n": 1,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 87,
+          "accessibilite": 83,
+          "bonnes_pratiques": 96,
+          "seo": 54,
+          "lcp_ms": 3548,
+          "cls": 0.0028,
+          "tbt_ms": 0,
+          "poids_octets": 152643,
+          "seo_echecs": [
+            "is-crawlable",
+            "meta-description"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v0-existant.html"
+        },
+        {
+          "n": 2,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 88,
+          "accessibilite": 83,
+          "bonnes_pratiques": 96,
+          "seo": 54,
+          "lcp_ms": 3488,
+          "cls": 0.002,
+          "tbt_ms": 0,
+          "poids_octets": 152642,
+          "seo_echecs": [
+            "is-crawlable",
+            "meta-description"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v0-existant.html"
+        },
+        {
+          "n": 3,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 89,
+          "accessibilite": 83,
+          "bonnes_pratiques": 96,
+          "seo": 54,
+          "lcp_ms": 3428,
+          "cls": 0,
+          "tbt_ms": 0,
+          "poids_octets": 151950,
+          "seo_echecs": [
+            "is-crawlable",
+            "meta-description"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v0-existant.html"
+        }
+      ],
+      "mediane": {
+        "n": 2,
+        "date": "2026-09-25",
+        "lighthouse": "13.5.0",
+        "performance": 88,
+        "accessibilite": 83,
+        "bonnes_pratiques": 96,
+        "seo": 54,
+        "lcp_ms": 3488,
+        "cls": 0.002,
+        "tbt_ms": 0,
+        "poids_octets": 152642,
+        "seo_echecs": [
+          "is-crawlable",
+          "meta-description"
+        ],
+        "url_finale": "https://suisseexam.vercel.app/v0-existant.html"
+      }
+    },
+    "desktop": {
+      "passages": [
+        {
+          "n": 1,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 93,
+          "accessibilite": 89,
+          "bonnes_pratiques": 96,
+          "seo": 54,
+          "lcp_ms": 1465,
+          "cls": 0.0004,
+          "tbt_ms": 0,
+          "poids_octets": 151954,
+          "seo_echecs": [
+            "is-crawlable",
+            "meta-description"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v0-existant.html"
+        },
+        {
+          "n": 2,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 93,
+          "accessibilite": 89,
+          "bonnes_pratiques": 96,
+          "seo": 54,
+          "lcp_ms": 1427,
+          "cls": 0.0224,
+          "tbt_ms": 0,
+          "poids_octets": 151947,
+          "seo_echecs": [
+            "is-crawlable",
+            "meta-description"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v0-existant.html"
+        },
+        {
+          "n": 3,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 93,
+          "accessibilite": 89,
+          "bonnes_pratiques": 96,
+          "seo": 54,
+          "lcp_ms": 1276,
+          "cls": 0.0004,
+          "tbt_ms": 0,
+          "poids_octets": 152646,
+          "seo_echecs": [
+            "is-crawlable",
+            "meta-description"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v0-existant.html"
+        }
+      ],
+      "mediane": {
+        "n": 2,
+        "date": "2026-09-25",
+        "lighthouse": "13.5.0",
+        "performance": 93,
+        "accessibilite": 89,
+        "bonnes_pratiques": 96,
+        "seo": 54,
+        "lcp_ms": 1427,
+        "cls": 0.0224,
+        "tbt_ms": 0,
+        "poids_octets": 151947,
+        "seo_echecs": [
+          "is-crawlable",
+          "meta-description"
+        ],
+        "url_finale": "https://suisseexam.vercel.app/v0-existant.html"
+      }
+    }
+  },
+  "v1-clarte": {
+    "mobile": {
+      "passages": [
+        {
+          "n": 1,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 86,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 3260,
+          "cls": 0.0096,
+          "tbt_ms": 0,
+          "poids_octets": 155171,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v1-clarte.html"
+        },
+        {
+          "n": 2,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 88,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 3043,
+          "cls": 0.0096,
+          "tbt_ms": 0,
+          "poids_octets": 155162,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v1-clarte.html"
+        },
+        {
+          "n": 3,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 96,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 2198,
+          "cls": 0.0096,
+          "tbt_ms": 0,
+          "poids_octets": 155172,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v1-clarte.html"
+        }
+      ],
+      "mediane": {
+        "n": 2,
+        "date": "2026-09-25",
+        "lighthouse": "13.5.0",
+        "performance": 88,
+        "accessibilite": 100,
+        "bonnes_pratiques": 96,
+        "seo": 63,
+        "lcp_ms": 3043,
+        "cls": 0.0096,
+        "tbt_ms": 0,
+        "poids_octets": 155162,
+        "seo_echecs": [
+          "is-crawlable"
+        ],
+        "url_finale": "https://suisseexam.vercel.app/v1-clarte.html"
+      }
+    },
+    "desktop": {
+      "passages": [
+        {
+          "n": 1,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 93,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 1241,
+          "cls": 0.0003,
+          "tbt_ms": 0,
+          "poids_octets": 396756,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v1-clarte.html"
+        },
+        {
+          "n": 2,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 92,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 1344,
+          "cls": 0.0003,
+          "tbt_ms": 0,
+          "poids_octets": 396749,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v1-clarte.html"
+        },
+        {
+          "n": 3,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 93,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 1255,
+          "cls": 0.0003,
+          "tbt_ms": 0,
+          "poids_octets": 397379,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v1-clarte.html"
+        }
+      ],
+      "mediane": {
+        "n": 1,
+        "date": "2026-09-25",
+        "lighthouse": "13.5.0",
+        "performance": 93,
+        "accessibilite": 100,
+        "bonnes_pratiques": 96,
+        "seo": 63,
+        "lcp_ms": 1241,
+        "cls": 0.0003,
+        "tbt_ms": 0,
+        "poids_octets": 396756,
+        "seo_echecs": [
+          "is-crawlable"
+        ],
+        "url_finale": "https://suisseexam.vercel.app/v1-clarte.html"
+      }
+    }
+  },
+  "v2-nuit-suisse": {
+    "mobile": {
+      "passages": [
+        {
+          "n": 1,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 87,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 3350,
+          "cls": 0,
+          "tbt_ms": 60,
+          "poids_octets": 355751,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v2-nuit-suisse.html"
+        },
+        {
+          "n": 2,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 92,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 2832,
+          "cls": 0,
+          "tbt_ms": 0,
+          "poids_octets": 356145,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v2-nuit-suisse.html"
+        },
+        {
+          "n": 3,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 90,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 3109,
+          "cls": 0,
+          "tbt_ms": 7,
+          "poids_octets": 355719,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v2-nuit-suisse.html"
+        }
+      ],
+      "mediane": {
+        "n": 3,
+        "date": "2026-09-25",
+        "lighthouse": "13.5.0",
+        "performance": 90,
+        "accessibilite": 100,
+        "bonnes_pratiques": 96,
+        "seo": 63,
+        "lcp_ms": 3109,
+        "cls": 0,
+        "tbt_ms": 7,
+        "poids_octets": 355719,
+        "seo_echecs": [
+          "is-crawlable"
+        ],
+        "url_finale": "https://suisseexam.vercel.app/v2-nuit-suisse.html"
+      }
+    },
+    "desktop": {
+      "passages": [
+        {
+          "n": 1,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 87,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 1584,
+          "cls": 0.0008,
+          "tbt_ms": 0,
+          "poids_octets": 380299,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v2-nuit-suisse.html"
+        },
+        {
+          "n": 2,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 83,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 1844,
+          "cls": 0.0008,
+          "tbt_ms": 0,
+          "poids_octets": 380319,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v2-nuit-suisse.html"
+        },
+        {
+          "n": 3,
+          "date": "2026-09-25",
+          "lighthouse": "13.5.0",
+          "performance": 89,
+          "accessibilite": 100,
+          "bonnes_pratiques": 96,
+          "seo": 63,
+          "lcp_ms": 1447,
+          "cls": 0.0008,
+          "tbt_ms": 0,
+          "poids_octets": 380295,
+          "seo_echecs": [
+            "is-crawlable"
+          ],
+          "url_finale": "https://suisseexam.vercel.app/v2-nuit-suisse.html"
+        }
+      ],
+      "mediane": {
+        "n": 1,
+        "date": "2026-09-25",
+        "lighthouse": "13.5.0",
+        "performance": 87,
+        "accessibilite": 100,
+        "bonnes_pratiques": 96,
+        "seo": 63,
+        "lcp_ms": 1584,
+        "cls": 0.0008,
+        "tbt_ms": 0,
+        "poids_octets": 380299,
+        "seo_echecs": [
+          "is-crawlable"
+        ],
+        "url_finale": "https://suisseexam.vercel.app/v2-nuit-suisse.html"
+      }
+    }
+  }
+}

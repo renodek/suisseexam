@@ -135,7 +135,7 @@ function releve(regions) {
           resultats.push({ texte: l.texte, ratio: +r.toFixed(2), seuil: grand ? 3 : 4.5, taille: l.taille, ok: r >= (grand ? 3 : 4.5) });
         }
         const pire = resultats.reduce((m, r) => (m === null || r.ratio - r.seuil < m.ratio - m.seuil ? r : m), null);
-        rapport[nom][w].push({ region: reg.region, lignes: resultats.length, echecs: resultats.filter((r) => !r.ok), pire });
+        rapport[nom][w].push({ region: reg.region, lignes: resultats.length, echecs: resultats.filter((r) => !r.ok), pire, toutes: resultats });
       }
       console.log(nom, w, rapport[nom][w].map((r) => r.region + ': ' + (r.absent ? 'ABSENT' : r.lignes + ' lignes, ' + r.echecs.length + ' échec(s), pire ' + (r.pire ? r.pire.ratio + ' (seuil ' + r.pire.seuil + ') « ' + r.pire.texte.slice(0, 30) + ' »' : '-'))).join(' | '), '|', Math.round((Date.now() - t0) / 1000) + ' s');
       await ctx.close();

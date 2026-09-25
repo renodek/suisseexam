@@ -3,43 +3,2716 @@
     "390": [
       {
         "region": "Page entière",
-        "lignes": 150,
+        "lignes": 127,
         "echecs": [],
         "pire": {
-          "texte": "mesures finales à venir",
-          "ratio": 5.53,
+          "texte": "·",
+          "ratio": 5.71,
           "seuil": 4.5,
-          "taille": 14,
+          "taille": 18,
           "ok": true
-        }
+        },
+        "toutes": [
+          {
+            "texte": "Dossier de propositions",
+            "ratio": 10.49,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Propositions SEO et design pour MZI Consulting",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 38,
+            "ok": true
+          },
+          {
+            "texte": "par",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Silvère Dekpon",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "·",
+            "ratio": 5.71,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Date de livraison :",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "25 septembre 2026",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Lisez dans cet ordre : l’audit, puis la V0, la V1 et la V2, ",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Commencer par l’audit",
+            "ratio": 11.15,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Le dossier",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Quatre pièces, dans l’ordre de",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "lecture",
+            "ratio": 5.36,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "1",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Diagnostic",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Audit",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 24,
+            "ok": true
+          },
+          {
+            "texte": "Diagnostic SEO, GEO, UX, performance et accessibilité, avec ",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir l’audit",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "2",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Point de comparaison",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "V0 « Existant »",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 24,
+            "ok": true
+          },
+          {
+            "texte": "Reproduction fidèle du site actuel, pour comparer chaque pro",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir la V0",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Évolution",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "V1 « Clarté »",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 24,
+            "ok": true
+          },
+          {
+            "texte": "Évolution fidèle à l’identité de MZI : plus claire et plus c",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir la V1",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "4",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Refonte",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "V2 « Nuit suisse »",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 24,
+            "ok": true
+          },
+          {
+            "texte": "Refonte premium, éditoriale, ancrée dans le paysage régional",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir la V2",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Résultats",
+            "ratio": 6.94,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Ce qui",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "change",
+            "ratio": 4.91,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "Six points mesurés ou vérifiables dans les pages ; le détail",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Un seul libellé d’action",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "« Réserver mon audit gratuit » partout dans la V1 et la V2, ",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Données structurées complètes",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "ProfessionalService, Service, FAQPage et BreadcrumbList sont",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Contrastes AA vérifiés sur les pixels rendus",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "0 échec en 390, 768 et 1440 px : 214 lignes de texte mesurée",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Mise en page stable",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "Sur la V2, une police de secours aux métriques ajustées main",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "LCP plus court que la V0, animations comprises",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "Sur mobile (Lighthouse, médiane de 3 passages), le LCP est d",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Images légères",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "Les fonds photographiques sont en WebP, en trois tailles (80",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Comparatif",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Site actuel, V1 et V2 : les",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "mesures",
+            "ratio": 5.36,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "Valeurs mobiles, médiane de 3 passages.",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Critère",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Site actuel",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "V1",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "V2",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 13,
+            "ok": true
+          },
+          {
+            "texte": "Performance (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "71",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "88",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "90",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Accessibilité (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "94",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Bonnes pratiques (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "96",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "96",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "SEO (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "63",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "63",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "LCP",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "1,30 s",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "3,04 s",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "3,11 s",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "CLS",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "0,000",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "0,010",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "0,000",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "TBT",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "2 302 ms",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "0 ms",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "7 ms",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Poids de la page",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "184 Ko",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "155 Ko",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "356 Ko",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Mesures Lighthouse 13.5.0 du 25 septembre 2026 : mobile (ému",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Méthode",
+            "ratio": 10.49,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Cinq outils,",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "une",
+            "ratio": 11.15,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "chaîne",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "1",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Collecte",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Playwright",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "2",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Audit",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "SEO, GEO, UX, performance, accessibilité",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Design system et maquettes",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Claude Design",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "4",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Intégration et contrôles",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Claude Code",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "5",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Mesures",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Lighthouse",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Le principe :",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "chaque modification est reliée au constat d’audit qui la jus",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Transparence",
+            "ratio": 6.94,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Ce que ces pages ne sont",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "pas",
+            "ratio": 4.91,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "Photos d’illustration.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Les photos viennent d’Unsplash ; elles sont à remplacer par ",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Données non vérifiées.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Chiffres, témoignages et coordonnées absents des sources por",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "À CONFIRMER",
+            "ratio": 6.62,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "dans les maquettes.",
+            "ratio": 7.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Liens de menu.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ils mènent aux pages de l’arborescence proposée, qui ne sont",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Maquettes en noindex.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Aucune page de ce dossier n’est destinée à être indexée.",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Photos d’illustration :",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "crédits photographiques (credits.txt)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Silvère Dekpon ·",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "silveredekpon@yahoo.fr",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          }
+        ]
       }
     ],
     "768": [
       {
         "region": "Page entière",
-        "lignes": 150,
+        "lignes": 127,
         "echecs": [],
         "pire": {
-          "texte": "mesures finales à venir",
-          "ratio": 5.53,
+          "texte": "·",
+          "ratio": 5.71,
           "seuil": 4.5,
-          "taille": 16,
+          "taille": 18,
           "ok": true
-        }
+        },
+        "toutes": [
+          {
+            "texte": "Dossier de propositions",
+            "ratio": 10.49,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Propositions SEO et design pour MZI Consulting",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 46.08,
+            "ok": true
+          },
+          {
+            "texte": "par",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Silvère Dekpon",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "·",
+            "ratio": 5.71,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Date de livraison :",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "25 septembre 2026",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Lisez dans cet ordre : l’audit, puis la V0, la V1 et la V2, ",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Commencer par l’audit",
+            "ratio": 11.15,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Le dossier",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Quatre pièces, dans l’ordre de",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "lecture",
+            "ratio": 5.36,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "1",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Diagnostic",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Audit",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 24,
+            "ok": true
+          },
+          {
+            "texte": "Diagnostic SEO, GEO, UX, performance et accessibilité, avec ",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir l’audit",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "2",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Point de comparaison",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "V0 « Existant »",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 24,
+            "ok": true
+          },
+          {
+            "texte": "Reproduction fidèle du site actuel, pour comparer chaque pro",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir la V0",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Évolution",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "V1 « Clarté »",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 24,
+            "ok": true
+          },
+          {
+            "texte": "Évolution fidèle à l’identité de MZI : plus claire et plus c",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir la V1",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "4",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Refonte",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "V2 « Nuit suisse »",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 24,
+            "ok": true
+          },
+          {
+            "texte": "Refonte premium, éditoriale, ancrée dans le paysage régional",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir la V2",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Résultats",
+            "ratio": 6.94,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Ce qui",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "change",
+            "ratio": 4.91,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "Six points mesurés ou vérifiables dans les pages ; le détail",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Un seul libellé d’action",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "« Réserver mon audit gratuit » partout dans la V1 et la V2, ",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Données structurées complètes",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "ProfessionalService, Service, FAQPage et BreadcrumbList sont",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Contrastes AA vérifiés sur les pixels rendus",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "0 échec en 390, 768 et 1440 px : 214 lignes de texte mesurée",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Mise en page stable",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "Sur la V2, une police de secours aux métriques ajustées main",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "LCP plus court que la V0, animations comprises",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "Sur mobile (Lighthouse, médiane de 3 passages), le LCP est d",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Images légères",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 20,
+            "ok": true
+          },
+          {
+            "texte": "Les fonds photographiques sont en WebP, en trois tailles (80",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Comparatif",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Site actuel, V1 et V2 : les",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "mesures",
+            "ratio": 5.36,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "Valeurs mobiles, médiane de 3 passages.",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Critère",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Site actuel",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "V1",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "V2",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Performance (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "71",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "88",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "90",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Accessibilité (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "94",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Bonnes pratiques (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "96",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "96",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "SEO (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "63",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "63",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "LCP",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "1,30 s",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3,04 s",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3,11 s",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "CLS",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "0,000",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "0,010",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "0,000",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "TBT",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "2 302 ms",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "0 ms",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "7 ms",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Poids de la page",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "184 Ko",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "155 Ko",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "356 Ko",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Mesures Lighthouse 13.5.0 du 25 septembre 2026 : mobile (ému",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Méthode",
+            "ratio": 10.49,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Cinq outils,",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "une",
+            "ratio": 11.15,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "chaîne",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "1",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Collecte",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Playwright",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "2",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Audit",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "SEO, GEO, UX, performance, accessibilité",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Design system et maquettes",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Claude Design",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "4",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Intégration et contrôles",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Claude Code",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "5",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Mesures",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Lighthouse",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Le principe :",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "chaque modification est reliée au constat d’audit qui la jus",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Transparence",
+            "ratio": 6.94,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Ce que ces pages ne sont",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "pas",
+            "ratio": 4.91,
+            "seuil": 3,
+            "taille": 30,
+            "ok": true
+          },
+          {
+            "texte": "Photos d’illustration.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Les photos viennent d’Unsplash ; elles sont à remplacer par ",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Données non vérifiées.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Chiffres, témoignages et coordonnées absents des sources por",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "À CONFIRMER",
+            "ratio": 6.62,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "dans les maquettes.",
+            "ratio": 7.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Liens de menu.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ils mènent aux pages de l’arborescence proposée, qui ne sont",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Maquettes en noindex.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Aucune page de ce dossier n’est destinée à être indexée.",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Photos d’illustration :",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "crédits photographiques (credits.txt)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Silvère Dekpon ·",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "silveredekpon@yahoo.fr",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          }
+        ]
       }
     ],
     "1440": [
       {
         "region": "Page entière",
-        "lignes": 150,
+        "lignes": 127,
         "echecs": [],
         "pire": {
-          "texte": "mesures finales à venir",
-          "ratio": 5.53,
+          "texte": "·",
+          "ratio": 5.71,
           "seuil": 4.5,
-          "taille": 16,
+          "taille": 18,
           "ok": true
-        }
+        },
+        "toutes": [
+          {
+            "texte": "Dossier de propositions",
+            "ratio": 10.49,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Propositions SEO et design pour MZI Consulting",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 68,
+            "ok": true
+          },
+          {
+            "texte": "par",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Silvère Dekpon",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "·",
+            "ratio": 5.71,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Date de livraison :",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "25 septembre 2026",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Lisez dans cet ordre : l’audit, puis la V0, la V1 et la V2, ",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 21,
+            "ok": true
+          },
+          {
+            "texte": "Commencer par l’audit",
+            "ratio": 11.15,
+            "seuil": 4.5,
+            "taille": 18,
+            "ok": true
+          },
+          {
+            "texte": "Le dossier",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Quatre pièces, dans l’ordre de",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "lecture",
+            "ratio": 5.36,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "1",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Diagnostic",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Audit",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 28,
+            "ok": true
+          },
+          {
+            "texte": "Diagnostic SEO, GEO, UX, performance et accessibilité, avec ",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir l’audit",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "2",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Point de comparaison",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "V0 « Existant »",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 28,
+            "ok": true
+          },
+          {
+            "texte": "Reproduction fidèle du site actuel, pour comparer chaque pro",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir la V0",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Évolution",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "V1 « Clarté »",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 28,
+            "ok": true
+          },
+          {
+            "texte": "Évolution fidèle à l’identité de MZI : plus claire et plus c",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir la V1",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "4",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Refonte",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "V2 « Nuit suisse »",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 28,
+            "ok": true
+          },
+          {
+            "texte": "Refonte premium, éditoriale, ancrée dans le paysage régional",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ouvrir la V2",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Résultats",
+            "ratio": 6.94,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Ce qui",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "change",
+            "ratio": 4.91,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "Six points mesurés ou vérifiables dans les pages ; le détail",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Un seul libellé d’action",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 23,
+            "ok": true
+          },
+          {
+            "texte": "« Réserver mon audit gratuit » partout dans la V1 et la V2, ",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Données structurées complètes",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 23,
+            "ok": true
+          },
+          {
+            "texte": "ProfessionalService, Service, FAQPage et BreadcrumbList sont",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Contrastes AA vérifiés sur les pixels rendus",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 23,
+            "ok": true
+          },
+          {
+            "texte": "0 échec en 390, 768 et 1440 px : 214 lignes de texte mesurée",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Mise en page stable",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 23,
+            "ok": true
+          },
+          {
+            "texte": "Sur la V2, une police de secours aux métriques ajustées main",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "LCP plus court que la V0, animations comprises",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 23,
+            "ok": true
+          },
+          {
+            "texte": "Sur mobile (Lighthouse, médiane de 3 passages), le LCP est d",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Images légères",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 23,
+            "ok": true
+          },
+          {
+            "texte": "Les fonds photographiques sont en WebP, en trois tailles (80",
+            "ratio": 8.72,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Comparatif",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Site actuel, V1 et V2 : les",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "mesures",
+            "ratio": 5.36,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "Valeurs mobiles, médiane de 3 passages.",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Critère",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Site actuel",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "V1",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "V2",
+            "ratio": 17.63,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Performance (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "71",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "88",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "90",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Accessibilité (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "94",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Bonnes pratiques (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "96",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "96",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "SEO (mobile)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "100",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "63",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "63",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "LCP",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "1,30 s",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3,04 s",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3,11 s",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "CLS",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "0,000",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "0,010",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "0,000",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "TBT",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "2 302 ms",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "0 ms",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "7 ms",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Poids de la page",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "184 Ko",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "155 Ko",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "356 Ko",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Mesures Lighthouse 13.5.0 du 25 septembre 2026 : mobile (ému",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Méthode",
+            "ratio": 10.49,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Cinq outils,",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "une",
+            "ratio": 11.15,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "chaîne",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "1",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Collecte",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Playwright",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "2",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Audit",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "SEO, GEO, UX, performance, accessibilité",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "3",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Design system et maquettes",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Claude Design",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "4",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Intégration et contrôles",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Claude Code",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "5",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "Mesures",
+            "ratio": 19.25,
+            "seuil": 3,
+            "taille": 19,
+            "ok": true
+          },
+          {
+            "texte": "Lighthouse",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Le principe :",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 22,
+            "ok": true
+          },
+          {
+            "texte": "chaque modification est reliée au constat d’audit qui la jus",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 22,
+            "ok": true
+          },
+          {
+            "texte": "Transparence",
+            "ratio": 6.94,
+            "seuil": 4.5,
+            "taille": 14,
+            "ok": true
+          },
+          {
+            "texte": "Ce que ces pages ne sont",
+            "ratio": 17.63,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "pas",
+            "ratio": 4.91,
+            "seuil": 3,
+            "taille": 44,
+            "ok": true
+          },
+          {
+            "texte": "Photos d’illustration.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Les photos viennent d’Unsplash ; elles sont à remplacer par ",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Données non vérifiées.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Chiffres, témoignages et coordonnées absents des sources por",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "À CONFIRMER",
+            "ratio": 6.62,
+            "seuil": 4.5,
+            "taille": 12.5,
+            "ok": true
+          },
+          {
+            "texte": "dans les maquettes.",
+            "ratio": 7.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Liens de menu.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Ils mènent aux pages de l’arborescence proposée, qui ne sont",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Maquettes en noindex.",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Aucune page de ce dossier n’est destinée à être indexée.",
+            "ratio": 9.52,
+            "seuil": 4.5,
+            "taille": 17,
+            "ok": true
+          },
+          {
+            "texte": "Photos d’illustration :",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "crédits photographiques (credits.txt)",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "Silvère Dekpon ·",
+            "ratio": 12.52,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          },
+          {
+            "texte": "silveredekpon@yahoo.fr",
+            "ratio": 19.25,
+            "seuil": 4.5,
+            "taille": 16,
+            "ok": true
+          }
+        ]
       }
     ]
   }

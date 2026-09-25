@@ -6,7 +6,7 @@
   Outfit (titres, 700 et 800) et Figtree (texte, 400 et 600), comme la V1.
   Aucun mouvement à l'arrivée ; retours au survol de 160 ms limités aux appareils qui savent survoler.
   Toute affirmation chiffrée provient d'une mesure consignée dans JOURNAL.md ou d'un constat de l'audit.
-  Les cellules du tableau comparatif sont volontairement vides : mesures finales à venir.
+  Le tableau comparatif reprend les valeurs mobiles (médiane de 3 passages) de mesures/final/comparatif.md.
 -->
 <html lang="fr">
 <head>
@@ -126,6 +126,7 @@
   tbody tr:last-child th,tbody tr:last-child td{border-bottom:none}
   @media (max-width:560px){ th,td{padding:12px 8px} table{font-size:14px} thead th{font-size:13px;white-space:normal} tbody th{font-size:14px} caption{padding:12px 8px} }
   .table-wrap:focus-visible{outline-offset:-3px}
+  .contexte{margin-top:16px;font:400 15px/1.55 var(--font-body);color:#475569;max-width:52em}
 
   /* Méthode : la chaîne d'outils en une ligne */
   .chain{margin-top:clamp(32px,4vw,52px);display:grid;grid-template-columns:minmax(0,1fr);gap:0}
@@ -252,8 +253,8 @@
           <p>Sur la V2, une police de secours aux métriques ajustées maintient le CLS sous 0,01 sur 14 largeurs d’écran (0,37 sans ce réglage).</p>
         </li>
         <li>
-          <h3>LCP maîtrisé malgré les animations</h3>
-          <p>Sur mobile, réseau limité (Slow 4G, médiane de 3 passages) : environ 1,0 s pour la V1 et 1,1 s pour la V2. Le titre principal n’est jamais masqué par une animation.</p>
+          <h3>LCP plus court que la V0, animations comprises</h3>
+          <p>Sur mobile (Lighthouse, médiane de 3 passages), le LCP est de 3,04 s pour la V1 et de 3,11 s pour la V2, contre 3,49 s pour la V0 hébergée au même endroit ; le site actuel, sur son propre hébergement, affiche 1,30 s. Le titre principal n’est jamais masqué par une animation.</p>
         </li>
         <li>
           <h3>Images légères</h3>
@@ -269,22 +270,23 @@
       <h2 id="t-cmp">Site actuel, V1 et V2 : les <span class="accent">mesures</span></h2>
       <div class="table-wrap" role="region" aria-labelledby="t-cmp" tabindex="0">
         <table>
-          <caption>Mesures finales à venir.</caption>
+          <caption>Valeurs mobiles, médiane de 3 passages.</caption>
           <thead>
             <tr><th scope="col">Critère</th><th scope="col">Site actuel</th><th scope="col">V1</th><th scope="col">V2</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row">Performance (mobile)</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
-            <tr><th scope="row">Accessibilité (mobile)</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
-            <tr><th scope="row">Bonnes pratiques (mobile)</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
-            <tr><th scope="row">SEO (mobile)</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
-            <tr><th scope="row">LCP</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
-            <tr><th scope="row">CLS</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
-            <tr><th scope="row">TBT</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
-            <tr><th scope="row">Poids de la page</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
+            <tr><th scope="row">Performance (mobile)</th><td>71</td><td>88</td><td>90</td></tr>
+            <tr><th scope="row">Accessibilité (mobile)</th><td>94</td><td>100</td><td>100</td></tr>
+            <tr><th scope="row">Bonnes pratiques (mobile)</th><td>100</td><td>96</td><td>96</td></tr>
+            <tr><th scope="row">SEO (mobile)</th><td>100</td><td>63</td><td>63</td></tr>
+            <tr><th scope="row">LCP</th><td>1,30 s</td><td>3,04 s</td><td>3,11 s</td></tr>
+            <tr><th scope="row">CLS</th><td>0,000</td><td>0,010</td><td>0,000</td></tr>
+            <tr><th scope="row">TBT</th><td>2 302 ms</td><td>0 ms</td><td>7 ms</td></tr>
+            <tr><th scope="row">Poids de la page</th><td>184 Ko</td><td>155 Ko</td><td>356 Ko</td></tr>
           </tbody>
         </table>
       </div>
+      <p class="contexte">Mesures Lighthouse 13.5.0 du 25 septembre 2026 : mobile (émulation Moto G, réseau 4G lent), médiane de 3 passages. Le site actuel est mesuré sur son propre hébergement ; la V0, reproduction fidèle du site actuel hébergée sur Vercel comme la V1 et la V2 (performance 88, LCP 3,49 s), permet la comparaison à hébergement égal. Le score SEO de la V1 et de la V2 est plafonné par le noindex volontaire de ces maquettes.</p>
     </div>
   </section>
 

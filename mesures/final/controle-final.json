@@ -1,0 +1,465 @@
+{
+ "console_debordement": {
+  "index": [
+   {
+    "w": 320,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 360,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 390,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 414,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 600,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 768,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1024,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1280,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1440,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   }
+  ],
+  "audit": [
+   {
+    "w": 320,
+    "debord": 288,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 360,
+    "debord": 248,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 390,
+    "debord": 218,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 414,
+    "debord": 194,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 600,
+    "debord": 8,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 768,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1024,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1280,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1440,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   }
+  ],
+  "v0-existant": [
+   {
+    "w": 320,
+    "debord": 84,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 360,
+    "debord": 44,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 390,
+    "debord": 14,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 414,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 600,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 768,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1024,
+    "debord": 38,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1280,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1440,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   }
+  ],
+  "v1-clarte": [
+   {
+    "w": 320,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 360,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 390,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 414,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 600,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 768,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1024,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1280,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1440,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   }
+  ],
+  "v2-nuit-suisse": [
+   {
+    "w": 320,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 360,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 390,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 414,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 600,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 768,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1024,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1280,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   },
+   {
+    "w": 1440,
+    "debord": 0,
+    "erreurs": 0,
+    "ex": ""
+   }
+  ]
+ },
+ "liens": {
+  "index": {
+   "interne_ok": [
+    "audit.html",
+    "v0-existant.html",
+    "v1-clarte.html",
+    "v2-nuit-suisse.html",
+    "credits.txt"
+   ],
+   "interne_absent": [],
+   "ancre_ok": [
+    "#contenu"
+   ],
+   "ancre_absente": [],
+   "racine_non_creee": [],
+   "externe": [],
+   "mailto": [
+    "mailto:silveredekpon@yahoo.fr"
+   ]
+  },
+  "audit": {
+   "interne_ok": [
+    "index.html"
+   ],
+   "interne_absent": [],
+   "ancre_ok": [
+    "#contenu-principal",
+    "#synthese",
+    "#architecture",
+    "#seo-onpage",
+    "#seo-local",
+    "#donnees-structurees",
+    "#reseaux-sociaux",
+    "#geo-aeo",
+    "#eeat",
+    "#ux-conversion",
+    "#design",
+    "#performance",
+    "#accessibilite",
+    "#roadmap"
+   ],
+   "ancre_absente": [],
+   "racine_non_creee": [],
+   "externe": [
+    "https://developers.google.com/search/docs/appearance/core-web-vitals",
+    "https://web.dev/case-studies/milliseconds-make-millions"
+   ],
+   "mailto": []
+  },
+  "v0-existant": {
+   "interne_ok": [],
+   "interne_absent": [],
+   "ancre_ok": [
+    "#",
+    "#probleme",
+    "#solution",
+    "#methodologie",
+    "#pourquoi-nous",
+    "#audit"
+   ],
+   "ancre_absente": [
+    "#content"
+   ],
+   "racine_non_creee": [],
+   "externe": [
+    "https://mzi-consulting.com/mention-legale/",
+    "https://mzi-consulting.com/politique-de-confidentialite/",
+    "https://mzi-consulting.com/politique-de-cookies-ue/"
+   ],
+   "mailto": []
+  },
+  "v1-clarte": {
+   "interne_ok": [],
+   "interne_absent": [],
+   "ancre_ok": [
+    "#contenu",
+    "#contact"
+   ],
+   "ancre_absente": [],
+   "racine_non_creee": [
+    "/",
+    "/services/audit-ia/",
+    "/methode/",
+    "/etudes-de-cas/",
+    "/faq/",
+    "/contact/",
+    "/politique-de-confidentialite/",
+    "/services/automatisation-ia/",
+    "/services/integration-ia/",
+    "/agence-ia-annemasse/",
+    "/agence-ia-geneve/",
+    "/ia-pme-suisse-romande/",
+    "/blog/",
+    "/mention-legale/",
+    "/politique-de-cookies-ue/"
+   ],
+   "externe": [
+    "https://unsplash.com/photos/8Jw2WhafOOg?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/@anniespratt?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/photos/Mb-lGau6K5U?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/photos/CrfmU6jKCnY?utm_source=mzi_consulting&utm_medium=referral"
+   ],
+   "mailto": [
+    "mailto:contact@mzi-consulting.com"
+   ]
+  },
+  "v2-nuit-suisse": {
+   "interne_ok": [],
+   "interne_absent": [],
+   "ancre_ok": [
+    "#contenu",
+    "#contact"
+   ],
+   "ancre_absente": [],
+   "racine_non_creee": [
+    "/",
+    "/services/audit-ia/",
+    "/methode/",
+    "/etudes-de-cas/",
+    "/faq/",
+    "/contact/",
+    "/politique-de-confidentialite/",
+    "/services/automatisation-ia/",
+    "/services/integration-ia/",
+    "/agence-ia-annemasse/",
+    "/agence-ia-geneve/",
+    "/ia-pme-suisse-romande/",
+    "/blog/",
+    "/mention-legale/",
+    "/politique-de-cookies-ue/"
+   ],
+   "externe": [
+    "https://unsplash.com/photos/xsbLx28ewOw?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/@mimithian?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/@anniespratt?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/photos/pvgfkvHu3pM?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/photos/AV4mRRZxBrM?utm_source=mzi_consulting&utm_medium=referral",
+    "https://unsplash.com/@tqfang?utm_source=mzi_consulting&utm_medium=referral"
+   ],
+   "mailto": [
+    "mailto:contact@mzi-consulting.com"
+   ]
+  }
+ },
+ "a_confirmer": {
+  "index": {
+   "n": 1,
+   "contextes": [
+    "s absents des sources portent la mention À CONFIRMER dans les maquettes."
+   ]
+  },
+  "audit": {
+   "n": 2,
+   "contextes": [
+    "est à MZI Consulting de fournir la donnée réelle : [À CONFIRMER : source et méthode de calcul des chiff",
+    "Correction [À CONFIRMER : nom de la ou des certifications réell"
+   ]
+  },
+  "v0-existant": {
+   "n": 0,
+   "contextes": []
+  },
+  "v1-clarte": {
+   "n": 22,
+   "contextes": [
+    "À CONFIRMER : source et période",
+    "À CONFIRMER : source et période",
+    "À CONFIRMER : photo du fondateur"
+   ]
+  },
+  "v2-nuit-suisse": {
+   "n": 22,
+   "contextes": [
+    "À CONFIRMER : source et période",
+    "À CONFIRMER : source et période",
+    "À CONFIRMER : photo du fondateur"
+   ]
+  }
+ }
+}
