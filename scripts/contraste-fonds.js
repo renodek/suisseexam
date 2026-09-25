@@ -17,6 +17,7 @@ const fs = require('fs');
 const ETAT = process.argv[2] || 'apres';
 const LARGEURS = [1440, 768, 390];
 const PAGES = {
+  index: [{ nom: 'Page entière', sel: 'body' }],
   'v1-clarte': [
     { nom: 'Héros', sel: '#hero' },
     { nom: 'Bande de transition', sel: '.photo-band' },

@@ -1,34 +1,327 @@
 <!doctype html>
+<!--
+  Page d'accueil du livrable : première page ouverte par le recruteur.
+  Objectif : orienter en 1 à 2 minutes (ordre de lecture, ce qui change, méthode, transparence).
+  Identité MZI sobre : bleu nuit et blanc, cyan sur fond sombre, bleu pétrole sur fond clair ;
+  Outfit (titres, 700 et 800) et Figtree (texte, 400 et 600), comme la V1.
+  Aucun mouvement à l'arrivée ; retours au survol de 160 ms limités aux appareils qui savent survoler.
+  Toute affirmation chiffrée provient d'une mesure consignée dans JOURNAL.md ou d'un constat de l'audit.
+  Les cellules du tableau comparatif sont volontairement vides : mesures finales à venir.
+-->
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>MZI Consulting — en préparation</title>
+<title>Propositions SEO et design pour MZI Consulting</title>
+<meta name="description" content="Audit SEO et deux propositions de refonte pour MZI Consulting : ordre de lecture, ce qui change, méthode et notes de transparence.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Propositions SEO et design pour MZI Consulting">
+<meta property="og:description" content="Audit SEO et deux propositions de refonte pour MZI Consulting : ordre de lecture, ce qui change, méthode et notes de transparence.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
-  html, body {
-    margin: 0;
-    height: 100%;
-    background: #0a0e1a;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+  :root{
+    --night:#0a0e1a; --cyan:#10d7fd; --cyan-dark:#09c6eb; --teal:#0e7490;
+    --ink:#0a0e1a; --slate:#334155; --body:#3d4655; --muted:#5b6576; --gray-text:#9ca3af; --soft:#c9d1de;
+    --line:#e1e6ed; --line-2:#d6dde5; --bg-light:#f3f5f8;
+    --font-display:'Outfit',system-ui,sans-serif; --font-body:'Figtree',system-ui,sans-serif;
+    --ease-out:cubic-bezier(0.23,1,0.32,1);
   }
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-    box-sizing: border-box;
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;scroll-padding-top:24px}
+  @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
+  body{margin:0;background:var(--night);font:400 17px/1.55 var(--font-body);color:var(--body);-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:var(--slate)}
+  a:hover{color:var(--ink)}
+  h1,h2,h3{margin:0;font-family:var(--font-display);color:var(--ink);text-wrap:balance}
+  p,ul,ol{margin:0}
+  ul,ol{padding:0;list-style:none}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .skip-link{position:absolute;left:16px;top:-64px;z-index:100;background:var(--cyan);color:var(--night);font:600 15px var(--font-body);padding:12px 18px;border-radius:8px;text-decoration:none}
+  .skip-link:focus{top:16px}
+  :focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+  .on-dark :focus-visible,.top :focus-visible{outline-color:var(--cyan)}
+
+  /* Structure */
+  .sec{padding:clamp(64px,8vw,104px) clamp(20px,5.5vw,80px)}
+  .wrap{max-width:1120px;margin:0 auto}
+  .bg-white{background:#fff}
+  .bg-light{background:var(--bg-light)}
+  .bg-night{background:var(--night)}
+  .eyebrow{font:600 14px var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#475569}
+  .on-dark .eyebrow{color:#b6c0d0}
+  h2{font:800 clamp(30px,3.6vw,44px)/1.1 var(--font-display);letter-spacing:-.02em;color:var(--ink);margin-top:14px}
+  h2 .accent{color:var(--teal)}
+  .on-dark h2{color:#fff}
+  .on-dark h2 .accent{color:var(--cyan)}
+  .lead{font:400 19px/1.55 var(--font-body);color:var(--body);max-width:40em;margin-top:16px}
+
+  /* Boutons */
+  .btn{display:inline-flex;align-items:center;gap:14px;font:700 18px var(--font-display);border-radius:999px;text-decoration:none;border:none;cursor:pointer;padding:18px 30px;transition:background-color .16s ease,color .16s ease,transform .1s var(--ease-out)}
+  .btn svg{width:15px;height:15px;flex-shrink:0;transition:transform .16s var(--ease-out)}
+  .btn-cyan{background:var(--cyan);color:var(--night)}
+  .btn:active{transform:scale(.98)}
+  @media (hover:hover) and (pointer:fine){
+    .btn-cyan:hover{background:var(--cyan-dark);color:var(--night)}
+    .btn:hover svg{transform:translateX(4px)}
   }
-  p {
-    max-width: 40em;
-    font-size: 1.25rem;
-    margin: 0;
+
+  /* En-tête et héros */
+  .top{background:var(--night);padding:20px clamp(20px,5.5vw,80px);border-bottom:1px solid rgba(126,141,163,.22)}
+  .top .wrap{display:flex;align-items:center}
+  .hero{background:var(--night);padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(64px,9vw,120px)}
+  .hero h1{font:800 clamp(38px,6vw,68px)/1.02 var(--font-display);letter-spacing:-.03em;color:#fff;margin-top:18px;max-width:14em}
+  .byline{margin-top:24px;font:400 18px/1.5 var(--font-body);color:var(--soft)}
+  .byline strong{font-weight:600;color:#fff}
+  .byline .sep{margin:0 10px;color:#7e8da3}
+  .byline time{white-space:nowrap}
+  .guide{margin-top:28px;font:400 clamp(18px,1.6vw,21px)/1.5 var(--font-body);color:var(--soft);max-width:34em}
+  .hero .btn{margin-top:36px}
+
+  /* Cartes : lecture dans l'ordre 1 à 4 */
+  .cards{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;margin-top:clamp(36px,4vw,56px)}
+  @media (min-width:900px){ .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px} }
+  .card{position:relative;background:#fff;border-radius:20px;box-shadow:inset 0 0 0 1px var(--line-2);padding:8px 8px 28px;display:flex;flex-direction:column;transition:transform .16s var(--ease-out),box-shadow .16s ease}
+  .card img{width:100%;height:auto;aspect-ratio:8/5;border-radius:12px;background:var(--bg-light);box-shadow:0 0 0 1px var(--line)}
+  .card-body{padding:22px 18px 0;display:flex;flex-direction:column;gap:10px;flex:1}
+  .tag{display:flex;align-items:center;gap:10px;font:600 14px var(--font-body);letter-spacing:.06em;text-transform:uppercase;color:#475569}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--slate);font:800 14px var(--font-display);color:var(--ink);letter-spacing:0}
+  .card h3{font:800 clamp(24px,2.2vw,28px)/1.15 var(--font-display);letter-spacing:-.015em}
+  .card p{font:400 17px/1.55 var(--font-body);color:var(--body)}
+  .card p.tag{font:600 14px var(--font-body);color:#475569}
+  .card-link{color:inherit;text-decoration:none}
+  .card-link::after{content:"";position:absolute;inset:0;border-radius:20px}
+  .card-link:focus-visible{outline:none}
+  .card-link:focus-visible::after{outline:3px solid var(--teal);outline-offset:3px}
+  .card-cta{margin-top:auto;padding-top:10px;font:700 16px var(--font-display);color:var(--ink);display:inline-flex;align-items:center;gap:10px}
+  .card-cta svg{width:13px;height:13px;transition:transform .16s var(--ease-out)}
+  .card:active{transform:scale(.985);transition-duration:.1s}
+  @media (hover:hover) and (pointer:fine){
+    .card:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px #94a3b8}
+    .card:hover .card-cta svg{transform:translateX(4px)}
   }
+
+  /* Ce qui change : lignes à filets */
+  .changes{margin-top:clamp(32px,4vw,52px);border-bottom:1px solid var(--line-2)}
+  .changes li{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:26px 0;border-top:1px solid var(--line-2)}
+  .changes h3{font:700 clamp(20px,1.8vw,23px)/1.25 var(--font-display);letter-spacing:-.01em}
+  .changes p{font:400 17px/1.55 var(--font-body);color:var(--body);max-width:44em}
+  @media (min-width:900px){ .changes li{grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);gap:0 48px;align-items:baseline} }
+
+  /* Tableau comparatif */
+  .table-wrap{margin-top:clamp(28px,3.5vw,44px);overflow-x:auto;border-radius:16px;box-shadow:inset 0 0 0 1px var(--line-2)}
+  table{width:100%;border-collapse:collapse;font:400 16px/1.4 var(--font-body)}
+  caption{caption-side:bottom;text-align:left;padding:14px 16px;font:600 15px var(--font-body);color:#475569}
+  th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  thead th{font:700 15px var(--font-display);color:var(--ink);background:var(--bg-light);white-space:nowrap}
+  tbody th{font:600 16px var(--font-body);color:var(--ink)}
+  td{color:#475569;text-align:center}
+  thead th:not(:first-child){text-align:center}
+  tbody tr:last-child th,tbody tr:last-child td{border-bottom:none}
+  @media (max-width:560px){ th,td{padding:12px 8px} table{font-size:14px} thead th{font-size:13px;white-space:normal} tbody th{font-size:14px} caption{padding:12px 8px} }
+  .table-wrap:focus-visible{outline-offset:-3px}
+
+  /* Méthode : la chaîne d'outils en une ligne */
+  .chain{margin-top:clamp(32px,4vw,52px);display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+  .chain li{position:relative;display:grid;grid-template-columns:36px minmax(0,1fr);gap:0 16px;padding:0 0 26px}
+  .chain li:last-child{padding-bottom:0}
+  .chain li::before{content:"";position:absolute;left:17px;top:40px;bottom:2px;width:1px;background:rgba(201,209,222,.35)}
+  .chain li:last-child::before{display:none}
+  .chain .n{grid-row:1 / span 2;width:36px;height:36px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--cyan);display:flex;align-items:center;justify-content:center;font:800 15px var(--font-display);color:#fff}
+  .chain strong{font:700 19px/1.3 var(--font-display);color:#fff;padding-top:5px}
+  .chain span.outil{font:400 16px/1.4 var(--font-body);color:var(--soft)}
+  @media (min-width:900px){
+    .chain{grid-template-columns:repeat(5,minmax(0,1fr));gap:0 20px}
+    .chain li{display:block;padding:0}
+    .chain li::before{left:44px;right:-20px;top:17px;bottom:auto;width:auto;height:1px}
+    .chain .n{margin-bottom:16px}
+    .chain strong{display:block;padding-top:0}
+  }
+  .principe{margin-top:clamp(32px,4vw,48px);font:400 clamp(19px,1.7vw,22px)/1.5 var(--font-body);color:#fff;max-width:38em;padding-top:24px;border-top:1px solid rgba(201,209,222,.25)}
+  .principe strong{font-weight:600}
+
+  /* Transparence */
+  .notes{margin-top:clamp(28px,3.5vw,44px);display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+  @media (min-width:900px){ .notes{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px} }
+  .notes li{background:#fff;border-radius:16px;box-shadow:inset 0 0 0 1px var(--line-2);padding:22px 24px;font:400 17px/1.55 var(--font-body);color:var(--body)}
+  .notes strong{font-weight:600;color:var(--ink)}
+  .todo{display:inline-block;font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:#7a4f00;border:1px dashed #c99a3e;background:#fdf6e7;border-radius:6px;padding:2px 8px;white-space:nowrap}
+
+  /* Pied de page */
+  .foot{background:var(--night);padding:clamp(40px,5vw,64px) clamp(20px,5.5vw,80px)}
+  .foot .wrap{display:flex;flex-wrap:wrap;gap:20px 48px;justify-content:space-between;align-items:center}
+  .foot p{font:400 16px/1.5 var(--font-body);color:var(--soft)}
+  .foot a{color:#fff;display:inline-flex;align-items:center;min-height:24px;padding:4px 0;text-decoration-color:rgba(255,255,255,.5);text-underline-offset:3px}
+  .foot a:hover{color:var(--cyan)}
+  @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
 </style>
 </head>
 <body>
-  <p>Propositions SEO et design pour MZI Consulting — en cours de préparation</p>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="top">
+  <div class="wrap">
+    <img src="assets/img/logo-mzi-consulting.webp" alt="MZI Consulting" width="120" height="45">
+  </div>
+</header>
+
+<main id="contenu">
+  <section class="sec hero on-dark" aria-labelledby="titre">
+    <div class="wrap">
+      <p class="eyebrow">Dossier de propositions</p>
+      <h1 id="titre">Propositions SEO et design pour MZI Consulting</h1>
+      <p class="byline">par <strong>Silvère Dekpon</strong><span class="sep" aria-hidden="true">·</span>Date de livraison : <time datetime="2026-09-25">25 septembre 2026</time></p>
+      <p class="guide">Lisez dans cet ordre : l'audit, puis la V0, la V1 et la V2, soit environ 10 minutes au total.</p>
+      <a class="btn btn-cyan" href="audit.html">Commencer par l'audit
+        <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="sec bg-white" aria-labelledby="t-pieces">
+    <div class="wrap">
+      <p class="eyebrow">Le dossier</p>
+      <h2 id="t-pieces">Quatre pièces, dans l'ordre de <span class="accent">lecture</span></h2>
+      <ol class="cards">
+        <li class="card">
+          <img src="assets/img/vignette-audit-1200.webp" srcset="assets/img/vignette-audit-720.webp 720w, assets/img/vignette-audit-1200.webp 1200w" sizes="(min-width:1200px) 520px, (min-width:900px) 44vw, calc(100vw - 56px)" width="1200" height="750" alt="Aperçu du premier écran de l'audit : titre « Un site bien construit qui freine ses propres ambitions » et sommaire" loading="lazy">
+          <div class="card-body">
+            <p class="tag"><span class="num">1</span>Diagnostic</p>
+            <h3><a class="card-link" href="audit.html">Audit</a></h3>
+            <p>Diagnostic SEO, GEO, UX, performance et accessibilité, avec une feuille de route à 30, 60 et 90 jours.</p>
+            <span class="card-cta" aria-hidden="true">Ouvrir l'audit <svg viewBox="0 0 448 512" fill="currentColor"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="assets/img/vignette-v0-1200.webp" srcset="assets/img/vignette-v0-720.webp 720w, assets/img/vignette-v0-1200.webp 1200w" sizes="(min-width:1200px) 520px, (min-width:900px) 44vw, calc(100vw - 56px)" width="1200" height="750" alt="Aperçu du premier écran de la V0 : le site actuel de MZI Consulting, titre « Automatisez votre business avec l'IA »" loading="lazy">
+          <div class="card-body">
+            <p class="tag"><span class="num">2</span>Point de comparaison</p>
+            <h3><a class="card-link" href="v0-existant.html">V0 « Existant »</a></h3>
+            <p>Reproduction fidèle du site actuel, pour comparer chaque proposition à son point de départ.</p>
+            <span class="card-cta" aria-hidden="true">Ouvrir la V0 <svg viewBox="0 0 448 512" fill="currentColor"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="assets/img/vignette-v1-1200.webp" srcset="assets/img/vignette-v1-720.webp 720w, assets/img/vignette-v1-1200.webp 1200w" sizes="(min-width:1200px) 520px, (min-width:900px) 44vw, calc(100vw - 56px)" width="1200" height="750" alt="Aperçu du premier écran de la V1 « Clarté » : titre « Automatisez les tâches répétitives de votre PME, à Annemasse » sur photo de travail en équipe" loading="lazy">
+          <div class="card-body">
+            <p class="tag"><span class="num">3</span>Évolution</p>
+            <h3><a class="card-link" href="v1-clarte.html">V1 « Clarté »</a></h3>
+            <p>Évolution fidèle à l'identité de MZI : plus claire et plus convertissante.</p>
+            <span class="card-cta" aria-hidden="true">Ouvrir la V1 <svg viewBox="0 0 448 512" fill="currentColor"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg></span>
+          </div>
+        </li>
+        <li class="card">
+          <img src="assets/img/vignette-v2-1200.webp" srcset="assets/img/vignette-v2-720.webp 720w, assets/img/vignette-v2-1200.webp 1200w" sizes="(min-width:1200px) 520px, (min-width:900px) 44vw, calc(100vw - 56px)" width="1200" height="750" alt="Aperçu du premier écran de la V2 « Nuit suisse » : titre en Fraunces sur un paysage de montagne enneigée" loading="lazy">
+          <div class="card-body">
+            <p class="tag"><span class="num">4</span>Refonte</p>
+            <h3><a class="card-link" href="v2-nuit-suisse.html">V2 « Nuit suisse »</a></h3>
+            <p>Refonte premium, éditoriale, ancrée dans le paysage régional.</p>
+            <span class="card-cta" aria-hidden="true">Ouvrir la V2 <svg viewBox="0 0 448 512" fill="currentColor"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg></span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec bg-light" aria-labelledby="t-change">
+    <div class="wrap">
+      <p class="eyebrow">Résultats</p>
+      <h2 id="t-change">Ce qui <span class="accent">change</span></h2>
+      <p class="lead">Six points mesurés ou vérifiables dans les pages ; le détail des mesures est consigné dans le journal du projet.</p>
+      <ul class="changes">
+        <li>
+          <h3>Un seul libellé d'action</h3>
+          <p>« Réserver mon audit gratuit » partout dans la V1 et la V2, là où le site actuel emploie trois libellés différents pour la même action (audit, §3 et §9).</p>
+        </li>
+        <li>
+          <h3>Données structurées complètes</h3>
+          <p>ProfessionalService, Service, FAQPage et BreadcrumbList sont publiés dans la V1 et la V2 ; le site actuel se limite à WebPage, WebSite et Organization (audit, §5).</p>
+        </li>
+        <li>
+          <h3>Contrastes AA vérifiés sur les pixels rendus</h3>
+          <p>0 échec en 390, 768 et 1440 px : 214 lignes de texte mesurées sur la page entière de la V1, et 43 couples de couleurs contrôlés sur la V2.</p>
+        </li>
+        <li>
+          <h3>Décalage de mise en page divisé par près de 40 (V2)</h3>
+          <p>Le CLS maximal passe de 0,37 à moins de 0,01 (0,0097 au pire, sur 14 largeurs de 320 à 1920 px) grâce à une police de secours aux métriques ajustées.</p>
+        </li>
+        <li>
+          <h3>LCP maîtrisé malgré les animations</h3>
+          <p>Sur mobile, réseau limité (Slow 4G, médiane de 3 passages) : environ 1,0 s pour la V1 et 1,1 s pour la V2. Le titre principal n'est jamais masqué par une animation.</p>
+        </li>
+        <li>
+          <h3>Images légères</h3>
+          <p>Les fonds photographiques sont en WebP, en trois tailles (800, 1400 et 2200 px de large) de 200 Ko au maximum, chargés en différé sauf celui du héros.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec bg-white" aria-labelledby="t-cmp">
+    <div class="wrap">
+      <p class="eyebrow">Comparatif</p>
+      <h2 id="t-cmp">Site actuel, V1 et V2 : les <span class="accent">mesures</span></h2>
+      <div class="table-wrap" role="region" aria-labelledby="t-cmp" tabindex="0">
+        <table>
+          <caption>Mesures finales à venir.</caption>
+          <thead>
+            <tr><th scope="col">Critère</th><th scope="col">Site actuel</th><th scope="col">V1</th><th scope="col">V2</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Performance (mobile)</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
+            <tr><th scope="row">Accessibilité (mobile)</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
+            <tr><th scope="row">Bonnes pratiques (mobile)</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
+            <tr><th scope="row">SEO (mobile)</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
+            <tr><th scope="row">LCP</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
+            <tr><th scope="row">CLS</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
+            <tr><th scope="row">TBT</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
+            <tr><th scope="row">Poids de la page</th><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td><td><span aria-hidden="true">—</span><span class="visually-hidden">mesures finales à venir</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec bg-night on-dark" aria-labelledby="t-methode">
+    <div class="wrap">
+      <p class="eyebrow">Méthode</p>
+      <h2 id="t-methode">Cinq outils, <span class="accent">une</span> chaîne</h2>
+      <ol class="chain">
+        <li><span class="n">1</span><strong>Collecte</strong><span class="outil">Playwright</span></li>
+        <li><span class="n">2</span><strong>Audit</strong><span class="outil">SEO, GEO, UX, performance, accessibilité</span></li>
+        <li><span class="n">3</span><strong>Design system et maquettes</strong><span class="outil">Claude Design</span></li>
+        <li><span class="n">4</span><strong>Intégration et contrôles</strong><span class="outil">Claude Code</span></li>
+        <li><span class="n">5</span><strong>Mesures</strong><span class="outil">Lighthouse</span></li>
+      </ol>
+      <p class="principe"><strong>Le principe :</strong> chaque modification est reliée au constat d'audit qui la justifie ; dans le code de la V1 et de la V2, un commentaire « Audit §n » précède chaque bloc concerné.</p>
+    </div>
+  </section>
+
+  <section class="sec bg-light" aria-labelledby="t-transp">
+    <div class="wrap">
+      <p class="eyebrow">Transparence</p>
+      <h2 id="t-transp">Ce que ces pages ne sont <span class="accent">pas</span></h2>
+      <ul class="notes">
+        <li><strong>Photos d'illustration.</strong> Les photos viennent d'Unsplash ; elles sont à remplacer par des photos réelles.</li>
+        <li><strong>Données non vérifiées.</strong> Chiffres, témoignages et coordonnées absents des sources portent la mention <span class="todo">À CONFIRMER</span> dans les maquettes.</li>
+        <li><strong>Liens de menu.</strong> Ils mènent aux pages de l'arborescence proposée, qui ne sont pas encore créées.</li>
+        <li><strong>Maquettes en noindex.</strong> Aucune page de ce dossier n'est destinée à être indexée.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot on-dark">
+  <div class="wrap">
+    <p>Photos d'illustration : <a href="credits.txt">crédits photographiques (credits.txt)</a></p>
+    <p>Silvère Dekpon · <a href="mailto:silveredekpon@yahoo.fr">silveredekpon@yahoo.fr</a></p>
+  </div>
+</footer>
 </body>
 </html>

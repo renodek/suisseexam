@@ -860,3 +860,39 @@ Aucune nouvelle mesure (consigne). Le contraste de cette étiquette en cyan n'a 
 ### Fichiers produits
 
 - `livrable/v2-nuit-suisse.html` (une règle CSS)
+
+## Étape 21 — Page d'accueil du livrable (`index.html`), étape 8 du plan (2026-09-25)
+
+### Ce qui a été fait
+
+- **`livrable/index.html` réécrit** (la page d'attente est remplacée) : identité MZI sobre comme la V1 (bleu nuit et blanc, cyan `#10d7fd` sur fond sombre, bleu pétrole `#0e7490` sur fond clair, Outfit 700 et 800 pour les titres, Figtree 400 et 600 pour le texte, soit les 4 instances de la V1). Même socle : `noindex`, `<main>`, lien d'évitement, un seul `<h1>`, mobile-first, typographie française (`scripts/typo-fr.js` : 22 remplacements).
+- **Contenu, dans l'ordre demandé** : (1) en-tête « Propositions SEO et design pour MZI Consulting », « par Silvère Dekpon », date de livraison **25 septembre 2026** (donnée fournie par le client, sans étiquette « À CONFIRMER ») ; (2) guide de lecture en une phrase (audit, puis V0, V1, V2, environ 10 minutes) et un seul bouton, « Commencer par l'audit » ; (3) quatre cartes numérotées de 1 à 4 avec vignette du premier écran desktop capturée par Playwright (`assets/img/vignette-<audit|v0|v1|v2>-720.webp` et `-1200.webp`, 16 à 59 Ko) ; (4) « Ce qui change », six points ; (5) tableau comparatif Site actuel / V1 / V2 (8 lignes : Performance, Accessibilité, Bonnes pratiques, SEO en mobile, LCP, CLS, TBT, poids de la page), cellules vides avec la mention « Mesures finales à venir » (et un texte masqué « mesures finales à venir » par cellule pour les lecteurs d'écran) ; (6) méthode en une ligne visuelle de cinq étapes et phrase de principe ; (7) quatre notes de transparence ; (8) pied de page avec `credits.txt` et silveredekpon@yahoo.fr.
+- **Les six points de « Ce qui change » sont tous rattachés à une mesure du journal ou à un constat de l'audit** : libellé d'action unique (« Réserver mon audit gratuit », 5 occurrences dans chaque page, contre trois libellés sur le site actuel, audit §3 et §9) ; données structurées ProfessionalService, Service, FAQPage et BreadcrumbList (le site actuel : WebPage, WebSite, Organization, audit §5) ; contrastes AA sur les pixels rendus (étapes 18 et 19 : 214 lignes de texte sur la page entière de la V1, 43 couples sur la V2) ; CLS de la V2 de 0,37 à 0,0097 au maximum (étapes 14 et 18) ; LCP mobile Slow 4G d'environ 1,0 s (V1) et 1,1 s (V2), médiane de 3 passages (étape 17) ; fonds en WebP de 200 Ko au maximum (étape 15). Le CLS de la V1 (0,0106 à 414 px, accepté) n'est pas revendiqué.
+- **Interactions** (skill emil-design-eng) : aucun mouvement à l'arrivée ; retour au survol des cartes et flèches en 160 ms (`cubic-bezier(0.23, 1, 0.32, 1)`) limité à `(hover: hover) and (pointer: fine)` ; appui `scale(0.985)` sur les cartes et `scale(0.98)` sur le bouton ; toutes les transitions coupées en mouvement réduit. Chaque carte est cliquable en entier par un seul lien (le titre), sans lien en double.
+- Outil : `scripts/contraste-fonds.js` accepte la page `index`.
+
+### Mesures
+
+- **Contrastes AA sur les pixels rendus** : 150 lignes de texte à 1440, 768 et 390 px, 0 échec, pire rapport 5,53:1 (seuil 4,5:1). Résultats dans `mesures/index/contrastes-apres.md` et `.json`.
+- **Rendu en 390, 768 et 1440 px** (`mesures/index/index-<390|768|1440>.jpg`) : aucun défilement horizontal, y compris dans le tableau ; 5 images sur 5 chargées ; un seul `<h1>`.
+- **Console** : 0 erreur ni requête en échec aux trois largeurs.
+- **Liens** : tous fonctionnels — `audit.html`, `v0-existant.html`, `v1-clarte.html`, `v2-nuit-suisse.html` et `credits.txt` existent ; les quatre pages liées s'ouvrent sans erreur de console ; l'ancre `#contenu` et le lien `mailto:` sont valides.
+
+### Décisions prises et leur justification
+
+- **Six points, pas plus** : la consigne en demandait quatre à six ; seuls les faits déjà mesurés y figurent, ce qui exclut par exemple tout score Lighthouse (réservé au tableau).
+- **Pas d'étiquette pour la date** : elle est fournie par le client ; l'étiquette « À CONFIRMER » n'a plus lieu d'être.
+- **Une seule action dans le héros** : « Commencer par l'audit » (même principe que le libellé unique des pages).
+- **Une seule colonne de texte en tête de page, sans visuel** : sobre et lisible en 1 à 2 minutes ; les cartes avec vignettes commencent dès le premier défilement.
+
+### Réserves
+
+- Le temps de lecture « environ 10 minutes » est une estimation, pas une mesure.
+- Le tableau comparatif est vide par consigne ; il reste à le remplir avec les mesures finales (étape 9).
+- CLS et LCP de la page d'accueil non mesurés (aucune mesure de performance demandée pour cette étape).
+- L'affirmation « LCP maîtrisé malgré les animations » repose sur les médianes de l'étape 17, mesurées avant les changements des étapes 18 et 19.
+
+### Fichiers produits
+
+- `livrable/index.html` (réécrit) ; `livrable/assets/img/vignette-*.webp` (8)
+- `scripts/contraste-fonds.js` (page `index`) ; `mesures/index/` (captures, contrastes)

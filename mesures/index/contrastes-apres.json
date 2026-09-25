@@ -1,0 +1,46 @@
+{
+  "index": {
+    "390": [
+      {
+        "region": "Page entière",
+        "lignes": 150,
+        "echecs": [],
+        "pire": {
+          "texte": "mesures finales à venir",
+          "ratio": 5.53,
+          "seuil": 4.5,
+          "taille": 14,
+          "ok": true
+        }
+      }
+    ],
+    "768": [
+      {
+        "region": "Page entière",
+        "lignes": 150,
+        "echecs": [],
+        "pire": {
+          "texte": "mesures finales à venir",
+          "ratio": 5.53,
+          "seuil": 4.5,
+          "taille": 16,
+          "ok": true
+        }
+      }
+    ],
+    "1440": [
+      {
+        "region": "Page entière",
+        "lignes": 150,
+        "echecs": [],
+        "pire": {
+          "texte": "mesures finales à venir",
+          "ratio": 5.53,
+          "seuil": 4.5,
+          "taille": 16,
+          "ok": true
+        }
+      }
+    ]
+  }
+}
