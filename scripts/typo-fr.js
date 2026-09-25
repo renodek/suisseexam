@@ -13,8 +13,10 @@ const INSECABLE = ' ';
 const PROTEGE = /(<!--[\s\S]*?-->|<script\b[\s\S]*?<\/script>|<style\b[\s\S]*?<\/style>|<pre\b[\s\S]*?<\/pre>|<code\b[\s\S]*?<\/code>|<title\b[\s\S]*?<\/title>|<textarea\b[\s\S]*?<\/textarea>|<[^>]+>)/;
 
 const POURCENT = process.argv.includes('--pourcent'); // option : « 67 % » -> espace fine insécable avant %
+const APOSTROPHES = process.argv.includes('--apostrophes'); // option : apostrophe droite ' -> apostrophe typographique ’ (texte visible et FAQ du JSON-LD)
 function traiteTexte(t, stats) {
   let out = t;
+  if (APOSTROPHES) out = out.replace(/'/g, () => { stats['’'] = (stats['’'] || 0) + 1; return '’'; });
   if (POURCENT) out = out.replace(/(\d) %/g, (m, d) => { stats['%'] = (stats['%'] || 0) + 1; return d + FINE + '%'; });
   out = out.replace(/(\S) ([?!:;])/g, (m, avant, p, off, str) => {
     // heures et ratios : "12 : 30", "4,5 : 1"
