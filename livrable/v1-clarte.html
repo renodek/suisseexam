@@ -27,6 +27,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico" sizes="any">
 <!-- ANIM:début -->
 <script>
 /* Animations : classe "anim" posée seulement si l'utilisateur n'a pas demandé moins de mouvement, si l'URL ne contient
@@ -61,9 +62,6 @@
 <meta name="twitter:description" content="Audit IA gratuit pour PME à Annemasse et en Haute-Savoie : analyse de vos processus, recommandations concrètes, sans engagement, réponse sous 24 h.">
 <meta name="twitter:image" content="https://mzi-consulting.com/assets/img/v1-og-image.jpg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
 
 <!-- Audit §5 : le graphe JSON-LD du site réel se limite à WebPage/WebSite/Organization (sans
      adresse ni téléphone) et un BreadcrumbList à un seul niveau ("Aucun schéma
@@ -169,7 +167,23 @@
 }
 </script>
 
+<!-- IMG:début -->
+<!-- Précharge de l'image du héros : mêmes srcset, sizes et point de rupture que l'<img> (variante mobile recadrée, sinon bureau). -->
+<link rel="preload" as="image" media="(max-width:1120px)" href="assets/img/fonds/v1-hero-mobile-800.webp" imagesrcset="assets/img/fonds/v1-hero-mobile-800.webp 800w, assets/img/fonds/v1-hero-mobile-1400.webp 1400w, assets/img/fonds/v1-hero-mobile-2200.webp 2200w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(min-width:1121px)" href="assets/img/fonds/v1-hero-bureau-1400.webp" imagesrcset="assets/img/fonds/v1-hero-bureau-800.webp 800w, assets/img/fonds/v1-hero-bureau-1400.webp 1400w, assets/img/fonds/v1-hero-bureau-2200.webp 2200w" imagesizes="76vw" fetchpriority="high">
+<!-- IMG:fin -->
+<!-- FONTS:début -->
+<!-- Polices hébergées en local (assets/fonts/) : Outfit 700 et 800, Figtree 400 et 600, sous-ensemble latin ; précharge des deux fichiers du premier écran. Régénération : scripts/heberge-polices.js. -->
+<link rel="preload" href="assets/fonts/figtree-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/outfit-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<!-- FONTS:fin -->
 <style>
+  /* FONTS:CSS début — polices hébergées */
+  @font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/figtree-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Figtree';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/figtree-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/outfit-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  @font-face{font-family:'Outfit';font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/outfit-normal-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+  /* FONTS:CSS fin */
   :root{
     --night:#0a0e1a; --cyan:#10d7fd; --cyan-dark:#09c6eb; --teal:#0e7490; --teal-dark:#0b5c73;
     --white:#ffffff; --ink:#0a0e1a; --slate:#1d2433; --body:#3d4655; --muted:#5b6576;
@@ -1194,5 +1208,18 @@
 })();
 </script>
 <!-- ANIM:fin -->
+<!-- RETOUR:début -->
+<!-- Lien de retour vers le dossier (page d'accueil du livrable), fixe et discret. -->
+<style>
+  .retour-dossier{position:fixed;left:12px;bottom:12px;z-index:9999;display:inline-flex;align-items:center;min-height:32px;padding:6px 14px;border-radius:999px;background:rgba(10,14,26,.94);color:#fff;font:600 13px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;text-decoration:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28)}
+  .retour-dossier .hors{color:#7dd3fc;margin-right:8px;padding-right:8px;border-right:1px solid rgba(255,255,255,.3)}
+  .retour-dossier:focus-visible{outline:3px solid #10d7fd;outline-offset:2px}
+  @media (prefers-reduced-motion:no-preference){ .retour-dossier{transition:background-color .12s ease,color .12s ease} }
+  @media (hover:hover) and (pointer:fine){ .retour-dossier:hover{background:#fff;color:#0a0e1a} .retour-dossier:hover .hors{color:#0e7490;border-color:rgba(10,14,26,.25)} }
+  @media (max-width:480px){ .retour-dossier{font-size:12.5px;padding:6px 12px} }
+  @media print{ .retour-dossier{display:none} }
+</style>
+<a class="retour-dossier" href="index.html">← Retour au dossier</a>
+<!-- RETOUR:fin -->
 </body>
 </html>

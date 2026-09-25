@@ -9,6 +9,8 @@
 // celle de Georgia entre 26 et 100 px ; le H1 va de 40 à 100 px selon la largeur d'écran. Un seul size-adjust ne peut
 // donc pas garder la même césure : le H1 reçoit une police de secours par tranche de largeur.
 // Les URL de précharge contiennent le sous-ensemble de glyphes : à regénérer (--appliquer) si le texte change.
+// Depuis l'hébergement local des polices (étape 23), la page n'a plus de lien Google Fonts : l'outil s'arrête sans rien modifier ;
+// la précharge est gérée par scripts/heberge-polices.js et le CLS se mesure avec un balayage de largeurs (voir JOURNAL.md).
 const { chromium } = require('playwright');
 const http = require('http');
 const path = require('path');
@@ -141,6 +143,7 @@ function variante(html, nom, faces, css) {
 async function main() {
   const html = fs.readFileSync(path.join(ROOT, PAGE), 'utf8');
   const faces = await urlsPolices(html);
+  if (!faces.length) { console.log('Polices hébergées en local (livrable/assets/fonts/) : la précharge est gérée par scripts/heberge-polices.js ; rien à régénérer ici.'); return; }
   const variantes = {};
   const server = http.createServer((req, res) => {
     const u = new URL(req.url, 'http://x');

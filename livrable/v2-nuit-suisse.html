@@ -29,6 +29,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico" sizes="any">
 <!-- ANIM:début -->
 <script>
 /* Animations : classe "anim" posée seulement si l'utilisateur n'a pas demandé moins de mouvement, si l'URL ne contient
@@ -63,22 +64,6 @@
 <meta name="twitter:description" content="Audit IA gratuit pour PME à Annemasse et en Haute-Savoie : analyse de vos processus, recommandations concrètes, sans engagement, réponse sous 24 h.">
 <meta name="twitter:image" content="https://mzi-consulting.com/assets/img/v2-og-image.jpg">
 
-<!-- CLS:début — précharge des polices du H1 (scripts/mesure-cls.js --appliquer) -->
-<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/l/font?kit=6NU58FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChTeOUKxbfJ2VTVpqYOuc43cfvfabkjPhrASpuQygIHfX6pGiGXBcOSivACTtXrp6S8t4VMwGkn3WPM3kalPwDTx4eyOFhrlrHxQLzktKPpTtP-A9j1XTmRbfnEiKHCtNnacPlTcaqElKfo2HZRqYEWyxebMTT60GBcBx_zZdUrptBCJHQ13H_5OB_3YpJOnwHGny-F6qQDI94VkImsymUPJDRAd65UYgu0r9tX36lrdRu16rr80YcQah5FLqcBz7ph1xZ9_CfxUyLFbnvzMO9xghZ_hGE9F9xczsxNS10mDgFET7u2jo72JahJorsWlcLjLbxbmEtJHA6P4XScQwjAvFAR21JH7EsNl2RtAVSdXl2NwZzJifJsa2FUPS1bhI3Rd1wt&skey=a711426ad14db1be&v=v38" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/l/font?kit=6NUu8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7iQcIfJD58ngB1bc5uGUAZ-nMfKwsTmqwOuvgunJ3DAqkFSycENSHke0dU87-sLGNhLR78VoW4lL_70uqMgvG0JKpJUd2jaTmVQ41BHteu2YIuCNMF1raBbCHx-OM9ZSRIbMDOP3LzumxlS4A99F1nHXBUG2RiAoCbnycB7tKy7szTgRcqxCDVmaaGuMw6ES221LOlO58fKdM0unvqyl_aUUYCvcqA0zU76oHr_gXK2TrrOO9idZhOm4aXflzlsY5qGUMjleALlK5Gz6Fdpc01ml3omBAdqhj4_YTElRTVwkwFr_X14uWfYYq-pR0zviSdocrw3MMRzfLul7bGCOG505OgE0Zt1ZszHgNWlHsBVn9m6e608geMUoHZwcJ3Z-pLk9jt7Oc0MSvV5gu41c&skey=2eca4ab215eafb9c&v=v38" crossorigin>
-<!-- CLS:fin -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Polices : le design charge Geist, Geist Mono et Fraunces complètes, dont Fraunces avec son axe de
-     taille optique (opsz 9..144, SOFT, WONK) : 165 Ko mesurés (V1 : 51 Ko). Chaque famille est
-     donc limitée aux instances utilisées (Geist 300-600 ; Geist Mono 300-400, le 500 n'est pas
-     utilisé ; Fraunces romain 500 + italique 400/500) ET aux seuls glyphes rendus dans la page,
-     calculés par scripts/fraunces-subset.js (+ alphabet latin et chiffres en marge de sécurité).
-     L'axe opsz reste variable : le fixer (testé à 72, 40 Ko au lieu de 80) change les retours à
-     la ligne des titres — hero +94 px, citations −33 px — donc le rendu du design. -->
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;display=swap&amp;text=%20%2B%2C-.0123456789%3A%3F%40ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C3%89%C3%A0%C3%A2%C3%A8%C3%A9%C3%AA%C3%AE%C3%BB%E2%80%99%E2%80%AF" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400&amp;display=swap&amp;text=%20-.0123456789%3A%3FABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C2%A9%C2%B7%C3%80%C3%88%C3%89%C3%A8%C3%A9%E2%80%99%E2%80%AF" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500,0,0;1,9..144,400,0,0;1,9..144,500,0,0&amp;display=swap&amp;text=%20%25%2B%2C.0123456789%3B%3FABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%C2%A0%C2%AB%C3%A0%C3%A2%C3%A9%C3%AA%C3%AE%E2%80%99%E2%80%AF" rel="stylesheet">
 
 <!-- Audit §5 : le graphe JSON-LD du site réel se limite à WebPage/WebSite/Organization (sans
      adresse ni téléphone) et un BreadcrumbList à un seul niveau ("Aucun schéma
@@ -184,7 +169,28 @@
 }
 </script>
 
+<!-- IMG:début -->
+<!-- Précharge de l'image du héros : mêmes srcset, sizes et point de rupture que l'<img> (variante mobile recadrée, sinon bureau). -->
+<link rel="preload" as="image" media="(max-width:760px)" href="assets/img/fonds/v2-hero-mobile-800.webp" imagesrcset="assets/img/fonds/v2-hero-mobile-800.webp 800w, assets/img/fonds/v2-hero-mobile-1400.webp 1400w, assets/img/fonds/v2-hero-mobile-2200.webp 2200w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(min-width:761px)" href="assets/img/fonds/v2-hero-bureau-1400.webp" imagesrcset="assets/img/fonds/v2-hero-bureau-800.webp 800w, assets/img/fonds/v2-hero-bureau-1400.webp 1400w, assets/img/fonds/v2-hero-bureau-2200.webp 2200w" imagesizes="(max-width:1400px) 100vw, 1400px" fetchpriority="high">
+<!-- IMG:fin -->
+<!-- FONTS:début -->
+<!-- Polices hébergées en local (assets/fonts/), sous-ensembles de glyphes calculés par scripts/fraunces-subset.js : Geist 300-600, Geist Mono 300-400, Fraunces romain 500 et italique 400/500 avec l'axe de taille optique. Préchargées : les deux faces du H1. Régénération : scripts/heberge-polices.js. -->
+<link rel="preload" href="assets/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<!-- FONTS:fin -->
 <style>
+  /* FONTS:CSS début — polices hébergées */
+  @font-face{font-family:'Geist';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/geist-normal.woff2) format('woff2');unicode-range:U+20, U+2b-2e, U+30-3a, U+3f-5a, U+61-7a, U+c0-c2, U+c8-ca, U+cc-ce, U+d2-d4, U+d9-db, U+dd, U+e0-e2, U+e8-ea, U+ec-ee, U+f2-f4, U+f9-fb, U+fd, U+106-109, U+11c-11d, U+124-125, U+134-135, U+139-13a, U+143-144, U+154-155, U+15a-15d, U+174-177, U+179-17a, U+1f4-1f5, U+1f8-1f9, U+300-302, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e80-1e83, U+1e90-1e91, U+1ea4-1ea7, U+1ebe-1ec1, U+1ed0-1ed3, U+1ef2-1ef3, U+2019, U+202f}
+  @font-face{font-family:'Geist';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/geist-normal.woff2) format('woff2');unicode-range:U+20, U+2b-2e, U+30-3a, U+3f-5a, U+61-7a, U+c0-c2, U+c8-ca, U+cc-ce, U+d2-d4, U+d9-db, U+dd, U+e0-e2, U+e8-ea, U+ec-ee, U+f2-f4, U+f9-fb, U+fd, U+106-109, U+11c-11d, U+124-125, U+134-135, U+139-13a, U+143-144, U+154-155, U+15a-15d, U+174-177, U+179-17a, U+1f4-1f5, U+1f8-1f9, U+300-302, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e80-1e83, U+1e90-1e91, U+1ea4-1ea7, U+1ebe-1ec1, U+1ed0-1ed3, U+1ef2-1ef3, U+2019, U+202f}
+  @font-face{font-family:'Geist';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/geist-normal.woff2) format('woff2');unicode-range:U+20, U+2b-2e, U+30-3a, U+3f-5a, U+61-7a, U+c0-c2, U+c8-ca, U+cc-ce, U+d2-d4, U+d9-db, U+dd, U+e0-e2, U+e8-ea, U+ec-ee, U+f2-f4, U+f9-fb, U+fd, U+106-109, U+11c-11d, U+124-125, U+134-135, U+139-13a, U+143-144, U+154-155, U+15a-15d, U+174-177, U+179-17a, U+1f4-1f5, U+1f8-1f9, U+300-302, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e80-1e83, U+1e90-1e91, U+1ea4-1ea7, U+1ebe-1ec1, U+1ed0-1ed3, U+1ef2-1ef3, U+2019, U+202f}
+  @font-face{font-family:'Geist';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/geist-normal.woff2) format('woff2');unicode-range:U+20, U+2b-2e, U+30-3a, U+3f-5a, U+61-7a, U+c0-c2, U+c8-ca, U+cc-ce, U+d2-d4, U+d9-db, U+dd, U+e0-e2, U+e8-ea, U+ec-ee, U+f2-f4, U+f9-fb, U+fd, U+106-109, U+11c-11d, U+124-125, U+134-135, U+139-13a, U+143-144, U+154-155, U+15a-15d, U+174-177, U+179-17a, U+1f4-1f5, U+1f8-1f9, U+300-302, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e80-1e83, U+1e90-1e91, U+1ea4-1ea7, U+1ebe-1ec1, U+1ed0-1ed3, U+1ef2-1ef3, U+2019, U+202f}
+  @font-face{font-family:'Geist Mono';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/geist-mono-normal.woff2) format('woff2');unicode-range:U+20, U+2d-2e, U+30-3a, U+3f, U+41-5a, U+61-7a, U+a9, U+b7, U+c0-c1, U+c8-c9, U+cc-cd, U+d2-d3, U+d9-da, U+dd, U+e0-e1, U+e8-e9, U+ec-ed, U+f2-f3, U+f9-fa, U+fd, U+106-107, U+139-13a, U+143-144, U+154-155, U+15a-15b, U+179-17a, U+1f4-1f5, U+1f8-1f9, U+300-301, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e80-1e83, U+1ef2-1ef3, U+2019, U+202f}
+  @font-face{font-family:'Geist Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/geist-mono-normal.woff2) format('woff2');unicode-range:U+20, U+2d-2e, U+30-3a, U+3f, U+41-5a, U+61-7a, U+a9, U+b7, U+c0-c1, U+c8-c9, U+cc-cd, U+d2-d3, U+d9-da, U+dd, U+e0-e1, U+e8-e9, U+ec-ed, U+f2-f3, U+f9-fa, U+fd, U+106-107, U+139-13a, U+143-144, U+154-155, U+15a-15b, U+179-17a, U+1f4-1f5, U+1f8-1f9, U+300-301, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e80-1e83, U+1ef2-1ef3, U+2019, U+202f}
+  @font-face{font-family:'Fraunces';font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/fraunces-italic.woff2) format('woff2');unicode-range:U+20, U+25, U+2b-2c, U+2e, U+30-39, U+3b, U+3f, U+41-5a, U+61-7a, U+a0, U+ab, U+c0-c2, U+c8-ca, U+cc-ce, U+d2-d4, U+d9-db, U+dd, U+e0-e2, U+e8-ea, U+ec-ee, U+f2-f4, U+f9-fb, U+fd, U+106-109, U+11c-11d, U+124-125, U+134-135, U+139-13a, U+143-144, U+154-155, U+15a-15d, U+174-177, U+179-17a, U+1f4-1f5, U+1f8-1f9, U+300-302, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e80-1e83, U+1e90-1e91, U+1ea4-1ea7, U+1ebe-1ec1, U+1ed0-1ed3, U+1ef2-1ef3, U+2019, U+202f}
+  @font-face{font-family:'Fraunces';font-style:italic;font-weight:500;font-display:swap;src:url(assets/fonts/fraunces-italic.woff2) format('woff2');unicode-range:U+20, U+25, U+2b-2c, U+2e, U+30-39, U+3b, U+3f, U+41-5a, U+61-7a, U+a0, U+ab, U+c0-c2, U+c8-ca, U+cc-ce, U+d2-d4, U+d9-db, U+dd, U+e0-e2, U+e8-ea, U+ec-ee, U+f2-f4, U+f9-fb, U+fd, U+106-109, U+11c-11d, U+124-125, U+134-135, U+139-13a, U+143-144, U+154-155, U+15a-15d, U+174-177, U+179-17a, U+1f4-1f5, U+1f8-1f9, U+300-302, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e80-1e83, U+1e90-1e91, U+1ea4-1ea7, U+1ebe-1ec1, U+1ed0-1ed3, U+1ef2-1ef3, U+2019, U+202f}
+  @font-face{font-family:'Fraunces';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/fraunces-normal.woff2) format('woff2');unicode-range:U+20, U+25, U+2b-2c, U+2e, U+30-39, U+3b, U+3f, U+41-5a, U+61-7a, U+a0, U+ab, U+c0-c2, U+c8-ca, U+cc-ce, U+d2-d4, U+d9-db, U+dd, U+e0-e2, U+e8-ea, U+ec-ee, U+f2-f4, U+f9-fb, U+fd, U+106-109, U+11c-11d, U+124-125, U+134-135, U+139-13a, U+143-144, U+154-155, U+15a-15d, U+174-177, U+179-17a, U+1f4-1f5, U+1f8-1f9, U+300-302, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e80-1e83, U+1e90-1e91, U+1ea4-1ea7, U+1ebe-1ec1, U+1ed0-1ed3, U+1ef2-1ef3, U+2019, U+202f}
+  /* FONTS:CSS fin */
   :root{
     --night:#0a0e1a; --night2:#0f1526; --cyan:#10d7fd; --cyan-hover:#6ee6fe;
     --g1:#f0f4fa; --g2:#c9d1de; --g3:#a3afc1; --g4:#8b98ae; --slate:#1c2c48; --glacier:#eef3f8;
@@ -367,7 +373,7 @@
     .hero-bg{height:148vw}
   }
   .hero-body{z-index:2}
-  .hero-body{position:relative;padding:clamp(40px,6vw,88px) var(--gutter) 0}
+  .hero-body{position:relative;padding:clamp(40px,6vw,88px) var(--gutter) calc(clamp(40px,5vw,64px) + clamp(200px,24vw,340px))}
   .chips{display:flex;flex-wrap:wrap;gap:8px}
   .chip{font:400 12.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--g1);border:1px solid rgba(126,141,163,.5);border-radius:999px;padding:8px 14px}
   .chip.accent{color:var(--cyan);border-color:rgba(16,215,253,.5)}
@@ -386,7 +392,7 @@
   @media (min-width:900px){ .audit-steps{grid-template-columns:repeat(3,minmax(0,1fr))} }
   .audit-steps li{display:flex;gap:14px;align-items:baseline;font:400 16px/1.4 var(--sans);color:var(--g1)}
   .audit-steps span{font:400 13px var(--mono);color:var(--cyan)}
-  .hero-band{position:relative;z-index:2;margin-top:clamp(40px,5vw,64px);height:clamp(200px,24vw,340px)}
+  .hero-band{position:absolute;z-index:2;left:0;right:0;bottom:0;height:clamp(200px,24vw,340px)}
   .photo-layer{position:absolute;inset:0}
   .photo-layer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .grade-b{filter:grayscale(.45) brightness(.9)}
@@ -1271,5 +1277,18 @@
 })();
 </script>
 <!-- ANIM:fin -->
+<!-- RETOUR:début -->
+<!-- Lien de retour vers le dossier (page d'accueil du livrable), fixe et discret. -->
+<style>
+  .retour-dossier{position:fixed;left:12px;bottom:12px;z-index:9999;display:inline-flex;align-items:center;min-height:32px;padding:6px 14px;border-radius:999px;background:rgba(10,14,26,.94);color:#fff;font:600 13px/1.2 system-ui,-apple-system,'Segoe UI',sans-serif;text-decoration:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28)}
+  .retour-dossier .hors{color:#7dd3fc;margin-right:8px;padding-right:8px;border-right:1px solid rgba(255,255,255,.3)}
+  .retour-dossier:focus-visible{outline:3px solid #10d7fd;outline-offset:2px}
+  @media (prefers-reduced-motion:no-preference){ .retour-dossier{transition:background-color .12s ease,color .12s ease} }
+  @media (hover:hover) and (pointer:fine){ .retour-dossier:hover{background:#fff;color:#0a0e1a} .retour-dossier:hover .hors{color:#0e7490;border-color:rgba(10,14,26,.25)} }
+  @media (max-width:480px){ .retour-dossier{font-size:12.5px;padding:6px 12px} }
+  @media print{ .retour-dossier{display:none} }
+</style>
+<a class="retour-dossier" href="index.html">← Retour au dossier</a>
+<!-- RETOUR:fin -->
 </body>
 </html>
