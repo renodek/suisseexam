@@ -1025,7 +1025,7 @@ CLS mesuré par balayage local (14 largeurs) : V1 0,0105 (direct) et 0,0106 (ré
 
 - **LCP mobile** : 1,83 s (V1) et 2,32 s (V2) contre 1,30 s. Desktop : V1 à égalité (0,48 s), V2 0,65 s contre 0,48 s.
 - **Poids de la page** : V2 mobile 278 Ko contre 184 Ko ; desktop V1 405 Ko et V2 303 Ko contre 185 Ko (images de fond plus grandes en desktop).
-- **TBT** : 108 ms (V1) et 63 ms (V2) contre 0 ms avant ; toujours très en dessous du site actuel (2302 ms mobile, 400 ms desktop), mais en hausse : script d'animations et hôte plus rapide qui exécute plus tôt.
+- **TBT** : 108 ms (V1) et 63 ms (V2) contre 0 ms avant ; toujours très en dessous du site actuel (2302 ms mobile, 400 ms desktop), mais en hausse (cause non analysée : les scripts s'exécutent probablement plus tôt maintenant que le rendu n'attend plus les polices).
 - **SEO** : 63 contre 100, uniquement à cause du noindex voulu.
 - **CLS du balayage local** : V1 0,0105–0,0106 à 414 px, au-dessus du seuil de 0,01 fixé (arbitrage de l'étape 20 : accepté) ; V2 à 0,0100.
 - Mieux que le site actuel : performance, accessibilité, bonnes pratiques (100 = égalité), TBT, CLS Lighthouse.
