@@ -844,3 +844,19 @@ Le baseline était déjà au-dessus de 0,01 à 360 et 414 px (mesure jamais fait
 
 - `livrable/v1-clarte.html` (modifié) ; `scripts/anime-pages.js`, `scripts/contraste-fonds.js` (modifiés)
 - `mesures/v1-taste/` (captures, `contrastes-apres.json` et `.md`) ; `mesures/v1-controles/`, `mesures/animations/verifications.json` (régénérés)
+
+## Étape 20 — Arbitrages sur les étapes 18 et 19 (2026-09-25)
+
+### Décisions du client et suites
+
+- **V1 — indicateurs fonctionnels gardés en bleu pétrole** : le trait de la timeline de la méthode, le halo des étapes actives et le mot « unique » de la bande de transition sont conservés tels quels (indicateurs fonctionnels, pas décoration). Aucune modification de code : l'accent restreint de l'étape 19 ne les concernait pas.
+- **V2 — étiquette « Agence d'automatisation IA » du héros** : le cyan est rétabli (texte `#10d7fd`, bordure `rgba(16,215,253,.5)`), une seule règle CSS modifiée (`.chip.accent`). Le cyan de la V2 couvre donc de nouveau : mots en italique des H1 et H2, bouton principal, numéros, traits de section, symboles des chiffres, et cette étiquette.
+- **V1 — CLS de 0,0106 à 414 px** : accepté, non traité (cause non recherchée).
+
+### Vérifications
+
+Aucune nouvelle mesure (consigne). Le contraste de cette étiquette en cyan n'a pas été remesuré sur les pixels rendus après le changement ; c'est du cyan `#10d7fd` sur le fond sombre du héros, et les mesures de l'étape 18 (héros V2, pire rapport de 4,77:1 à 768 px) ont été faites avec l'étiquette en gris clair.
+
+### Fichiers produits
+
+- `livrable/v2-nuit-suisse.html` (une règle CSS)
