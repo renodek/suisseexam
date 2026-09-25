@@ -3,7 +3,7 @@
     "390": [
       {
         "region": "Page entière",
-        "lignes": 127,
+        "lignes": 128,
         "echecs": [],
         "pire": {
           "texte": "·",
@@ -322,14 +322,14 @@
             "ok": true
           },
           {
-            "texte": "LCP plus court que la V0, animations comprises",
+            "texte": "LCP mobile réduit, encore au-dessus du site actuel",
             "ratio": 17.63,
             "seuil": 3,
             "taille": 20,
             "ok": true
           },
           {
-            "texte": "Sur mobile (Lighthouse, médiane de 3 passages), le LCP est d",
+            "texte": "Polices hébergées en local et préchargées, image du héros pr",
             "ratio": 8.72,
             "seuil": 4.5,
             "taille": 17,
@@ -420,14 +420,14 @@
             "ok": true
           },
           {
-            "texte": "88",
+            "texte": "98",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
             "ok": true
           },
           {
-            "texte": "90",
+            "texte": "97",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
@@ -476,14 +476,14 @@
             "ok": true
           },
           {
-            "texte": "96",
+            "texte": "100",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
             "ok": true
           },
           {
-            "texte": "96",
+            "texte": "100",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
@@ -504,14 +504,14 @@
             "ok": true
           },
           {
-            "texte": "63",
+            "texte": "63*",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
             "ok": true
           },
           {
-            "texte": "63",
+            "texte": "63*",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
@@ -532,14 +532,14 @@
             "ok": true
           },
           {
-            "texte": "3,04 s",
+            "texte": "1,83 s",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
             "ok": true
           },
           {
-            "texte": "3,11 s",
+            "texte": "2,32 s",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
@@ -560,7 +560,7 @@
             "ok": true
           },
           {
-            "texte": "0,010",
+            "texte": "0,000",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
@@ -588,14 +588,14 @@
             "ok": true
           },
           {
-            "texte": "0 ms",
+            "texte": "108 ms",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
             "ok": true
           },
           {
-            "texte": "7 ms",
+            "texte": "63 ms",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
@@ -616,14 +616,14 @@
             "ok": true
           },
           {
-            "texte": "155 Ko",
+            "texte": "163 Ko",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
             "ok": true
           },
           {
-            "texte": "356 Ko",
+            "texte": "278 Ko",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 14,
@@ -631,6 +631,13 @@
           },
           {
             "texte": "Mesures Lighthouse 13.5.0 du 25 septembre 2026 : mobile (ému",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "* noindex volontaire des maquettes ; 100 sans cette balise (",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 15,
@@ -908,7 +915,7 @@
     "768": [
       {
         "region": "Page entière",
-        "lignes": 127,
+        "lignes": 128,
         "echecs": [],
         "pire": {
           "texte": "·",
@@ -1227,14 +1234,14 @@
             "ok": true
           },
           {
-            "texte": "LCP plus court que la V0, animations comprises",
+            "texte": "LCP mobile réduit, encore au-dessus du site actuel",
             "ratio": 17.63,
             "seuil": 3,
             "taille": 20,
             "ok": true
           },
           {
-            "texte": "Sur mobile (Lighthouse, médiane de 3 passages), le LCP est d",
+            "texte": "Polices hébergées en local et préchargées, image du héros pr",
             "ratio": 8.72,
             "seuil": 4.5,
             "taille": 17,
@@ -1325,14 +1332,14 @@
             "ok": true
           },
           {
-            "texte": "88",
+            "texte": "98",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "90",
+            "texte": "97",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -1381,14 +1388,14 @@
             "ok": true
           },
           {
-            "texte": "96",
+            "texte": "100",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "96",
+            "texte": "100",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -1409,14 +1416,14 @@
             "ok": true
           },
           {
-            "texte": "63",
+            "texte": "63*",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "63",
+            "texte": "63*",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -1437,14 +1444,14 @@
             "ok": true
           },
           {
-            "texte": "3,04 s",
+            "texte": "1,83 s",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "3,11 s",
+            "texte": "2,32 s",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -1465,7 +1472,7 @@
             "ok": true
           },
           {
-            "texte": "0,010",
+            "texte": "0,000",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -1493,14 +1500,14 @@
             "ok": true
           },
           {
-            "texte": "0 ms",
+            "texte": "108 ms",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "7 ms",
+            "texte": "63 ms",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -1521,14 +1528,14 @@
             "ok": true
           },
           {
-            "texte": "155 Ko",
+            "texte": "163 Ko",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "356 Ko",
+            "texte": "278 Ko",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -1536,6 +1543,13 @@
           },
           {
             "texte": "Mesures Lighthouse 13.5.0 du 25 septembre 2026 : mobile (ému",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "* noindex volontaire des maquettes ; 100 sans cette balise (",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 15,
@@ -1813,7 +1827,7 @@
     "1440": [
       {
         "region": "Page entière",
-        "lignes": 127,
+        "lignes": 128,
         "echecs": [],
         "pire": {
           "texte": "·",
@@ -2132,14 +2146,14 @@
             "ok": true
           },
           {
-            "texte": "LCP plus court que la V0, animations comprises",
+            "texte": "LCP mobile réduit, encore au-dessus du site actuel",
             "ratio": 17.63,
             "seuil": 3,
             "taille": 23,
             "ok": true
           },
           {
-            "texte": "Sur mobile (Lighthouse, médiane de 3 passages), le LCP est d",
+            "texte": "Polices hébergées en local et préchargées, image du héros pr",
             "ratio": 8.72,
             "seuil": 4.5,
             "taille": 17,
@@ -2230,14 +2244,14 @@
             "ok": true
           },
           {
-            "texte": "88",
+            "texte": "98",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "90",
+            "texte": "97",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -2286,14 +2300,14 @@
             "ok": true
           },
           {
-            "texte": "96",
+            "texte": "100",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "96",
+            "texte": "100",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -2314,14 +2328,14 @@
             "ok": true
           },
           {
-            "texte": "63",
+            "texte": "63*",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "63",
+            "texte": "63*",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -2342,14 +2356,14 @@
             "ok": true
           },
           {
-            "texte": "3,04 s",
+            "texte": "1,83 s",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "3,11 s",
+            "texte": "2,32 s",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -2370,7 +2384,7 @@
             "ok": true
           },
           {
-            "texte": "0,010",
+            "texte": "0,000",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -2398,14 +2412,14 @@
             "ok": true
           },
           {
-            "texte": "0 ms",
+            "texte": "108 ms",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "7 ms",
+            "texte": "63 ms",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -2426,14 +2440,14 @@
             "ok": true
           },
           {
-            "texte": "155 Ko",
+            "texte": "163 Ko",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
             "ok": true
           },
           {
-            "texte": "356 Ko",
+            "texte": "278 Ko",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 16,
@@ -2441,6 +2455,13 @@
           },
           {
             "texte": "Mesures Lighthouse 13.5.0 du 25 septembre 2026 : mobile (ému",
+            "ratio": 7.58,
+            "seuil": 4.5,
+            "taille": 15,
+            "ok": true
+          },
+          {
+            "texte": "* noindex volontaire des maquettes ; 100 sans cette balise (",
             "ratio": 7.58,
             "seuil": 4.5,
             "taille": 15,
@@ -2651,7 +2672,7 @@
           },
           {
             "texte": "dans les maquettes.",
-            "ratio": 7.25,
+            "ratio": 6.99,
             "seuil": 4.5,
             "taille": 17,
             "ok": true

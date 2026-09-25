@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-25",
+  "lighthouse": "13.5.0",
+  "mode": "mobile",
+  "resultats": {
+    "v0-existant": {
+      "avec": {
+        "score": 54,
+        "echecs": [
+          "is-crawlable",
+          "meta-description"
+        ]
+      },
+      "sans": {
+        "score": 91,
+        "echecs": [
+          "meta-description"
+        ]
+      }
+    },
+    "v1-clarte": {
+      "avec": {
+        "score": 63,
+        "echecs": [
+          "is-crawlable"
+        ]
+      },
+      "sans": {
+        "score": 100,
+        "echecs": []
+      }
+    },
+    "v2-nuit-suisse": {
+      "avec": {
+        "score": 63,
+        "echecs": [
+          "is-crawlable"
+        ]
+      },
+      "sans": {
+        "score": 100,
+        "echecs": []
+      }
+    }
+  }
+}

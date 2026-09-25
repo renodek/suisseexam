@@ -975,3 +975,68 @@ La V0 est hébergée sur Vercel comme la V1 et la V2 : à hébergement égal, la
 - `livrable/index.html`, `livrable/audit.html` (corrections) ; `livrable/v1-clarte.html`, `livrable/v2-nuit-suisse.html` (apostrophes, sous-ensembles de polices)
 - `scripts/lighthouse-final.js` (nouveau), `scripts/typo-fr.js` (option `--apostrophes`), `scripts/contraste-fonds.js` (toutes les lignes conservées dans le JSON)
 - `mesures/final/` : `comparatif.md`, `passages.json`, rapports médians (JSON et HTML, 8 paires), `controle-final.json`, `contrastes-hero-v2.*` ; `mesures/index/` (contrastes)
+
+## Étape 23 — LCP mobile, favicon, lien de retour, SEO sans noindex (2026-09-25)
+
+Point de départ : le LCP mobile de la V1 (3,04 s) et de la V2 (3,11 s) était moins bon que celui du site actuel (1,30 s), ce qui contredisait l'argument performance de l'audit. Cause relevée dans les rapports Lighthouse de l'étape 22 : la feuille de style Google Fonts bloquait le premier rendu (1 064 ms perdues ; sur la V1, le LCP était égal au FCP).
+
+### Ce qui a été fait
+
+- **Polices hébergées en local** (`livrable/assets/fonts/`, 6 fichiers woff2 et `sources.json`), avec `@font-face` en ligne, `font-display: swap`, sous-ensembles inchangés (V1 et hub : sous-ensemble latin d'Outfit et de Figtree ; V2 : sous-ensembles de glyphes de Geist, Geist Mono et Fraunces). Seuls les fichiers du premier écran sont préchargés (V1 et hub : Outfit et Figtree ; V2 : Fraunces romain et italique du H1). Les polices de secours ajustées de la V2 sont conservées. Outil : `scripts/heberge-polices.js` (idempotent).
+- **Image du héros préchargée** (`rel="preload"`, `imagesrcset`, `imagesizes`, `fetchpriority="high"`, `media` alignés sur les points de rupture du `<picture>`). Vérifié : à 412 px de large (DPR 1,75), le mobile ne télécharge que la variante 800 px (`…-hero-mobile-800.webp`), le bureau que la 1400 px, une seule fois chacune.
+- **Plus aucune ressource externe bloquant le rendu** sur la V1, la V2 et le hub (aucune requête vers Google). L'insight « render-blocking » de Lighthouse est à 1 (aucune ressource) sur les deux pages. `audit.html` et la V0 chargent encore Google Fonts (la V0 reproduit le site actuel ; l'audit n'est pas mesuré).
+- **Favicon** : `livrable/favicon.ico` (16, 32 et 48 px, tiré de `source/design-system-mzi/assets/logo/favicon.jpg`), lien ajouté sur les 5 pages ; le 404 de `favicon.ico` disparaît (0 erreur console).
+- **Lien « ← Retour au dossier »** (fixe, discret) vers `index.html` sur `audit.html`, la V1 et la V2 ; sur la V0, dans un bandeau « Hors reproduction » clairement extérieur à la reproduction, avec un commentaire HTML qui l'explique (seule modification autorisée de la V0).
+- **Hauteur du héros de la V2 indépendante du chargement** : voir « Problème rencontré ».
+- `scripts/mesure-cls.js` ne fait plus rien tant que la page n'a pas de lien Google Fonts (garde ajoutée : `--appliquer` ne peut plus supprimer la précharge locale). Le CLS se mesure désormais avec le nouveau `scripts/balayage-cls.js` (14 largeurs, direct et réseau bridé).
+
+### Problème rencontré
+
+Après suppression du CSS bloquant, le CLS de la V2 sous réseau bridé est monté à 0,03–0,23 (0,0100 au plus avant). Cause : le navigateur peignait avant que l'élément `.hero-band` soit analysé, puis le héros passait de 662 à 902 px. Solution : le `padding-bottom` du héros réserve la hauteur du bandeau, qui est positionné en absolu. Après correction : 0,0100 au plus (à 320 px).
+
+### SEO : le 63 vient-il uniquement du noindex ?
+
+Oui. Catégorie SEO mesurée (mobile) sur des copies locales servies en HTTP, avec et sans `<meta name="robots" content="noindex">` (copies non déployées ; `mesures/final/seo-sans-noindex.json`) : V1 63 → **100**, V2 63 → **100** (le seul audit en échec, `is-crawlable`, disparaît). La V0 passe de 54 à 91 (reste `meta-description`, absente du site actuel reproduit). Le hub affiche « 63* » avec la note « * noindex volontaire des maquettes ; 100 sans cette balise ».
+
+### Mesures Lighthouse (V1 et V2 seules, 3 passages, médiane ; site actuel et V0 : valeurs de l'étape 22)
+
+| Mobile | Site actuel | V0 | V1 avant → après | V2 avant → après |
+|---|---|---|---|---|
+| Performance | 71 | 88 | 88 → **98** | 90 → **97** |
+| Accessibilité | 94 | 83 | 100 | 100 |
+| Bonnes pratiques | 100 | 96 | 96 → **100** | 96 → **100** |
+| SEO | 100 | 54 | 63* | 63* |
+| LCP | 1,30 s | 3,49 s | 3,04 → **1,83 s** | 3,11 → **2,32 s** |
+| CLS | 0,000 | 0,002 | 0,010 → 0,000 | 0,000 |
+| TBT | 2302 ms | 0 ms | 0 → 108 ms | 7 → 63 ms |
+| Poids | 184 Ko | 153 Ko | 155 → 163 Ko | 356 → 278 Ko |
+
+| Desktop | Site actuel | V0 | V1 avant → après | V2 avant → après |
+|---|---|---|---|---|
+| Performance | 70 | 93 | 93 → **100** | 87 → **99** |
+| LCP | 0,48 s | 1,43 s | 1,24 → **0,48 s** | 1,58 → **0,65 s** |
+| CLS | 0,237 | 0,022 | 0,000 | 0,001 |
+| TBT | 400 ms | 0 ms | 0 ms | 0 → 11 ms |
+| Poids | 185 Ko | 152 Ko | 397 → 405 Ko | 380 → 303 Ko |
+
+CLS mesuré par balayage local (14 largeurs) : V1 0,0105 (direct) et 0,0106 (réseau bridé) à 414 px ; V2 0,0096 et 0,0100 à 320 px. Lighthouse : 0,000 pour les deux.
+
+### Valeurs encore moins bonnes que celles du site actuel
+
+- **LCP mobile** : 1,83 s (V1) et 2,32 s (V2) contre 1,30 s. Desktop : V1 à égalité (0,48 s), V2 0,65 s contre 0,48 s.
+- **Poids de la page** : V2 mobile 278 Ko contre 184 Ko ; desktop V1 405 Ko et V2 303 Ko contre 185 Ko (images de fond plus grandes en desktop).
+- **TBT** : 108 ms (V1) et 63 ms (V2) contre 0 ms avant ; toujours très en dessous du site actuel (2302 ms mobile, 400 ms desktop), mais en hausse : script d'animations et hôte plus rapide qui exécute plus tôt.
+- **SEO** : 63 contre 100, uniquement à cause du noindex voulu.
+- **CLS du balayage local** : V1 0,0105–0,0106 à 414 px, au-dessus du seuil de 0,01 fixé (arbitrage de l'étape 20 : accepté) ; V2 à 0,0100.
+- Mieux que le site actuel : performance, accessibilité, bonnes pratiques (100 = égalité), TBT, CLS Lighthouse.
+
+### Pistes non traitées
+
+- V1 : le LCP (élément `p.hero-lead`, 1 829 ms) suit le FCP (1 559 ms) de 270 ms de « render delay » ; un dernier levier possible est le poids du HTML (80 Ko, CSS en ligne) et l'ordre de chargement.
+- V2 : l'élément du LCP est l'image du héros (chargement 599 ms sur réseau simulé) ; l'AVIF ou une variante 800 px plus légère réduirait ce temps.
+
+### Fichiers produits
+
+- `livrable/` : `favicon.ico`, `assets/fonts/`, les 5 pages (favicon, lien de retour), `v1-clarte.html`, `v2-nuit-suisse.html` (polices locales, préchargements), `index.html` (tableau, note SEO, point LCP).
+- `scripts/heberge-polices.js`, `scripts/balayage-cls.js` (nouveaux) ; `scripts/lighthouse-final.js` (option `--pages=`, sections SEO et avant/après) ; `scripts/mesure-cls.js` (garde).
+- `mesures/final/` : `comparatif.md`, `passages.json`, `passages-avant-lcp.json`, `avant-lcp/` (rapports V1 et V2 d'avant), `seo-sans-noindex.json`, `cls-balayage.json`, rapports médians V1 et V2.
