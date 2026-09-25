@@ -1040,3 +1040,13 @@ CLS mesuré par balayage local (14 largeurs) : V1 0,0105 (direct) et 0,0106 (ré
 - `livrable/` : `favicon.ico`, `assets/fonts/`, les 5 pages (favicon, lien de retour), `v1-clarte.html`, `v2-nuit-suisse.html` (polices locales, préchargements), `index.html` (tableau, note SEO, point LCP).
 - `scripts/heberge-polices.js`, `scripts/balayage-cls.js` (nouveaux) ; `scripts/lighthouse-final.js` (option `--pages=`, sections SEO et avant/après) ; `scripts/mesure-cls.js` (garde).
 - `mesures/final/` : `comparatif.md`, `passages.json`, `passages-avant-lcp.json`, `avant-lcp/` (rapports V1 et V2 d'avant), `seo-sans-noindex.json`, `cls-balayage.json`, rapports médians V1 et V2.
+
+### Étape 23 (suite) — retouches de texte du hub, sans nouvelle mesure (2026-09-25)
+
+Décision : arrêt de l'optimisation du LCP (1,83 s et 2,32 s, sous le seuil « bon » de Google de 2,5 s ; l'écart avec le site actuel s'explique par le héros photographique des propositions, compromis assumé). Dans « Ce qui change » de `index.html` :
+
+- le point « Images légères » devient le point « Performance mobile de 71 à 98 (V1) et 97 (V2) » (TBT de 2 302 ms à 108 ms et 63 ms ; les fonds restent légers), placé **en premier** de la liste ;
+- le point LCP devient « LCP mobile sous le seuil « bon » de Google » (1,83 s et 2,32 s ; site actuel 1,30 s, héros en texte seul contre une photo pour les propositions) ;
+- la liste compte toujours six points ; typographie française et apostrophes passées avec `scripts/typo-fr.js --apostrophes`.
+
+`tmp-seo/` (copies temporaires du test SEO) n'a pas pu être supprimé : un processus Windows garde `tmp-seo/avec` (« Device or resource busy »). Le dossier est ajouté au `.gitignore` ; à supprimer à la main quand il sera libéré. Aucune nouvelle mesure.

@@ -13,3 +13,6 @@ mesures/animations/*.mp4
 mesures/animations/*.mov
 mesures/animations/*.mkv
 mesures/animations/*.avi
+
+# Copies temporaires du test SEO sans noindex (dossier verrouillé par Windows, à supprimer quand il est libéré)
+tmp-seo/

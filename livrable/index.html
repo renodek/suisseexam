@@ -246,6 +246,10 @@
       <p class="lead">Six points mesurés ou vérifiables dans les pages ; le détail des mesures est consigné dans le journal du projet.</p>
       <ul class="changes">
         <li>
+          <h3>Performance mobile de 71 à 98 (V1) et 97 (V2)</h3>
+          <p>Le temps de blocage du fil principal (TBT) passe de 2 302 ms sur le site actuel à 108 ms (V1) et 63 ms (V2) ; les fonds photographiques restent légers (WebP en trois tailles, 200 Ko au maximum, chargés en différé sauf le héros).</p>
+        </li>
+        <li>
           <h3>Un seul libellé d’action</h3>
           <p>« Réserver mon audit gratuit » partout dans la V1 et la V2, là où le site actuel emploie trois libellés différents pour la même action (audit, §3 et §9).</p>
         </li>
@@ -262,12 +266,8 @@
           <p>Sur la V2, une police de secours aux métriques ajustées maintient le CLS à 0,01 au plus sur 14 largeurs d’écran (0,37 sans ce réglage).</p>
         </li>
         <li>
-          <h3>LCP mobile réduit, encore au-dessus du site actuel</h3>
-          <p>Polices hébergées en local et préchargées, image du héros préchargée, aucune ressource bloquant le premier rendu : sur mobile (Lighthouse, médiane de 3 passages), le LCP passe de 3,04 à 1,83 s pour la V1 et de 3,11 à 2,32 s pour la V2, contre 3,49 s pour la V0 hébergée au même endroit. Le site actuel, sur son propre hébergement, affiche 1,30 s : l’écart n’est pas comblé. Le titre principal n’est jamais masqué par une animation.</p>
-        </li>
-        <li>
-          <h3>Images légères</h3>
-          <p>Les fonds photographiques sont en WebP, en trois tailles (800, 1400 et 2200 px de large) de 200 Ko au maximum, chargés en différé sauf celui du héros.</p>
+          <h3>LCP mobile sous le seuil « bon » de Google</h3>
+          <p>1,83 s (V1) et 2,32 s (V2), sous le seuil de 2,5 s, grâce aux polices hébergées en local et à l’image du héros préchargée. Le site actuel affiche 1,30 s : son héros n’est que du texte, alors que les propositions affichent une photo, un compromis assumé en faveur du rendu visuel.</p>
         </li>
       </ul>
     </div>
