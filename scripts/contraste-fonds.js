@@ -5,7 +5,7 @@
 // clair, 0,5 % pour un texte sombre) et calculer le rapport WCAG. Seuil 4,5:1, ou 3:1 pour le grand texte
 // (≥ 24 px, ou ≥ 18,66 px en gras).
 // Usage : node scripts/contraste-fonds.js [avant|apres]   -> mesures/fonds-images/contrastes-<état>.json et .md
-// Options (variables d'environnement) : PAGE=v2-nuit-suisse, ZONES="^0[1-5]" (filtre sur le nom de zone), SORTIE=dossier.
+// Options (variables d'environnement) : OUVRIR_DETAILS=1 (déplie les <details> avant la mesure), PAGE=v2-nuit-suisse, ZONES="^0[1-5]" (filtre sur le nom de zone), SORTIE=dossier.
 // Contrôle négatif : CSS_TEST="..." injecte du CSS (ex. supprimer les voiles) pour vérifier que la mesure détecte les échecs.
 // Durée maximale : 90 s par page et par largeur.
 const { chromium } = require('playwright');
@@ -21,6 +21,7 @@ const PAGES = {
     { nom: 'Héros', sel: '#hero' },
     { nom: 'Bande de transition', sel: '.photo-band' },
     { nom: 'Contact', sel: '#contact' },
+    { nom: 'Page entière', sel: 'body' },
   ],
   'v2-nuit-suisse': [
     { nom: 'Héros', sel: '.hero-sec' },
@@ -57,6 +58,8 @@ function releve(regions) {
       if (!t) continue;
       const p = n.parentElement;
       if (!p || p.closest('script,style,canvas,svg,textarea,noscript,[hidden]')) continue;
+      const dt = p.closest('details');
+      if (dt && !dt.open && !p.closest('summary')) continue; // contenu d'un <details> refermé : non rendu
       const cs = getComputedStyle(p);
       if (cs.visibility === 'hidden' || cs.display === 'none') continue;
       let op = 1;
@@ -98,6 +101,7 @@ function releve(regions) {
       await page.evaluate(() => window.scrollTo(0, 0));
       await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
       await page.evaluate(() => Promise.all([...document.images].map((i) => i.decode().catch(() => {}))));
+      if (process.env.OUVRIR_DETAILS) await page.evaluate(() => document.querySelectorAll('details').forEach((d) => { d.open = true; }));
       const donnees = await page.evaluate(releve, regions);
       await page.addStyleTag({ content: '*,*::before,*::after{color:transparent!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important;caret-color:transparent!important;text-decoration-color:transparent!important} svg{visibility:hidden!important} ::placeholder{color:transparent!important}' });
       await page.waitForTimeout(300);

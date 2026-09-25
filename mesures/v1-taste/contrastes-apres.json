@@ -1,0 +1,46 @@
+{
+  "v1-clarte": {
+    "390": [
+      {
+        "region": "Page entière",
+        "lignes": 208,
+        "echecs": [],
+        "pire": {
+          "texte": "+",
+          "ratio": 5.03,
+          "seuil": 4.5,
+          "taille": 22,
+          "ok": true
+        }
+      }
+    ],
+    "768": [
+      {
+        "region": "Page entière",
+        "lignes": 208,
+        "echecs": [],
+        "pire": {
+          "texte": "+",
+          "ratio": 5.03,
+          "seuil": 4.5,
+          "taille": 22,
+          "ok": true
+        }
+      }
+    ],
+    "1440": [
+      {
+        "region": "Page entière",
+        "lignes": 214,
+        "echecs": [],
+        "pire": {
+          "texte": "+",
+          "ratio": 5.03,
+          "seuil": 4.5,
+          "taille": 22,
+          "ok": true
+        }
+      }
+    ]
+  }
+}

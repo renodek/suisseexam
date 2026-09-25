@@ -63,7 +63,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
 
 <!-- Audit §5 : le graphe JSON-LD du site réel se limite à WebPage/WebSite/Organization (sans
      adresse ni téléphone) et un BreadcrumbList à un seul niveau ("Aucun schéma
@@ -183,8 +183,8 @@
   @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
   body{margin:0;background:var(--night);font-family:var(--font-body);-webkit-font-smoothing:antialiased;color:var(--body)}
   img{max-width:100%;display:block}
-  a{color:var(--teal)}
-  a:hover{color:var(--teal-dark)}
+  a{color:#334155}
+  a:hover{color:var(--ink)}
   summary{-webkit-tap-highlight-color:transparent}
   summary::-webkit-details-marker{display:none}
   details[open] .faq-plus{transform:rotate(45deg)}
@@ -193,17 +193,18 @@
   .skip-link:focus{top:16px}
 
   /* Boutons */
-  .btn{display:inline-flex;align-items:center;gap:14px;font:500 18px var(--font-display);border-radius:999px;text-decoration:none;border:none;cursor:pointer}
+  .btn{display:inline-flex;align-items:center;gap:14px;font:700 18px var(--font-display);border-radius:999px;text-decoration:none;border:none;cursor:pointer}
   .btn svg{width:15px;height:15px;flex-shrink:0}
   .btn-cyan{background:var(--cyan);color:var(--night);padding:18px 30px}
   .btn-cyan:hover{background:var(--cyan-dark);color:var(--night);box-shadow:0 0 10px rgba(255,255,255,.5)}
   .btn-cyan.compact{padding:12px 22px;font-size:16px;white-space:nowrap}
   .btn-teal{background:var(--teal);color:#fff;padding:17px 28px}
   .btn-teal:hover{background:var(--teal-dark);color:#fff}
-  .link-underline{font:500 19px var(--font-display);color:#fff;padding:10px 2px;border-bottom:1px solid #7e8da3;text-decoration:none}
-  .link-underline:hover{color:var(--cyan);border-color:var(--cyan)}
-  .link-teal{display:inline-flex;align-items:center;min-height:24px;margin:-2px 0;font:600 17px var(--font-body);color:var(--teal);text-decoration:none}
-  .link-teal:hover{color:var(--teal-dark)}
+  .btn-outline{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);padding:18px 30px}
+  .btn-outline:hover{background:var(--ink);color:#fff}
+  .btn-outline.on-dark{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+  .btn-outline.on-dark:hover{background:#fff;color:var(--night)}
+  .faq-head .btn{align-self:flex-start}
 
   /* Badges "À confirmer" */
   .todo{display:inline-block;font:500 12.5px/1.4 ui-monospace,Menlo,monospace;color:var(--todo-text);border:1px dashed var(--todo-border);background:var(--todo-bg);border-radius:6px;padding:4px 9px}
@@ -220,13 +221,13 @@
      texte de navigation ci-dessous reçoivent un padding vertical pour que chaque zone
      cliquable atteigne au moins 24px de hauteur, sans changer leur apparence visuelle
      (le texte reste identique, seule sa zone de clic/tap s'agrandit). */
-  .nav-link{display:inline-flex;align-items:center;padding:6px 0;font:500 16px var(--font-body);color:#e3e8f0;text-decoration:none;min-height:24px}
-  .nav-link:hover{color:var(--cyan)}
+  .nav-link{display:inline-flex;align-items:center;padding:6px 0;font:600 16px var(--font-body);color:#e3e8f0;text-decoration:none;min-height:24px}
+  .nav-link:hover{color:#fff}
   .menu-toggle{display:flex;width:48px;height:48px;border-radius:12px;border:1px solid rgba(126,141,163,.5);background:transparent;align-items:center;justify-content:center;cursor:pointer;color:#fff}
   .menu-toggle svg{width:20px;height:20px}
   .nav-mobile{padding:8px 20px 24px;display:flex;flex-direction:column;border-top:1px solid rgba(126,141,163,.22)}
   .nav-mobile[hidden]{display:none}
-  .mobile-link{font:500 18px var(--font-body);color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)}
+  .mobile-link{font:600 18px var(--font-body);color:#fff;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(126,141,163,.18)}
   .mobile-link:last-of-type{border-bottom:none}
   .mobile-cta{margin-top:12px;text-align:center}
   @media (min-width:900px){
@@ -246,8 +247,8 @@
   .bg-light{background:var(--bg-light)}
   .section-head{display:flex;flex-direction:column;gap:16px;max-width:780px}
   .section-head-row{display:flex;flex-wrap:wrap;gap:20px 48px;align-items:flex-end;justify-content:space-between}
-  .eyebrow{font:600 14px var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
-  .eyebrow.on-dark{color:var(--cyan)}
+  .eyebrow{font:600 14px var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#475569}
+  .eyebrow.on-dark{color:#b6c0d0}
   h2{margin:0;font:800 clamp(32px,3.8vw,50px)/1.1 var(--font-display);letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
   h2 .accent{color:var(--teal)}
   .section-lead{margin:0;font:400 19px/1.55 var(--font-body);color:var(--body);text-wrap:pretty}
@@ -268,14 +269,14 @@
   .hero-grid{display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,72px);align-items:center}
   .hero-text{position:relative;z-index:2;flex:1 1 560px;min-width:0;display:flex;flex-direction:column}
   .hero-text .eyebrow{line-height:1.5}
-  .hero-actions .btn{font-size:19px}
+  .hero-actions .btn{font-size:17px;padding:16px 26px}
   .hero-actions .btn svg{width:16px;height:16px}
-  .hero-title{margin:20px 0 0;font:800 clamp(40px,4.9vw,66px)/1.06 var(--font-display);letter-spacing:-.022em;color:#fff;text-wrap:balance}
-  .hero-lead{margin:24px 0 0;font:400 clamp(18px,1.5vw,21px)/1.5 var(--font-body);color:var(--gray-text);max-width:600px;text-wrap:pretty}
+  .hero-title{margin:20px 0 0;font:800 clamp(40px,5.7vw,80px)/1 var(--font-display);letter-spacing:-.03em;max-width:12em;color:#fff;text-wrap:balance}
+  .hero-lead{margin:24px 0 0;font:400 clamp(18px,1.5vw,21px)/1.5 var(--font-body);color:var(--gray-text);max-width:560px;text-wrap:pretty}
   .hero-actions{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
-  .hero-checklist{margin:36px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:12px 28px;font:500 16px var(--font-body);color:#c9d1de}
+  .hero-checklist{margin:36px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:12px 28px;font:400 16px var(--font-body);color:#c9d1de}
   .hero-checklist li{display:flex;align-items:center;gap:10px}
-  .hero-checklist svg{width:14px;height:14px;color:var(--cyan);flex-shrink:0}
+  .hero-checklist svg{width:14px;height:14px;color:#c9d1de;flex-shrink:0}
   .hero-media{flex:1 1 380px;min-width:0;height:clamp(440px,44vw,620px);display:flex;align-items:flex-end}
   /* Crédit de photo : 12 px, blanc sur fond bleu nuit à 82 % (contraste mesuré sur les pixels rendus). */
   .photo-credit{position:absolute;right:12px;bottom:12px;z-index:3;max-width:calc(100% - 24px);padding:4px 9px;border-radius:6px;background:rgba(10,14,26,.82);color:#fff;font:12px/1.3 system-ui,-apple-system,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -286,11 +287,12 @@
     .hero-bg::after{background:linear-gradient(180deg,#0a0e1a 0%,rgba(10,14,26,.3) 7%,rgba(10,14,26,.2) 30%,rgba(10,14,26,.45) 52%,rgba(10,14,26,.9) 66%,#0a0e1a 78%)}
     .hero .hero-stats{padding-bottom:56px}
   }
-  .hero-card{position:relative;z-index:2;margin:0 0 20px 20px;width:min(300px,calc(100% - 40px));background:var(--night);border:1px solid rgba(126,141,163,.35);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 48px rgba(0,0,0,.35)}
-  .hero-card-title{font:700 18px var(--font-display);color:#fff}
-  .hero-steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.35 var(--font-body);color:#c9d1de}
-  .hero-steps li{display:flex;gap:10px}
-  .hero-steps span{font:700 13px var(--font-display);color:var(--cyan);min-width:18px}
+  .hero-card{position:relative;z-index:2;margin:0 0 20px 20px;width:min(320px,calc(100% - 40px));background:#0d1220;border-radius:12px;padding:0;display:flex;flex-direction:column;gap:0;box-shadow:inset 0 0 0 1px rgba(201,209,222,.3);overflow:hidden}
+  .hero-card-title{font:700 16px var(--font-display);color:#fff;padding:16px 18px;border-bottom:1px solid rgba(201,209,222,.2)}
+  .hero-steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:0;font:400 15px/1.35 var(--font-body);color:#c9d1de}
+  .hero-steps li{display:flex;gap:12px;align-items:baseline;padding:12px 18px}
+  .hero-steps li + li{border-top:1px solid rgba(201,209,222,.14)}
+  .hero-steps span{font:800 13px var(--font-display);color:#fff;min-width:22px}
   .hero-stats{position:relative;z-index:2;margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(126,141,163,.3);padding:28px 0 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 48px}
   .hero-stats p{margin:0;font:400 17px var(--font-body);color:#c9d1de}
   .hero-stats strong{font:700 22px var(--font-display);color:#fff}
@@ -298,18 +300,21 @@
   /* Défis */
   .challenge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px}
   .challenge-card{background:var(--bg-light);border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;gap:16px}
-  .icon-circle{width:52px;height:52px;border-radius:14px;background:#dcecf1;display:flex;align-items:center;justify-content:center;color:var(--teal)}
+  .icon-circle{width:52px;height:52px;border-radius:14px;background:#e6eaf0;display:flex;align-items:center;justify-content:center;color:#334155}
   .icon-circle svg{width:24px;height:24px}
   h3{margin:0;font:700 22px/1.2 var(--font-display);color:var(--ink)}
-  .challenge-card p, .solution-card p, .benefit-card p, .qui-feature p{margin:0;font:400 16px/1.55 var(--font-body);color:var(--body)}
+  .challenge-card p, .benefit-card p, .qui-feature p{margin:0;font:400 16px/1.55 var(--font-body);color:var(--body)}
 
   /* Solution */
-  .solution-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
-  .solution-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:36px 32px;display:flex;flex-direction:column;gap:18px}
-  .solution-card-top{display:flex;align-items:center;justify-content:space-between}
-  .solution-card-top svg{width:28px;height:28px;color:var(--teal)}
-  .solution-card-top span{font:700 15px var(--font-display);color:var(--muted)}
-  .solution-card h3{font-size:24px}
+  .solution-rows{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line-2)}
+  .solution-row{display:grid;grid-template-columns:56px minmax(0,1fr);gap:6px 20px;padding:30px 0;border-top:1px solid var(--line-2)}
+  .solution-row .row-n{font:800 20px/1.2 var(--font-display);color:var(--ink);grid-row:1 / span 2}
+  .solution-row h3{font-size:24px}
+  .solution-row p{margin:0;font:400 17px/1.55 var(--font-body);color:var(--body)}
+  @media (min-width:900px){
+    .solution-row{grid-template-columns:96px minmax(0,1fr) minmax(0,1.3fr);gap:0 32px;align-items:baseline}
+    .solution-row .row-n{grid-row:auto}
+  }
 
   /* Méthode */
   .methode-photo-wrap{position:relative;height:clamp(220px,28vw,380px)}
@@ -317,7 +322,7 @@
   .methode-steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:36px 24px}
   .methode-step{display:flex;flex-direction:column;gap:18px}
   .step-head{display:flex;align-items:center;gap:14px}
-  .step-circle{width:52px;height:52px;flex-shrink:0;border-radius:50%;border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;font:700 17px var(--font-display);color:var(--teal)}
+  .step-circle{width:52px;height:52px;flex-shrink:0;border-radius:50%;border:2px solid #334155;display:flex;align-items:center;justify-content:center;font:700 17px var(--font-display);color:#334155}
   .step-line{flex:1;height:2px;background:var(--line-2)}
   .methode-step h3{font-size:24px}
   .methode-step p{margin:0;font:400 16px/1.55 var(--font-body);color:var(--body);text-wrap:pretty}
@@ -325,7 +330,7 @@
   /* Bénéfices */
   .benefit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px}
   .benefit-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:32px 28px;display:flex;flex-direction:column;gap:12px}
-  .benefit-card .benefit-value{margin:0 0 8px;font:800 52px/1 var(--font-display);letter-spacing:-.02em;color:var(--teal)}
+  .benefit-card .benefit-value{margin:0 0 8px;font:800 52px/1 var(--font-display);letter-spacing:-.02em;color:var(--ink)}
   .benefit-card h3{font-size:21px}
   .benefit-card p:not(.benefit-value), .qui-feature p{line-height:1.5}
 
@@ -335,7 +340,7 @@
   .qui-media .todo{position:absolute;left:16px;bottom:16px;max-width:calc(100% - 32px)}
   .placeholder-slot{position:absolute;inset:0;border-radius:28px;background:rgba(127,127,127,.08);border:1.5px dashed rgba(10,14,26,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted);text-align:center;padding:16px}
   .placeholder-slot svg{width:28px;height:28px;opacity:.6}
-  .placeholder-slot span{font:500 13px var(--font-body)}
+  .placeholder-slot span{font:400 13px var(--font-body)}
   .qui-text{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:20px}
   .qui-tags{display:flex;flex-wrap:wrap;gap:10px}
   .qui-features{margin:12px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:28px 32px}
@@ -358,7 +363,7 @@
   .faq-item{border-bottom:1px solid var(--line-2)}
   .faq-summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:24px}
   .faq-question{margin:0;font:700 20px/1.3 var(--font-display);color:var(--ink)}
-  .faq-plus{flex-shrink:0;width:36px;height:36px;border-radius:50%;border:1px solid #c5ccd6;display:flex;align-items:center;justify-content:center;font:400 22px/1 var(--font-body);color:var(--teal);transition:transform .2s}
+  .faq-plus{flex-shrink:0;width:36px;height:36px;border-radius:50%;border:1px solid #c5ccd6;display:flex;align-items:center;justify-content:center;font:400 22px/1 var(--font-body);color:#475569;transition:transform .2s}
   @media (prefers-reduced-motion:reduce){ .faq-plus{transition:none} }
   .faq-body{padding:0 60px 26px 0;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
   .faq-answer{margin:0;font:400 17px/1.6 var(--font-body);color:var(--body);text-wrap:pretty}
@@ -381,7 +386,7 @@
   .contact-sec h2 .accent{color:var(--cyan)}
   .contact-sec .section-lead{color:#d5dce8}
   .contact-sec .contact-checklist{color:#e8edf4}
-  .contact-sec .contact-checklist svg{color:var(--cyan)}
+  .contact-sec .contact-checklist svg{color:#c9d1de}
   .contact-sec .contact-address{border-top-color:rgba(126,141,163,.45)}
   .contact-sec .address-label{color:#b6c0d0}
   .contact-sec .address-value{color:#fff}
@@ -392,13 +397,13 @@
   }
   .contact-grid{position:relative;z-index:2;max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px clamp(40px,6vw,88px);align-items:flex-start}
   .contact-info{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:20px}
-  .contact-checklist{margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font:500 17px var(--font-body);color:var(--slate)}
+  .contact-checklist{margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font:400 17px var(--font-body);color:var(--slate)}
   .contact-checklist li{display:flex;align-items:center;gap:12px}
-  .contact-checklist svg{width:16px;height:16px;color:var(--teal);flex-shrink:0}
+  .contact-checklist svg{width:16px;height:16px;color:#475569;flex-shrink:0}
   .contact-address{margin-top:16px;font-style:normal;border-top:1px solid var(--line-2);padding-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
   .address-item{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
   .address-label{font:600 14px var(--font-body);color:var(--muted)}
-  .address-value{font:500 16px var(--font-body);color:var(--slate)}
+  .address-value{font:400 16px var(--font-body);color:var(--slate)}
   .contact-form-wrap{flex:1 1 440px;min-width:0;background:#fff;border:1px solid var(--line);border-radius:28px;padding:clamp(28px,4vw,44px)}
   .contact-form{display:flex;flex-direction:column;gap:20px}
   .contact-form[hidden]{display:none}
@@ -409,7 +414,7 @@
      (WCAG 1.4.11). #7c8696 atteint 3,7:1. */
   .form-field{font:400 17px var(--font-body);color:var(--ink);background:#fff;border:1px solid #7c8696;border-radius:12px;padding:14px 16px;outline:none}
   textarea.form-field{font-family:var(--font-body);line-height:1.5;resize:vertical}
-  .form-field:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(14,116,144,.2)}
+  .form-field:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(10,14,26,.14)}
   .contact-form .btn-teal{margin-top:4px;padding:18px 28px;justify-content:center}
   .form-note{margin:0;font:400 14px/1.5 var(--font-body);color:var(--muted)}
   .form-sent{display:flex;flex-direction:column;gap:12px;padding:24px 0}
@@ -424,20 +429,25 @@
   .footer-brand{flex:1 1 280px;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
   .footer-brand p{margin:0;font:400 16px/1.55 var(--font-body);color:var(--gray-text);max-width:300px}
   .footer-contact{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
-  .footer-email{display:inline-flex;align-items:center;min-height:28px;font:500 15px var(--font-body);color:var(--gray-text);text-decoration:none}
-  .footer-email:hover{color:var(--cyan)}
+  .footer-email{display:inline-flex;align-items:center;min-height:28px;font:400 15px var(--font-body);color:var(--gray-text);text-decoration:none}
+  .footer-email:hover{color:#fff}
   .footer-nav{flex:0 1 200px;display:flex;flex-direction:column;gap:12px}
   .footer-nav-title{font:700 16px var(--font-display);color:#fff;margin-bottom:4px}
   /* Audit §12 : zones tactiles ≥24×24px (voir commentaire sur .nav-link) — padding vertical
      ajouté et compensé par une marge négative de même valeur : la zone cliquable atteint 24px,
      l'espacement visuel de la colonne reste celui du design. */
   .footer-link{display:inline-flex;align-items:center;min-height:24px;padding:3px 0;margin:-3px 0;font:400 15px var(--font-body);color:var(--gray-text);text-decoration:none}
-  .footer-link:hover{color:var(--cyan)}
+  .footer-link:hover{color:#fff}
   .footer-bottom{border-top:1px solid rgba(221,221,221,.18);padding-top:24px;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
   .footer-copy{margin:0;font:400 14px var(--font-body);color:var(--gray-text)}
   .footer-legal{display:flex;flex-wrap:wrap;gap:12px 28px}
   .footer-legal-link{display:inline-flex;align-items:center;min-height:24px;padding:4px 0;margin:-4px 0;font:400 14px var(--font-body);color:var(--gray-text);text-decoration:none}
-  .footer-legal-link:hover{color:var(--cyan)}
+  .footer-legal-link:hover{color:#fff}
+  /* Retours à la ligne du titre fixés (aucun mot court en fin de ligne, indépendants des métriques de la police chargée, donc sans décalage au changement de police) : 5 lignes au-dessus de 1120 px et jusqu'à 414 px, 3 lignes entre les deux. */
+  .hero-title .p{display:block}
+  .hero-title .g{display:block;white-space:nowrap}
+  @media (min-width:415px) and (max-width:1120px){ .hero-title .g{display:inline} .hero-title .p{white-space:nowrap} }
+  @media (max-width:600px){ .hero-title{font-size:clamp(36px,11.2vw,46px)} }
   /* ANIM:CSS début */
   /* Animations natives (CSS, SVG, IntersectionObserver, requestAnimationFrame) — propriétés animées : transform, opacity
      et stroke-dashoffset uniquement, donc aucun décalage de mise en page. Tout ce qui suit est réservé à <html class="anim">
@@ -463,7 +473,7 @@
   @media (hover:hover) and (pointer:fine){ .anim .btn:hover svg{transform:translateX(5px)} }
   .anim .sc-ring{stroke-dasharray:151;stroke-dashoffset:151;animation:draw .4s var(--ease-out) .05s forwards}
   .anim .sc-tick{stroke-dasharray:34;stroke-dashoffset:34;animation:draw .3s var(--ease-out) .4s forwards}
-  :root{--sent-color:var(--teal);--bar-color:var(--teal)}
+  :root{--sent-color:#334155;--bar-color:#334155}
   /* V1 : timeline de la méthode — la ligne bleu pétrole se remplit avec le défilement (variable --f, de 0 à 1, posée par le script),
      l'étape franchie reçoit un halo (classe "on"). */
   .step-circle{position:relative;isolation:isolate}
@@ -520,13 +530,13 @@
     <div class="hero-grid">
       <div class="hero-text">
         <div class="eyebrow on-dark">Agence d'automatisation IA · Annemasse · Grand Genève</div>
-        <h1 class="hero-title">Automatisez les tâches répétitives de votre PME, à Annemasse</h1>
+        <h1 class="hero-title"><span class="p"><span class="g">Automatisez</span> <span class="g">les tâches</span></span> <span class="p"><span class="g">répétitives</span> <span class="g">de votre PME,</span></span> <span class="p"><span class="g">à Annemasse</span></span></h1>
         <p class="hero-lead">Gagnez du temps et augmentez votre chiffre d'affaires grâce à nos solutions IA sur-mesure.</p>
         <div class="hero-actions">
           <a class="btn btn-cyan" href="#contact">Réserver mon audit gratuit
             <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
           </a>
-          <a class="link-underline" href="/methode/">Découvrir notre méthode</a>
+          <a class="btn btn-outline on-dark" href="/methode/">Découvrir notre méthode</a>
         </div>
         <ul class="hero-checklist">
           <li><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>Sans engagement</li>
@@ -570,7 +580,7 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Les défis</div>
-      <h2>Votre entreprise à Annemasse fait face à <span class="accent">ces défis ?</span></h2>
+      <h2>Votre entreprise à Annemasse fait face à ces <span class="accent">défis</span> ?</h2>
       <p class="section-lead">Les entreprises qui n'adoptent pas l'intelligence artificielle perdent un avantage concurrentiel majeur. Pourtant, des solutions simples existent pour renverser cette tendance rapidement.</p>
     </div>
     <div class="challenge-grid">
@@ -610,32 +620,23 @@
         <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>
       </a>
     </div>
-    <div class="solution-grid">
-      <article class="solution-card">
-        <div class="solution-card-top">
-          <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
-          <span>01</span>
-        </div>
+    <ol class="solution-rows">
+      <li class="solution-row">
+        <span class="row-n">01</span>
         <h3>Analyse détaillée et complète</h3>
         <p>Nous analysons vos processus, vos outils actuels et votre organisation pour vous offrir une vision claire.</p>
-      </article>
-      <article class="solution-card">
-        <div class="solution-card-top">
-          <svg viewBox="0 0 352 512" fill="currentColor" aria-hidden="true"><path d="M176 80c-52.94 0-96 43.06-96 96 0 8.84 7.16 16 16 16s16-7.16 16-16c0-35.3 28.72-64 64-64 8.84 0 16-7.16 16-16s-7.16-16-16-16zM96.06 459.17c0 3.15.93 6.22 2.68 8.84l24.51 36.84c2.97 4.46 7.97 7.14 13.32 7.14h78.85c5.36 0 10.36-2.68 13.32-7.14l24.51-36.84c1.74-2.62 2.67-5.7 2.68-8.84l.05-43.18H96.02l.04 43.18zM176 0C73.72 0 0 82.97 0 176c0 44.37 16.45 84.85 43.56 115.78 16.64 18.99 42.74 58.8 52.42 92.16v.06h48v-.12c-.01-4.77-.72-9.51-2.15-14.07-5.59-17.81-22.82-64.77-62.17-109.67-20.54-23.43-31.52-53.15-31.61-84.14-.2-73.64 59.67-128 127.95-128 70.58 0 128 57.42 128 128 0 30.97-11.24 60.85-31.65 84.14-39.11 44.61-56.42 91.47-62.1 109.46a47.507 47.507 0 0 0-2.22 14.3v.1h48v-.05c9.68-33.37 35.78-73.18 52.42-92.16C335.55 260.85 352 220.37 352 176 352 78.8 273.2 0 176 0z"/></svg>
-          <span>02</span>
-        </div>
+      </li>
+      <li class="solution-row">
+        <span class="row-n">02</span>
         <h3>Identification des opportunités IA</h3>
         <p>Nous identifions les gains automatisables les plus pertinents pour votre activité et vos objectifs.</p>
-      </article>
-      <article class="solution-card">
-        <div class="solution-card-top">
-          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M288 248v28c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-28c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm-12 72H108c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h168c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12zm108-188.1V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h204.1C264.8 0 277 5.1 286 14.1L369.9 98c9 8.9 14.1 21.2 14.1 33.9zm-128-80V128h76.1L256 51.9zM336 464V176H232c-13.3 0-24-10.7-24-24V48H48v416h288z"/></svg>
-          <span>03</span>
-        </div>
+      </li>
+      <li class="solution-row">
+        <span class="row-n">03</span>
         <h3>Recommandations concrètes</h3>
         <p>Vous recevez une liste de recommandations pour passer à l'IA efficacement.</p>
-      </article>
-    </div>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -643,7 +644,7 @@
   <div class="wrap" style="gap:56px">
     <div class="section-head" style="max-width:760px">
       <div class="eyebrow">La méthode</div>
-      <h2>Une approche <span class="accent">structurée et éprouvée</span></h2>
+      <h2>Une approche <span class="accent">structurée</span> et éprouvée</h2>
       <p class="section-lead plain">Notre accompagnement en intelligence artificielle à Annemasse suit un processus en 4 étapes.</p>
     </div>
     <div class="methode-photo-wrap">
@@ -720,7 +721,7 @@
     </div>
     <div class="qui-text">
       <div class="eyebrow">Qui sommes-nous</div>
-      <h2>Votre agence IA de confiance <span class="accent">à Annemasse</span></h2>
+      <h2>Votre agence IA de confiance à <span class="accent">Annemasse</span></h2>
       <div class="qui-tags">
         <span class="todo">À CONFIRMER : nom du fondateur</span>
         <span class="todo">À CONFIRMER : parcours du fondateur</span>
@@ -752,7 +753,7 @@
   <div class="wrap">
     <div class="section-head" style="max-width:760px">
       <div class="eyebrow">Témoignages</div>
-      <h2 class="plain">Ce que disent <span class="accent">nos clients</span></h2>
+      <h2 class="plain">Ce que disent nos <span class="accent">clients</span></h2>
       <p class="section-lead plain">Chaque avis est publié avec son auteur, son entreprise, sa date et un lien vers la source d'origine.</p>
     </div>
     <div class="testimonial-grid">
@@ -809,7 +810,7 @@
     <div class="faq-head">
       <div class="eyebrow">FAQ</div>
       <h2 class="plain">Questions <span class="accent">fréquentes</span></h2>
-      <a class="link-teal" href="/faq/">Toutes les questions</a>
+      <a class="btn btn-outline" href="/faq/">Toutes les questions</a>
     </div>
     <div class="faq-list">
       <details class="faq-item" open>
@@ -884,7 +885,7 @@
   <div class="contact-grid">
     <div class="contact-info">
       <div class="eyebrow on-dark">Contact</div>
-      <h2>Prêt à transformer votre entreprise avec l'IA <span class="accent">à Annemasse ?</span></h2>
+      <h2>Prêt à transformer votre entreprise avec l'IA à <span class="accent">Annemasse</span> ?</h2>
       <p class="section-lead">Réservez votre audit IA gratuit et découvrez concrètement comment exploiter l'intelligence artificielle dans votre entreprise.</p>
       <ul class="contact-checklist">
         <li><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>Sans engagement</li>
@@ -1158,7 +1159,7 @@
     counters('.hero-stats strong, .benefit-value');
 
     // Cartes (défis, solution, bénéfices, témoignages) : fondu et glissement vers le haut, en cascade.
-    ['.challenge-grid', '.solution-grid', '.benefit-grid', '.testimonial-grid'].forEach(function(g){
+    ['.challenge-grid', '.solution-rows', '.benefit-grid', '.testimonial-grid'].forEach(function(g){
       all(g).forEach(function(grid){
         Array.prototype.forEach.call(grid.children, function(c){ c.setAttribute('data-reveal', ''); });
       });

@@ -790,3 +790,57 @@ Le plus bas (4,80) est le numéro « 01 » en bleu pétrole sur le glacier. `con
 - `livrable/v2-nuit-suisse.html`, `livrable/credits.txt` (modifiés) ; `livrable/assets/img/fonds/v2-benefices-*.webp` (6)
 - `scripts/fonds-images.js`, `scripts/contraste-fonds.js` (options `PAGE`, `ZONES`, `SORTIE`), `scripts/anime-pages.js` (couleur de focus et de coche) ; `.claude/skills/taste/`, `source/tech/taste/`
 - `mesures/rythme-fonds/` (captures, `contrastes-apres.*`, `contrastes-autres-zones.*`) ; `mesures/animations/verifications.json`, `mesures/v2-controles/` (régénérés)
+
+## Étape 19 — V1 : décisions de goût issues de l'analyse de Cohere (2026-09-25)
+
+Exécutée après la fin de l'étape 18 (refonte des fonds V2), sans chevauchement.
+
+### Ce qui a été fait
+
+- **Titre du héros** : `clamp(40px, 5.7vw, 80px)` (80 px à partir de 1404 px), interligne 1,0, crénage -0,03 em, mesure de 12 em ; sous 600 px, `clamp(36px, 11.2vw, 46px)` (42 px à 375, 44 px à 390, 46 px à 414). Les retours à la ligne sont fixés par groupes (`Automatisez` / `les tâches` / `répétitives` / `de votre PME,` / `à Annemasse`) : 5 lignes jusqu'à 414 px et à partir de 1121 px, 3 lignes entre les deux (« Automatisez les tâches / répétitives de votre PME, / à Annemasse »). Testé de 320 à 1920 px : aucun mot court (les, de, à) en fin de ligne.
+- **Solution** : les trois cartes deviennent une liste ordonnée à filets de 1 px numérotée 01 à 03 (numéro en Outfit 800, titre, texte ; une seule colonne sous 900 px, trois colonnes au-dessus). Défis, bénéfices et témoignages restent en cartes.
+- **Carte du héros** : panneau d'interface (rayon 12 px, anneau inset de 1 px, barre de titre, trois lignes séparées par des filets, numéros 01 à 03 en Outfit 800 blanc) ; contenu inchangé : les trois étapes de `contenu.md` (« Analyse de vos processus », « Identification des opportunités IA », « Recommandations concrètes »).
+- **Accent restreint** : étiquettes, liens, icônes, cercles d'étapes, icône « + » de la FAQ et anneau de focus des champs passent en gris ardoise (`#475569` pour les étiquettes, `#334155` pour les liens et icônes, encre pour le focus) ; les grands chiffres des bénéfices passent en encre ; les survols cyan du menu et du pied de page passent en blanc. Le bleu pétrole reste sur les boutons et sur un seul mot par H2 : « ces **défis** », « **personnalisé** », « **structurée** », « **concrets** », « à **Annemasse** », « nos **clients** », « **fréquentes** », « à **Annemasse** » (contact, en cyan sur fond sombre).
+- **Boutons** : « Découvrir notre méthode » (héros, contour blanc) et « Toutes les questions » (FAQ, contour encre) deviennent des pastilles secondaires à contour (anneau inset de 1,5 px, plein au survol). Les boutons du héros passent à 17 px (padding 16/26) pour tenir sur une ligne à 1440 px.
+- **Polices : de 8 à 4 instances** : Outfit 700 et 800, Figtree 400 et 600 (avant : Outfit 500 à 800, Figtree 400 à 700). Correspondances : boutons et anciens liens Outfit 500 → 700 ; menu et libellés Figtree 500 → 600 (menu) ou 400 (listes de coches, adresse, e-mail du pied). Mesure : 4 faces chargées, 2 fichiers téléchargés.
+- Outils : `scripts/contraste-fonds.js` (zone « Page entière » pour la V1 ; option `OUVRIR_DETAILS=1` ; les contenus de `<details>` refermés sont ignorés), `scripts/anime-pages.js` (liste de la Solution, couleurs de focus et de coche de la V1).
+
+### Mesures
+
+**Contrastes AA sur les pixels rendus** (page entière, FAQ dépliée, 214 lignes de texte à 1440 px et 208 à 768 et 390 px) : 0 échec ; pire rapport 5,03:1 (seuil 4,5:1). `controle-v1.js` : 28 et 29 couples, 0 échec.
+
+**CLS** (balayage de 14 largeurs de 320 à 1920 px, modes statique et animé, défilement complet ; avant → après) :
+
+| Largeur | Avant | Après |
+|---|---|---|
+| 320 px | 0,0017 | 0,0014 |
+| 360 px | 0,0433 (animé 0,0463) | 0,0008 |
+| 390 px | 0,0022 | 0,0005 |
+| 414 px | 0,0141 | 0,0106 |
+| 600 px | 0,0022 | 0,0020 |
+| 768 à 1920 px | 0,0001 à 0,0038 | 0,0001 à 0,0031 (0,0096 en animé à 900 px, un passage) |
+| **Maximum** | **0,0463** | **0,0106** |
+
+Le baseline était déjà au-dessus de 0,01 à 360 et 414 px (mesure jamais faite à ces largeurs pour la V1) : le maximum est divisé par quatre, la valeur de 414 px reste juste au-dessus de 0,01 (cause non recherchée). `verifie-animations.js` : 0,0002 (1440 px) et 0,0005 (390 px), 0 erreur de console, 0 élément masqué, 0 défilement horizontal, hauteur des titres identique en mode animé et statique.
+
+**Captures avant/après** : `mesures/v1-taste/` (`avant-page-` et `apres-page-<1440|390>.jpg`, `comparaison-page-` et `comparaison-heros-<1440|390>.jpg`, avant à gauche).
+
+### Problèmes rencontrés et leur solution
+
+| Problème | Solution |
+|---|---|
+| Le CLS à 600 px est passé de 0,0022 à 0,2186 avec le nouveau titre : avec la police de secours (plus large), « Automatisez les tâches » passait sur 4 lignes, puis 3 avec Outfit, ce qui décalait tout le héros de 48 px | Groupes de mots insécables sur trois niveaux (`.p`, `.g`) : retours à la ligne indépendants de la police ; entre 415 et 1120 px, chaque ligne est `nowrap`. Résultat : 0,0020 à 600 px. |
+| Le contrôle de contraste de la page entière signalait des échecs dans la dernière question de la FAQ | Contenu d'un `<details>` refermé, non rendu : ignoré ; les réponses sont mesurées dépliées (`OUVRIR_DETAILS=1`). |
+
+### Réserves
+
+- **Trait de la timeline de la méthode et halo des étapes actives restent en bleu pétrole** : c'est l'état fonctionnel demandé à l'étape 16 (« ligne bleu pétrole qui se dessine ») ; l'instruction d'accent restreint aurait pu le retirer. La phrase de la bande de transition garde aussi son mot « unique » en bleu pétrole (une phrase, pas un H2). À arbitrer.
+- Le titre du héros fait 5 lignes à 1440 px (400 px de haut) : plus imposant qu'avant (4 lignes à 66 px), le bloc entier passe de 861 à 917 px de haut.
+- 414 px : CLS de 0,0106, juste au-dessus de 0,01.
+- LCP de la V1 non remesuré après ces changements.
+- La V1 n'a pas de police de secours à métriques ajustées comme la V2 : le décalage au chargement des polices reste possible sur les textes hors du titre.
+
+### Fichiers produits
+
+- `livrable/v1-clarte.html` (modifié) ; `scripts/anime-pages.js`, `scripts/contraste-fonds.js` (modifiés)
+- `mesures/v1-taste/` (captures, `contrastes-apres.json` et `.md`) ; `mesures/v1-controles/`, `mesures/animations/verifications.json` (régénérés)

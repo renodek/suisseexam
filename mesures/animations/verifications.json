@@ -2,11 +2,15 @@
  "v1-clarte 1440 anime": {
   "anim": true,
   "ok": true,
-  "cls": 0.0008301897967303241,
+  "cls": 0.00020429809737761487,
   "shifts": [
    {
-    "v": 0.0008301897967303241,
-    "s": "#text|#text|#text|btn btn-cyan compact|link-underline"
+    "v": 0.00006258603529020919,
+    "s": "nav-desktop|LI"
+   },
+   {
+    "v": 0.0001417120620874057,
+    "s": "nav-desktop|btn btn-outline on-dark|btn btn-cyan compact|[object SVGAnimatedString]"
    }
   ],
   "masques": 0,
@@ -21,15 +25,11 @@
  "v1-clarte 1440 statique": {
   "anim": false,
   "ok": false,
-  "cls": 0.000820002183534808,
+  "cls": 0.00011061306758509088,
   "shifts": [
    {
-    "v": 0.0001748574171864283,
-    "s": "#text|nav-desktop|P|todo dark"
-   },
-   {
-    "v": 0.0006451447663483797,
-    "s": "#text|btn btn-cyan compact|link-underline|[object SVGAnimatedString]"
+    "v": 0.00011061306758509088,
+    "s": "btn btn-outline on-dark|btn btn-cyan compact|LI|nav-link|[object SVGAnimatedString]"
    }
   ],
   "masques": 0,
@@ -43,15 +43,15 @@
  "v1-clarte 1440 reduit": {
   "anim": false,
   "ok": false,
-  "cls": 0.000820002183534808,
+  "cls": 0.00020621307749807102,
   "shifts": [
    {
-    "v": 0.0001748574171864283,
-    "s": "#text|nav-desktop|P|todo dark"
+    "v": 0.0001436270422078618,
+    "s": "nav-desktop|btn btn-outline on-dark|btn btn-cyan compact|[object SVGAnimatedString]"
    },
    {
-    "v": 0.0006451447663483797,
-    "s": "#text|btn btn-cyan compact|link-underline|[object SVGAnimatedString]"
+    "v": 0.00006258603529020919,
+    "s": "nav-desktop|LI"
    }
   ],
   "masques": 0,
@@ -78,15 +78,15 @@
  "v1-clarte 390 anime": {
   "anim": true,
   "ok": true,
-  "cls": 0.0022370152738208295,
+  "cls": 0.0005242750870528649,
   "shifts": [
    {
-    "v": 0.0007486926242481798,
+    "v": 0.0005165938588160811,
     "s": "::after|[object SVGAnimatedString]"
    },
    {
-    "v": 0.0014883226495726496,
-    "s": "::after|hero-checklist|[object SVGAnimatedString]"
+    "v": 0.000007681228236783793,
+    "s": "[object SVGAnimatedString]"
    }
   ],
   "masques": 0,
@@ -101,15 +101,15 @@
  "v1-clarte 390 statique": {
   "anim": false,
   "ok": false,
-  "cls": 0.0022370152738208295,
+  "cls": 0.0005242750870528649,
   "shifts": [
    {
-    "v": 0.0007486926242481798,
+    "v": 0.0005165938588160811,
     "s": "::after|[object SVGAnimatedString]"
    },
    {
-    "v": 0.0014883226495726496,
-    "s": "::after|hero-checklist|[object SVGAnimatedString]"
+    "v": 0.000007681228236783793,
+    "s": "[object SVGAnimatedString]"
    }
   ],
   "masques": 0,
@@ -123,15 +123,15 @@
  "v1-clarte 390 reduit": {
   "anim": false,
   "ok": false,
-  "cls": 0.0022536273345995566,
+  "cls": 0.0005242750870528649,
   "shifts": [
    {
-    "v": 0.001485181623931624,
-    "s": "::after|hero-checklist|[object SVGAnimatedString]"
+    "v": 0.0005165938588160811,
+    "s": "::after|[object SVGAnimatedString]"
    },
    {
-    "v": 0.0007684457106679328,
-    "s": "::after|[object SVGAnimatedString]"
+    "v": 0.000007681228236783793,
+    "s": "[object SVGAnimatedString]"
    }
   ],
   "masques": 0,
@@ -158,10 +158,10 @@
  "v2-nuit-suisse 1440 anime": {
   "anim": true,
   "ok": true,
-  "cls": 0.0007731895164207174,
+  "cls": 0.001270375645013503,
   "shifts": [
    {
-    "v": 0.00004140396432130915,
+    "v": 0.00009623526114004629,
     "s": "#text"
    },
    {
@@ -169,16 +169,16 @@
     "s": "#text"
    },
    {
-    "v": 0.00006954667205182612,
-    "s": "#text"
-   },
-   {
-    "v": 0.00004227204499421297,
-    "s": "#text"
-   },
-   {
-    "v": 0.0001295678409529321,
+    "v": 0.0001456371166087963,
     "s": "#text|#text"
+   },
+   {
+    "v": 0.00008116148646476337,
+    "s": "#text|#text"
+   },
+   {
+    "v": 0.000021969265407986112,
+    "s": "#text"
    }
   ],
   "masques": 0,
@@ -232,10 +232,14 @@
  "v2-nuit-suisse 390 anime": {
   "anim": true,
   "ok": true,
-  "cls": 0.0009467694484013927,
+  "cls": 0.000905446541627097,
   "shifts": [
    {
-    "v": 0.00012662749287749287,
+    "v": 0.00007404390234251345,
+    "s": "#text"
+   },
+   {
+    "v": 0.000034606976100031654,
     "s": "#text"
    },
    {
@@ -248,10 +252,6 @@
    },
    {
     "v": 0.000029537828426717317,
-    "s": "#text"
-   },
-   {
-    "v": 0.000028148642766698325,
     "s": "#text"
    }
   ],

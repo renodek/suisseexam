@@ -45,7 +45,7 @@ const CSS_COMMUN = String.raw`
   .anim .sc-tick{stroke-dasharray:34;stroke-dashoffset:34;animation:draw .3s var(--ease-out) .4s forwards}
 `;
 
-const CSS_V1 = String.raw`  :root{--sent-color:var(--teal);--bar-color:var(--teal)}
+const CSS_V1 = String.raw`  :root{--sent-color:#334155;--bar-color:#334155}
   /* V1 : timeline de la méthode — la ligne bleu pétrole se remplit avec le défilement (variable --f, de 0 à 1, posée par le script),
      l'étape franchie reçoit un halo (classe "on"). */
   .step-circle{position:relative;isolation:isolate}
@@ -139,7 +139,7 @@ const JS_V1 = String.raw`
     counters('.hero-stats strong, .benefit-value');
 
     // Cartes (défis, solution, bénéfices, témoignages) : fondu et glissement vers le haut, en cascade.
-    ['.challenge-grid', '.solution-grid', '.benefit-grid', '.testimonial-grid'].forEach(function(g){
+    ['.challenge-grid', '.solution-rows', '.benefit-grid', '.testimonial-grid'].forEach(function(g){
       all(g).forEach(function(grid){
         Array.prototype.forEach.call(grid.children, function(c){ c.setAttribute('data-reveal', ''); });
       });

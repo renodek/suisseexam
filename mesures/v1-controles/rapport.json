@@ -56,6 +56,7 @@
       "element": "Lien « Découvrir notre méthode »",
       "v1_change": [
         "color",
+        "background",
         "borderBottom"
       ],
       "design_change": [
@@ -63,10 +64,10 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
-        "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "1px rgb(16, 215, 253)",
-        "boxShadow": "none",
+        "color": "rgb(10, 14, 26)",
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "0px rgb(10, 14, 26)",
+        "boxShadow": "rgba(255, 255, 255, 0.7) 0px 0px 0px 1.5px inset",
         "transform": "none"
       },
       "design_survol": {
@@ -76,7 +77,7 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Bouton section Solution",
@@ -137,9 +138,9 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
+        "color": "rgb(255, 255, 255)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(16, 215, 253)",
+        "borderBottom": "0px rgb(255, 255, 255)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -150,12 +151,13 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Lien « Toutes les questions »",
       "v1_change": [
         "color",
+        "background",
         "borderBottom"
       ],
       "design_change": [
@@ -163,10 +165,10 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(11, 92, 115)",
-        "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(11, 92, 115)",
-        "boxShadow": "none",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(10, 14, 26)",
+        "borderBottom": "0px rgb(255, 255, 255)",
+        "boxShadow": "rgb(10, 14, 26) 0px 0px 0px 1.5px inset",
         "transform": "none"
       },
       "design_survol": {
@@ -176,7 +178,7 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Lien de pied de page « Audit IA gratuit »",
@@ -189,9 +191,9 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
+        "color": "rgb(255, 255, 255)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(16, 215, 253)",
+        "borderBottom": "0px rgb(255, 255, 255)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -202,7 +204,7 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Lien légal « Mentions légales »",
@@ -215,9 +217,9 @@
         "borderBottom"
       ],
       "v1_survol": {
-        "color": "rgb(16, 215, 253)",
+        "color": "rgb(255, 255, 255)",
         "background": "rgba(0, 0, 0, 0)",
-        "borderBottom": "0px rgb(16, 215, 253)",
+        "borderBottom": "0px rgb(255, 255, 255)",
         "boxShadow": "none",
         "transform": "none"
       },
@@ -228,7 +230,7 @@
         "boxShadow": "none",
         "transform": "none"
       },
-      "identiqueAuDesign": true
+      "identiqueAuDesign": false
     },
     {
       "element": "Carte défi",
@@ -252,15 +254,9 @@
     },
     {
       "element": "Carte solution",
-      "v1_change": [],
+      "v1_change": null,
       "design_change": [],
-      "v1_survol": {
-        "color": "rgb(61, 70, 85)",
-        "background": "rgb(255, 255, 255)",
-        "borderBottom": "1px rgb(225, 230, 237)",
-        "boxShadow": "none",
-        "transform": "none"
-      },
+      "v1_survol": null,
       "design_survol": {
         "color": "rgb(0, 0, 0)",
         "background": "rgb(255, 255, 255)",
@@ -432,24 +428,9 @@
   },
   "contrastes": {
     "390": {
-      "couples": 26,
+      "couples": 28,
       "echecs": [],
       "tous": [
-        {
-          "fg": "#0e7490",
-          "bg": "#f3f5f8",
-          "ratio": 4.91,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 3,
-          "samples": [
-            "La solution",
-            "Les bénéfices",
-            "Témoignages"
-          ],
-          "note": ""
-        },
         {
           "fg": "#0e7490",
           "bg": "#f3f5f8",
@@ -461,22 +442,7 @@
           "samples": [
             "personnalisé",
             "concrets",
-            "nos clients"
-          ],
-          "note": ""
-        },
-        {
-          "fg": "#0e7490",
-          "bg": "#ffffff",
-          "ratio": 5.36,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 16,
-          "samples": [
-            "Les défis",
-            "La méthode",
-            "01"
+            "clients"
           ],
           "note": ""
         },
@@ -487,11 +453,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 9,
+          "count": 5,
           "samples": [
-            "ces défis ?",
-            "structurée et éprouvée",
-            "40 %"
+            "défis",
+            "structurée",
+            "Annemasse"
           ],
           "note": ""
         },
@@ -529,11 +495,9 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 4,
+          "count": 1,
           "samples": [
-            "01",
-            "02",
-            "03"
+            "Vos données servent uniquement à vous re"
           ],
           "note": ""
         },
@@ -553,6 +517,21 @@
           "note": ""
         },
         {
+          "fg": "#475569",
+          "bg": "#f3f5f8",
+          "ratio": 6.94,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "La solution",
+            "Les bénéfices",
+            "Témoignages"
+          ],
+          "note": ""
+        },
+        {
           "fg": "#9ca3af",
           "bg": "#0a0e1a",
           "ratio": 7.58,
@@ -568,13 +547,28 @@
           "note": ""
         },
         {
+          "fg": "#475569",
+          "bg": "#ffffff",
+          "ratio": 7.58,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 10,
+          "samples": [
+            "Les défis",
+            "La méthode",
+            "Qui sommes-nous"
+          ],
+          "note": ""
+        },
+        {
           "fg": "#3d4655",
           "bg": "#f3f5f8",
           "ratio": 8.72,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 6,
+          "count": 9,
           "samples": [
             "Vos équipes passent trop de temps sur de",
             "Sans système performant pour accélérer v",
@@ -589,11 +583,26 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 23,
+          "count": 20,
           "samples": [
             "Les entreprises qui n'adoptent pas l'int",
-            "Nous analysons vos processus, vos outils",
-            "Nous identifions les gains automatisable"
+            "Notre accompagnement en intelligence art",
+            "Analyse approfondie de vos processus, de"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#334155",
+          "bg": "#ffffff",
+          "ratio": 10.35,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "01",
+            "02",
+            "03"
           ],
           "note": ""
         },
@@ -604,10 +613,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 2,
+          "count": 4,
           "samples": [
-            "Adresse",
-            "Téléphone"
+            "Agence d'automatisation IA · Annemasse ·",
+            "Contact",
+            "Adresse"
           ],
           "note": ""
         },
@@ -645,27 +655,12 @@
           "fg": "#10d7fd",
           "bg": "#0a0e1a",
           "ratio": 11.15,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 5,
-          "samples": [
-            "Agence d'automatisation IA · Annemasse ·",
-            "01",
-            "02"
-          ],
-          "note": ""
-        },
-        {
-          "fg": "#10d7fd",
-          "bg": "#0a0e1a",
-          "ratio": 11.15,
           "large": true,
           "required": 3,
           "ok": true,
           "count": 1,
           "samples": [
-            "à Annemasse ?"
+            "Annemasse"
           ],
           "note": ""
         },
@@ -686,12 +681,27 @@
         },
         {
           "fg": "#c9d1de",
+          "bg": "#0d1220",
+          "ratio": 12.15,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Analyse de vos processus",
+            "Identification des opportunités IA",
+            "Recommandations concrètes"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
           "bg": "#0a0e1a",
           "ratio": 12.52,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 9,
+          "count": 6,
           "samples": [
             "Sans engagement",
             "Réponse sous 24 h",
@@ -749,11 +759,26 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 7,
+          "count": 13,
           "samples": [
             "Perte de temps massive",
             "Manque d'automatisation",
             "Concurrence plus rapide"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
+          "bg": "#0d1220",
+          "ratio": 18.68,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 4,
+          "samples": [
+            "L'audit IA gratuit",
+            "01",
+            "02"
           ],
           "note": ""
         },
@@ -764,7 +789,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 17,
+          "count": 16,
           "samples": [
             "Services",
             "Méthode",
@@ -779,11 +804,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 5,
+          "count": 9,
           "samples": [
-            "Automatisez les tâches répétitives de vo",
-            "50+",
-            "3x"
+            "Automatisez",
+            "les tâches",
+            "répétitives"
           ],
           "note": ""
         },
@@ -794,11 +819,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 26,
+          "count": 27,
           "samples": [
             "Votre entreprise à Annemasse fait face à",
-            "Analyse détaillée et complète",
-            "Identification des opportunités IA"
+            "Une approche et éprouvée",
+            "Audit"
           ],
           "note": ""
         },
@@ -809,7 +834,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 3,
+          "count": 4,
           "samples": [
             "Jean-Pierre Morel",
             "Clara Vallet",
@@ -820,24 +845,9 @@
       ]
     },
     "1440": {
-      "couples": 27,
+      "couples": 29,
       "echecs": [],
       "tous": [
-        {
-          "fg": "#0e7490",
-          "bg": "#f3f5f8",
-          "ratio": 4.91,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 3,
-          "samples": [
-            "La solution",
-            "Les bénéfices",
-            "Témoignages"
-          ],
-          "note": ""
-        },
         {
           "fg": "#0e7490",
           "bg": "#f3f5f8",
@@ -849,22 +859,7 @@
           "samples": [
             "personnalisé",
             "concrets",
-            "nos clients"
-          ],
-          "note": ""
-        },
-        {
-          "fg": "#0e7490",
-          "bg": "#ffffff",
-          "ratio": 5.36,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 16,
-          "samples": [
-            "Les défis",
-            "La méthode",
-            "01"
+            "clients"
           ],
           "note": ""
         },
@@ -875,11 +870,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 9,
+          "count": 5,
           "samples": [
-            "ces défis ?",
-            "structurée et éprouvée",
-            "40 %"
+            "défis",
+            "structurée",
+            "Annemasse"
           ],
           "note": ""
         },
@@ -917,11 +912,9 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 4,
+          "count": 1,
           "samples": [
-            "01",
-            "02",
-            "03"
+            "Vos données servent uniquement à vous re"
           ],
           "note": ""
         },
@@ -941,6 +934,21 @@
           "note": ""
         },
         {
+          "fg": "#475569",
+          "bg": "#f3f5f8",
+          "ratio": 6.94,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "La solution",
+            "Les bénéfices",
+            "Témoignages"
+          ],
+          "note": ""
+        },
+        {
           "fg": "#9ca3af",
           "bg": "#0a0e1a",
           "ratio": 7.58,
@@ -956,13 +964,28 @@
           "note": ""
         },
         {
+          "fg": "#475569",
+          "bg": "#ffffff",
+          "ratio": 7.58,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 10,
+          "samples": [
+            "Les défis",
+            "La méthode",
+            "Qui sommes-nous"
+          ],
+          "note": ""
+        },
+        {
           "fg": "#3d4655",
           "bg": "#f3f5f8",
           "ratio": 8.72,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 6,
+          "count": 9,
           "samples": [
             "Vos équipes passent trop de temps sur de",
             "Sans système performant pour accélérer v",
@@ -977,11 +1000,26 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 23,
+          "count": 20,
           "samples": [
             "Les entreprises qui n'adoptent pas l'int",
-            "Nous analysons vos processus, vos outils",
-            "Nous identifions les gains automatisable"
+            "Notre accompagnement en intelligence art",
+            "Analyse approfondie de vos processus, de"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#334155",
+          "bg": "#ffffff",
+          "ratio": 10.35,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 5,
+          "samples": [
+            "01",
+            "02",
+            "03"
           ],
           "note": ""
         },
@@ -992,10 +1030,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 2,
+          "count": 4,
           "samples": [
-            "Adresse",
-            "Téléphone"
+            "Agence d'automatisation IA · Annemasse ·",
+            "Contact",
+            "Adresse"
           ],
           "note": ""
         },
@@ -1033,27 +1072,12 @@
           "fg": "#10d7fd",
           "bg": "#0a0e1a",
           "ratio": 11.15,
-          "large": false,
-          "required": 4.5,
-          "ok": true,
-          "count": 5,
-          "samples": [
-            "Agence d'automatisation IA · Annemasse ·",
-            "01",
-            "02"
-          ],
-          "note": ""
-        },
-        {
-          "fg": "#10d7fd",
-          "bg": "#0a0e1a",
-          "ratio": 11.15,
           "large": true,
           "required": 3,
           "ok": true,
           "count": 1,
           "samples": [
-            "à Annemasse ?"
+            "Annemasse"
           ],
           "note": ""
         },
@@ -1074,12 +1098,27 @@
         },
         {
           "fg": "#c9d1de",
+          "bg": "#0d1220",
+          "ratio": 12.15,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 3,
+          "samples": [
+            "Analyse de vos processus",
+            "Identification des opportunités IA",
+            "Recommandations concrètes"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#c9d1de",
           "bg": "#0a0e1a",
           "ratio": 12.52,
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 9,
+          "count": 6,
           "samples": [
             "Sans engagement",
             "Réponse sous 24 h",
@@ -1152,7 +1191,7 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 7,
+          "count": 13,
           "samples": [
             "Perte de temps massive",
             "Manque d'automatisation",
@@ -1162,16 +1201,31 @@
         },
         {
           "fg": "#ffffff",
+          "bg": "#0d1220",
+          "ratio": 18.68,
+          "large": false,
+          "required": 4.5,
+          "ok": true,
+          "count": 4,
+          "samples": [
+            "L'audit IA gratuit",
+            "01",
+            "02"
+          ],
+          "note": ""
+        },
+        {
+          "fg": "#ffffff",
           "bg": "#0a0e1a",
           "ratio": 19.25,
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 5,
+          "count": 9,
           "samples": [
-            "Automatisez les tâches répétitives de vo",
-            "50+",
-            "3x"
+            "Automatisez",
+            "les tâches",
+            "répétitives"
           ],
           "note": ""
         },
@@ -1182,11 +1236,11 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 12,
+          "count": 11,
           "samples": [
             "Découvrir notre méthode",
-            "L'audit IA gratuit",
-            "Photo by on"
+            "Photo by on",
+            "ThisisEngineering"
           ],
           "note": ""
         },
@@ -1197,11 +1251,11 @@
           "large": true,
           "required": 3,
           "ok": true,
-          "count": 26,
+          "count": 27,
           "samples": [
             "Votre entreprise à Annemasse fait face à",
-            "Analyse détaillée et complète",
-            "Identification des opportunités IA"
+            "Une approche et éprouvée",
+            "Audit"
           ],
           "note": ""
         },
@@ -1212,7 +1266,7 @@
           "large": false,
           "required": 4.5,
           "ok": true,
-          "count": 3,
+          "count": 4,
           "samples": [
             "Jean-Pierre Morel",
             "Clara Vallet",
@@ -1238,9 +1292,9 @@
     },
     {
       "element": "Lien « Découvrir notre méthode »",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(10, 14, 26)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 1
     },
     {
       "element": "Bouton section Solution",
@@ -1256,27 +1310,27 @@
     },
     {
       "element": "Lien de navigation « Services »",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 19.25
     },
     {
       "element": "Lien « Toutes les questions »",
-      "texte": "rgb(11, 92, 115)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(255,255,255)",
-      "ratio": 7.52
+      "ratio": 1
     },
     {
       "element": "Lien de pied de page « Audit IA gratuit »",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 19.25
     },
     {
       "element": "Lien légal « Mentions légales »",
-      "texte": "rgb(16, 215, 253)",
+      "texte": "rgb(255, 255, 255)",
       "fond": "rgb(10,14,26)",
-      "ratio": 11.15
+      "ratio": 19.25
     }
   ],
   "composantsInterface": [
